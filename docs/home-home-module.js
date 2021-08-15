@@ -59,7 +59,7 @@ HomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-grid>\n  <ion-row>\n    <ion-col size=\"4\" *ngFor=\"let pokemon of pokemonArray\">\n      <ion-card\n        [style.background-color]=\"pokemon.color\"\n        (click)=\"goToDetails(pokemon.id)\"\n      >\n        <ion-card-header>\n          <ion-card-title>{{pokemon.name}}</ion-card-title>\n        </ion-card-header>\n        <ion-card-content>\n          {{pokemon.name}} is {{pokemon.type}} type Pokemon !\n        </ion-card-content>\n      </ion-card>\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-grid>\r\n  <ion-row>\r\n    <ion-col *ngFor=\"let pokemon of pokemonArray\" size=\"4\">\r\n        <ion-card style=\"cursor: pointer\"\r\n          (click)=\"goToDetails(pokemon.id)\"\r\n          [style.background-color]=\"pokemon.color\"\r\n        >\r\n          <ion-card-header>\r\n            <ion-card-title>{{pokemon.name}}</ion-card-title>\r\n          </ion-card-header>\r\n          <ion-card-content>\r\n            {{pokemon.name}} is {{pokemon.type}} type Pokemon !\r\n          </ion-card-content>\r\n        </ion-card>\r\n    </ion-col>\r\n\r\n  </ion-row>\r\n\r\n</ion-grid>\r\n\r\n");
 
 /***/ }),
 
@@ -78,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _all_pokemons_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./all-pokemons.component.scss */ "5TcM");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _services_all_pokemons_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/all-pokemons.service */ "vBcR");
+/* harmony import */ var _shared_services_all_pokemons_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/services/all-pokemons.service */ "X0eG");
 
 
 
@@ -98,7 +98,7 @@ let AllPokemonsComponent = class AllPokemonsComponent {
     }
 };
 AllPokemonsComponent.ctorParameters = () => [
-    { type: _services_all_pokemons_service__WEBPACK_IMPORTED_MODULE_5__["AllPokemonsService"] },
+    { type: _shared_services_all_pokemons_service__WEBPACK_IMPORTED_MODULE_5__["AllPokemonsService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
 ];
 AllPokemonsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
@@ -122,7 +122,7 @@ AllPokemonsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])(
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n  <ion-content>\n<ion-title>Ahs's first Pokemon Team !</ion-title>\n    <app-all-pokemons></app-all-pokemons>\n    <form [formGroup]=\"newPokemon\">\n      <input formControlName=\"name\" type=\"text\">\n      <input formControlName=\"type\" type=\"text\">\n    </form>\n    <button (click)=\"create()\">Create</button>\n  </ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-title>Ahs's first Pokemon Team !</ion-title>\r\n  <app-all-pokemons></app-all-pokemons>\r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -198,29 +198,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_home_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./home.page.html */ "WcN3");
 /* harmony import */ var _home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.page.scss */ "f6od");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-
 
 
 
 
 let HomePage = class HomePage {
-    constructor(fb) {
-        this.newPokemon = fb.group({
-            name: '',
-            type: ''
-        });
-    }
+    constructor() { }
     ngOnInit() {
     }
-    create() {
-        this.name = this.newPokemon.value.name;
-        this.type = this.newPokemon.value.type;
-    }
 };
-HomePage.ctorParameters = () => [
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
-];
+HomePage.ctorParameters = () => [];
 HomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-home',

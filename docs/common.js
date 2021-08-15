@@ -137,6 +137,177 @@ const createButtonActiveGesture = (el, isButton) => {
 
 /***/ }),
 
+/***/ "TLjL":
+/*!********************************************!*\
+  !*** ./src/app/shared/enums/types.enum.ts ***!
+  \********************************************/
+/*! exports provided: Types */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Types", function() { return Types; });
+var Types;
+(function (Types) {
+    Types["fire"] = "fire";
+    Types["grass"] = "grass";
+    Types["water"] = "water";
+    Types["electrik"] = "electrik";
+    Types["fly"] = "fly";
+    Types["rock"] = "rock";
+    Types["spectre"] = "spectre";
+    Types["darkness"] = "darkness";
+    Types["fight"] = "fight";
+    Types["steel"] = "steel";
+    Types["dragon"] = "dragon";
+    Types["insect"] = "insect";
+    Types["normal"] = "normal";
+})(Types || (Types = {}));
+
+
+/***/ }),
+
+/***/ "X0eG":
+/*!*********************************************************!*\
+  !*** ./src/app/shared/services/all-pokemons.service.ts ***!
+  \*********************************************************/
+/*! exports provided: AllPokemonsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllPokemonsService", function() { return AllPokemonsService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _enums_types_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../enums/types.enum */ "TLjL");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _enums_gender_enum__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../enums/gender.enum */ "ZSZ5");
+/* harmony import */ var _enums_color_enum__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../enums/color.enum */ "m7LA");
+
+
+
+
+
+
+let AllPokemonsService = class AllPokemonsService {
+    constructor(http) {
+        this.http = http;
+        this.pokemonArray = [
+            {
+                id: 1,
+                name: 'Pikachu',
+                type: _enums_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].electrik,
+                gender: _enums_gender_enum__WEBPACK_IMPORTED_MODULE_4__["Gender"].male,
+                height: '0.4m',
+                weight: '6kg',
+                color: _enums_color_enum__WEBPACK_IMPORTED_MODULE_5__["Color"].electrikColor,
+                img: 'https://www.pokepedia.fr/images/thumb/e/e7/Pikachu-RFVF.png/375px-Pikachu-RFVF.png',
+                audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+                description: 'It keeps its tail raised to monitor its surroundings. ' +
+                    'If you yank its tail, it will try to bite you. '
+            },
+            {
+                id: 2,
+                name: 'Charmander',
+                type: _enums_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].fire,
+                gender: _enums_gender_enum__WEBPACK_IMPORTED_MODULE_4__["Gender"].female,
+                height: '0.6m',
+                weight: '8.5kg',
+                color: _enums_color_enum__WEBPACK_IMPORTED_MODULE_5__["Color"].fireColor,
+                img: 'https://www.pokepedia.fr/images/thumb/8/89/Salam%C3%A8che-RFVF.png/375px-Salam%C3%A8che-RFVF.png',
+                audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+                description: 'The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places. '
+            },
+            {
+                id: 3,
+                name: 'Bulbasaur',
+                type: _enums_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].grass,
+                gender: _enums_gender_enum__WEBPACK_IMPORTED_MODULE_4__["Gender"].male,
+                height: '0.7 m',
+                weight: '6.9 kg',
+                color: _enums_color_enum__WEBPACK_IMPORTED_MODULE_5__["Color"].grassColor,
+                img: 'https://www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/375px-Bulbizarre-RFVF.png',
+                audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+                description: 'It can go for days without eating a single morsel. In the bulb on its back, it stores energy. '
+            },
+            {
+                id: 4,
+                name: 'Squirtle',
+                type: _enums_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].water,
+                gender: _enums_gender_enum__WEBPACK_IMPORTED_MODULE_4__["Gender"].male,
+                height: '0.5 m',
+                weight: '9.0 kg ',
+                color: _enums_color_enum__WEBPACK_IMPORTED_MODULE_5__["Color"].waterColor,
+                img: 'https://www.pokepedia.fr/images/thumb/c/cc/Carapuce-RFVF.png/375px-Carapuce-RFVF.png',
+                audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+                description: 'Shoots water at prey while in the water. Withdraws into its shell when in danger. '
+            },
+            {
+                id: 5,
+                name: 'Caterpie',
+                type: _enums_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].insect,
+                gender: _enums_gender_enum__WEBPACK_IMPORTED_MODULE_4__["Gender"].male,
+                height: '0.3 m',
+                weight: '2.9 kg',
+                color: _enums_color_enum__WEBPACK_IMPORTED_MODULE_5__["Color"].insectColor,
+                img: 'https://www.pokepedia.fr/images/thumb/c/c7/Chenipan-RFVF.png/375px-Chenipan-RFVF.png',
+                audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+                description: 'If you touch the feeler on top of its head, it will release a horrible stink to protect itself. '
+            },
+            {
+                id: 6,
+                name: 'Pidgeotto',
+                type: _enums_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].fly,
+                gender: _enums_gender_enum__WEBPACK_IMPORTED_MODULE_4__["Gender"].female,
+                height: '1.1 m',
+                weight: '30.0 kg',
+                color: _enums_color_enum__WEBPACK_IMPORTED_MODULE_5__["Color"].flyColor,
+                img: 'https://www.pokepedia.fr/images/thumb/9/94/Roucool-RFVF.png/375px-Roucool-RFVF.png',
+                audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+                description: 'This Pokémon is full of vitality. ' +
+                    'It constantly flies around its large territory in search of prey. '
+            },
+        ];
+    }
+    getDetailsPokemon(id) {
+        return this.pokemonArray[id - 1];
+    }
+    getAllPokemons() {
+        return this.pokemonArray;
+    }
+};
+AllPokemonsService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
+AllPokemonsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AllPokemonsService);
+
+
+
+/***/ }),
+
+/***/ "ZSZ5":
+/*!*********************************************!*\
+  !*** ./src/app/shared/enums/gender.enum.ts ***!
+  \*********************************************/
+/*! exports provided: Gender */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Gender", function() { return Gender; });
+var Gender;
+(function (Gender) {
+    Gender["male"] = "male";
+    Gender["female"] = "female";
+})(Gender || (Gender = {}));
+
+
+/***/ }),
+
 /***/ "acej":
 /*!**************************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-4392cd63.js ***!
@@ -183,63 +354,6 @@ const detachComponent = (delegate, element) => {
 };
 
 
-
-
-/***/ }),
-
-/***/ "cclh":
-/*!*********************************************!*\
-  !*** ./src/app/enums/pokemon-types.enum.ts ***!
-  \*********************************************/
-/*! exports provided: Types, Gender, Color */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Types", function() { return Types; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Gender", function() { return Gender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return Color; });
-var Types;
-(function (Types) {
-    Types["fire"] = "fire";
-    Types["grass"] = "grass";
-    Types["water"] = "water";
-    Types["electrik"] = "electrik";
-    Types["fly"] = "fly";
-    Types["rock"] = "rock";
-    Types["spectre"] = "spectre";
-    Types["darkness"] = "darkness";
-    Types["fight"] = "fight";
-    Types["steel"] = "steel";
-    Types["dragon"] = "dragon";
-    Types["insect"] = "insect";
-    Types["normal"] = "normal";
-})(Types || (Types = {}));
-var Gender;
-(function (Gender) {
-    Gender["male"] = "male";
-    Gender["female"] = "female";
-})(Gender || (Gender = {}));
-var Color;
-(function (Color) {
-    Color["fireColor"] = "#f75231";
-    Color["grassColor"] = "#7bce52";
-    Color["waterColor"] = "#399cff";
-    Color["electrikColor"] = "#ffc631";
-    Color["flyColor"] = "#ada594";
-    Color["rockColor"] = "#bda55a";
-    Color["spectreColor"] = "#6363b5";
-    Color["darknessColor"] = "#735a4a";
-    Color["fightColor"] = "#a55239";
-    Color["steelColor"] = "#ada594";
-    Color["dragonColor"] = "#8858f6";
-    Color["insectColor"] = "#adbd21";
-    Color["normalColor"] = "#ada594";
-    Color["fairyColor"] = "#e09ae3";
-    Color["psyColor"] = "#ff73a5";
-    Color["groundColor"] = "#d6b55a";
-    Color["poisonColor"] = "#b55aa5";
-})(Color || (Color = {}));
 
 
 /***/ }),
@@ -368,6 +482,40 @@ const SPINNERS = spinners;
 
 /***/ }),
 
+/***/ "m7LA":
+/*!********************************************!*\
+  !*** ./src/app/shared/enums/color.enum.ts ***!
+  \********************************************/
+/*! exports provided: Color */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return Color; });
+var Color;
+(function (Color) {
+    Color["fireColor"] = "#f75231";
+    Color["grassColor"] = "#7bce52";
+    Color["waterColor"] = "#399cff";
+    Color["electrikColor"] = "#ffc631";
+    Color["flyColor"] = "#ada594";
+    Color["rockColor"] = "#bda55a";
+    Color["spectreColor"] = "#6363b5";
+    Color["darknessColor"] = "#735a4a";
+    Color["fightColor"] = "#a55239";
+    Color["steelColor"] = "#ada594";
+    Color["dragonColor"] = "#8858f6";
+    Color["insectColor"] = "#adbd21";
+    Color["normalColor"] = "#ada594";
+    Color["fairyColor"] = "#e09ae3";
+    Color["psyColor"] = "#ff73a5";
+    Color["groundColor"] = "#d6b55a";
+    Color["poisonColor"] = "#b55aa5";
+})(Color || (Color = {}));
+
+
+/***/ }),
+
 /***/ "qULd":
 /*!**************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js ***!
@@ -487,116 +635,6 @@ const hapticImpact = (options) => {
   HapticEngine.impact(options);
 };
 
-
-
-
-/***/ }),
-
-/***/ "vBcR":
-/*!**************************************************!*\
-  !*** ./src/app/services/all-pokemons.service.ts ***!
-  \**************************************************/
-/*! exports provided: AllPokemonsService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllPokemonsService", function() { return AllPokemonsService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../enums/pokemon-types.enum */ "cclh");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-
-
-
-
-let AllPokemonsService = class AllPokemonsService {
-    constructor(http) {
-        this.http = http;
-        this.pokemonArray = [
-            {
-                id: 1,
-                name: 'Pikachu',
-                type: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].electrik,
-                gender: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Gender"].male,
-                height: 1,
-                weight: 10,
-                color: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Color"].electrikColor,
-                img: 'https://www.pokepedia.fr/images/thumb/e/e7/Pikachu-RFVF.png/375px-Pikachu-RFVF.png',
-                audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg'
-            },
-            {
-                id: 2,
-                name: 'Charmander',
-                type: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].fire,
-                gender: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Gender"].female,
-                height: 1,
-                weight: 10,
-                color: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Color"].fireColor,
-                img: 'https://www.pokepedia.fr/images/thumb/8/89/Salam%C3%A8che-RFVF.png/375px-Salam%C3%A8che-RFVF.png',
-                audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg'
-            },
-            {
-                id: 3,
-                name: 'Bulbasaur',
-                type: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].grass,
-                gender: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Gender"].male,
-                height: 1,
-                weight: 10,
-                color: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Color"].grassColor,
-                img: 'https://www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/375px-Bulbizarre-RFVF.png',
-                audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg'
-            },
-            {
-                id: 4,
-                name: 'Squirtle',
-                type: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].water,
-                gender: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Gender"].male,
-                height: 1,
-                weight: 10,
-                color: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Color"].waterColor,
-                img: 'https://www.pokepedia.fr/images/thumb/c/cc/Carapuce-RFVF.png/375px-Carapuce-RFVF.png',
-                audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg'
-            },
-            {
-                id: 5,
-                name: 'Caterpie',
-                type: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].insect,
-                gender: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Gender"].male,
-                height: 1,
-                weight: 10,
-                color: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Color"].insectColor,
-                img: 'https://www.pokepedia.fr/images/thumb/c/c7/Chenipan-RFVF.png/375px-Chenipan-RFVF.png',
-                audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg'
-            },
-            {
-                id: 6,
-                name: 'Pidgeotto',
-                type: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Types"].fly,
-                gender: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Gender"].female,
-                height: 1,
-                weight: 10,
-                color: _enums_pokemon_types_enum__WEBPACK_IMPORTED_MODULE_2__["Color"].flyColor,
-                img: 'https://www.pokepedia.fr/images/thumb/9/94/Roucool-RFVF.png/375px-Roucool-RFVF.png',
-                audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg'
-            },
-        ];
-    }
-    getDetailsPokemon(id) {
-        return this.pokemonArray[id - 1];
-    }
-    getAllPokemons() {
-        return this.pokemonArray;
-    }
-};
-AllPokemonsService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
-];
-AllPokemonsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    })
-], AllPokemonsService);
 
 
 

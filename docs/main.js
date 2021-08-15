@@ -390,7 +390,7 @@ const routes = [
     },
     {
         path: 'pokemon-details/:id',
-        loadChildren: () => Promise.all(/*! import() | pokemon-details-pokemon-details-module */[__webpack_require__.e("common"), __webpack_require__.e("pokemon-details-pokemon-details-module")]).then(__webpack_require__.bind(null, /*! ./pokemon-details/pokemon-details.module */ "NGWu")).then(m => m.PokemonDetailsPageModule)
+        loadChildren: () => Promise.all(/*! import() | components-pokemon-details-pokemon-details-module */[__webpack_require__.e("common"), __webpack_require__.e("components-pokemon-details-pokemon-details-module")]).then(__webpack_require__.bind(null, /*! ./components/pokemon-details/pokemon-details.module */ "jL1i")).then(m => m.PokemonDetailsPageModule)
     },
     {
         path: '',
