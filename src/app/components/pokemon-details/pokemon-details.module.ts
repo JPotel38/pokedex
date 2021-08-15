@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PokemonDetailsPageRoutingModule } from './pokemon-details-routing.module';
 
 import { PokemonDetailsPage } from './pokemon-details.page';
-import {AllPokemonsComponent} from '../components/all-pokemons/all-pokemons.component';
+import {AllPokemonsComponent} from '../all-pokemons/all-pokemons.component';
 
 @NgModule({
   imports: [

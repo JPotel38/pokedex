@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{pokemon.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img style="cursor: pointer" [src]="pokemon.img" (click)="playAudio()"></ion-img>
+  <ion-text>{{pokemon.description}}</ion-text>
+</ion-content>

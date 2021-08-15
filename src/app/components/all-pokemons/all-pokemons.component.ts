@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Pokemon} from '../../interfaces/pokemon';
+import {Pokemon} from '../../shared/interfaces/pokemon';
 import {Router} from '@angular/router';
-import {AllPokemonsService} from '../../services/all-pokemons.service';
+import {AllPokemonsService} from '../../shared/services/all-pokemons.service';
 import {Observable} from 'rxjs';
 
 @Component({

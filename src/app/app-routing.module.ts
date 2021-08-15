@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'pokemon-details/:id',
-    loadChildren: () => import('./pokemon-details/pokemon-details.module').then(m => m.PokemonDetailsPageModule)
+    loadChildren: () => import('./components/pokemon-details/pokemon-details.module').then(m => m.PokemonDetailsPageModule)
   },
   {
     path: '',

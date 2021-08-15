@@ -1,17 +1,17 @@
 <ion-grid>
   <ion-row>
-    <ion-col size="4" *ngFor="let pokemon of pokemonArray">
-      <ion-card
-        [style.background-color]="pokemon.color"
-        (click)="goToDetails(pokemon.id)"
-      >
-        <ion-card-header>
-          <ion-card-title>{{pokemon.name}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          {{pokemon.name}} is {{pokemon.type}} type Pokemon !
-        </ion-card-content>
-      </ion-card>
+    <ion-col *ngFor="let pokemon of pokemonArray" size="4">
+        <ion-card style="cursor: pointer"
+          (click)="goToDetails(pokemon.id)"
+          [style.background-color]="pokemon.color"
+        >
+          <ion-card-header>
+            <ion-card-title>{{pokemon.name}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{pokemon.name}} is {{pokemon.type}} type Pokemon !
+          </ion-card-content>
+        </ion-card>
     </ion-col>
 
   </ion-row>

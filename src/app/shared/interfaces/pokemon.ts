@@ -3,9 +3,10 @@ export interface Pokemon {
   name: string;
   type: string;
   gender: string;
-  height: number;
-  weight: number;
+  height: string;
+  weight: string;
   color: string;
   img: string;
   audio: string;
+  description: string;
 }

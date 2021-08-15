@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Types} from '../enums/pokemon-types.enum';
+import {Types} from '../shared/enums/types.enum';
 
 @Component({
   selector: 'app-home',
