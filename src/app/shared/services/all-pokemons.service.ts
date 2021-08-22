@@ -25,7 +25,8 @@ export class AllPokemonsService {
         img: 'https://www.pokepedia.fr/images/thumb/e/e7/Pikachu-RFVF.png/375px-Pikachu-RFVF.png',
         audio:'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
         description:'It keeps its tail raised to monitor its surroundings. ' +
-          'If you yank its tail, it will try to bite you. '
+          'If you yank its tail, it will try to bite you. ',
+        attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
       {
         id: 2,
@@ -37,7 +38,8 @@ export class AllPokemonsService {
         color: Color.fireColor,
         img: 'https://www.pokepedia.fr/images/thumb/8/89/Salam%C3%A8che-RFVF.png/375px-Salam%C3%A8che-RFVF.png',
         audio:'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
-        description:'The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places. '
+        description:'The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places. ',
+        attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
       {
         id: 3,
@@ -49,7 +51,8 @@ export class AllPokemonsService {
         color: Color.grassColor,
         img: 'https://www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/375px-Bulbizarre-RFVF.png',
         audio:'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
-        description: 'It can go for days without eating a single morsel. In the bulb on its back, it stores energy. '
+        description: 'It can go for days without eating a single morsel. In the bulb on its back, it stores energy. ',
+        attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
       {
         id: 4,
@@ -61,7 +64,8 @@ export class AllPokemonsService {
         color: Color.waterColor,
         img: 'https://www.pokepedia.fr/images/thumb/c/cc/Carapuce-RFVF.png/375px-Carapuce-RFVF.png',
         audio:'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
-        description:'Shoots water at prey while in the water. Withdraws into its shell when in danger. '
+        description:'Shoots water at prey while in the water. Withdraws into its shell when in danger. ',
+        attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
       {
         id: 5,
@@ -73,7 +77,8 @@ export class AllPokemonsService {
         color: Color.insectColor,
         img: 'https://www.pokepedia.fr/images/thumb/c/c7/Chenipan-RFVF.png/375px-Chenipan-RFVF.png',
         audio:'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
-        description: 'If you touch the feeler on top of its head, it will release a horrible stink to protect itself. '
+        description: 'If you touch the feeler on top of its head, it will release a horrible stink to protect itself. ',
+        attacks: ['Tackle', 'String Shot']
       },
       {
         id: 6,
@@ -86,7 +91,8 @@ export class AllPokemonsService {
         img: 'https://www.pokepedia.fr/images/thumb/9/94/Roucool-RFVF.png/375px-Roucool-RFVF.png',
         audio:'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
         description: 'This Pokémon is full of vitality. ' +
-          'It constantly flies around its large territory in search of prey. '
+          'It constantly flies around its large territory in search of prey. ',
+        attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
     ];
 

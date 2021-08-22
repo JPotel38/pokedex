@@ -9,4 +9,5 @@ export interface Pokemon {
   img: string;
   audio: string;
   description: string;
+  attacks: Array<string>;
 }

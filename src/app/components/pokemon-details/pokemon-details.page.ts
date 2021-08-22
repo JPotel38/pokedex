@@ -22,6 +22,7 @@ export class PokemonDetailsPage implements OnInit {
 
   ngOnInit() {
     this.pokemon = this.allPokemonsService.getDetailsPokemon(this.pokemonId);
+    this.playAudio();
   }
 
   playAudio() {

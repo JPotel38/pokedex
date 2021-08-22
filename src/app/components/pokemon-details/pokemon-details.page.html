@@ -5,6 +5,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-img style="cursor: pointer" [src]="pokemon.img" (click)="playAudio()"></ion-img>
-  <ion-text>{{pokemon.description}}</ion-text>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img (click)="playAudio()" [src]="pokemon.img" style="cursor: pointer"></ion-img>
+        <ion-text>{{pokemon.description}}</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-list>
+          <h1>Attacks: </h1>
+          <ion-item *ngFor="let attacks of pokemon.attacks">
+            <ion-label >
+              {{attacks}}
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
