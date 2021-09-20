@@ -10,16 +10,22 @@
       <ion-col>
         <ion-img (click)="playAudio()" [src]="pokemon.img" style="cursor: pointer"></ion-img>
         <ion-text>{{pokemon.description}}</ion-text>
+            <ion-input type="number" (ionChange)="manageLevel($event)"></ion-input>
       </ion-col>
       <ion-col>
         <ion-list>
           <h1>Attacks: </h1>
           <ion-item *ngFor="let attacks of pokemon.attacks">
-            <ion-label >
+            <ion-label>
               {{attacks}}
             </ion-label>
           </ion-item>
         </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="goBack()" size="large">Back</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

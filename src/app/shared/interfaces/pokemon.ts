@@ -1,6 +1,7 @@
 export interface Pokemon {
   id: number;
   name: string;
+  evolutionLevel?: number;
   type: string;
   gender: string;
   height: string;

@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {Pokemon} from '../interfaces/pokemon';
 import {Types} from '../enums/types.enum';
 import {HttpClient} from '@angular/common/http';
-import {Gender} from "../enums/gender.enum";
-import {Color} from "../enums/color.enum";
+import {Gender} from '../enums/gender.enum';
+import {Color} from '../enums/color.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -57,6 +57,7 @@ export class AllPokemonsService {
       {
         id: 4,
         name: 'Squirtle',
+        evolutionLevel: 16,
         type: Types.water,
         gender: Gender.male,
         height: '0.5 m',
@@ -69,6 +70,19 @@ export class AllPokemonsService {
       },
       {
         id: 5,
+        name: 'Wartortle',
+        type: Types.water,
+        gender: Gender.male,
+        height: '1.0 m',
+        weight: '22.5 kg ',
+        color: Color.waterColor,
+        img: 'https://www.pokepedia.fr/images/2/2a/Carabaffe-RFVF.png',
+        audio:'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        description:'When tapped, this Pokémon will pull in its head, but its tail will still stick out a little bit. ',
+        attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      },
+      {
+        id: 6,
         name: 'Caterpie',
         type: Types.insect,
         gender: Gender.male,
@@ -81,7 +95,7 @@ export class AllPokemonsService {
         attacks: ['Tackle', 'String Shot']
       },
       {
-        id: 6,
+        id: 7,
         name: 'Pidgeotto',
         type: Types.fly,
         gender: Gender.female,
