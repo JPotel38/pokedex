@@ -11,5 +11,7 @@ export enum Types {
   steel = 'steel',
   dragon = 'dragon',
   insect = 'insect',
-  normal = 'normal'
+  normal = 'normal',
+  poison = 'poison',
+  ground = 'ground'
 }
