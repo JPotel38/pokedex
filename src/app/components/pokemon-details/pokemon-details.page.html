@@ -8,9 +8,17 @@
   <ion-grid>
     <ion-row>
       <ion-col>
+        <ion-button (click)="previousPokemon()" *ngIf="pokemonId > 1">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
         <ion-img (click)="playAudio()" [src]="pokemon.img" style="cursor: pointer"></ion-img>
         <ion-text>{{pokemon.description}}</ion-text>
-            <ion-input type="number" (ionChange)="manageLevel($event)"></ion-input>
+        <br>
+        <ion-text>Level :</ion-text>
+        <ion-input (ionChange)="manageLevel($event)" type="number"></ion-input>
+        <ion-button (click)="nextPokemon()" *ngIf="level == pokemon.evolutionLevel">Evolve</ion-button>
       </ion-col>
       <ion-col>
         <ion-list>
@@ -22,10 +30,15 @@
           </ion-item>
         </ion-list>
       </ion-col>
+      <ion-col>
+        <ion-button (click)="nextPokemon()" *ngIf="pokemonId < 151">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button (click)="goBack()" size="large">Back</ion-button>
+        <ion-button (click)="goBackToPokedex()" size="large">Home</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

@@ -20,7 +20,6 @@ export class PokemonDetailsPage implements OnInit {
   constructor(
     public readonly activatedRoute: ActivatedRoute,
     public readonly allPokemonsService: AllPokemonsService,
-    private location: Location,
     public alertController: AlertController,
     public readonly router: Router
   ) {
@@ -36,7 +35,6 @@ export class PokemonDetailsPage implements OnInit {
   async presentAlertMultipleButtons() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Alert',
       message: this.pokemon.name + ' is evolving!',
       buttons: ['Cancel', 'Open Modal', 'Delete']
     });
@@ -51,18 +49,21 @@ export class PokemonDetailsPage implements OnInit {
     audio.play();
   }
 
-  goBack() {
-    this.location.back();
+  goBackToPokedex() {
+    this.router.navigate([`/`]);
   }
-
-
 
   manageLevel(e) {
     this.level = e.detail.value;
-    if(this.level == this.pokemon.evolutionLevel) {
-      this.presentAlertMultipleButtons();
-      this.pokemonId++;
-      this.router.navigate([`pokemon-details/${this.pokemonId}`]);
-    }
+  }
+
+  previousPokemon() {
+    this.pokemonId--;
+    this.router.navigate([`pokemon-details/${this.pokemonId}`]);
+  }
+
+  nextPokemon() {
+    this.pokemonId++;
+    this.router.navigate([`pokemon-details/${this.pokemonId}`]);
   }
 }

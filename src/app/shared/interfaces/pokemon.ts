@@ -6,7 +6,7 @@ export interface Pokemon {
   gender?: string;
   height: string;
   weight: string;
-  color: string;
+  color: Array<string>;
   img: string;
   audio: string;
   description: string;
