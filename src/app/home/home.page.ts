@@ -1,14 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {Types} from '../shared/enums/types.enum';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit{
+export class HomePage implements OnInit {
 
-  constructor() {}
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'fr']);
+    translate.setDefaultLang('en');
+  }
 
   ngOnInit() {
   }

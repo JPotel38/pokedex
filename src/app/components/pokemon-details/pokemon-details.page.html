@@ -17,8 +17,9 @@
         <ion-text>{{pokemon.description}}</ion-text>
         <br>
         <ion-text>Level :</ion-text>
-        <ion-input (ionChange)="manageLevel($event)" type="number" min="1" max="100"></ion-input>
-        <ion-button (click)="nextPokemon()" *ngIf="pokemon.evolutionLevel && level == pokemon.evolutionLevel">Evolve</ion-button>
+        <ion-input (ionChange)="manageLevel($event)" max="100" min="1" type="number"></ion-input>
+        <ion-button (click)="nextPokemon()" *ngIf="pokemon.evolutionLevel && level == pokemon.evolutionLevel">Evolve
+        </ion-button>
       </ion-col>
       <ion-col>
         <ion-list>

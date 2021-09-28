@@ -1,12 +1,9 @@
 <ion-content>
 
   <ion-title>Pokedex</ion-title>
-  <ion-item>
-    <ion-label>Language</ion-label>
-    <ion-select interface="popover">
-      <ion-select-option value="en">English</ion-select-option>
-      <ion-select-option value="fr">French</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <select #langSelect (change)="translate.use(langSelect.value)">
+    <option *ngFor="let lang of translate.getLangs()" [selected]="lang === translate.currentLang"
+            [value]="lang"> {{ lang }}</option>
+  </select>
   <app-all-pokemons></app-all-pokemons>
 </ion-content>
