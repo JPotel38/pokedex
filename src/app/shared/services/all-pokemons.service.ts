@@ -3,6 +3,7 @@ import {Pokemon} from '../interfaces/pokemon';
 import {Types} from '../enums/types.enum';
 import {HttpClient} from '@angular/common/http';
 import {Color} from '../enums/color.enum';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -503,6 +504,18 @@ export class AllPokemonsService {
       },
       {
         id: 40,
+        name: 'Wigglytuff',
+        types: [Types.normal, Types.fairy],
+        height: '0.7 m',
+        weight: '6.9 kg',
+        color: [Color.normalColor, Color.fairyColor],
+        img: 'https://www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/375px-Bulbizarre-RFVF.png',
+        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        description: 'It can go for days without eating a single morsel. In the bulb on its back, it stores energy. ',
+        attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      },
+      {
+        id: 41,
         name: 'Zubat',
         types: [Types.poison, Types.flying],
         height: '0.4m',
@@ -515,7 +528,7 @@ export class AllPokemonsService {
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
       {
-        id: 41,
+        id: 42,
         name: 'Golbat',
         types: [Types.poison, Types.flying],
         height: '0.6m',
@@ -664,7 +677,7 @@ export class AllPokemonsService {
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
       {
-        id: 55,
+        id: 54,
         name: 'Psyduck',
         types: [Types.water],
         height: '0.7 m',
@@ -676,7 +689,7 @@ export class AllPokemonsService {
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
       {
-        id: 56,
+        id: 55,
         name: 'Golduck',
         types: [Types.water],
         height: '0.4m',
@@ -689,7 +702,7 @@ export class AllPokemonsService {
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
       {
-        id: 57,
+        id: 56,
         name: 'Mankey',
         types: [Types.fighting],
         height: '0.6m',
@@ -701,7 +714,7 @@ export class AllPokemonsService {
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
       {
-        id: 58,
+        id: 57,
         name: 'Growlithe',
         types: [Types.fire],
         height: '0.6m',
@@ -713,7 +726,7 @@ export class AllPokemonsService {
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
       {
-        id: 59,
+        id: 58,
         name: 'Arcanine',
         types: [Types.fire],
         height: '0.6m',
@@ -1745,12 +1758,12 @@ export class AllPokemonsService {
       },
       {
         id: 142,
-        name: 'Zubat',
+        name: 'Aerodactyl',
         types: [Types.rock, Types.flying],
-        height: '1.0 m',
-        weight: '22.5 kg ',
+        height: '1.8 m',
+        weight: '59.0 kg ',
         color: [Color.rockColor, Color.flyingColor],
-        img: 'https://www.pokepedia.fr/images/thumb/e/e7/Pikachu-RFVF.png/375px-Pikachu-RFVF.png',
+        img: '../../assets/images/Aerodactyl.png',
         audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
         description: 'It keeps its tail raised to monitor its surroundings. ' +
           'If you yank its tail, it will try to bite you. ',
@@ -1760,10 +1773,10 @@ export class AllPokemonsService {
         id: 143,
         name: 'Snorlax',
         types: [Types.normal],
-        height: '0.6m',
-        weight: '8.5kg',
+        height: '2.1 m',
+        weight: '460.0 kg',
         color: [Color.normalColor],
-        img: 'https://www.pokepedia.fr/images/thumb/8/89/Salam%C3%A8che-RFVF.png/375px-Salam%C3%A8che-RFVF.png',
+        img: '../../assets/images/Snorlax.png',
         audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
         description: 'The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
@@ -1772,10 +1785,10 @@ export class AllPokemonsService {
         id: 144,
         name: 'Articuno',
         types: [Types.ice, Types.flying],
-        height: '0.5 m',
-        weight: '9.0 kg ',
+        height: '1.7 m',
+        weight: '55.4 kg ',
         color: [Color.iceColor, Color.flyingColor],
-        img: 'https://www.pokepedia.fr/images/thumb/c/cc/Carapuce-RFVF.png/375px-Carapuce-RFVF.png',
+        img: '../../assets/images/Articuno.png',
         audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
         description: 'Shoots water at prey while in the water. Withdraws into its shell when in danger. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
@@ -1784,10 +1797,10 @@ export class AllPokemonsService {
         id: 145,
         name: 'Zapdos',
         types: [Types.electric, Types.flying],
-        height: '1.0 m',
-        weight: '22.5 kg ',
+        height: '1.6 m',
+        weight: '52.6 kg ',
         color: [Color.electricColor, Color.flyingColor],
-        img: 'https://www.pokepedia.fr/images/2/2a/Carabaffe-RFVF.png',
+        img: '../../assets/images/Zapdos.png',
         audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
         description: 'When tapped, this Pokémon will pull in its head, but its tail will still stick out a little bit. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
@@ -1796,10 +1809,10 @@ export class AllPokemonsService {
         id: 146,
         name: 'Moltres',
         types: [Types.fire, Types.flying],
-        height: '0.3 m',
-        weight: '2.9 kg',
+        height: '2.0 m',
+        weight: '60.0 kg',
         color: [Color.fireColor, Color.flyingColor],
-        img: 'https://www.pokepedia.fr/images/thumb/c/c7/Chenipan-RFVF.png/375px-Chenipan-RFVF.png',
+        img: '../../assets/images/Moltres.png',
         audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
         description: 'If you touch the feeler on top of its head, it will release a horrible stink to protect itself. ',
         attacks: ['Tackle', 'String Shot']
@@ -1807,11 +1820,12 @@ export class AllPokemonsService {
       {
         id: 147,
         name: 'Dratini',
+        evolutionLevel: 30,
         types: [Types.dragon],
-        height: '1.1 m',
-        weight: '30.0 kg',
+        height: '1.8 m',
+        weight: '3.3 kg',
         color: [Color.dragonColor],
-        img: 'https://www.pokepedia.fr/images/thumb/9/94/Roucool-RFVF.png/375px-Roucool-RFVF.png',
+        img: '../../assets/images/Draniti.png',
         audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
         description: 'This Pokémon is full of vitality. ' +
           'It constantly flies around its large territory in search of prey. ',
@@ -1820,11 +1834,12 @@ export class AllPokemonsService {
       {
         id: 148,
         name: 'Dragonair',
+        evolutionLevel: 55,
         types: [Types.dragon],
         height: '1.1 m',
         weight: '30.0 kg',
         color: [Color.dragonColor],
-        img: 'https://www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/375px-Bulbizarre-RFVF.png',
+        img: '../../assets/images/Dragonair.png',
         audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
         description: 'It can go for days without eating a single morsel. In the bulb on its back, it stores energy. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
@@ -1833,10 +1848,10 @@ export class AllPokemonsService {
         id: 149,
         name: 'Dragonite',
         types: [Types.dragon, Types.flying],
-        height: '0.4m',
-        weight: '6kg',
+        height: '2.2 m',
+        weight: '210 kg',
         color: [Color.dragonColor, Color.flyingColor],
-        img: 'https://www.pokepedia.fr/images/thumb/e/e7/Pikachu-RFVF.png/375px-Pikachu-RFVF.png',
+        img: '../../assets/images/Dragonite.png',
         audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
         description: 'It keeps its tail raised to monitor its surroundings. ' +
           'If you yank its tail, it will try to bite you. ',
@@ -1846,10 +1861,10 @@ export class AllPokemonsService {
         id: 150,
         name: 'Mewtwo',
         types: [Types.psychic],
-        height: '0.6m',
-        weight: '8.5kg',
+        height: '2.0 m',
+        weight: '122 kg',
         color: [Color.psychicColor],
-        img: 'https://www.pokepedia.fr/images/thumb/8/89/Salam%C3%A8che-RFVF.png/375px-Salam%C3%A8che-RFVF.png',
+        img: '../../assets/images/Mewtwo.png',
         audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
         description: 'The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
@@ -1857,12 +1872,11 @@ export class AllPokemonsService {
       {
         id: 151,
         name: 'Mew',
-        evolutionLevel: 16,
         types: [Types.psychic],
-        height: '0.5 m',
-        weight: '9.0 kg ',
+        height: '0.4 m',
+        weight: '4.0 kg ',
         color: [Color.psychicColor],
-        img: 'https://www.pokepedia.fr/images/thumb/c/cc/Carapuce-RFVF.png/375px-Carapuce-RFVF.png',
+        img: '../../assets/images/Mew.png',
         audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
         description: 'Shoots water at prey while in the water. Withdraws into its shell when in danger. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
@@ -1874,7 +1888,7 @@ export class AllPokemonsService {
     return this.pokemonArray[id - 1];
   }
 
-  getAllPokemons(): Array<Pokemon> {
-    return this.pokemonArray;
+  getAllPokemons(): Observable<Array<Pokemon>> {
+    return of(this.pokemonArray);
   }
 }

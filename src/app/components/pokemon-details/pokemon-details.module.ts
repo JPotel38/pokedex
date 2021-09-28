@@ -1,21 +1,23 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { PokemonDetailsPageRoutingModule } from './pokemon-details-routing.module';
+import {PokemonDetailsPageRoutingModule} from './pokemon-details-routing.module';
 
-import { PokemonDetailsPage } from './pokemon-details.page';
-import {AllPokemonsComponent} from '../all-pokemons/all-pokemons.component';
+import {PokemonDetailsPage} from './pokemon-details.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PokemonDetailsPageRoutingModule
+    PokemonDetailsPageRoutingModule,
+    TranslateModule
   ],
   declarations: [PokemonDetailsPage]
 })
-export class PokemonDetailsPageModule {}
+export class PokemonDetailsPageModule {
+}

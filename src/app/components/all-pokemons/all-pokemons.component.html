@@ -1,23 +1,24 @@
 <ion-grid>
   <ion-row>
-    <ion-col *ngFor="let pokemon of pokemonArray" size="4">
-      <ion-card *ngIf="pokemon.types.length == 1"
-        (click)="goToDetails(pokemon.id)"
+    <ion-col *ngFor="let pokemon of (allPokemon.getAllPokemons() | async)" size="4">
+      <ion-card (click)="goToDetails(pokemon.id)"
+                *ngIf="pokemon.types.length == 1"
                 [style.background-color]="pokemon.color[0]"
                 style="cursor: pointer"
       >
         <ion-card-header>
-          <ion-card-title>#{{pokemon.id}} {{pokemon.name}}</ion-card-title>
+          <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
         </ion-card-header>
         <ion-card-content *ngIf="pokemon.types.length == 1">
-          {{pokemon.name}} is a {{pokemon.types[0]}}-type Pokemon !
+          {{'NAMES.' + pokemon.name | translate}} is a {{'TYPES.' + pokemon.types[0] | translate}}-type Pokemon !
         </ion-card-content>
         <ion-card-content *ngIf="pokemon.types.length > 1">
-          {{pokemon.name}} is a {{pokemon.types[0]}}-type Pokemon and a {{pokemon.types[1]}}-type Pokemon !
+          {{'NAMES.' + pokemon.name}} is a {{'TYPES.' + pokemon.types[0] | translate}}-type Pokemon and
+          a {{'TYPES.' + pokemon.types[1] | translate}}-type Pokemon !
         </ion-card-content>
       </ion-card>
-      <ion-card *ngIf="pokemon.types.length > 1"
-        (click)="goToDetails(pokemon.id)"
+      <ion-card (click)="goToDetails(pokemon.id)"
+                *ngIf="pokemon.types.length > 1"
                 [style.background]="'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'"
                 style="cursor: pointer"
       >

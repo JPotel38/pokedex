@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {AllPokemonsComponent} from '../components/all-pokemons/all-pokemons.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {AllPokemonsComponent} from '../components/all-pokemons/all-pokemons.comp
         FormsModule,
         IonicModule,
         HomePageRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TranslateModule
     ],
   declarations: [HomePage, AllPokemonsComponent]
 })

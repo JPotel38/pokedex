@@ -20,7 +20,6 @@ export class AllPokemonsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pokemonArray = this.allPokemon.getAllPokemons();
   }
 
   goToDetails(id: number) {
