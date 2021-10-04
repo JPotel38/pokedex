@@ -13,7 +13,7 @@
           {{'NAMES.' + pokemon.name | translate}} is a {{'TYPES.' + pokemon.types[0] | translate}}-type Pokemon !
         </ion-card-content>
         <ion-card-content *ngIf="pokemon.types.length > 1">
-          {{'NAMES.' + pokemon.name}} is a {{'TYPES.' + pokemon.types[0] | translate}}-type Pokemon and
+          {{'NAMES.' + pokemon.name | translate}} is a {{'TYPES.' + pokemon.types[0] | translate}}-type Pokemon and
           a {{'TYPES.' + pokemon.types[1] | translate}}-type Pokemon !
         </ion-card-content>
       </ion-card>
@@ -26,10 +26,11 @@
           <ion-card-title>#{{pokemon.id}} {{pokemon.name}}</ion-card-title>
         </ion-card-header>
         <ion-card-content *ngIf="pokemon.types.length == 1">
-          {{pokemon.name}} is a {{pokemon.types[0]}}-type Pokemon !
+          {{'NAMES.' + pokemon.name | translate}} is a {{'TYPES.' + pokemon.types[0] | translate}}-type Pokemon !
         </ion-card-content>
         <ion-card-content *ngIf="pokemon.types.length > 1">
-          {{pokemon.name}} is a {{pokemon.types[0]}}-type Pokemon and {{pokemon.types[1]}}-type Pokemon !
+          {{'NAMES.' + pokemon.name | translate}} is a {{'TYPES.' + pokemon.types[0] | translate}}-type Pokemon and
+          a {{'TYPES.' + pokemon.types[1] | translate}}-type Pokemon !
         </ion-card-content>
       </ion-card>
     </ion-col>

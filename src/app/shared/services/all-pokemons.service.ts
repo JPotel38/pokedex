@@ -715,6 +715,18 @@ export class AllPokemonsService {
       },
       {
         id: 57,
+        name: 'Primeape',
+        types: [Types.fighting],
+        height: '0.6m',
+        weight: '8.5kg',
+        color: [Color.fightingColor],
+        img: 'https://www.pokepedia.fr/images/thumb/8/89/Salam%C3%A8che-RFVF.png/375px-Salam%C3%A8che-RFVF.png',
+        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        description: 'The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places. ',
+        attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      },
+      {
+        id: 58,
         name: 'Growlithe',
         types: [Types.fire],
         height: '0.6m',
@@ -726,7 +738,7 @@ export class AllPokemonsService {
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
       {
-        id: 58,
+        id: 59,
         name: 'Arcanine',
         types: [Types.fire],
         height: '0.6m',
