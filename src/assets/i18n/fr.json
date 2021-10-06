@@ -1,8 +1,9 @@
 {
   "HOME": "Accueil",
-  "CARD_SUBJECT": "est un Pokemon de type",
+  "CARD_SUBJECT_ONE": "est un Pokemon de type",
+  "CARD_SUBJECT_TWO": "est un Pokemon de type",
   "POKEMON": " ",
-  "AND": "et de type",
+  "AND": "et",
   "WEIGHT": "Poids",
   "HEIGHT": "Taille",
   "LEVEL": "Niveau",

@@ -41,10 +41,14 @@ export class PokemonDetailsPage implements OnInit {
   }
 
   playAudio() {
+    document.getElementById('img').classList.add('shake');
     const audio = new Audio();
     audio.src = this.pokemon.audio;
     audio.load();
     audio.play();
+    setTimeout(() => {
+      document.getElementById('img').classList.remove('shake');
+    }, 1000);
   }
 
   goBackToPokedex() {

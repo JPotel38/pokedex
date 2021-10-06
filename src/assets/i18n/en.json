@@ -1,8 +1,9 @@
 {
   "HOME": "Home",
-  "CARD_SUBJECT": "is a",
+  "CARD_SUBJECT_ONE": "is a",
+  "CARD_SUBJECT_TWO": "is a dual-type",
   "POKEMON": "Pokemon",
-  "AND": "and a",
+  "AND": "and",
   "WEIGHT": "Weight",
   "HEIGHT": "Height",
   "LEVEL": "Level",

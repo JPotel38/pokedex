@@ -13,7 +13,7 @@
       </ion-col>
       <ion-col>
         <ion-row>
-          <ion-img (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img" style="cursor: pointer"></ion-img>
+          <ion-img id="img" (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img" style="cursor: pointer"></ion-img>
         </ion-row>
         <ion-row>
           <ion-text [innerHTML]="'DESC.' + pokemon.name | translate"></ion-text>
@@ -25,22 +25,30 @@
           <ion-col>{{'HEIGHT' | translate}}: {{pokemon.height}}</ion-col>
         </ion-row>
         <ion-row>
-          <ion-text>{{'LEVEL' | translate}} :</ion-text>
-          <ion-input (ionChange)="manageLevel($event)" max="100" min="1" type="number"></ion-input>
-          <ion-button (click)="nextPokemon()"
-                      *ngIf="pokemon.evolutionLevel && level >= pokemon.evolutionLevel">{{'EVOLVE' | translate}}
-          </ion-button>
-          <ion-button (click)="nextPokemon()" *ngIf="pokemon.exchange">{{'EXCHANGE' | translate}}</ion-button>
+          <ion-col>
+            <ion-text>{{'LEVEL' | translate}} :</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-input (ionChange)="manageLevel($event)" max="100" min="1" type="number"></ion-input>
+          </ion-col>
+          <ion-row>
+            <ion-button (click)="nextPokemon()"
+                        *ngIf="pokemon.evolutionLevel && level >= pokemon.evolutionLevel">{{'EVOLVE' | translate}}
+            </ion-button>
+            <ion-button (click)="nextPokemon()" *ngIf="pokemon.exchange">{{'EXCHANGE' | translate}}</ion-button>
+            <ion-img [src]='pokemon.stone'></ion-img>
+          </ion-row>
         </ion-row>
       </ion-col>
       <ion-col>
         <ion-list>
           <h1>{{'ATTACKS' | translate}}: </h1>
-          <ion-item *ngFor="let attacks of pokemon.attacks">
-            <ion-label>
-              {{attacks}}
-            </ion-label>
-          </ion-item>
+<!--          <ion-item *ngFor="let attacks of pokemon.attacks">-->
+<!--            <ion-label>-->
+<!--              {{attacks}}-->
+<!--            </ion-label>-->
+<!--          </ion-item>-->
+          <ion-text> Coming soon ! </ion-text>
         </ion-list>
       </ion-col>
       <ion-col>

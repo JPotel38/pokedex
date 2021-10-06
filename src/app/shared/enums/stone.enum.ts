@@ -1,7 +1,7 @@
 export enum StoneEnum {
-  fire = 'Fire Stone',
-  water = 'Water Stone',
-  thunder = 'Thunder Stone',
-  moon = 'Moon Stone',
-  leaf = 'Leaf Stone'
+  fire = '../../assets/icons/Fire_Stone.png',
+  water = '../../assets/icons/Water_Stone.png',
+  thunder = '../../assets/icons/Thunder_Stone.png',
+  moon = '../../assets/icons/Moon_Stone.png',
+  leaf = '../../assets/icons/Leaf_Stone.png'
 }

@@ -11,12 +11,11 @@
             <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
           </ion-card-header>
           <ion-card-content *ngIf="pokemon.types.length == 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT' | translate}}
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
             {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}
           </ion-card-content>
           <ion-card-content *ngIf="pokemon.types.length > 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
-            {{'POKEMON' | translate}} {{'AND' | translate}} {{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
           </ion-card-content>
         </ion-card>
         <ion-card (click)="goToDetails(pokemon.id)"
@@ -25,15 +24,14 @@
                   style="cursor: pointer"
         >
           <ion-card-header>
-            <ion-card-title>#{{pokemon.id}} {{pokemon.name}}</ion-card-title>
+            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
           </ion-card-header>
           <ion-card-content *ngIf="pokemon.types.length == 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT' | translate}}
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
             {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}
           </ion-card-content>
           <ion-card-content *ngIf="pokemon.types.length > 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
-            {{'POKEMON' | translate}} {{'AND' | translate}} {{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
           </ion-card-content>
         </ion-card>
       </ion-col>

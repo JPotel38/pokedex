@@ -24,7 +24,7 @@ export class AllPokemonService {
         weight: '6.9 kg',
         color: [ColorEnum.grassColor],
         img: '../../assets/images/Bulbasaur.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Bulbasaur.ogg',
         description: 'It can go for days without eating a single morsel. In the bulb on its back, it stores energy. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -37,7 +37,7 @@ export class AllPokemonService {
         weight: '13 kg',
         color: [ColorEnum.grassColor],
         img: '../../assets/images/Ivysaur.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Ivysaur.ogg',
         description: 'The bulb on its back grows by drawing energy. It gives off an aroma when it is ready to bloom. ',
         attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam']
       },
@@ -49,7 +49,7 @@ export class AllPokemonService {
         weight: '100.0 kg',
         color: [ColorEnum.grassColor],
         img: '../../assets/images/Venusaur.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Venusaur.ogg',
         description: 'The flower on its back catches the sun\'s rays. The sunlight is then absorbed and used for energy. ',
         attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam']
       },
@@ -62,7 +62,7 @@ export class AllPokemonService {
         weight: '8.5 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Charmander.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Charmander.ogg',
         description: 'The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -75,7 +75,7 @@ export class AllPokemonService {
         weight: '19.0 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Charmeleon.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Charmeleon.ogg',
         description: 'Tough fights could excite this Pokémon. When excited, it may blow out bluish-white flames. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -87,7 +87,7 @@ export class AllPokemonService {
         weight: '90.5 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Charizard.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Charizard.ogg',
         description: 'When expelling a blast of super hot fire, the red flame at the tip of its tail burns more intensely. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -100,7 +100,7 @@ export class AllPokemonService {
         weight: '9.0 kg ',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Squirtle.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Squirtle.ogg',
         description: 'Shoots water at prey while in the water. Withdraws into its shell when in danger. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -113,7 +113,7 @@ export class AllPokemonService {
         weight: '22.5 kg ',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Wartortle.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Wartortle.ogg',
         description: 'When tapped, this Pokémon will pull in its head, but its tail will still stick out a little bit. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -125,7 +125,7 @@ export class AllPokemonService {
         weight: '85.5 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Blastoise.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Blastoise.ogg',
         description: 'Once it takes aim at its enemy, it blasts out water with even more force than a fire hose. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -138,7 +138,7 @@ export class AllPokemonService {
         weight: '2.9 kg',
         color: [ColorEnum.bugColor],
         img: '../../assets/images/Caterpie.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Caterpie.ogg',
         description: 'If you touch the feeler on top of its head, it will release a horrible stink to protect itself. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -151,7 +151,7 @@ export class AllPokemonService {
         weight: '9.9 kg',
         color: [ColorEnum.bugColor],
         img: '../../assets/images/Metapod.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Metapod.ogg',
         description: 'Hardens its shell to protect itself. However, a large impact may cause it to pop out of its shell. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -163,7 +163,7 @@ export class AllPokemonService {
         weight: '32.0 kg',
         color: [ColorEnum.bugColor],
         img: '../../assets/images/Butterfree.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Butterfree.ogg',
         description: 'Its wings, covered with poisonous powders, repel water. This allows it to fly in the rain. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -176,7 +176,7 @@ export class AllPokemonService {
         weight: '3.2 kg',
         color: [ColorEnum.bugColor],
         img: '../../assets/images/Weedle.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Weedle.ogg',
         description: 'Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -189,7 +189,7 @@ export class AllPokemonService {
         weight: '10.0 kg',
         color: [ColorEnum.bugColor],
         img: '../../assets/images/Kakuna.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Kakuna.ogg',
         description: 'Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -201,7 +201,7 @@ export class AllPokemonService {
         weight: '29.5 kg',
         color: [ColorEnum.bugColor],
         img: '../../assets/images/Beedrill.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Beedrill.ogg',
         description: 'It has 3 poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -214,7 +214,7 @@ export class AllPokemonService {
         weight: '1.8 kg',
         color: [ColorEnum.flyingColor],
         img: '../../assets/images/Pidgey.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Pidgey.ogg',
         description: 'Very docile. If attacked, it will often kick up sand to protect itself rather than fight back. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -227,7 +227,7 @@ export class AllPokemonService {
         weight: '30.0 kg',
         color: [ColorEnum.flyingColor],
         img: '../../assets/images/Pidgeotto.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Pidgeotto.ogg',
         description: 'This Pokémon is full of vitality. It constantly flies around its large territory in search of prey. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -239,7 +239,7 @@ export class AllPokemonService {
         weight: '39.5 kg',
         color: [ColorEnum.flyingColor],
         img: '../../assets/images/Pidgeot.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Pidgeot.ogg',
         description: 'This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -252,7 +252,7 @@ export class AllPokemonService {
         weight: '3.5 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Rattata.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Rattata.ogg',
         description: 'Will chew on anything with its fangs. If you see one, it is certain that 40 more live in the area. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -264,7 +264,7 @@ export class AllPokemonService {
         weight: '18.5 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Raticate.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Raticate.ogg',
         description: 'Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -277,7 +277,7 @@ export class AllPokemonService {
         weight: '2.0 kg',
         color: [ColorEnum.normalColor, ColorEnum.flyingColor],
         img: '../../assets/images/Spearow.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Spearow.ogg',
         description: 'Inept at flying high. However, it can fly around very fast to protect its territory. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -289,7 +289,7 @@ export class AllPokemonService {
         weight: '38.0 kg',
         color: [ColorEnum.normalColor, ColorEnum.flyingColor],
         img: '../../assets/images/Fearow.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Fearow.ogg',
         description: 'A Pokémon that dates back many years. If it senses danger, it flies high and away, instantly. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -302,7 +302,7 @@ export class AllPokemonService {
         weight: '6.9 kg',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Ekans.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Ekans.ogg',
         description: 'The older it gets, the longer it grows. At night, it wraps its long body around tree branches to rest. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -314,7 +314,7 @@ export class AllPokemonService {
         weight: '65.0 kg',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Arbok.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Arbok.ogg',
         description: 'The frightening patterns on its belly have been studied. Six variations have been confirmed. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -327,7 +327,7 @@ export class AllPokemonService {
         weight: '6.0 kg',
         color: [ColorEnum.electricColor],
         img: '../../assets/images/Pikachu.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Pikachu.ogg',
         description: 'It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -339,7 +339,7 @@ export class AllPokemonService {
         weight: '30.0 kg',
         color: [ColorEnum.electricColor],
         img: '../../assets/images/Raichu.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Raichu.ogg',
         description: 'When electricity builds up inside its body, it becomes feisty. It also glows in the dark. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -352,7 +352,7 @@ export class AllPokemonService {
         weight: '12.0 kg ',
         color: [ColorEnum.groundColor],
         img: '../../assets/images/Sandshrew.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Sandshrew.ogg',
         description: 'Its body is dry. When it gets cold at night, its hide is said to become coated with a fine dew. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -364,7 +364,7 @@ export class AllPokemonService {
         weight: '29.5 kg ',
         color: [ColorEnum.groundColor],
         img: '../../assets/images/Sandslash.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Sandslash.ogg',
         description: 'It is skilled at slashing enemies with its claws. If broken, they start to grow back in a day. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -377,7 +377,7 @@ export class AllPokemonService {
         weight: '7.0 kg',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Nidoran♀.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Nidoran.ogg',
         description: 'A mild-mannered Pokémon that does not like to fight. Beware, its small horns secrete venom. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -390,7 +390,7 @@ export class AllPokemonService {
         weight: '6.9 kg',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Nidorina.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Nidorina.ogg',
         description: 'When resting deep in its burrow, its thorns always retract. This is proof that it is relaxed. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -402,7 +402,7 @@ export class AllPokemonService {
         weight: '60.0 kg',
         color: [ColorEnum.poisonColor, ColorEnum.groundColor],
         img: '../../assets/images/Nidoqueen.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Nidoqueen.ogg',
         description: 'Tough scales cover the sturdy body of this Pokémon. It appears that the scales grow in cycles. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -415,7 +415,7 @@ export class AllPokemonService {
         weight: '9.0 kg',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Nidoran♂.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Nidoran.ogg',
         description: 'Its large ears are always kept upright. If it senses danger, it will attack with a poisonous sting. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -428,19 +428,19 @@ export class AllPokemonService {
         weight: '19.5 kg',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Nidorino.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Nidorino.ogg',
         description: 'Its horns contain venom. If they are stabbed into an enemy, the impact makes the poison leak out. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
       {
         id: 34,
         name: 'Nidoking',
-        types: [TypesEnum.poison, TypesEnum.poison],
+        types: [TypesEnum.poison, TypesEnum.ground],
         height: '1.4 m',
         weight: '62.0 kg',
         color: [ColorEnum.poisonColor, ColorEnum.groundColor],
         img: '../../assets/images/Nidoking.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Nidoking.ogg',
         description: 'Its steel-like hide adds to its powerful tackle. Its horns are so hard, they can pierce a diamond. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -453,7 +453,7 @@ export class AllPokemonService {
         weight: '7.5 kg ',
         color: [ColorEnum.fairyColor],
         img: '../../assets/images/Clefairy.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Clefairy.ogg',
         description: 'Adored for their cute looks and playfulness. They are thought to be rare, as they do not appear often. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -465,7 +465,7 @@ export class AllPokemonService {
         weight: '40.0 kg ',
         color: [ColorEnum.fairyColor],
         img: '../../assets/images/Clefable.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Clefable.ogg',
         description: 'They appear to be very protective of their own world. It is a kind of fairy, rarely seen by people. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -478,7 +478,7 @@ export class AllPokemonService {
         weight: '9.9 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Vulpix.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Vulpix.ogg',
         description: 'Both its fur and its tails are beautiful. As it grows, the tails split and form more tails. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -490,7 +490,7 @@ export class AllPokemonService {
         weight: '19.9 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Ninetales.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Ninetales.ogg',
         description: 'According to an enduring legend, 9 noble saints were united and reincarnated as this Pokémon. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -503,19 +503,19 @@ export class AllPokemonService {
         weight: '5.5 kg',
         color: [ColorEnum.normalColor, ColorEnum.fairyColor],
         img: '../../assets/images/Jigglypuff.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Jigglypuff.ogg',
         description: 'Uses its alluring eyes to enrapture its foe. It then sings a pleasing melody that lulls the foe to sleep. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
       {
         id: 40,
-        name: 'Wigglypuff',
+        name: 'Wigglytuff',
         types: [TypesEnum.normal, TypesEnum.fairy],
         height: '1.0 m',
         weight: '12.0 kg',
         color: [ColorEnum.normalColor, ColorEnum.fairyColor],
-        img: '../../assets/images/Wigglypuff.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        img: '../../assets/images/Wigglytuff.png',
+        audio: '../../assets/audio/Wigglytuff.ogg',
         description: 'Its body is full of elasticity. By inhaling deeply, it can continue to inflate itself without limit. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -528,7 +528,7 @@ export class AllPokemonService {
         weight: '7.5 kg',
         color: [ColorEnum.poisonColor, ColorEnum.flyingColor],
         img: '../../assets/images/Zubat.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Zubat.ogg',
         description: 'Emits ultrasonic cries while it flies. They act as a sonar used to check for objects in its way. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -540,7 +540,7 @@ export class AllPokemonService {
         weight: '55.0 kg',
         color: [ColorEnum.poisonColor, ColorEnum.flyingColor],
         img: '../../assets/images/Golbat.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Golbat.ogg',
         description: 'It attacks in a stealthy manner, without warning. Its sharp fangs are used to bite and suck blood. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -553,7 +553,7 @@ export class AllPokemonService {
         weight: '5.4 kg ',
         color: [ColorEnum.grassColor, ColorEnum.poisonColor],
         img: '../../assets/images/Oddish.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Oddish.ogg',
         description: 'It may be mistaken for a clump of weeds. If you try to yank it out of the ground, it shrieks horribly. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -566,7 +566,7 @@ export class AllPokemonService {
         weight: '8.6 kg ',
         color: [ColorEnum.grassColor, ColorEnum.poisonColor],
         img: '../../assets/images/Gloom.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Gloom.ogg',
         description: 'Smells incredibly foul! However, around 1 out of 1,000 people enjoy sniffing its nose-bending stink. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -578,7 +578,7 @@ export class AllPokemonService {
         weight: '18.6 kg',
         color: [ColorEnum.grassColor, ColorEnum.poisonColor],
         img: '../../assets/images/Vileplume.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Vileplume.ogg',
         description: 'Flaps its broad flower petals to scatter its poisonous pollen. The flapping sound is very loud. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -591,7 +591,7 @@ export class AllPokemonService {
         weight: '5.4 kg',
         color: [ColorEnum.bugColor, ColorEnum.grassColor],
         img: '../../assets/images/Paras.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Paras.ogg',
         description: 'Burrows under the ground to gnaw on tree roots. The mushrooms on its back absorb most of the nutrition. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -603,7 +603,7 @@ export class AllPokemonService {
         weight: '29.5 kg',
         color: [ColorEnum.bugColor, ColorEnum.grassColor],
         img: '../../assets/images/Parasect.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Parasect.ogg',
         description: 'The bug host is drained of energy by the mushrooms on its back. They appear to do all the thinking. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -616,7 +616,7 @@ export class AllPokemonService {
         weight: '30.0 kg',
         color: [ColorEnum.bugColor, ColorEnum.poisonColor],
         img: '../../assets/images/Venonat.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Venonat.ogg',
         description: 'Its large eyes act as radars. In a bright place, you can see that they are clusters of many tiny eyes. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -628,7 +628,7 @@ export class AllPokemonService {
         weight: '12.5 kg',
         color: [ColorEnum.bugColor, ColorEnum.poisonColor],
         img: '../../assets/images/Venomoth.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Venomoth.ogg',
         description: 'The powdery scales on its wings are hard to remove. They also contain poison that leaks out on contact. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -641,7 +641,7 @@ export class AllPokemonService {
         weight: '0.8 kg ',
         color: [ColorEnum.groundColor],
         img: '../../assets/images/Diglett.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Diglett.ogg',
         description: 'It prefers dark places. It spends most of its time underground, though it may pop up in caves. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -653,7 +653,7 @@ export class AllPokemonService {
         weight: '33.3 kg ',
         color: [ColorEnum.groundColor],
         img: '../../assets/images/Dugtrio.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Dugtrio.ogg',
         description: 'A team of triplets that can burrow over 60 MPH. Due to this, some people think it\'s an earthquake. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -666,7 +666,7 @@ export class AllPokemonService {
         weight: '4.2 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Meowth.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Meowth.ogg',
         description: 'Appears to be more active at night. It loves round and shiny things. It can\'t stop from picking them up. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -678,7 +678,7 @@ export class AllPokemonService {
         weight: '32.0 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Persian.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Persian.ogg',
         description: 'The gem in its forehead glows on its own! It walks with all the grace and elegance of a proud queen. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -691,7 +691,7 @@ export class AllPokemonService {
         weight: '19.6 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Psyduck.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Psyduck.ogg',
         description: 'Always tormented by headaches. It uses psychic powers, but it is not known if it intends to do so. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -703,7 +703,7 @@ export class AllPokemonService {
         weight: '76.6 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Golduck.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Golduck.ogg',
         description: 'Its slim and long limbs end in broad flippers. They are used for swimming gracefully in lakes. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -716,7 +716,7 @@ export class AllPokemonService {
         weight: '28.0 kg',
         color: [ColorEnum.fightingColor],
         img: '../../assets/images/Mankey.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Mankey.ogg',
         description: 'An agile Pokémon that lives in trees. It angers easily and will not hesitate to attack anything. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -728,7 +728,7 @@ export class AllPokemonService {
         weight: '32.0 kg',
         color: [ColorEnum.fightingColor],
         img: '../../assets/images/Primeape.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Primeape.ogg',
         description: 'It stops being angry only when nobody else is around. To view this moment is very difficult. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -741,7 +741,7 @@ export class AllPokemonService {
         weight: '19.0 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Growlithe.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Growlithe.ogg',
         description: 'A Pokémon with a friendly nature. However, it will bark fiercely at anything invading its territory. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -753,7 +753,7 @@ export class AllPokemonService {
         weight: '155.0 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Arcanine.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Arcanine.ogg',
         description: 'A legendary Pokémon in China. Many people are charmed by its grace and beauty while running. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -766,7 +766,7 @@ export class AllPokemonService {
         weight: '12.4 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Poliwag.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Poliwag.ogg',
         description: 'The direction of the spiral on the belly differs by area. It is more adept at swimming than walking. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -780,7 +780,7 @@ export class AllPokemonService {
         weight: '20.0 kg ',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Poliwhirl.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Poliwhirl.ogg',
         description: 'Under attack, it uses its belly spiral to put the foe to sleep. It then makes its escape. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -792,7 +792,7 @@ export class AllPokemonService {
         weight: '54.0 kg ',
         color: [ColorEnum.waterColor, ColorEnum.fightingColor],
         img: '../../assets/images/Poliwrath.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Poliwrath.ogg',
         description: 'Swims powerfully using all the muscles in its body. It can even overtake champion swimmers. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -805,7 +805,7 @@ export class AllPokemonService {
         weight: '19.5 kg',
         color: [ColorEnum.psychicColor],
         img: '../../assets/images/Abra.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Abra.ogg',
         description: 'Sleeps 18 hours a day. If it senses danger, it will teleport itself to safety even as it sleeps. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -818,7 +818,7 @@ export class AllPokemonService {
         weight: '56.5 kg',
         color: [ColorEnum.psychicColor],
         img: '../../assets/images/Kadabra.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Kadabra.ogg',
         description: 'Many odd things happen if this Pokémon is close by. For example, it makes clocks run backwards. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -830,7 +830,7 @@ export class AllPokemonService {
         weight: '48.0 kg',
         color: [ColorEnum.psychicColor],
         img: '../../assets/images/Alakazam.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Alakazam.ogg',
         description: 'A Pokémon that can memorize anything. It never forgets what it learns—that\'s why this Pokémon is smart. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -843,7 +843,7 @@ export class AllPokemonService {
         weight: '19.5 kg',
         color: [ColorEnum.fightingColor],
         img: '../../assets/images/Machop.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Machop.ogg',
         description: 'Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -856,7 +856,7 @@ export class AllPokemonService {
         weight: '70.5 kg',
         color: [ColorEnum.fightingColor],
         img: '../../assets/images/Machoke.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Machoke.ogg',
         description: 'The belt around its waist holds back its energy. Without it, this Pokémon would be unstoppable. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -868,7 +868,7 @@ export class AllPokemonService {
         weight: '130.0 kg',
         color: [ColorEnum.fightingColor],
         img: '../../assets/images/Machamp.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Machamp.ogg',
         description: 'One arm alone can move mountains. Using all four arms, this Pokémon fires off awesome punches. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -881,7 +881,7 @@ export class AllPokemonService {
         weight: '4.0 kg',
         color: [ColorEnum.grassColor, ColorEnum.poisonColor],
         img: '../../assets/images/Bellsprout.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Bellsprout.ogg',
         description: 'Prefers hot and humid places. It ensnares tiny insects with its vines and devours them. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -894,7 +894,7 @@ export class AllPokemonService {
         weight: '6.4 kg',
         color: [ColorEnum.grassColor, ColorEnum.poisonColor],
         img: '../../assets/images/Weepinbell.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Weepinbell.ogg',
         description: 'When hungry, it swallows anything that moves. Its hapless prey is melted inside by strong acids. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -906,7 +906,7 @@ export class AllPokemonService {
         weight: '15.5 kg',
         color: [ColorEnum.grassColor, ColorEnum.poisonColor],
         img: '../../assets/images/Victreebel.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Victreebel.ogg',
         description: 'Lures prey with the sweet aroma of honey. Swallowed whole, the prey is melted in a day, bones and all. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -919,7 +919,7 @@ export class AllPokemonService {
         weight: '45.5 kg',
         color: [ColorEnum.waterColor, ColorEnum.poisonColor],
         img: '../../assets/images/Tentacool.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Tentacool.ogg',
         description: 'It can sometimes be found all dry and shriveled up on a beach. Toss it back into the sea to revive it. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -931,7 +931,7 @@ export class AllPokemonService {
         weight: '55.0 kg',
         color: [ColorEnum.waterColor, ColorEnum.poisonColor],
         img: '../../assets/images/Tentacruel.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Tentacruel.ogg',
         description: 'Its 80 tentacles can stretch and contract freely. They wrap around prey and weaken it with poison. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -944,7 +944,7 @@ export class AllPokemonService {
         weight: '20.0 kg',
         color: [ColorEnum.rockColor, ColorEnum.groundColor],
         img: '../../assets/images/Geodude.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Geodude.ogg',
         description: 'Commonly found near mountain trails, etc. If you step on one by accident, it gets angry. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -957,7 +957,7 @@ export class AllPokemonService {
         weight: '105.0 kg',
         color: [ColorEnum.rockColor, ColorEnum.groundColor],
         img: '../../assets/images/Graveler.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Graveler.ogg',
         description: 'Often seen rolling down mountain trails. Obstacles are just things to roll straight over, not avoid. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -969,7 +969,7 @@ export class AllPokemonService {
         weight: '300.0 kg',
         color: [ColorEnum.rockColor, ColorEnum.groundColor],
         img: '../../assets/images/Golem.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Golem.ogg',
         description: 'Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it\'s exposed to air. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -982,7 +982,7 @@ export class AllPokemonService {
         weight: '30.0 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Ponyta.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Ponyta.ogg',
         description: 'Capable of jumping incredibly high. Its hooves and sturdy legs absorb the impact of a hard landing. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -994,7 +994,7 @@ export class AllPokemonService {
         weight: '95.0 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Rapidash.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Rapidash.ogg',
         description: 'Just loves to run. If it sees something faster than itself, it will give chase at top speed. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1007,7 +1007,7 @@ export class AllPokemonService {
         weight: '36.0 kg',
         color: [ColorEnum.waterColor, ColorEnum.psychicColor],
         img: '../../assets/images/Slowpoke.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Slowpoke.ogg',
         description: 'Incredibly slow and sluggish. It is quite content to loll about without worrying about the time. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1019,7 +1019,7 @@ export class AllPokemonService {
         weight: '78.5 kg',
         color: [ColorEnum.waterColor, ColorEnum.psychicColor],
         img: '../../assets/images/Slowbro.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Slowbro.ogg',
         description: 'Lives lazily by the sea. If the Shellder on its tail comes off, it becomes a Slowpoke again. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1032,7 +1032,7 @@ export class AllPokemonService {
         weight: '6.0 kg ',
         color: [ColorEnum.electricColor, ColorEnum.steelColor],
         img: '../../assets/images/Magnemite.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Magnemite.ogg',
         description: 'It is born with the ability to defy gravity. It floats in air on powerful electromagnetic waves. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -1044,7 +1044,7 @@ export class AllPokemonService {
         weight: '60.0 kg ',
         color: [ColorEnum.electricColor, ColorEnum.steelColor],
         img: '../../assets/images/Magneton.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Magneton.ogg',
         description: 'Generates strange radio signals. It raises the temperature by 3.6F degrees within 3,300 feet. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -1056,7 +1056,7 @@ export class AllPokemonService {
         weight: '15.0 kg',
         color: [ColorEnum.normalColor, ColorEnum.flyingColor],
         img: '../../assets/images/Farfetch\'d.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Farfetch\'d.ogg',
         description: 'Lives where reedy plants grow. They are rarely seen, so it\'s thought their numbers are decreasing. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1069,7 +1069,7 @@ export class AllPokemonService {
         weight: '39.2 kg',
         color: [ColorEnum.normalColor, ColorEnum.flyingColor],
         img: '../../assets/images/Doduo.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Doduov.ogg',
         description: 'Its short wings make flying difficult. Instead, this Pokémon runs at high speed on developed legs. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1081,7 +1081,7 @@ export class AllPokemonService {
         weight: '85.2 kg',
         color: [ColorEnum.normalColor, ColorEnum.flyingColor],
         img: '../../assets/images/Dodrio.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Dodrio.ogg',
         description: 'One of Doduo\'s 2 heads splits to form a unique species. It runs close to 40 MPH in prairies. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1094,7 +1094,7 @@ export class AllPokemonService {
         weight: '90.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Seel.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Seel.ogg',
         description: 'Loves freezing cold conditions. Relishes swimming in a frigid climate of around 14F degrees. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1106,7 +1106,7 @@ export class AllPokemonService {
         weight: '120.0 kg',
         color: [ColorEnum.waterColor, ColorEnum.iceColor],
         img: '../../assets/images/Dewgong.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Dewgong.ogg',
         description: 'Its entire body is a snowy-white. Unharmed by even intense cold, it swims powerfully in icy waters. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1119,7 +1119,7 @@ export class AllPokemonService {
         weight: '30.0 kg ',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Grimer.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Grimer.ogg',
         description: 'Made of hardened sludge. It smells too putrid to touch. Even weeds won\'t grow in its path. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -1131,7 +1131,7 @@ export class AllPokemonService {
         weight: '30.0 kg ',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Muk.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Muk.ogg',
         description: 'Smells so awful, it can cause fainting. Through degeneration, it lost its sense of smell. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -1144,7 +1144,7 @@ export class AllPokemonService {
         weight: '4.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Shellder.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Shellder.ogg',
         description: 'The shell can withstand any attack. However, when it is open, the tender body is exposed. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1156,7 +1156,7 @@ export class AllPokemonService {
         weight: '132.5 kg',
         color: [ColorEnum.waterColor, ColorEnum.iceColor],
         img: '../../assets/images/Cloyster.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Cloyster.ogg',
         description: 'For protection, it uses its harder-than-diamonds shell. It also shoots spikes from the shell. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1169,7 +1169,7 @@ export class AllPokemonService {
         weight: '0.1 kg',
         color: [ColorEnum.ghostColor, ColorEnum.poisonColor],
         img: '../../assets/images/Gastly.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Gastly.ogg',
         description: 'Said to appear in decrepit, deserted buildings. It has no real shape as it appears to be made of a gas. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1182,7 +1182,7 @@ export class AllPokemonService {
         weight: '0.1 kg',
         color: [ColorEnum.ghostColor, ColorEnum.poisonColor],
         img: '../../assets/images/Haunter.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Haunter.ogg',
         description: 'By licking, it saps the victim\'s life. It causes shaking that won\'t stop until the victim\'s demise. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1194,7 +1194,7 @@ export class AllPokemonService {
         weight: '40.5 kg',
         color: [ColorEnum.ghostColor, ColorEnum.poisonColor],
         img: '../../assets/images/Gengar.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Gengar.ogg',
         description: 'A Gengar is close by if you feel a sudden chill. It may be trying to lay a curse on you. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1206,7 +1206,7 @@ export class AllPokemonService {
         weight: '210.0 kg ',
         color: [ColorEnum.rockColor],
         img: '../../assets/images/Onix.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Onix.ogg',
         description: 'Burrows at high speed in search of food. The tunnels it leaves are used as homes by Diglett. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -1219,7 +1219,7 @@ export class AllPokemonService {
         weight: '32.4 kg ',
         color: [ColorEnum.psychicColor],
         img: '../../assets/images/Drowzee.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Drowzee.ogg',
         description: 'If you sleep by it all the time, it will sometimes show you dreams it has eaten in the past. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -1231,7 +1231,7 @@ export class AllPokemonService {
         weight: '75.6 kg',
         color: [ColorEnum.psychicColor],
         img: '../../assets/images/Hypno.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Hypno.ogg',
         description: 'Avoid eye contact if you come across one. It will try to put you to sleep by using its pendulum. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1244,7 +1244,7 @@ export class AllPokemonService {
         weight: '6.5 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Krabby.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Krabby.ogg',
         description: 'Its pincers are superb weapons. They sometimes break off during battle, but they grow back fast. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1256,7 +1256,7 @@ export class AllPokemonService {
         weight: '60.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Kingler.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Kingler.ogg',
         description: 'One claw grew massively and as hard as steel. It has 10,000-HP strength. However, it is too heavy. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1269,7 +1269,7 @@ export class AllPokemonService {
         weight: '10.4 kg',
         color: [ColorEnum.electricColor],
         img: '../../assets/images/Voltorb.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Voltorb.ogg',
         description: 'It is said to camouflage itself as a Poké Ball. It will self-destruct with very little stimulus. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1281,7 +1281,7 @@ export class AllPokemonService {
         weight: '66.6 kg',
         color: [ColorEnum.electricColor],
         img: '../../assets/images/Electrode.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Electrode.ogg',
         description: 'Stores electrical energy inside its body. Even the slightest shock could trigger a huge explosion. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1295,19 +1295,19 @@ export class AllPokemonService {
         weight: '2.5 kg ',
         color: [ColorEnum.grassColor, ColorEnum.psychicColor],
         img: '../../assets/images/Exeggcute.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Exeggcute.ogg',
         description: 'The heads attract each other and spin around. There must be 6 heads for it to maintain balance. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
       {
         id: 103,
-        name: 'Exeggcutor',
+        name: 'Exeggutor',
         types: [TypesEnum.grass, TypesEnum.psychic],
         height: '2.0 m',
         weight: '120.0 kg ',
         color: [ColorEnum.grassColor, ColorEnum.psychicColor],
-        img: '../../assets/images/Exeggcutor.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        img: '../../assets/images/Exeggutor.png',
+        audio: '../../assets/audio/Exeggutor.ogg',
         description: 'Its cries are very noisy. This is because each of the three heads thinks about whatever it likes. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1320,7 +1320,7 @@ export class AllPokemonService {
         weight: '6.5 kg',
         color: [ColorEnum.groundColor],
         img: '../../assets/images/Cubone.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Cubone.ogg',
         description: 'Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1332,7 +1332,7 @@ export class AllPokemonService {
         weight: '45.0 kg',
         color: [ColorEnum.groundColor],
         img: '../../assets/images/Marowak.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Marowak.ogg',
         description: 'Small and weak, this Pokémon is adept with its Bone Club. It has grown more vicious over the ages. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1344,7 +1344,7 @@ export class AllPokemonService {
         weight: '49.8 kg',
         color: [ColorEnum.fightingColor],
         img: '../../assets/images/Hitmonlee.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Hitmonlee.ogg',
         description: 'When kicking, the sole of its foot turns as hard as a diamond on impact and destroys its enemy. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1356,7 +1356,7 @@ export class AllPokemonService {
         weight: '50.2 kg',
         color: [ColorEnum.fightingColor],
         img: '../../assets/images/Hitmonchan.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Hitmonchan.ogg',
         description: 'Punches in corkscrew fashion. It can punch its way through a concrete wall in the same way as a drill. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1368,7 +1368,7 @@ export class AllPokemonService {
         weight: '65.5 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Lickitung.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Lickitung.ogg',
         description: 'Its tongue spans almost 7 feet and moves more freely than its forelegs. Its licks can cause paralysis. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1381,7 +1381,7 @@ export class AllPokemonService {
         weight: '1.0 kg ',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Koffing.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Koffing.ogg',
         description: 'In hot places, its internal gases could expand and explode without any warning. Be very careful! ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -1393,7 +1393,7 @@ export class AllPokemonService {
         weight: '9.5 kg ',
         color: [ColorEnum.poisonColor],
         img: '../../assets/images/Weezing.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Weezing.ogg',
         description: 'It lives and grows by absorbing dust, germs, and poison gases that are contained in toxic waste and garbage. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -1406,7 +1406,7 @@ export class AllPokemonService {
         weight: '115.0 kg',
         color: [ColorEnum.groundColor, ColorEnum.rockColor],
         img: '../../assets/images/Rhyhorn.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Rhyhorn.ogg',
         description: 'A Pokémon with a one-track mind. Once it charges, it won\'t stop running until it falls asleep. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1418,7 +1418,7 @@ export class AllPokemonService {
         weight: '120.0 kg',
         color: [ColorEnum.groundColor, ColorEnum.rockColor],
         img: '../../assets/images/Rhydon.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Rhydon.ogg',
         description: 'Walks on its hind legs. Shows signs of intelligence. Its armor-like hide even repels molten lava. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1430,7 +1430,7 @@ export class AllPokemonService {
         weight: '34.6 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Chansey.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Chansey.ogg',
         description: 'A gentle and kind-hearted Pokémon that shares its nutritious eggs if it sees an injured Pokémon. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1442,7 +1442,7 @@ export class AllPokemonService {
         weight: '35.0 kg',
         color: [ColorEnum.grassColor],
         img: '../../assets/images/Tangela.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Tangela.ogg',
         description: 'Its identity is obscured by masses of thick, blue vines. The vines are said to never stop growing. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1454,7 +1454,7 @@ export class AllPokemonService {
         weight: '80.0 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Kangaskhan.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Kangaskhan.ogg',
         description: 'Raises its young in its belly pouch. Won\'t run from any fight to keep its young protected. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1467,7 +1467,7 @@ export class AllPokemonService {
         weight: '8.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Horsea.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Horsea.ogg',
         description: 'If it senses any danger, it will vigorously spray water or a special type of ink from its mouth.  ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1480,7 +1480,7 @@ export class AllPokemonService {
         weight: '15.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Seadra.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Seadra.ogg',
         description: 'Touching the back fin causes numbness. It hooks its tail to coral to stay in place while sleeping. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1493,7 +1493,7 @@ export class AllPokemonService {
         weight: '15.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Goldeen.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Goldeen.ogg',
         description: 'When it is time for them to lay eggs, they can be seen swimming up rivers and falls in large groups. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1505,7 +1505,7 @@ export class AllPokemonService {
         weight: '39.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Seaking.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Seaking.ogg',
         description: 'It is the male\'s job to make a nest by carving out boulders in a stream using the horn on its head. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1518,7 +1518,7 @@ export class AllPokemonService {
         weight: '34.5 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Staryu.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Staryu.ogg',
         description: 'As long as the center section is unharmed, it can grow back fully even if it is chopped to bits. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1530,7 +1530,7 @@ export class AllPokemonService {
         weight: '80.0 kg',
         color: [ColorEnum.waterColor, ColorEnum.psychicColor],
         img: '../../assets/images/Starmie.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Starmie.ogg',
         description: 'The center section is named the core. People think it is communicating when it glows in 7 colors. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1542,7 +1542,7 @@ export class AllPokemonService {
         weight: '54.5 kg',
         color: [ColorEnum.psychicColor, ColorEnum.fairyColor],
         img: '../../assets/images/MrMime.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/MrMime.ogg',
         description: 'Always practices its pantomime act. It makes enemies believe something exists that really doesn\'t. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1554,7 +1554,7 @@ export class AllPokemonService {
         weight: '56.0 kg',
         color: [ColorEnum.bugColor, ColorEnum.flyingColor],
         img: '../../assets/images/Scyther.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Scyther.ogg',
         description: 'Leaps out of tall grass and slices prey with its scythes. The movement looks like that of a ninja. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1566,7 +1566,7 @@ export class AllPokemonService {
         weight: '40.6 kg',
         color: [ColorEnum.iceColor, ColorEnum.psychicColor],
         img: '../../assets/images/Jynx.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Jynx.ogg',
         description: 'Appears to move to a rhythm of its own, as if it were dancing. It wiggles its hips as it walks. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1578,7 +1578,7 @@ export class AllPokemonService {
         weight: '30.0 kg',
         color: [ColorEnum.electricColor],
         img: '../../assets/images/Electabuzz.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Electabuzz.ogg',
         description: 'If a major power outage occurs, it is certain that this Pokémon has eaten electricity at a power plant. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1590,7 +1590,7 @@ export class AllPokemonService {
         weight: '44.5 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Magmar.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Magmar.ogg',
         description: 'Born in an active volcano. Its body is always cloaked in flames, so it looks like a big ball of fire. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1602,7 +1602,7 @@ export class AllPokemonService {
         weight: '55.0 kg',
         color: [ColorEnum.bugColor],
         img: '../../assets/images/Pinsir.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Pinsir.ogg',
         description: 'Grips its prey in its pincers and squeezes hard! It can\'t move if it\'s cold, so it lives in warm places. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1614,7 +1614,7 @@ export class AllPokemonService {
         weight: '88.4 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Tauros.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Tauros.ogg',
         description: 'A rowdy Pokémon with a lot of stamina. Once running, it won\'t stop until it hits something. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1627,7 +1627,7 @@ export class AllPokemonService {
         weight: '10.0 kg ',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Magikarp.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Magikarp.ogg',
         description: 'Famous for being very unreliable. It can be found swimming in seas, lakes, rivers and shallow puddles. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -1639,7 +1639,7 @@ export class AllPokemonService {
         weight: '235.0 kg ',
         color: [ColorEnum.waterColor, ColorEnum.flyingColor],
         img: '../../assets/images/Gyarados.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Gyarados.ogg',
         description: 'Brutally vicious and enormously destructive. Known for totally destroying cities in ancient times. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -1651,7 +1651,7 @@ export class AllPokemonService {
         weight: '220.0 kg',
         color: [ColorEnum.waterColor, ColorEnum.iceColor],
         img: '../../assets/images/Lapras.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Lapras.ogg',
         description: 'A gentle soul that can read the minds of people. It can ferry people across the sea on its back. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1663,7 +1663,7 @@ export class AllPokemonService {
         weight: '4.0 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Ditto.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Ditto.ogg',
         description: 'When it spots an enemy, its body transforms into an almost perfect copy of its opponent. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1676,7 +1676,7 @@ export class AllPokemonService {
         weight: '6.5 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Eevee.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Eevee.ogg',
         description: 'Its genetic code is unstable, so it could evolve in a variety of ways. There are only a few alive. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1688,7 +1688,7 @@ export class AllPokemonService {
         weight: '29.0 kg',
         color: [ColorEnum.waterColor],
         img: '../../assets/images/Vaporeon.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Vaporeon.ogg',
         description: 'Its cell structure is similar to water molecules. It will melt away and become invisible in water. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1700,7 +1700,7 @@ export class AllPokemonService {
         weight: '24.5 kg',
         color: [ColorEnum.electricColor],
         img: '../../assets/images/Jolteon.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Jolteon.ogg',
         description: 'A sensitive Pokémon that easily becomes sad or angry. Every time its mood changes, it charges power. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1712,7 +1712,7 @@ export class AllPokemonService {
         weight: '25.0 kg',
         color: [ColorEnum.fireColor],
         img: '../../assets/images/Flareon.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Flareon.ogg',
         description: 'It has a flame chamber inside its body. It inhales, then blows out fire that is over 3,000F degrees. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1725,7 +1725,7 @@ export class AllPokemonService {
         weight: '36.5 kg ',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Porygon.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Porygon.ogg',
         description: 'The only Pokémon people anticipate can fly into space. None has managed the feat yet, however. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -1738,7 +1738,7 @@ export class AllPokemonService {
         weight: '7.5 kg ',
         color: [ColorEnum.rockColor, ColorEnum.waterColor],
         img: '../../assets/images/Omanyte.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Omanyte.ogg',
         description: 'An ancient Pokémon that was recovered from a fossil. It swims by cleverly twisting its 10 tentacles about. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -1750,7 +1750,7 @@ export class AllPokemonService {
         weight: '35.0 kg ',
         color: [ColorEnum.rockColor, ColorEnum.waterColor],
         img: '../../assets/images/Omastar.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Omastar.ogg',
         description: 'Sharp beaks ring its mouth. Its shell was too big for it to move freely, so it became extinct. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1762,7 +1762,7 @@ export class AllPokemonService {
         weight: '11.5 kg ',
         color: [ColorEnum.rockColor, ColorEnum.waterColor],
         img: '../../assets/images/Kabuto.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Kabuto.ogg',
         description: 'A Pokémon that was recovered from a fossil. It uses the eyes on its back while hiding on the sea floor. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1774,7 +1774,7 @@ export class AllPokemonService {
         weight: '40.5 kg ',
         color: [ColorEnum.rockColor, ColorEnum.waterColor],
         img: '../../assets/images/Kabutops.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Kabutops.ogg',
         description: 'A slim and fast swimmer. It slices its prey with its sharp sickles and drinks the body fluids. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1786,7 +1786,7 @@ export class AllPokemonService {
         weight: '59.0 kg ',
         color: [ColorEnum.rockColor, ColorEnum.flyingColor],
         img: '../../assets/images/Aerodactyl.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Aerodactyl.ogg',
         description: 'A savage Pokémon that died out in ancient times. It was resurrected using DNA taken from amber. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1798,7 +1798,7 @@ export class AllPokemonService {
         weight: '460.0 kg',
         color: [ColorEnum.normalColor],
         img: '../../assets/images/Snorlax.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Snorlax.ogg',
         description: 'Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1810,7 +1810,7 @@ export class AllPokemonService {
         weight: '55.4 kg ',
         color: [ColorEnum.iceColor, ColorEnum.flyingColor],
         img: '../../assets/images/Articuno.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Articuno.ogg',
         description: 'A legendary bird Pokémon. It freezes water that is contained in winter air and makes it snow. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
@@ -1822,7 +1822,7 @@ export class AllPokemonService {
         weight: '52.6 kg ',
         color: [ColorEnum.electricColor, ColorEnum.flyingColor],
         img: '../../assets/images/Zapdos.png',
-        audio: 'https://www.pokepedia.fr/images/6/6f/Cri_4_d_008.ogg',
+        audio: '../../assets/audio/Zapdos.ogg',
         description: 'This legendary bird Pokémon is said to appear when the sky turns dark and lightning showers down. ',
         attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
       },
@@ -1834,7 +1834,7 @@ export class AllPokemonService {
         weight: '60.0 kg',
         color: [ColorEnum.fireColor, ColorEnum.flyingColor],
         img: '../../assets/images/Moltres.png',
-        audio: 'https://www.pokepedia.fr/images/f/f9/Cri_4_d_017.ogg',
+        audio: '../../assets/audio/Moltres.ogg',
         description: 'A legendary bird Pokémon. As it flaps its blazing wings, even the night sky will turn red. ',
         attacks: ['Tackle', 'String Shot']
       },
@@ -1847,7 +1847,7 @@ export class AllPokemonService {
         weight: '3.3 kg',
         color: [ColorEnum.dragonColor],
         img: '../../assets/images/Dratini.png',
-        audio: 'https://www.pokepedia.fr/images/4/4c/Cri_4_d_010.ogg',
+        audio: '../../assets/audio/Dratini.ogg',
         description: 'The existence of this mythical Pokémon was only recently confirmed by a fisherman who caught one. ',
         attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
       },
@@ -1860,7 +1860,7 @@ export class AllPokemonService {
         weight: '30.0 kg',
         color: [ColorEnum.dragonColor],
         img: '../../assets/images/Dragonair.png',
-        audio: 'https://www.pokepedia.fr/images/9/97/Cri_6_x_001.ogg',
+        audio: '../../assets/audio/Dragonair.ogg',
         description: 'According to a witness, its body was surrounded by a strange aura that gave it a mystical look. ',
         attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
       },
@@ -1872,7 +1872,7 @@ export class AllPokemonService {
         weight: '210 kg',
         color: [ColorEnum.dragonColor, ColorEnum.flyingColor],
         img: '../../assets/images/Dragonite.png',
-        audio: 'https://www.pokepedia.fr/images/e/ec/Cri_4_d_025.ogg',
+        audio: '../../assets/audio/Dragonite.ogg',
         description: 'It is said that this Pokémon lives somewhere in the sea and that it flies. However, it is only a rumor. ',
         attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
       },
@@ -1884,7 +1884,7 @@ export class AllPokemonService {
         weight: '122 kg',
         color: [ColorEnum.psychicColor],
         img: '../../assets/images/Mewtwo.png',
-        audio: 'https://www.pokepedia.fr/images/c/cf/Cri_4_d_004.ogg',
+        audio: '../../assets/audio/Mewtwo.ogg',
         description: 'Its DNA is almost the same as Mew\'s. However, its size and disposition are vastly different. ',
         attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
       },
@@ -1896,7 +1896,7 @@ export class AllPokemonService {
         weight: '4.0 kg ',
         color: [ColorEnum.psychicColor],
         img: '../../assets/images/Mew.png',
-        audio: 'https://www.pokepedia.fr/images/f/f4/Cri_4_d_007.ogg',
+        audio: '../../assets/audio/Mew.ogg',
         description: 'When viewed through a microscope, this Pokémon\'s short, fine, delicate hair can be seen. ',
         attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
       },
