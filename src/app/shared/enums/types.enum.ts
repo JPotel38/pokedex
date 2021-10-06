@@ -1,4 +1,4 @@
-export enum Types {
+export enum TypesEnum {
   fire = 'fire',
   grass = 'grass',
   water = 'water',

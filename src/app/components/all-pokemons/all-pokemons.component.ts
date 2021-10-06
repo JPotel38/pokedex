@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Pokemon} from '../../shared/interfaces/pokemon';
 import {Router} from '@angular/router';
-import {AllPokemonsService} from '../../shared/services/all-pokemons.service';
+import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -14,7 +14,7 @@ export class AllPokemonsComponent implements OnInit {
   pokemon: Observable<any>;
 
   constructor(
-    public readonly allPokemon: AllPokemonsService,
+    public readonly allPokemon: AllPokemonService,
     public readonly router: Router
   ) {
   }

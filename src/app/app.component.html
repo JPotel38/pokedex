@@ -1,3 +1,12 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+    <ion-title>Pokedex</ion-title>
+    <select (change)="selectedLang($event)">
+      <option *ngFor="let lang of langSelect"
+              [value]="lang"> {{ lang }}</option>
+    </select>
+  </ion-header>
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
 </ion-app>

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Pokemon} from '../../shared/interfaces/pokemon';
-import {AllPokemonsService} from '../../shared/services/all-pokemons.service';
+import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 import {AlertController} from '@ionic/angular';
 
 @Component({
@@ -18,7 +18,7 @@ export class PokemonDetailsPage implements OnInit {
 
   constructor(
     public readonly activatedRoute: ActivatedRoute,
-    public readonly allPokemonsService: AllPokemonsService,
+    public readonly allPokemonService: AllPokemonService,
     public alertController: AlertController,
     public readonly router: Router
   ) {
@@ -27,8 +27,7 @@ export class PokemonDetailsPage implements OnInit {
 
 
   ngOnInit() {
-    this.pokemon = this.allPokemonsService.getDetailsPokemon(this.pokemonId);
-    this.playAudio();
+    this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
   }
 
   async presentAlertMultipleButtons() {

@@ -1,4 +1,4 @@
-export enum Color {
+export enum ColorEnum {
   fireColor = 'rgb(247, 82, 49)',
   grassColor = 'rgb(123, 206, 82)',
   waterColor = 'rgb(57, 156, 255)',

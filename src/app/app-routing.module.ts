@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.component';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
   {
     path: 'pokemon-details/:id',
     loadChildren: () => import('./components/pokemon-details/pokemon-details.module').then(m => m.PokemonDetailsPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    component: AllPokemonsComponent
   },
+  {
+    path: '**',
+    component: AllPokemonsComponent
+  }
 ];
 
 @NgModule({

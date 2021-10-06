@@ -9,11 +9,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.component';
 
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http);
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AllPokemonsComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -26,7 +27,8 @@ export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
         useFactory: httpLoaderFactory,
         deps: [HttpClient]
       }
-    })],
+    })
+  ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
 })

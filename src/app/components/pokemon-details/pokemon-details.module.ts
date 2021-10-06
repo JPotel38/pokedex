@@ -15,7 +15,7 @@ import {TranslateModule} from '@ngx-translate/core';
     FormsModule,
     IonicModule,
     PokemonDetailsPageRoutingModule,
-    TranslateModule
+    TranslateModule,
   ],
   declarations: [PokemonDetailsPage]
 })
