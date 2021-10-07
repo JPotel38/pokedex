@@ -1,8 +1,8 @@
 {
-  "name": "Pokedex",
+  "name": "pokedex",
   "version": "1",
   "author": "Jérémy Potel",
-  "homepage": "https://jpotel38.github.io/pokedex/",
+  "homepage": "http://jpotel38.github.io/pokedex/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
