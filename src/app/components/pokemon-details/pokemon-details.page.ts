@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Pokemon} from '../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
-import {AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-pokemon-details',
@@ -19,25 +18,14 @@ export class PokemonDetailsPage implements OnInit {
   constructor(
     public readonly activatedRoute: ActivatedRoute,
     public readonly allPokemonService: AllPokemonService,
-    public alertController: AlertController,
     public readonly router: Router
   ) {
-    this.pokemonId = this.activatedRoute.snapshot.params.id;
+    this.pokemonId = parseInt(this.activatedRoute.snapshot.params.id, 10);
   }
 
 
   ngOnInit() {
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
-  }
-
-  async presentAlertMultipleButtons() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      message: this.pokemon.name + ' is evolving!',
-      buttons: ['Cancel', 'Open Modal', 'Delete']
-    });
-
-    await alert.present();
   }
 
   playAudio() {
@@ -61,11 +49,17 @@ export class PokemonDetailsPage implements OnInit {
 
   previousPokemon() {
     this.pokemonId--;
-    this.router.navigate([`pokemon-details/${this.pokemonId}`]);
+    this.router.navigate([`pokemon-details/${this.pokemonId.toString()}`]);
   }
 
   nextPokemon() {
     this.pokemonId++;
-    this.router.navigate([`pokemon-details/${this.pokemonId}`]);
+    this.router.navigate([`pokemon-details/${this.pokemonId.toString()}`]);
+  }
+
+  useStone(stone) {
+    const evolution = this.pokemonId + this.pokemon.stone.indexOf(stone) + 1;
+    this.router.navigate([`pokemon-details/${evolution.toString()}`]);
+
   }
 }
