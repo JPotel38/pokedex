@@ -1,7 +1,7 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let pokemon of (allPokemon.getAllPokemons() | async)" size="2">
+      <ion-col *ngFor="let pokemon of (allPokemon.getAllPokemons() | async)" sizeXs="11" sizeLg="2">
         <ion-card (click)="goToDetails(pokemon.id)"
                   *ngIf="pokemon.types.length == 1"
                   [style.background-color]="pokemon.color[0]"
