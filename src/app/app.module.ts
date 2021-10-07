@@ -15,7 +15,7 @@ import {LoginPage} from './components/login/login-page.component';
 import {JwtPaginationComponent} from './components/jwt-pagination/jwt-pagination.component';
 import {SigninComponent} from './components/signin/signin.component';
 
-export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', 'json');
+export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './docs/assets/i18n/', 'json');
 
 @NgModule({
   declarations: [AppComponent, AllPokemonsComponent, LoginPage, JwtPaginationComponent, SigninComponent],
