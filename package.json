@@ -1,8 +1,8 @@
 {
-  "name": "pokedex",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "Pokedex",
+  "version": "1",
+  "author": "Jérémy Potel",
+  "homepage": "https://jpotel38.github.io/pokedex/home",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
