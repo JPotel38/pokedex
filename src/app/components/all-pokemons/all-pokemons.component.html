@@ -1,11 +1,12 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let pokemon of (allPokemon.getAllPokemons() | async)" sizeXs="11" sizeLg="2">
+      <ion-col *ngFor="let pokemon of (allPokemon.getAllPokemons() | async)" sizeLg="2" sizeXs="11">
         <ion-card (click)="goToDetails(pokemon.id)"
-                  *ngIf="pokemon.types.length == 1"
-                  [style.background-color]="pokemon.color[0]"
-                  style="cursor: pointer"
+                  [ngStyle]="{'cursor': 'pointer',
+                  'background': pokemon.types.length == 1 ?
+                  pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
+                  }"
         >
           <ion-card-header>
             <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
@@ -15,23 +16,8 @@
             {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}
           </ion-card-content>
           <ion-card-content *ngIf="pokemon.types.length > 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
-          </ion-card-content>
-        </ion-card>
-        <ion-card (click)="goToDetails(pokemon.id)"
-                  *ngIf="pokemon.types.length > 1"
-                  [style.background]="'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'"
-                  style="cursor: pointer"
-        >
-          <ion-card-header>
-            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
-          </ion-card-header>
-          <ion-card-content *ngIf="pokemon.types.length == 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
-            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}
-          </ion-card-content>
-          <ion-card-content *ngIf="pokemon.types.length > 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
+            /{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
           </ion-card-content>
         </ion-card>
       </ion-col>

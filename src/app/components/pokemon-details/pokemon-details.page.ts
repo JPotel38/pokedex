@@ -21,45 +21,45 @@ export class PokemonDetailsPage implements OnInit {
     public readonly router: Router
   ) {
     this.pokemonId = parseInt(this.activatedRoute.snapshot.params.id, 10);
-  }
-
-
-  ngOnInit() {
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
   }
 
-  playAudio() {
+  ngOnInit() {
+  }
+
+  playAudio(): void {
     document.getElementById('img').classList.add('shake');
+    this.shaking();
     const audio = new Audio();
     audio.src = this.pokemon.audio;
     audio.load();
     audio.play();
-    setTimeout(() => {
-      document.getElementById('img').classList.remove('shake');
-    }, 1000);
   }
 
-  goBackToPokedex() {
-    this.router.navigate([`/`]);
+  async shaking(): Promise<void> {
+    return new Promise(_ => {
+      setTimeout(() => {
+        document.getElementById('img').classList.remove('shake');
+      }, 1000);
+    });
   }
 
-  manageLevel(e) {
+  manageLevel(e): void {
     this.level = e.detail.value;
   }
 
-  previousPokemon() {
+  previousPokemon(): void {
     this.pokemonId--;
     this.router.navigate([`pokemon-details/${this.pokemonId.toString()}`]);
   }
 
-  nextPokemon() {
+  nextPokemon(): void {
     this.pokemonId++;
     this.router.navigate([`pokemon-details/${this.pokemonId.toString()}`]);
   }
 
-  useStone(stone) {
+  useStone(stone): void {
     const evolution = this.pokemonId + this.pokemon.stone.indexOf(stone) + 1;
     this.router.navigate([`pokemon-details/${evolution.toString()}`]);
-
   }
 }

@@ -1,6 +1,6 @@
 <ion-app>
   <ion-header>
-    <ion-title>Pokedex</ion-title>
+    <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
     <select (change)="selectedLang($event)">
       <option *ngFor="let lang of langSelect"
               [value]="lang"> {{ lang }}</option>
