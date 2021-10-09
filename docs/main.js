@@ -12,11 +12,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoneEnum", function() { return StoneEnum; });
 var StoneEnum;
 (function (StoneEnum) {
-    StoneEnum["fire"] = "../../assets/icons/Fire_Stone.png";
-    StoneEnum["water"] = "../../assets/icons/Water_Stone.png";
-    StoneEnum["thunder"] = "../../assets/icons/Thunder_Stone.png";
-    StoneEnum["moon"] = "../../assets/icons/Moon_Stone.png";
-    StoneEnum["leaf"] = "../../assets/icons/Leaf_Stone.png";
+    StoneEnum["fire"] = "./assets/icons/Fire_Stone.png";
+    StoneEnum["water"] = "./assets/icons/Water_Stone.png";
+    StoneEnum["thunder"] = "./assets/icons/Thunder_Stone.png";
+    StoneEnum["moon"] = "./assets/icons/Moon_Stone.png";
+    StoneEnum["leaf"] = "./assets/icons/Leaf_Stone.png";
 })(StoneEnum || (StoneEnum = {}));
 
 
@@ -2019,7 +2019,7 @@ const environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-grid>\r\n    <ion-row>\r\n      <ion-col *ngFor=\"let pokemon of (allPokemon.getAllPokemons() | async)\" sizeXs=\"11\" sizeLg=\"2\">\r\n        <ion-card (click)=\"goToDetails(pokemon.id)\"\r\n                  *ngIf=\"pokemon.types.length == 1\"\r\n                  [style.background-color]=\"pokemon.color[0]\"\r\n                  style=\"cursor: pointer\"\r\n        >\r\n          <ion-card-header>\r\n            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>\r\n          </ion-card-header>\r\n          <ion-card-content *ngIf=\"pokemon.types.length == 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}\r\n            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n          <ion-card-content *ngIf=\"pokemon.types.length > 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n        <ion-card (click)=\"goToDetails(pokemon.id)\"\r\n                  *ngIf=\"pokemon.types.length > 1\"\r\n                  [style.background]=\"'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'\"\r\n                  style=\"cursor: pointer\"\r\n        >\r\n          <ion-card-header>\r\n            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>\r\n          </ion-card-header>\r\n          <ion-card-content *ngIf=\"pokemon.types.length == 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}\r\n            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n          <ion-card-content *ngIf=\"pokemon.types.length > 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n</ion-content>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-grid>\r\n    <ion-row>\r\n      <ion-col *ngFor=\"let pokemon of (allPokemon.getAllPokemons() | async)\" sizeLg=\"2\" sizeXs=\"11\">\r\n        <ion-card (click)=\"goToDetails(pokemon.id)\"\r\n                  [ngStyle]=\"{'cursor': 'pointer',\r\n                  'background': pokemon.types.length == 1 ?\r\n                  pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'\r\n                  }\"\r\n        >\r\n          <ion-card-header>\r\n            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>\r\n          </ion-card-header>\r\n          <ion-card-content *ngIf=\"pokemon.types.length == 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}\r\n            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n          <ion-card-content *ngIf=\"pokemon.types.length > 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}\r\n            /{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -2087,23 +2087,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component.scss */ "ynWL");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "sYmb");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
 
 
 
 
 
 let AppComponent = class AppComponent {
-    constructor(translate) {
+    constructor(translate, router) {
         this.translate = translate;
+        this.router = router;
         this.langSelect = ['en', 'fr'];
         translate.setDefaultLang('en');
     }
     selectedLang($event) {
         this.translate.use($event.target.value);
     }
+    goBackToPokedex() {
+        this.router.navigate([`/`]);
+    }
 };
 AppComponent.ctorParameters = () => [
-    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
 ];
 AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
@@ -2161,7 +2168,7 @@ var TypesEnum;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\r\n  <ion-header>\r\n    <ion-title>Pokedex</ion-title>\r\n    <select (change)=\"selectedLang($event)\">\r\n      <option *ngFor=\"let lang of langSelect\"\r\n              [value]=\"lang\"> {{ lang }}</option>\r\n    </select>\r\n  </ion-header>\r\n  <ion-content>\r\n    <ion-router-outlet></ion-router-outlet>\r\n  </ion-content>\r\n</ion-app>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\r\n  <ion-header>\r\n    <ion-title (click)=\"goBackToPokedex()\">Pokedex</ion-title>\r\n    <select (change)=\"selectedLang($event)\">\r\n      <option *ngFor=\"let lang of langSelect\"\r\n              [value]=\"lang\"> {{ lang }}</option>\r\n    </select>\r\n  </ion-header>\r\n  <ion-content>\r\n    <ion-router-outlet></ion-router-outlet>\r\n  </ion-content>\r\n</ion-app>\r\n");
 
 /***/ }),
 
@@ -2556,7 +2563,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\nion-title {\n  cursor: pointer;\n  font-size: 30px;\n  font-family: \"Press Start 2P\", cursive;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFRLG1GQUFBO0FBRVI7RUFDRSxlQUFBO0VBQ0EsZUFBQTtFQUNBLHNDQUFBO0FBQUYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9UHJlc3MrU3RhcnQrMlAmZGlzcGxheT1zd2FwJyk7XHJcblxyXG5pb24tdGl0bGUge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICBmb250LXNpemU6IDMwcHg7XHJcbiAgZm9udC1mYW1pbHk6ICdQcmVzcyBTdGFydCAyUCcsIGN1cnNpdmU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
