@@ -21,7 +21,7 @@ export class PokemonDetailsPage implements OnInit {
     public readonly router: Router
   ) {
     this.pokemonId = parseInt(this.activatedRoute.snapshot.params.id, 10);
-    this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
+    this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId.toString());
   }
 
   ngOnInit() {

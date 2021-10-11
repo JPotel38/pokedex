@@ -13,7 +13,7 @@
       </ion-col>
       <ion-col>
         <ion-row>
-          <ion-img id="img" (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img" style="cursor: pointer"></ion-img>
+          <ion-img id="img" (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img"></ion-img>
         </ion-row>
         <ion-row>
           <ion-text [innerHTML]="'DESC.' + pokemon.name | translate"></ion-text>

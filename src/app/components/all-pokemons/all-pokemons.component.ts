@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Pokemon} from '../../shared/interfaces/pokemon';
 import {Router} from '@angular/router';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 import {Observable} from 'rxjs';
@@ -10,7 +9,6 @@ import {Observable} from 'rxjs';
   styleUrls: ['./all-pokemons.component.scss'],
 })
 export class AllPokemonsComponent implements OnInit {
-  pokemonArray: Array<Pokemon>;
   pokemon: Observable<any>;
 
   constructor(

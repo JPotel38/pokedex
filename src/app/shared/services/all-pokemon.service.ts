@@ -1903,11 +1903,12 @@ export class AllPokemonService {
     ];
   }
 
-  getDetailsPokemon(id: number) {
-    return this.pokemonArray[id - 1];
-  }
-
   getAllPokemons(): Observable<Array<Pokemon>> {
     return of(this.pokemonArray);
   }
+
+  getDetailsPokemon(id: string) {
+    return this.pokemonArray[parseInt(id, 10) - 1];
+  }
+
 }
