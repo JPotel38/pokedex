@@ -9,17 +9,25 @@ import {Router} from '@angular/router';
 })
 export class AppComponent {
   langSelect: Array<string> = ['en', 'fr'];
+  toggle = document.querySelector('#themeToggle');
+
 
   constructor(private translate: TranslateService,
   public readonly router: Router) {
     translate.setDefaultLang('en');
   }
 
-  selectedLang($event) {
+  selectedLang($event): void {
     this.translate.use($event.target.value);
   }
 
-  goBackToPokedex() {
+  goBackToPokedex(): void {
     this.router.navigate([`/`]);
   }
+
+  checkToggle(e): void {
+    const isChecked = e.detail.checked;
+      document.body.classList.toggle('dark', isChecked);
+    console.log(document.body.classList);
+    }
 }

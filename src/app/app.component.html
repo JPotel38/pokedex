@@ -5,6 +5,15 @@
       <option *ngFor="let lang of langSelect"
               [value]="lang"> {{ lang }}</option>
     </select>
+      <ion-list>
+        <ion-item lines="full">
+          <ion-icon slot="start" name="moon"></ion-icon>
+          <ion-label>
+            Toggle Dark Theme
+          </ion-label>
+          <ion-toggle (ionChange)="checkToggle($event)" id="themeToggle" slot="end"></ion-toggle>
+        </ion-item>
+      </ion-list>
   </ion-header>
   <ion-content>
     <ion-router-outlet></ion-router-outlet>
