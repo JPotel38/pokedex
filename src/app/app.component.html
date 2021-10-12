@@ -1,19 +1,36 @@
 <ion-app>
   <ion-header>
-    <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
-    <select (change)="selectedLang($event)">
-      <option *ngFor="let lang of langSelect"
-              [value]="lang"> {{ lang }}</option>
-    </select>
-      <ion-list>
-        <ion-item lines="full">
-          <ion-icon slot="start" name="moon"></ion-icon>
-          <ion-label>
-            Toggle Dark Theme
-          </ion-label>
-          <ion-toggle (ionChange)="checkToggle($event)" id="themeToggle" slot="end"></ion-toggle>
+    <form [formGroup]="trainerForm">
+      <ion-row>
+        <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-select (ionChange)="selectedLang($event)" value="en">
+            <ion-select-option *ngFor="let lang of langSelect"
+                               [value]="lang"> {{ lang }}</ion-select-option>
+          </ion-select>
         </ion-item>
-      </ion-list>
+        <ion-list>
+          <ion-item lines="full">
+            <ion-icon name="moon" slot="start"></ion-icon>
+            <ion-label>
+              Toggle Dark Theme
+            </ion-label>
+            <ion-toggle (ionChange)="checkToggle($event)" id="themeToggle" slot="end"></ion-toggle>
+          </ion-item>
+        </ion-list>
+        <ion-label position="fixed">Trainer's name:</ion-label>
+        <ion-col *ngIf="!trainerName">
+          <ion-input formControlName="trainerName" type="text"></ion-input>
+          <ion-button (click)="validateName()" color="light">Ok</ion-button>
+        </ion-col>
+        <ion-col *ngIf="trainerName">
+          {{trainerName}}
+          <ion-button (click)="changeName()" color="light">Change Name</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
   </ion-header>
   <ion-content>
     <ion-router-outlet></ion-router-outlet>

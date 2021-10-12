@@ -9,12 +9,14 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {JwPaginationComponent} from 'jw-angular-pagination';
 import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http);
 
 @NgModule({
-  declarations: [AppComponent, AllPokemonsComponent],
+  declarations: [AppComponent, AllPokemonsComponent, JwPaginationComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
         useFactory: httpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
