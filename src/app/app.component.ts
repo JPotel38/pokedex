@@ -31,7 +31,6 @@ export class AppComponent implements OnInit{
   }
 
   selectedLang($event): void {
-    console.log($event);
     this.translate.use($event.target.value);
   }
 
