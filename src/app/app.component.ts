@@ -1,33 +1,28 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
-import {FormControl, FormGroup} from '@angular/forms';
 import {TrainerService} from './shared/services/trainer.service';
+import {User} from './shared/interfaces/user';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   langSelect: Array<string> = ['en', 'fr'];
   toggle = document.querySelector('#themeToggle');
-  trainerForm: FormGroup;
-  trainerName: string;
+  user: User;
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
               public trainerService: TrainerService
   ) {
     translate.setDefaultLang('en');
-    this.trainerForm = new FormGroup({
-      trainerName: new FormControl(null),
-
-    });
   }
 
   ngOnInit() {
-    this.trainerService.trainerName.subscribe(name => this.trainerName = name);
+    this.trainerService.trainer.subscribe(user => this.user = user);
   }
 
   selectedLang($event): void {
@@ -43,12 +38,16 @@ export class AppComponent implements OnInit{
     document.body.classList.toggle('dark', isChecked);
   }
 
-  validateName() {
-    this.trainerService.trainerName.next(this.trainerForm.get('trainerName').value);
+  goLogin() {
+    this.router.navigate([`login`]);
   }
 
-  changeName() {
-    this.trainerForm.get('trainerName').setValue(null);
-    this.trainerService.trainerName.next(this.trainerForm.get('trainerName').value);
+  goAccount() {
+    this.router.navigate([`account`]);
+  }
+
+  logOut() {
+    localStorage.clear();
+    this.ngOnInit();
   }
 }

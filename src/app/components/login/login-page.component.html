@@ -1,0 +1,12 @@
+<ion-content>
+  <ion-title>Account</ion-title>
+  <form [formGroup]="userForm">
+    <ion-label>Username:</ion-label>
+    <input formControlName="name" type="text">
+    <ion-label >Password:</ion-label>
+    <input formControlName="password" type="password">
+    <ion-label>Confirm password:</ion-label>
+    <input type="password">
+  </form>
+  <ion-button (click)="validate()">Validate</ion-button>
+</ion-content>

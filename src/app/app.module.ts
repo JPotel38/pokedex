@@ -12,11 +12,12 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {JwPaginationComponent} from 'jw-angular-pagination';
 import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {LoginPage} from './components/login/login-page.component';
 
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http);
 
 @NgModule({
-  declarations: [AppComponent, AllPokemonsComponent, JwPaginationComponent],
+  declarations: [AppComponent, AllPokemonsComponent, LoginPage, JwPaginationComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

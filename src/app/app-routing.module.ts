@@ -3,6 +3,8 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.component';
 import {PokemonDetailsResolver} from './shared/resolver/pokemon-details-resolver.service';
 import {AllPokemonResolver} from './shared/resolver/all-pokemon-resolver.service';
+import {LoginPage} from './components/login/login-page.component';
+import {AccountComponent} from './components/account/account.component';
 
 const routes: Routes = [
   {
@@ -11,6 +13,14 @@ const routes: Routes = [
     resolve: {
       pokemon: PokemonDetailsResolver
     }
+  },
+  {
+    path: 'login',
+    component: LoginPage
+  },
+  {
+    path: 'account',
+    component: AccountComponent
   },
   {
     path: '',
@@ -22,7 +32,7 @@ const routes: Routes = [
   {
     path: '**',
     component: AllPokemonsComponent
-  }
+  },
 ];
 
 @NgModule({
