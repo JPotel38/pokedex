@@ -13,12 +13,14 @@ export class AppComponent implements OnInit {
   langSelect: Array<string> = ['en', 'fr'];
   toggle = document.querySelector('#themeToggle');
   user: User;
+  currentUrl: any;
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
               public trainerService: TrainerService
   ) {
     translate.setDefaultLang('en');
+    router.events.subscribe(() => this.currentUrl = router.url);
   }
 
   ngOnInit() {

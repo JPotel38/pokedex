@@ -21,12 +21,12 @@
       </ion-list>
     </ion-row>
     <ion-row>
-      <ion-col>
-        <ion-button (click)="goLogin()" *ngIf="!user">Login</ion-button>
+      <ion-col >
+        <ion-button (click)="goLogin()" *ngIf="currentUrl !== '/login' && !user">Login</ion-button>
       </ion-col>
       <ion-col *ngIf="trainerService.trainer | async as user">
         <ion-label>Pokedex of {{user.login}}</ion-label>
-        <ion-button (click)="goAccount()">Account</ion-button>
+        <ion-button  (click)="goAccount()">Account</ion-button>
         <ion-button (click)="logOut()">Log Out</ion-button>
       </ion-col>
     </ion-row>
