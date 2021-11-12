@@ -49,7 +49,11 @@ export class AppComponent implements OnInit {
   }
 
   logOut() {
-    localStorage.clear();
-    this.ngOnInit();
+    this.trainerService.trainer.next(null);
+  }
+
+  goSignin() {
+    this.router.navigate([`signin`]);
+
   }
 }

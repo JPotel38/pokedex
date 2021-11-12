@@ -1,12 +1,21 @@
 <ion-content>
-  <ion-title>Account</ion-title>
-  <form [formGroup]="userForm">
-    <ion-label>Username:</ion-label>
-    <input formControlName="name" type="text">
-    <ion-label >Password:</ion-label>
-    <input formControlName="password" type="password">
-    <ion-label>Confirm password:</ion-label>
-    <input type="password">
+  <ion-title>{{'LOGIN' | translate}}</ion-title>
+  <form (ngSubmit)="validate()" [formGroup]="userForm">
+    <ion-col>
+      <ion-label>Username: </ion-label>
+      <input formControlName="name" type="text">
+      <ion-label style="color: red" *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')">* Username is required</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label>Password: </ion-label>
+      <input formControlName="password" type="password">
+      <ion-label *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Password is required</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label>Confirm password: </ion-label>
+      <input type="password">
+      <ion-label *ngIf="passwordConfirmCtrl.dirty && passwordConfirmCtrl.hasError('required')">Password confirm is required</ion-label>
+    </ion-col>
   </form>
-  <ion-button (click)="validate()">Validate</ion-button>
+  <ion-button [disabled]="userForm.invalid" type="submit">Validate</ion-button>
 </ion-content>

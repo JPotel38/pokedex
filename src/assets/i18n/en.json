@@ -1,9 +1,12 @@
 {
   "HOME": "Home",
+  "LOGIN": "Login",
+  "SIGNIN": "Sign In",
   "CARD_SUBJECT_ONE": "is a",
   "CARD_SUBJECT_TWO": "is a dual-type",
   "POKEMON": "Pokemon",
   "AND": "and",
+  "OF": "de",
   "WEIGHT": "Weight",
   "HEIGHT": "Height",
   "LEVEL": "Level",

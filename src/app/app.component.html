@@ -13,21 +13,19 @@
       <ion-list>
         <ion-item lines="full">
           <ion-icon name="moon" slot="start"></ion-icon>
-          <ion-label>
-            Toggle Dark Theme
-          </ion-label>
           <ion-toggle (ionChange)="checkToggle($event)" id="themeToggle" slot="end"></ion-toggle>
         </ion-item>
       </ion-list>
     </ion-row>
     <ion-row>
       <ion-col >
-        <ion-button (click)="goLogin()" *ngIf="currentUrl !== '/login' && !user">Login</ion-button>
+        <ion-button (click)="goSignin()" *ngIf="currentUrl !== '/signin' && !user">{{'SIGNIN' | translate}}</ion-button>
+        <ion-button (click)="goLogin()" *ngIf="currentUrl !== '/login' && !user">{{'LOGIN' | translate}}</ion-button>
       </ion-col>
       <ion-col *ngIf="trainerService.trainer | async as user">
-        <ion-label>Pokedex of {{user.login}}</ion-label>
-        <ion-button  (click)="goAccount()">Account</ion-button>
-        <ion-button (click)="logOut()">Log Out</ion-button>
+        <ion-label>Pokedex {{'OF' | translate}} {{user.login}}</ion-label>
+        <ion-button  (click)="goAccount()">{{'ACCOUNT' | translate}}</ion-button>
+        <ion-button (click)="logOut()">{{'LOGOUT' | translate}}</ion-button>
       </ion-col>
     </ion-row>
   </ion-header>

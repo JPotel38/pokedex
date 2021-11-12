@@ -5,30 +5,27 @@ import {Router} from '@angular/router';
 import {TrainerService} from '../../shared/services/trainer.service';
 
 @Component({
-  selector: 'app-account',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss'],
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.scss'],
 })
-export class LoginPage implements OnInit {
+export class SigninComponent implements OnInit {
+
   userForm: FormGroup;
   user: User;
+  userArray: Array<User> = [];
   usernameCtrl: FormControl;
   passwordCtrl: FormControl;
-  passwordConfirmCtrl: FormControl;
 
   constructor(public readonly router: Router,
               public trainerService: TrainerService,
-              fb: FormBuilder
-  ) {
+              fb: FormBuilder) {
     this.usernameCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
-    this.passwordConfirmCtrl = fb.control('', Validators.required);
 
     this.userForm = fb.group({
       name: this.usernameCtrl,
-      password: this.passwordCtrl,
-      passwordConfirm: this.passwordConfirmCtrl,
-      pokemonTeam: fb.control([])
+      password: this.passwordCtrl
     });
   }
 
@@ -40,7 +37,15 @@ export class LoginPage implements OnInit {
       login: this.userForm.get('name').value,
       password: this.userForm.get('password').value
     };
+    this.storeUser(this.user);
     this.trainerService.trainer.next(this.user);
     this.router.navigate([`/`]);
   }
+
+  storeUser(user: User) {
+    localStorage.getItem('userArray');
+    this.userArray.push(user);
+    localStorage.setItem('userArray', JSON.stringify(this.userArray));
+  }
+
 }

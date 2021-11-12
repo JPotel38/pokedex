@@ -5,6 +5,7 @@ import {PokemonDetailsResolver} from './shared/resolver/pokemon-details-resolver
 import {AllPokemonResolver} from './shared/resolver/all-pokemon-resolver.service';
 import {LoginPage} from './components/login/login-page.component';
 import {AccountComponent} from './components/account/account.component';
+import {SigninComponent} from './components/signin/signin.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginPage
+  },
+  {
+    path: 'signin',
+    component: SigninComponent
   },
   {
     path: 'account',

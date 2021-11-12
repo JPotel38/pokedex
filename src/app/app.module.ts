@@ -12,7 +12,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {LoginPage} from './components/login/login-page.component';
-import {JwtPaginationComponent} from './components/pagination/jwt-pagination/jwt-pagination.component';
+import {JwtPaginationComponent} from './components/jwt-pagination/jwt-pagination.component';
 
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http);
 
