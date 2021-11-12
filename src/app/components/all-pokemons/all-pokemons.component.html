@@ -1,10 +1,6 @@
 <ion-content>
   <ion-grid *ngIf="allPokemon.getAllPokemons() | async as PokemonArray">
     <ion-row>
-      <jw-pagination (changePage)="setPage($event)" [items]="PokemonArray" [pageSize]="24">
-      </jw-pagination>
-    </ion-row>
-    <ion-row>
       <ion-col *ngFor="let pokemon of pokemonArrayByPages" sizeLg="2" sizeXs="11">
         <ion-card (click)="goToDetails(pokemon.id)"
                   [ngStyle]="{'cursor': 'pointer',
@@ -24,6 +20,12 @@
             /{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
           </ion-card-content>
         </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="4">
+        <app-jw-pagination (changePage)="setPage($event)" [items]="PokemonArray" [pageSize]="24">
+        </app-jw-pagination>
       </ion-col>
     </ion-row>
   </ion-grid>
