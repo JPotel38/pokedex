@@ -1,24 +1,32 @@
-<ion-content>
+<ion-content xmlns="http://www.w3.org/1999/html">
   <ion-title>{{'SIGNIN' | translate}}</ion-title>
   <form (ngSubmit)="validate()" [formGroup]="userForm">
     <ion-row>
       <ion-col>
-        <ion-label>Username: </ion-label>
+        <ion-label>{{'USERNAME' | translate}}:</ion-label>
         <input formControlName="name" type="text">
-        <ion-label *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')">Username is required</ion-label>
+        <ion-label *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')">{{'USERNAME' | translate}}
+          {{'IS_REQUIRED' | translate}}</ion-label>
       </ion-col>
-      <ion-col>
-        <ion-label>Password: </ion-label>
-        <input formControlName="password" type="password">
-        <ion-label *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Password is required</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>Confirm password: </ion-label>
-        <input type="password">
-        <ion-label *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Password confirm is required</ion-label>
-      </ion-col>
-
+      <div formGroupName="passwordForm">
+        <ion-col>
+          <ion-label>{{'PASSWORD' | translate}}:</ion-label>
+          <input formControlName="password" type="password">
+          <ion-label
+            *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{'PASSWORD_CONFIRM' | translate}}:</ion-label>
+          <input formControlName="passwordConfirm" type="password">
+          <ion-label
+            *ngIf="passwordConfirmCtrl.dirty && passwordConfirmCtrl.hasError('required')">{{'PASSWORD_CONFIRM_REQUIRED' | translate}}
+          </ion-label>
+        </ion-col>
+        <ion-label *ngIf="passwordForm.dirty && passwordForm.hasError('matchingError')">
+          {{'PASSWORD_NOT_MATCHING' | translate}}
+        </ion-label>
+      </div>
     </ion-row>
+    <ion-button [disabled]="userForm.invalid" type="submit">{{'VALIDATE' | translate}}</ion-button>
   </form>
-  <ion-button [disabled]="userForm.invalid" type="submit">Validate</ion-button>
 </ion-content>

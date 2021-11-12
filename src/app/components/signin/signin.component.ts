@@ -16,17 +16,33 @@ export class SigninComponent implements OnInit {
   userArray: Array<User> = [];
   usernameCtrl: FormControl;
   passwordCtrl: FormControl;
+  passwordConfirmCtrl: FormControl;
+  passwordForm: FormGroup;
 
   constructor(public readonly router: Router,
               public trainerService: TrainerService,
-              fb: FormBuilder) {
+              fb: FormBuilder
+  ) {
     this.usernameCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
+    this.passwordConfirmCtrl = fb.control('', Validators.required);
+
+    this.passwordForm = fb.group(
+      {password: this.passwordCtrl, passwordConfirm: this.passwordConfirmCtrl},
+      {validators: SigninComponent.passwordMatch}
+    );
 
     this.userForm = fb.group({
       name: this.usernameCtrl,
-      password: this.passwordCtrl
+      passwordForm: this.passwordForm,
+      pokemonTeam: fb.control([])
     });
+  }
+
+  static passwordMatch(group: FormGroup): { matchingError: true } | null {
+    const password = group.get('password').value;
+    const confirm = group.get('passwordConfirm').value;
+    return password === confirm ? null : {matchingError: true};
   }
 
   ngOnInit() {
@@ -47,5 +63,6 @@ export class SigninComponent implements OnInit {
     this.userArray.push(user);
     localStorage.setItem('userArray', JSON.stringify(this.userArray));
   }
-
 }
+
+
