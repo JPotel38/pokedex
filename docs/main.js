@@ -1,5 +1,40 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "++XS":
+/*!*********************************************************!*\
+  !*** ./src/app/components/account/account.component.ts ***!
+  \*********************************************************/
+/*! exports provided: AccountComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountComponent", function() { return AccountComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_account_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./account.component.html */ "XOJO");
+/* harmony import */ var _account_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./account.component.scss */ "lZjX");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
+
+let AccountComponent = class AccountComponent {
+    constructor() { }
+    ngOnInit() { }
+};
+AccountComponent.ctorParameters = () => [];
+AccountComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-account',
+        template: _raw_loader_account_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_account_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+    })
+], AccountComponent);
+
+
+
+/***/ }),
+
 /***/ "+tMd":
 /*!********************************************!*\
   !*** ./src/app/shared/enums/stone.enum.ts ***!
@@ -12,11 +47,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoneEnum", function() { return StoneEnum; });
 var StoneEnum;
 (function (StoneEnum) {
-    StoneEnum["fire"] = "../../assets/icons/Fire_Stone.png";
-    StoneEnum["water"] = "../../assets/icons/Water_Stone.png";
-    StoneEnum["thunder"] = "../../assets/icons/Thunder_Stone.png";
-    StoneEnum["moon"] = "../../assets/icons/Moon_Stone.png";
-    StoneEnum["leaf"] = "../../assets/icons/Leaf_Stone.png";
+    StoneEnum["fire"] = "./assets/icons/Fire_Stone.png";
+    StoneEnum["water"] = "./assets/icons/Water_Stone.png";
+    StoneEnum["thunder"] = "./assets/icons/Thunder_Stone.png";
+    StoneEnum["moon"] = "./assets/icons/Moon_Stone.png";
+    StoneEnum["leaf"] = "./assets/icons/Leaf_Stone.png";
 })(StoneEnum || (StoneEnum = {}));
 
 
@@ -29,7 +64,7 @@ var StoneEnum;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Jerem\IdeaProjects\Angular-11\pokedex\src\main.ts */"zUnb");
+module.exports = __webpack_require__(/*! C:\Users\Jerem\VSCode\pokedex\src\main.ts */"zUnb");
 
 
 /***/ }),
@@ -1949,11 +1984,11 @@ let AllPokemonService = class AllPokemonService {
             },
         ];
     }
-    getDetailsPokemon(id) {
-        return this.pokemonArray[id - 1];
-    }
     getAllPokemons() {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(this.pokemonArray);
+    }
+    getDetailsPokemon(id) {
+        return this.pokemonArray[parseInt(id, 10) - 1];
     }
 };
 AllPokemonService.ctorParameters = () => [
@@ -1979,6 +2014,99 @@ AllPokemonService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("ion-card-content {\n  color: #0d0d0d;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFxhbGwtcG9rZW1vbnMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFBO0FBQ0YiLCJmaWxlIjoiYWxsLXBva2Vtb25zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNhcmQtY29udGVudCB7XHJcbiAgY29sb3I6ICMwZDBkMGQ7XHJcbn1cclxuIl19 */");
+
+/***/ }),
+
+/***/ "9ERn":
+/*!************************************************************!*\
+  !*** ./src/app/components/login/login-page.component.scss ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJsb2dpbi1wYWdlLmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "ARKG":
+/*!**********************************************************!*\
+  !*** ./src/app/components/login/login-page.component.ts ***!
+  \**********************************************************/
+/*! exports provided: LoginPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPage", function() { return LoginPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_login_page_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./login-page.component.html */ "lLn3");
+/* harmony import */ var _login_page_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./login-page.component.scss */ "9ERn");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_services_trainer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/services/trainer.service */ "fftq");
+var LoginPage_1;
+
+
+
+
+
+
+
+let LoginPage = LoginPage_1 = class LoginPage {
+    constructor(router, trainerService, fb) {
+        this.router = router;
+        this.trainerService = trainerService;
+        this.usernameCtrl = fb.control('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required);
+        this.passwordCtrl = fb.control('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required);
+        this.passwordConfirmCtrl = fb.control('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required);
+        this.passwordForm = fb.group({ password: this.passwordCtrl, passwordConfirm: this.passwordConfirmCtrl }, { validators: LoginPage_1.passwordMatch });
+        this.userForm = fb.group({
+            name: this.usernameCtrl,
+            passwordForm: this.passwordForm
+        });
+    }
+    static passwordMatch(group) {
+        const password = group.get('password').value;
+        const confirm = group.get('passwordConfirm').value;
+        return password === confirm ? null : { matchingError: true };
+    }
+    ngOnInit() {
+    }
+    validate() {
+        this.user = {
+            login: this.userForm.get('name').value,
+            password: this.passwordForm.get('password').value
+        };
+        const userArrayFromStorage = JSON.parse(localStorage.getItem('userArray'));
+        if (this.success(userArrayFromStorage)) {
+            this.trainerService.trainer.next(this.user);
+            this.router.navigate([`/`]);
+        }
+        else {
+            alert('Unknown user');
+        }
+    }
+    success(userArray) {
+        return userArray.find(user => JSON.stringify(user) === JSON.stringify(this.user));
+    }
+};
+LoginPage.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _shared_services_trainer_service__WEBPACK_IMPORTED_MODULE_6__["TrainerService"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+];
+LoginPage = LoginPage_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-account',
+        template: _raw_loader_login_page_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_login_page_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+    })
+], LoginPage);
+
+
 
 /***/ }),
 
@@ -2010,6 +2138,19 @@ const environment = {
 
 /***/ }),
 
+/***/ "CFCz":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/signin/signin.component.html ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content xmlns=\"http://www.w3.org/1999/html\">\r\n  <ion-title>{{'SIGNIN' | translate}}</ion-title>\r\n  <form (ngSubmit)=\"validate()\" [formGroup]=\"userForm\">\r\n    <ion-row>\r\n      <ion-col>\r\n        <ion-label>{{'USERNAME' | translate}}:</ion-label>\r\n        <input formControlName=\"name\" type=\"text\">\r\n        <ion-label *ngIf=\"usernameCtrl.dirty && usernameCtrl.hasError('required')\">{{'USERNAME' | translate}}\r\n          {{'IS_REQUIRED' | translate}}</ion-label>\r\n      </ion-col>\r\n      <div formGroupName=\"passwordForm\">\r\n        <ion-col>\r\n          <ion-label>{{'PASSWORD' | translate}}:</ion-label>\r\n          <input formControlName=\"password\" type=\"password\">\r\n          <ion-label\r\n            *ngIf=\"passwordCtrl.dirty && passwordCtrl.hasError('required')\">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>\r\n        </ion-col>\r\n        <ion-col>\r\n          <ion-label>{{'PASSWORD_CONFIRM' | translate}}:</ion-label>\r\n          <input formControlName=\"passwordConfirm\" type=\"password\">\r\n          <ion-label\r\n            *ngIf=\"passwordConfirmCtrl.dirty && passwordConfirmCtrl.hasError('required')\">{{'PASSWORD_CONFIRM_REQUIRED' | translate}}\r\n          </ion-label>\r\n        </ion-col>\r\n        <ion-label *ngIf=\"passwordForm.dirty && passwordForm.hasError('matchingError')\">\r\n          {{'PASSWORD_NOT_MATCHING' | translate}}\r\n        </ion-label>\r\n      </div>\r\n    </ion-row>\r\n    <ion-button [disabled]=\"userForm.invalid\" type=\"submit\">{{'VALIDATE' | translate}}</ion-button>\r\n  </form>\r\n</ion-content>\r\n");
+
+/***/ }),
+
 /***/ "LCLT":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/all-pokemons/all-pokemons.component.html ***!
@@ -2019,7 +2160,20 @@ const environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-grid>\r\n    <ion-row>\r\n      <ion-col *ngFor=\"let pokemon of (allPokemon.getAllPokemons() | async)\" sizeXs=\"11\" sizeLg=\"2\">\r\n        <ion-card (click)=\"goToDetails(pokemon.id)\"\r\n                  *ngIf=\"pokemon.types.length == 1\"\r\n                  [style.background-color]=\"pokemon.color[0]\"\r\n                  style=\"cursor: pointer\"\r\n        >\r\n          <ion-card-header>\r\n            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>\r\n          </ion-card-header>\r\n          <ion-card-content *ngIf=\"pokemon.types.length == 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}\r\n            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n          <ion-card-content *ngIf=\"pokemon.types.length > 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n        <ion-card (click)=\"goToDetails(pokemon.id)\"\r\n                  *ngIf=\"pokemon.types.length > 1\"\r\n                  [style.background]=\"'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'\"\r\n                  style=\"cursor: pointer\"\r\n        >\r\n          <ion-card-header>\r\n            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>\r\n          </ion-card-header>\r\n          <ion-card-content *ngIf=\"pokemon.types.length == 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}\r\n            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n          <ion-card-content *ngIf=\"pokemon.types.length > 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}/{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n</ion-content>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-grid *ngIf=\"allPokemon.getAllPokemons() | async as PokemonArray\">\r\n    <ion-row>\r\n      <ion-col *ngFor=\"let pokemon of pokemonArrayByPages\" sizeLg=\"2\" sizeXs=\"11\">\r\n        <ion-card (click)=\"goToDetails(pokemon.id)\"\r\n                  [ngStyle]=\"{'cursor': 'pointer',\r\n                  'background': pokemon.types.length == 1 ?\r\n                  pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'\r\n                  }\"\r\n        >\r\n          <ion-card-header>\r\n            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>\r\n          </ion-card-header>\r\n          <ion-card-content *ngIf=\"pokemon.types.length == 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}\r\n            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n          <ion-card-content *ngIf=\"pokemon.types.length > 1\">\r\n            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}\r\n            /{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col offset=\"4\">\r\n        <app-jw-pagination (changePage)=\"setPage($event)\" [items]=\"PokemonArray\" [pageSize]=\"24\">\r\n        </app-jw-pagination>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n</ion-content>\r\n");
+
+/***/ }),
+
+/***/ "R+uZ":
+/*!*********************************************************!*\
+  !*** ./src/app/components/signin/signin.component.scss ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzaWduaW4uY29tcG9uZW50LnNjc3MifQ== */");
 
 /***/ }),
 
@@ -2055,6 +2209,9 @@ let AllPokemonsComponent = class AllPokemonsComponent {
     goToDetails(id) {
         this.router.navigate([`pokemon-details/${id}`]);
     }
+    setPage(pokemonArrayByPages) {
+        this.pokemonArrayByPages = pokemonArrayByPages;
+    }
 };
 AllPokemonsComponent.ctorParameters = () => [
     { type: _shared_services_all_pokemon_service__WEBPACK_IMPORTED_MODULE_5__["AllPokemonService"] },
@@ -2087,23 +2244,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component.scss */ "ynWL");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "sYmb");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_services_trainer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/services/trainer.service */ "fftq");
+
+
 
 
 
 
 
 let AppComponent = class AppComponent {
-    constructor(translate) {
+    constructor(translate, router, trainerService) {
         this.translate = translate;
+        this.router = router;
+        this.trainerService = trainerService;
         this.langSelect = ['en', 'fr'];
+        this.toggle = document.querySelector('#themeToggle');
         translate.setDefaultLang('en');
+        router.events.subscribe(() => this.currentUrl = router.url);
+    }
+    ngOnInit() {
+        this.trainerService.trainer.subscribe(user => this.user = user);
     }
     selectedLang($event) {
         this.translate.use($event.target.value);
     }
+    goBackToPokedex() {
+        this.router.navigate([`/`]);
+    }
+    checkToggle(e) {
+        const isChecked = e.detail.checked;
+        document.body.classList.toggle('dark', isChecked);
+    }
+    goLogin() {
+        this.router.navigate([`login`]);
+    }
+    goAccount() {
+        this.router.navigate([`account`]);
+    }
+    logOut() {
+        this.trainerService.trainer.next(null);
+    }
+    goSignin() {
+        this.router.navigate([`signin`]);
+    }
 };
 AppComponent.ctorParameters = () => [
-    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _shared_services_trainer_service__WEBPACK_IMPORTED_MODULE_6__["TrainerService"] }
 ];
 AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
@@ -2152,6 +2341,19 @@ var TypesEnum;
 
 /***/ }),
 
+/***/ "VykM":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/jwt-pagination/jwt-pagination.component.html ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"pager.pages && pager.pages.length\" class=\"pagination\">\r\n  <ion-button color=\"light\" [disabled]=\"pager.currentPage === 1\" class=\"page-item first-item\">\r\n    <a (click)=\"setPage(1)\" class=\"page-link\">First</a>\r\n  </ion-button>\r\n  <ion-button color=\"light\" *ngFor=\"let page of pager.pages\" [ngClass]=\"{active:pager.currentPage === page}\" class=\"page-item number-item\">\r\n    <a (click)=\"setPage(page)\" class=\"page-link\">{{page}}</a>\r\n  </ion-button>\r\n  <ion-button color=\"light\" [disabled]=\"pager.currentPage === pager.totalPages\" class=\"page-item last-item\">\r\n    <a (click)=\"setPage(pager.totalPages)\" class=\"page-link\">Last</a>\r\n  </ion-button>\r\n</div>\r\n");
+
+/***/ }),
+
 /***/ "VzVu":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -2161,7 +2363,99 @@ var TypesEnum;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\r\n  <ion-header>\r\n    <ion-title>Pokedex</ion-title>\r\n    <select (change)=\"selectedLang($event)\">\r\n      <option *ngFor=\"let lang of langSelect\"\r\n              [value]=\"lang\"> {{ lang }}</option>\r\n    </select>\r\n  </ion-header>\r\n  <ion-content>\r\n    <ion-router-outlet></ion-router-outlet>\r\n  </ion-content>\r\n</ion-app>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\r\n  <ion-header>\r\n    <ion-row>\r\n      <ion-title (click)=\"goBackToPokedex()\">Pokedex</ion-title>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"1\">\r\n        <ion-item>\r\n          <ion-select (ionChange)=\"selectedLang($event)\" value=\"en\">\r\n            <ion-select-option *ngFor=\"let lang of langSelect\" [value]=\"lang\"> {{ lang }}</ion-select-option>\r\n          </ion-select>\r\n        </ion-item>\r\n      </ion-col>\r\n      <ion-col size=\"1\">\r\n        <ion-list>\r\n          <ion-item lines=\"full\">\r\n            <ion-icon name=\"moon\" slot=\"start\"></ion-icon>\r\n            <ion-toggle (ionChange)=\"checkToggle($event)\" id=\"themeToggle\" slot=\"end\"></ion-toggle>\r\n          </ion-item>\r\n        </ion-list>\r\n      </ion-col>\r\n      <ion-col offset=\"8\">\r\n        <ion-button (click)=\"goSignin()\" *ngIf=\"currentUrl !== '/signin' && !user\">{{'SIGNIN' | translate}}</ion-button>\r\n        <ion-button (click)=\"goLogin()\" *ngIf=\"currentUrl !== '/login' && !user\">{{'LOGIN' | translate}}</ion-button>\r\n      </ion-col>\r\n      <ion-col *ngIf=\"trainerService.trainer | async as user\">\r\n        <ion-label>Pokedex {{'OF' | translate}} {{user.login}}</ion-label>\r\n        <ion-button (click)=\"goAccount()\">{{'ACCOUNT' | translate}}</ion-button>\r\n        <ion-button (click)=\"logOut()\">{{'LOGOUT' | translate}}</ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-header>\r\n  <ion-content>\r\n    <ion-router-outlet></ion-router-outlet>\r\n  </ion-content>\r\n</ion-app>");
+
+/***/ }),
+
+/***/ "WnTk":
+/*!*******************************************************!*\
+  !*** ./src/app/components/signin/signin.component.ts ***!
+  \*******************************************************/
+/*! exports provided: SigninComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SigninComponent", function() { return SigninComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_signin_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./signin.component.html */ "CFCz");
+/* harmony import */ var _signin_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./signin.component.scss */ "R+uZ");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_services_trainer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/services/trainer.service */ "fftq");
+var SigninComponent_1;
+
+
+
+
+
+
+
+let SigninComponent = SigninComponent_1 = class SigninComponent {
+    constructor(router, trainerService, fb) {
+        this.router = router;
+        this.trainerService = trainerService;
+        this.userArray = [];
+        this.usernameCtrl = fb.control('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required);
+        this.passwordCtrl = fb.control('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required);
+        this.passwordConfirmCtrl = fb.control('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required);
+        this.passwordForm = fb.group({ password: this.passwordCtrl, passwordConfirm: this.passwordConfirmCtrl }, { validators: SigninComponent_1.passwordMatch });
+        this.userForm = fb.group({
+            name: this.usernameCtrl,
+            passwordForm: this.passwordForm,
+            pokemonTeam: fb.control([])
+        });
+    }
+    static passwordMatch(group) {
+        const password = group.get('password').value;
+        const confirm = group.get('passwordConfirm').value;
+        return password === confirm ? null : { matchingError: true };
+    }
+    ngOnInit() {
+    }
+    validate() {
+        this.user = {
+            login: this.userForm.get('name').value,
+            password: this.userForm.get('password').value
+        };
+        this.storeUser(this.user);
+        this.trainerService.trainer.next(this.user);
+        this.router.navigate([`/`]);
+    }
+    storeUser(user) {
+        localStorage.getItem('userArray');
+        this.userArray.push(user);
+        localStorage.setItem('userArray', JSON.stringify(this.userArray));
+    }
+};
+SigninComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _shared_services_trainer_service__WEBPACK_IMPORTED_MODULE_6__["TrainerService"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+];
+SigninComponent = SigninComponent_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-signin',
+        template: _raw_loader_signin_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_signin_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+    })
+], SigninComponent);
+
+
+
+/***/ }),
+
+/***/ "XOJO":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/account/account.component.html ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>\r\n  account works!\r\n</p>\r\n");
 
 /***/ }),
 
@@ -2187,6 +2481,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-translate/core */ "sYmb");
 /* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ngx-translate/http-loader */ "mqiu");
 /* harmony import */ var _components_all_pokemons_all_pokemons_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/all-pokemons/all-pokemons.component */ "Sm+d");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _components_login_login_page_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/login/login-page.component */ "ARKG");
+/* harmony import */ var _components_jwt_pagination_jwt_pagination_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/jwt-pagination/jwt-pagination.component */ "v0KE");
+/* harmony import */ var _components_signin_signin_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/signin/signin.component */ "WnTk");
+
+
+
+
 
 
 
@@ -2203,7 +2505,7 @@ let AppModule = class AppModule {
 };
 AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _components_all_pokemons_all_pokemons_component__WEBPACK_IMPORTED_MODULE_10__["AllPokemonsComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _components_all_pokemons_all_pokemons_component__WEBPACK_IMPORTED_MODULE_10__["AllPokemonsComponent"], _components_login_login_page_component__WEBPACK_IMPORTED_MODULE_12__["LoginPage"], _components_jwt_pagination_jwt_pagination_component__WEBPACK_IMPORTED_MODULE_13__["JwtPaginationComponent"], _components_signin_signin_component__WEBPACK_IMPORTED_MODULE_14__["SigninComponent"]],
         entryComponents: [],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
@@ -2216,12 +2518,83 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
                     useFactory: httpLoaderFactory,
                     deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"]]
                 }
-            })
+            }),
+            _angular_forms__WEBPACK_IMPORTED_MODULE_11__["ReactiveFormsModule"]
         ],
         providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]],
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "fftq":
+/*!****************************************************!*\
+  !*** ./src/app/shared/services/trainer.service.ts ***!
+  \****************************************************/
+/*! exports provided: TrainerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrainerService", function() { return TrainerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "qCKp");
+
+
+
+let TrainerService = class TrainerService {
+    constructor() {
+        this.trainer = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
+    }
+    getUser() {
+    }
+};
+TrainerService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], TrainerService);
+
+
+
+/***/ }),
+
+/***/ "htNN":
+/*!*****************************************************************!*\
+  !*** ./src/app/shared/resolver/all-pokemon-resolver.service.ts ***!
+  \*****************************************************************/
+/*! exports provided: AllPokemonResolver */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllPokemonResolver", function() { return AllPokemonResolver; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _services_all_pokemon_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/all-pokemon.service */ "09Fq");
+
+
+
+let AllPokemonResolver = class AllPokemonResolver {
+    constructor(allPokemon) {
+        this.allPokemon = allPokemon;
+    }
+    resolve() {
+        return this.allPokemon.getAllPokemons();
+    }
+};
+AllPokemonResolver.ctorParameters = () => [
+    { type: _services_all_pokemon_service__WEBPACK_IMPORTED_MODULE_2__["AllPokemonService"] }
+];
+AllPokemonResolver = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AllPokemonResolver);
 
 
 
@@ -2465,6 +2838,32 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
+/***/ "lLn3":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/login/login-page.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-title>{{'LOGIN' | translate}}</ion-title>\r\n  <form (ngSubmit)=\"validate()\" [formGroup]=\"userForm\">\r\n    <ion-col>\r\n      <ion-label>{{'USERNAME' | translate}}:</ion-label>\r\n      <input formControlName=\"name\" type=\"text\">\r\n      <ion-label *ngIf=\"usernameCtrl.dirty && usernameCtrl.hasError('required')\">\r\n        * {{'USERNAME' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>\r\n    </ion-col>\r\n    <div formGroupName=\"passwordForm\">\r\n      <ion-col>\r\n        <ion-label>{{'PASSWORD' | translate}}:</ion-label>\r\n        <input formControlName=\"password\" type=\"password\">\r\n        <ion-label\r\n          *ngIf=\"passwordCtrl.dirty && passwordCtrl.hasError('required')\">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>\r\n      </ion-col>\r\n      <ion-col>\r\n        <ion-label>{{'PASSWORD_CONFIRM' | translate}}:</ion-label>\r\n        <input formControlName=\"passwordConfirm\" type=\"password\">\r\n        <ion-label\r\n          *ngIf=\"passwordConfirmCtrl.dirty && passwordConfirmCtrl.hasError('required')\">{{'PASSWORD_CONFIRM_REQUIRED' | translate}}\r\n        </ion-label>\r\n      </ion-col>\r\n      <ion-label *ngIf=\"passwordForm.dirty && passwordForm.hasError('matchingError')\">\r\n        {{'PASSWORD_NOT_MATCHING' | translate}}\r\n      </ion-label>\r\n    </div>\r\n    <ion-button [disabled]=\"userForm.invalid\" type=\"submit\">{{'VALIDATE' | translate}}</ion-button>\r\n  </form>\r\n</ion-content>\r\n");
+
+/***/ }),
+
+/***/ "lZjX":
+/*!***********************************************************!*\
+  !*** ./src/app/components/account/account.component.scss ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhY2NvdW50LmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
 /***/ "m7LA":
 /*!********************************************!*\
   !*** ./src/app/shared/enums/color.enum.ts ***!
@@ -2500,6 +2899,109 @@ var ColorEnum;
 
 /***/ }),
 
+/***/ "p009":
+/*!*********************************************************************!*\
+  !*** ./src/app/shared/resolver/pokemon-details-resolver.service.ts ***!
+  \*********************************************************************/
+/*! exports provided: PokemonDetailsResolver */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PokemonDetailsResolver", function() { return PokemonDetailsResolver; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _services_all_pokemon_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/all-pokemon.service */ "09Fq");
+
+
+
+let PokemonDetailsResolver = class PokemonDetailsResolver {
+    constructor(allPokemon) {
+        this.allPokemon = allPokemon;
+    }
+    resolve(route, state) {
+        return this.allPokemon.getDetailsPokemon(route.paramMap.get('id'));
+    }
+};
+PokemonDetailsResolver.ctorParameters = () => [
+    { type: _services_all_pokemon_service__WEBPACK_IMPORTED_MODULE_2__["AllPokemonService"] }
+];
+PokemonDetailsResolver = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], PokemonDetailsResolver);
+
+
+
+/***/ }),
+
+/***/ "v0KE":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/jwt-pagination/jwt-pagination.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: JwtPaginationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JwtPaginationComponent", function() { return JwtPaginationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_jwt_pagination_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./jwt-pagination.component.html */ "VykM");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var jw_paginate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jw-paginate */ "TNpa");
+/* harmony import */ var jw_paginate__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jw_paginate__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+let JwtPaginationComponent = class JwtPaginationComponent {
+    constructor() {
+        this.changePage = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"](true);
+        this.initialPage = 1;
+        this.pageSize = 10;
+        this.maxPages = 10;
+        this.pager = {};
+    }
+    ngOnInit() {
+        // set page if items array isn't empty
+        if (this.items && this.items.length) {
+            this.setPage(this.initialPage);
+        }
+    }
+    ngOnChanges(changes) {
+        // reset page if items array has changed
+        if (changes.items.currentValue !== changes.items.previousValue) {
+            this.setPage(this.initialPage);
+        }
+    }
+    setPage(page) {
+        // get new pager object for specified page
+        this.pager = jw_paginate__WEBPACK_IMPORTED_MODULE_3___default()(this.items.length, page, this.pageSize, this.maxPages);
+        // get new page of items from items array
+        const pageOfItems = this.items.slice(this.pager.startIndex, this.pager.endIndex + 1);
+        // call change page function in parent component
+        this.changePage.emit(pageOfItems);
+    }
+};
+JwtPaginationComponent.propDecorators = {
+    items: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }],
+    changePage: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"] }],
+    initialPage: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }],
+    pageSize: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }],
+    maxPages: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }]
+};
+JwtPaginationComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-jw-pagination',
+        template: _raw_loader_jwt_pagination_component_html__WEBPACK_IMPORTED_MODULE_1__["default"]
+    })
+], JwtPaginationComponent);
+
+
+
+/***/ }),
+
 /***/ "vY5A":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -2514,6 +3016,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _components_all_pokemons_all_pokemons_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/all-pokemons/all-pokemons.component */ "Sm+d");
+/* harmony import */ var _shared_resolver_pokemon_details_resolver_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared/resolver/pokemon-details-resolver.service */ "p009");
+/* harmony import */ var _shared_resolver_all_pokemon_resolver_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/resolver/all-pokemon-resolver.service */ "htNN");
+/* harmony import */ var _components_login_login_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/login/login-page.component */ "ARKG");
+/* harmony import */ var _components_account_account_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/account/account.component */ "++XS");
+/* harmony import */ var _components_signin_signin_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/signin/signin.component */ "WnTk");
+
+
+
+
+
 
 
 
@@ -2521,16 +3033,34 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: 'pokemon-details/:id',
-        loadChildren: () => __webpack_require__.e(/*! import() | components-pokemon-details-pokemon-details-module */ "components-pokemon-details-pokemon-details-module").then(__webpack_require__.bind(null, /*! ./components/pokemon-details/pokemon-details.module */ "jL1i")).then(m => m.PokemonDetailsPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | components-pokemon-details-pokemon-details-module */ "components-pokemon-details-pokemon-details-module").then(__webpack_require__.bind(null, /*! ./components/pokemon-details/pokemon-details.module */ "jL1i")).then(m => m.PokemonDetailsPageModule),
+        resolve: {
+            pokemon: _shared_resolver_pokemon_details_resolver_service__WEBPACK_IMPORTED_MODULE_4__["PokemonDetailsResolver"]
+        }
+    },
+    {
+        path: 'login',
+        component: _components_login_login_page_component__WEBPACK_IMPORTED_MODULE_6__["LoginPage"]
+    },
+    {
+        path: 'signin',
+        component: _components_signin_signin_component__WEBPACK_IMPORTED_MODULE_8__["SigninComponent"]
+    },
+    {
+        path: 'account',
+        component: _components_account_account_component__WEBPACK_IMPORTED_MODULE_7__["AccountComponent"]
     },
     {
         path: '',
-        component: _components_all_pokemons_all_pokemons_component__WEBPACK_IMPORTED_MODULE_3__["AllPokemonsComponent"]
+        component: _components_all_pokemons_all_pokemons_component__WEBPACK_IMPORTED_MODULE_3__["AllPokemonsComponent"],
+        resolve: {
+            allPokemon: _shared_resolver_all_pokemon_resolver_service__WEBPACK_IMPORTED_MODULE_5__["AllPokemonResolver"]
+        }
     },
     {
         path: '**',
         component: _components_all_pokemons_all_pokemons_component__WEBPACK_IMPORTED_MODULE_3__["AllPokemonsComponent"]
-    }
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -2556,7 +3086,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\n/*\n * Dark Colors\n * -------------------------------------------\n */\nbody.dark {\n  --ion-color-primary: #428cff;\n  --ion-color-primary-rgb: 66,140,255;\n  --ion-color-primary-contrast: #ffffff;\n  --ion-color-primary-contrast-rgb: 255,255,255;\n  --ion-color-primary-shade: #3a7be0;\n  --ion-color-primary-tint: #5598ff;\n  --ion-color-secondary: #50c8ff;\n  --ion-color-secondary-rgb: 80,200,255;\n  --ion-color-secondary-contrast: #ffffff;\n  --ion-color-secondary-contrast-rgb: 255,255,255;\n  --ion-color-secondary-shade: #46b0e0;\n  --ion-color-secondary-tint: #62ceff;\n  --ion-color-tertiary: #6a64ff;\n  --ion-color-tertiary-rgb: 106,100,255;\n  --ion-color-tertiary-contrast: #ffffff;\n  --ion-color-tertiary-contrast-rgb: 255,255,255;\n  --ion-color-tertiary-shade: #5d58e0;\n  --ion-color-tertiary-tint: #7974ff;\n  --ion-color-success: #2fdf75;\n  --ion-color-success-rgb: 47,223,117;\n  --ion-color-success-contrast: #000000;\n  --ion-color-success-contrast-rgb: 0,0,0;\n  --ion-color-success-shade: #29c467;\n  --ion-color-success-tint: #44e283;\n  --ion-color-warning: #ffd534;\n  --ion-color-warning-rgb: 255,213,52;\n  --ion-color-warning-contrast: #000000;\n  --ion-color-warning-contrast-rgb: 0,0,0;\n  --ion-color-warning-shade: #e0bb2e;\n  --ion-color-warning-tint: #ffd948;\n  --ion-color-danger: #ff4961;\n  --ion-color-danger-rgb: 255,73,97;\n  --ion-color-danger-contrast: #ffffff;\n  --ion-color-danger-contrast-rgb: 255,255,255;\n  --ion-color-danger-shade: #e04055;\n  --ion-color-danger-tint: #ff5b71;\n  --ion-color-dark: #f4f5f8;\n  --ion-color-dark-rgb: 244,245,248;\n  --ion-color-dark-contrast: #000000;\n  --ion-color-dark-contrast-rgb: 0,0,0;\n  --ion-color-dark-shade: #d7d8da;\n  --ion-color-dark-tint: #f5f6f9;\n  --ion-color-medium: #989aa2;\n  --ion-color-medium-rgb: 152,154,162;\n  --ion-color-medium-contrast: #000000;\n  --ion-color-medium-contrast-rgb: 0,0,0;\n  --ion-color-medium-shade: #86888f;\n  --ion-color-medium-tint: #a2a4ab;\n  --ion-color-light: #222428;\n  --ion-color-light-rgb: 34,36,40;\n  --ion-color-light-contrast: #ffffff;\n  --ion-color-light-contrast-rgb: 255,255,255;\n  --ion-color-light-shade: #1e2023;\n  --ion-color-light-tint: #383a3e;\n}\nbody.dark ion-card-content, body.dark ion-title, body.dark ion-label ion-select, body.dark form {\n  color: #ffffff;\n}\n/*\n * iOS Dark Theme\n * -------------------------------------------\n */\n.ios body.dark {\n  --ion-background-color: #000000;\n  --ion-background-color-rgb: 0,0,0;\n  --ion-text-color: #ffffff;\n  --ion-text-color-rgb: 255,255,255;\n  --ion-color-step-50: #0d0d0d;\n  --ion-color-step-100: #1a1a1a;\n  --ion-color-step-150: #262626;\n  --ion-color-step-200: #333333;\n  --ion-color-step-250: #404040;\n  --ion-color-step-300: #4d4d4d;\n  --ion-color-step-350: #595959;\n  --ion-color-step-400: #666666;\n  --ion-color-step-450: #737373;\n  --ion-color-step-500: #808080;\n  --ion-color-step-550: #8c8c8c;\n  --ion-color-step-600: #999999;\n  --ion-color-step-650: #a6a6a6;\n  --ion-color-step-700: #b3b3b3;\n  --ion-color-step-750: #bfbfbf;\n  --ion-color-step-800: #cccccc;\n  --ion-color-step-850: #d9d9d9;\n  --ion-color-step-900: #e6e6e6;\n  --ion-color-step-950: #f2f2f2;\n  --ion-item-background: #000000;\n  --ion-card-background: #1c1c1d;\n}\n.ios body.dark ion-modal {\n  --ion-background-color: var(--ion-color-step-100);\n  --ion-toolbar-background: var(--ion-color-step-150);\n  --ion-toolbar-border-color: var(--ion-color-step-250);\n  --ion-item-background: var(--ion-color-step-150);\n}\n/*\n * Material Design Dark Theme\n * -------------------------------------------\n */\n.md body.dark {\n  --ion-background-color: #121212;\n  --ion-background-color-rgb: 18,18,18;\n  --ion-text-color: #ffffff;\n  --ion-text-color-rgb: 255,255,255;\n  --ion-border-color: #222222;\n  --ion-color-step-50: #1e1e1e;\n  --ion-color-step-100: #2a2a2a;\n  --ion-color-step-150: #363636;\n  --ion-color-step-200: #414141;\n  --ion-color-step-250: #4d4d4d;\n  --ion-color-step-300: #595959;\n  --ion-color-step-350: #656565;\n  --ion-color-step-400: #717171;\n  --ion-color-step-450: #7d7d7d;\n  --ion-color-step-500: #898989;\n  --ion-color-step-550: #949494;\n  --ion-color-step-600: #a0a0a0;\n  --ion-color-step-650: #acacac;\n  --ion-color-step-700: #b8b8b8;\n  --ion-color-step-750: #c4c4c4;\n  --ion-color-step-800: #d0d0d0;\n  --ion-color-step-850: #dbdbdb;\n  --ion-color-step-900: #e7e7e7;\n  --ion-color-step-950: #f3f3f3;\n  --ion-item-background: #1e1e1e;\n  --ion-toolbar-background: #1f1f1f;\n  --ion-tab-bar-background: #1f1f1f;\n  --ion-card-background: #1e1e1e;\n}\nion-title {\n  cursor: pointer;\n  font-size: 30px;\n  font-family: \"Press Start 2P\", cursive;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcYXBwLmNvbXBvbmVudC5zY3NzIiwiLi5cXC4uXFwuLlxcdGhlbWVcXHZhcmlhYmxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFRLG1GQUFBO0FDQVI7OztFQUFBO0FBS0E7RUFDRSw0QkFBQTtFQUNBLG1DQUFBO0VBQ0EscUNBQUE7RUFDQSw2Q0FBQTtFQUNBLGtDQUFBO0VBQ0EsaUNBQUE7RUFFQSw4QkFBQTtFQUNBLHFDQUFBO0VBQ0EsdUNBQUE7RUFDQSwrQ0FBQTtFQUNBLG9DQUFBO0VBQ0EsbUNBQUE7RUFFQSw2QkFBQTtFQUNBLHFDQUFBO0VBQ0Esc0NBQUE7RUFDQSw4Q0FBQTtFQUNBLG1DQUFBO0VBQ0Esa0NBQUE7RUFFQSw0QkFBQTtFQUNBLG1DQUFBO0VBQ0EscUNBQUE7RUFDQSx1Q0FBQTtFQUNBLGtDQUFBO0VBQ0EsaUNBQUE7RUFFQSw0QkFBQTtFQUNBLG1DQUFBO0VBQ0EscUNBQUE7RUFDQSx1Q0FBQTtFQUNBLGtDQUFBO0VBQ0EsaUNBQUE7RUFFQSwyQkFBQTtFQUNBLGlDQUFBO0VBQ0Esb0NBQUE7RUFDQSw0Q0FBQTtFQUNBLGlDQUFBO0VBQ0EsZ0NBQUE7RUFFQSx5QkFBQTtFQUNBLGlDQUFBO0VBQ0Esa0NBQUE7RUFDQSxvQ0FBQTtFQUNBLCtCQUFBO0VBQ0EsOEJBQUE7RUFFQSwyQkFBQTtFQUNBLG1DQUFBO0VBQ0Esb0NBQUE7RUFDQSxzQ0FBQTtFQUNBLGlDQUFBO0VBQ0EsZ0NBQUE7RUFFQSwwQkFBQTtFQUNBLCtCQUFBO0VBQ0EsbUNBQUE7RUFDQSwyQ0FBQTtFQUNBLGdDQUFBO0VBQ0EsK0JBQUE7QURQRjtBQ1NFO0VBQ0UsY0FBQTtBRFBKO0FDV0E7OztFQUFBO0FBS0E7RUFDRSwrQkFBQTtFQUNBLGlDQUFBO0VBRUEseUJBQUE7RUFDQSxpQ0FBQTtFQUVBLDRCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBRUEsOEJBQUE7RUFFQSw4QkFBQTtBRGJGO0FDZ0JBO0VBQ0UsaURBQUE7RUFDQSxtREFBQTtFQUNBLHFEQUFBO0VBQ0EsZ0RBQUE7QURiRjtBQ2lCQTs7O0VBQUE7QUFLQTtFQUNFLCtCQUFBO0VBQ0Esb0NBQUE7RUFFQSx5QkFBQTtFQUNBLGlDQUFBO0VBRUEsMkJBQUE7RUFFQSw0QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUNBLDZCQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtFQUVBLDhCQUFBO0VBRUEsaUNBQUE7RUFFQSxpQ0FBQTtFQUVBLDhCQUFBO0FEdEJGO0FBdElBO0VBQ0UsZUFBQTtFQUNBLGVBQUE7RUFDQSxzQ0FBQTtBQXlJRiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1QcmVzcytTdGFydCsyUCZkaXNwbGF5PXN3YXAnKTtcclxuQGltcG9ydCAnLi4vdGhlbWUvdmFyaWFibGVzLnNjc3MnO1xyXG5cclxuaW9uLXRpdGxlIHtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgZm9udC1zaXplOiAzMHB4O1xyXG4gIGZvbnQtZmFtaWx5OiAnUHJlc3MgU3RhcnQgMlAnLCBjdXJzaXZlO1xyXG59XHJcblxyXG4iLCIvKlxyXG4gKiBEYXJrIENvbG9yc1xyXG4gKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXHJcbiAqL1xyXG5cclxuYm9keS5kYXJrIHtcclxuICAtLWlvbi1jb2xvci1wcmltYXJ5OiAjNDI4Y2ZmO1xyXG4gIC0taW9uLWNvbG9yLXByaW1hcnktcmdiOiA2NiwxNDAsMjU1O1xyXG4gIC0taW9uLWNvbG9yLXByaW1hcnktY29udHJhc3Q6ICNmZmZmZmY7XHJcbiAgLS1pb24tY29sb3ItcHJpbWFyeS1jb250cmFzdC1yZ2I6IDI1NSwyNTUsMjU1O1xyXG4gIC0taW9uLWNvbG9yLXByaW1hcnktc2hhZGU6ICMzYTdiZTA7XHJcbiAgLS1pb24tY29sb3ItcHJpbWFyeS10aW50OiAjNTU5OGZmO1xyXG5cclxuICAtLWlvbi1jb2xvci1zZWNvbmRhcnk6ICM1MGM4ZmY7XHJcbiAgLS1pb24tY29sb3Itc2Vjb25kYXJ5LXJnYjogODAsMjAwLDI1NTtcclxuICAtLWlvbi1jb2xvci1zZWNvbmRhcnktY29udHJhc3Q6ICNmZmZmZmY7XHJcbiAgLS1pb24tY29sb3Itc2Vjb25kYXJ5LWNvbnRyYXN0LXJnYjogMjU1LDI1NSwyNTU7XHJcbiAgLS1pb24tY29sb3Itc2Vjb25kYXJ5LXNoYWRlOiAjNDZiMGUwO1xyXG4gIC0taW9uLWNvbG9yLXNlY29uZGFyeS10aW50OiAjNjJjZWZmO1xyXG5cclxuICAtLWlvbi1jb2xvci10ZXJ0aWFyeTogIzZhNjRmZjtcclxuICAtLWlvbi1jb2xvci10ZXJ0aWFyeS1yZ2I6IDEwNiwxMDAsMjU1O1xyXG4gIC0taW9uLWNvbG9yLXRlcnRpYXJ5LWNvbnRyYXN0OiAjZmZmZmZmO1xyXG4gIC0taW9uLWNvbG9yLXRlcnRpYXJ5LWNvbnRyYXN0LXJnYjogMjU1LDI1NSwyNTU7XHJcbiAgLS1pb24tY29sb3ItdGVydGlhcnktc2hhZGU6ICM1ZDU4ZTA7XHJcbiAgLS1pb24tY29sb3ItdGVydGlhcnktdGludDogIzc5NzRmZjtcclxuXHJcbiAgLS1pb24tY29sb3Itc3VjY2VzczogIzJmZGY3NTtcclxuICAtLWlvbi1jb2xvci1zdWNjZXNzLXJnYjogNDcsMjIzLDExNztcclxuICAtLWlvbi1jb2xvci1zdWNjZXNzLWNvbnRyYXN0OiAjMDAwMDAwO1xyXG4gIC0taW9uLWNvbG9yLXN1Y2Nlc3MtY29udHJhc3QtcmdiOiAwLDAsMDtcclxuICAtLWlvbi1jb2xvci1zdWNjZXNzLXNoYWRlOiAjMjljNDY3O1xyXG4gIC0taW9uLWNvbG9yLXN1Y2Nlc3MtdGludDogIzQ0ZTI4MztcclxuXHJcbiAgLS1pb24tY29sb3Itd2FybmluZzogI2ZmZDUzNDtcclxuICAtLWlvbi1jb2xvci13YXJuaW5nLXJnYjogMjU1LDIxMyw1MjtcclxuICAtLWlvbi1jb2xvci13YXJuaW5nLWNvbnRyYXN0OiAjMDAwMDAwO1xyXG4gIC0taW9uLWNvbG9yLXdhcm5pbmctY29udHJhc3QtcmdiOiAwLDAsMDtcclxuICAtLWlvbi1jb2xvci13YXJuaW5nLXNoYWRlOiAjZTBiYjJlO1xyXG4gIC0taW9uLWNvbG9yLXdhcm5pbmctdGludDogI2ZmZDk0ODtcclxuXHJcbiAgLS1pb24tY29sb3ItZGFuZ2VyOiAjZmY0OTYxO1xyXG4gIC0taW9uLWNvbG9yLWRhbmdlci1yZ2I6IDI1NSw3Myw5NztcclxuICAtLWlvbi1jb2xvci1kYW5nZXItY29udHJhc3Q6ICNmZmZmZmY7XHJcbiAgLS1pb24tY29sb3ItZGFuZ2VyLWNvbnRyYXN0LXJnYjogMjU1LDI1NSwyNTU7XHJcbiAgLS1pb24tY29sb3ItZGFuZ2VyLXNoYWRlOiAjZTA0MDU1O1xyXG4gIC0taW9uLWNvbG9yLWRhbmdlci10aW50OiAjZmY1YjcxO1xyXG5cclxuICAtLWlvbi1jb2xvci1kYXJrOiAjZjRmNWY4O1xyXG4gIC0taW9uLWNvbG9yLWRhcmstcmdiOiAyNDQsMjQ1LDI0ODtcclxuICAtLWlvbi1jb2xvci1kYXJrLWNvbnRyYXN0OiAjMDAwMDAwO1xyXG4gIC0taW9uLWNvbG9yLWRhcmstY29udHJhc3QtcmdiOiAwLDAsMDtcclxuICAtLWlvbi1jb2xvci1kYXJrLXNoYWRlOiAjZDdkOGRhO1xyXG4gIC0taW9uLWNvbG9yLWRhcmstdGludDogI2Y1ZjZmOTtcclxuXHJcbiAgLS1pb24tY29sb3ItbWVkaXVtOiAjOTg5YWEyO1xyXG4gIC0taW9uLWNvbG9yLW1lZGl1bS1yZ2I6IDE1MiwxNTQsMTYyO1xyXG4gIC0taW9uLWNvbG9yLW1lZGl1bS1jb250cmFzdDogIzAwMDAwMDtcclxuICAtLWlvbi1jb2xvci1tZWRpdW0tY29udHJhc3QtcmdiOiAwLDAsMDtcclxuICAtLWlvbi1jb2xvci1tZWRpdW0tc2hhZGU6ICM4Njg4OGY7XHJcbiAgLS1pb24tY29sb3ItbWVkaXVtLXRpbnQ6ICNhMmE0YWI7XHJcblxyXG4gIC0taW9uLWNvbG9yLWxpZ2h0OiAjMjIyNDI4O1xyXG4gIC0taW9uLWNvbG9yLWxpZ2h0LXJnYjogMzQsMzYsNDA7XHJcbiAgLS1pb24tY29sb3ItbGlnaHQtY29udHJhc3Q6ICNmZmZmZmY7XHJcbiAgLS1pb24tY29sb3ItbGlnaHQtY29udHJhc3QtcmdiOiAyNTUsMjU1LDI1NTtcclxuICAtLWlvbi1jb2xvci1saWdodC1zaGFkZTogIzFlMjAyMztcclxuICAtLWlvbi1jb2xvci1saWdodC10aW50OiAjMzgzYTNlO1xyXG5cclxuICBpb24tY2FyZC1jb250ZW50LCBpb24tdGl0bGUsIGlvbi1sYWJlbCBpb24tc2VsZWN0LCBmb3Jte1xyXG4gICAgY29sb3I6ICNmZmZmZmY7XHJcbiAgfVxyXG59XHJcblxyXG4vKlxyXG4gKiBpT1MgRGFyayBUaGVtZVxyXG4gKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXHJcbiAqL1xyXG5cclxuLmlvcyBib2R5LmRhcmsge1xyXG4gIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICMwMDAwMDA7XHJcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvci1yZ2I6IDAsMCwwO1xyXG5cclxuICAtLWlvbi10ZXh0LWNvbG9yOiAjZmZmZmZmO1xyXG4gIC0taW9uLXRleHQtY29sb3ItcmdiOiAyNTUsMjU1LDI1NTtcclxuXHJcbiAgLS1pb24tY29sb3Itc3RlcC01MDogIzBkMGQwZDtcclxuICAtLWlvbi1jb2xvci1zdGVwLTEwMDogIzFhMWExYTtcclxuICAtLWlvbi1jb2xvci1zdGVwLTE1MDogIzI2MjYyNjtcclxuICAtLWlvbi1jb2xvci1zdGVwLTIwMDogIzMzMzMzMztcclxuICAtLWlvbi1jb2xvci1zdGVwLTI1MDogIzQwNDA0MDtcclxuICAtLWlvbi1jb2xvci1zdGVwLTMwMDogIzRkNGQ0ZDtcclxuICAtLWlvbi1jb2xvci1zdGVwLTM1MDogIzU5NTk1OTtcclxuICAtLWlvbi1jb2xvci1zdGVwLTQwMDogIzY2NjY2NjtcclxuICAtLWlvbi1jb2xvci1zdGVwLTQ1MDogIzczNzM3MztcclxuICAtLWlvbi1jb2xvci1zdGVwLTUwMDogIzgwODA4MDtcclxuICAtLWlvbi1jb2xvci1zdGVwLTU1MDogIzhjOGM4YztcclxuICAtLWlvbi1jb2xvci1zdGVwLTYwMDogIzk5OTk5OTtcclxuICAtLWlvbi1jb2xvci1zdGVwLTY1MDogI2E2YTZhNjtcclxuICAtLWlvbi1jb2xvci1zdGVwLTcwMDogI2IzYjNiMztcclxuICAtLWlvbi1jb2xvci1zdGVwLTc1MDogI2JmYmZiZjtcclxuICAtLWlvbi1jb2xvci1zdGVwLTgwMDogI2NjY2NjYztcclxuICAtLWlvbi1jb2xvci1zdGVwLTg1MDogI2Q5ZDlkOTtcclxuICAtLWlvbi1jb2xvci1zdGVwLTkwMDogI2U2ZTZlNjtcclxuICAtLWlvbi1jb2xvci1zdGVwLTk1MDogI2YyZjJmMjtcclxuXHJcbiAgLS1pb24taXRlbS1iYWNrZ3JvdW5kOiAjMDAwMDAwO1xyXG5cclxuICAtLWlvbi1jYXJkLWJhY2tncm91bmQ6ICMxYzFjMWQ7XHJcbn1cclxuXHJcbi5pb3MgYm9keS5kYXJrIGlvbi1tb2RhbCB7XHJcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogdmFyKC0taW9uLWNvbG9yLXN0ZXAtMTAwKTtcclxuICAtLWlvbi10b29sYmFyLWJhY2tncm91bmQ6IHZhcigtLWlvbi1jb2xvci1zdGVwLTE1MCk7XHJcbiAgLS1pb24tdG9vbGJhci1ib3JkZXItY29sb3I6IHZhcigtLWlvbi1jb2xvci1zdGVwLTI1MCk7XHJcbiAgLS1pb24taXRlbS1iYWNrZ3JvdW5kOiB2YXIoLS1pb24tY29sb3Itc3RlcC0xNTApO1xyXG59XHJcblxyXG5cclxuLypcclxuICogTWF0ZXJpYWwgRGVzaWduIERhcmsgVGhlbWVcclxuICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxyXG4gKi9cclxuXHJcbi5tZCBib2R5LmRhcmsge1xyXG4gIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICMxMjEyMTI7XHJcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvci1yZ2I6IDE4LDE4LDE4O1xyXG5cclxuICAtLWlvbi10ZXh0LWNvbG9yOiAjZmZmZmZmO1xyXG4gIC0taW9uLXRleHQtY29sb3ItcmdiOiAyNTUsMjU1LDI1NTtcclxuXHJcbiAgLS1pb24tYm9yZGVyLWNvbG9yOiAjMjIyMjIyO1xyXG5cclxuICAtLWlvbi1jb2xvci1zdGVwLTUwOiAjMWUxZTFlO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtMTAwOiAjMmEyYTJhO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtMTUwOiAjMzYzNjM2O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtMjAwOiAjNDE0MTQxO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtMjUwOiAjNGQ0ZDRkO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtMzAwOiAjNTk1OTU5O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtMzUwOiAjNjU2NTY1O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNDAwOiAjNzE3MTcxO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNDUwOiAjN2Q3ZDdkO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNTAwOiAjODk4OTg5O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNTUwOiAjOTQ5NDk0O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNjAwOiAjYTBhMGEwO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNjUwOiAjYWNhY2FjO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNzAwOiAjYjhiOGI4O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtNzUwOiAjYzRjNGM0O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtODAwOiAjZDBkMGQwO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtODUwOiAjZGJkYmRiO1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtOTAwOiAjZTdlN2U3O1xyXG4gIC0taW9uLWNvbG9yLXN0ZXAtOTUwOiAjZjNmM2YzO1xyXG5cclxuICAtLWlvbi1pdGVtLWJhY2tncm91bmQ6ICMxZTFlMWU7XHJcblxyXG4gIC0taW9uLXRvb2xiYXItYmFja2dyb3VuZDogIzFmMWYxZjtcclxuXHJcbiAgLS1pb24tdGFiLWJhci1iYWNrZ3JvdW5kOiAjMWYxZjFmO1xyXG5cclxuICAtLWlvbi1jYXJkLWJhY2tncm91bmQ6ICMxZTFlMWU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
