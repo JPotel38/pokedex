@@ -17,8 +17,8 @@ export class LoginPage implements OnInit {
   passwordConfirmCtrl: FormControl;
   passwordForm: FormGroup;
 
-  constructor(public readonly router: Router,
-              public trainerService: TrainerService,
+  constructor(private router: Router,
+              private trainerService: TrainerService,
               fb: FormBuilder
   ) {
     this.usernameCtrl = fb.control('', Validators.required);
@@ -59,7 +59,7 @@ export class LoginPage implements OnInit {
     }
   }
 
-  success(userArray: Array<User>): User | undefined {
+  success(userArray: Array<User>): User {
     return userArray.find(user => JSON.stringify(user) === JSON.stringify(this.user));
   }
 }

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import { StoneEnum } from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 
@@ -13,12 +14,11 @@ export class PokemonDetailsPage implements OnInit {
   pokemonId: number;
   pokemon: Pokemon;
   level: number;
-  alert: any;
 
   constructor(
-    public readonly activatedRoute: ActivatedRoute,
-    public readonly allPokemonService: AllPokemonService,
-    public readonly router: Router
+    private activatedRoute: ActivatedRoute,
+    private allPokemonService: AllPokemonService,
+    private router: Router
   ) {
     this.pokemonId = parseInt(this.activatedRoute.snapshot.params.id, 10);
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId.toString());
@@ -44,7 +44,7 @@ export class PokemonDetailsPage implements OnInit {
     });
   }
 
-  manageLevel(e): void {
+  manageLevel(e: { detail: { value: number } }): void {
     this.level = e.detail.value;
   }
 
@@ -58,7 +58,7 @@ export class PokemonDetailsPage implements OnInit {
     this.router.navigate([`pokemon-details/${this.pokemonId.toString()}`]);
   }
 
-  useStone(stone): void {
+  useStone(stone: StoneEnum): void {
     const evolution = this.pokemonId + this.pokemon.stone.indexOf(stone) + 1;
     this.router.navigate([`pokemon-details/${evolution.toString()}`]);
   }
