@@ -6,11 +6,12 @@ import {AllPokemonResolver} from './shared/resolver/all-pokemon-resolver.service
 import {LoginPage} from './components/login/login-page.component';
 import {AccountComponent} from './components/account/account.component';
 import {SigninComponent} from './components/signin/signin.component';
+import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
 
 const routes: Routes = [
   {
     path: 'pokemon-details/:id',
-    loadChildren: () => import('./components/pokemon-details/pokemon-details.module').then(m => m.PokemonDetailsPageModule),
+    component: PokemonDetailsPage,
     resolve: {
       pokemon: PokemonDetailsResolver
     }

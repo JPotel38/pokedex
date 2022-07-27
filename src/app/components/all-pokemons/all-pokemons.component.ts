@@ -25,6 +25,7 @@ export class AllPokemonsComponent implements OnInit {
   }
 
   setPage(pokemonArrayByPages: any) {
+    console.log({pokemonArrayByPages})
     this.pokemonArrayByPages = pokemonArrayByPages;
   }
 

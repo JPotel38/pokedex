@@ -4,29 +4,28 @@
       <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
     </ion-row>
     <ion-row>
-      <ion-col size="1">
         <ion-item>
-          <ion-select (ionChange)="selectedLang($event)" value="en">
+          <ion-select interface="popover" (ionChange)="selectedLang($event)" value="en">
             <ion-select-option *ngFor="let lang of langSelect" [value]="lang"> {{ lang }}</ion-select-option>
           </ion-select>
         </ion-item>
-      </ion-col>
-      <ion-col size="1">
-        <ion-list>
-          <ion-item lines="full">
-            <ion-icon name="moon" slot="start"></ion-icon>
-            <ion-toggle (ionChange)="checkToggle($event)" id="themeToggle" slot="end"></ion-toggle>
-          </ion-item>
-        </ion-list>
-      </ion-col>
+        <ion-item>
+          <ion-icon name="moon" slot="start"></ion-icon>
+          <ion-toggle color="dark" (ionChange)="checkToggle($event)" id="themeToggle" slot="end"></ion-toggle>
+        </ion-item>
       <ion-col offset="8">
-        <ion-button (click)="goSignin()" *ngIf="currentUrl !== '/signin' && !user">{{'SIGNIN' | translate}}</ion-button>
-        <ion-button (click)="goLogin()" *ngIf="currentUrl !== '/login' && !user">{{'LOGIN' | translate}}</ion-button>
+        <ion-button color="light" class="button" (click)="goSignin()"
+                    *ngIf="currentUrl !== '/signin' && !user">{{'SIGNIN' | translate}}
+        </ion-button>
+        <ion-button color="light" class="button" (click)="goLogin()"
+                    *ngIf="currentUrl !== '/login' && !user">{{'LOGIN' | translate}}
+        </ion-button>
       </ion-col>
       <ion-col *ngIf="trainerService.trainer | async as user">
         <ion-label>Pokedex {{'OF' | translate}} {{user.login}}</ion-label>
-        <ion-button (click)="goAccount()">{{'ACCOUNT' | translate}}</ion-button>
-        <ion-button (click)="logOut()">{{'LOGOUT' | translate}}</ion-button>
+        <ion-button color="light" class="button"
+                    (click)="goAccount()">{{'ACCOUNT' | translate}}</ion-button>
+        <ion-button color="light" class="button" (click)="logOut()">{{'LOGOUT' | translate}}</ion-button>
       </ion-col>
     </ion-row>
   </ion-header>

@@ -14,11 +14,12 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {LoginPage} from './components/login/login-page.component';
 import {JwtPaginationComponent} from './components/jwt-pagination/jwt-pagination.component';
 import {SigninComponent} from './components/signin/signin.component';
+import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
 
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http);
 
 @NgModule({
-  declarations: [AppComponent, AllPokemonsComponent, LoginPage, JwtPaginationComponent, SigninComponent],
+  declarations: [AppComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, JwtPaginationComponent, SigninComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -32,7 +33,8 @@ export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
         deps: [HttpClient]
       }
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],

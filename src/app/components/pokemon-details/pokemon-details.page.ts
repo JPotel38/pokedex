@@ -36,7 +36,7 @@ export class PokemonDetailsPage implements OnInit {
     audio.play();
   }
 
-  async shaking(): Promise<void> {
+  shaking(): Promise<void> {
     return new Promise(_ => {
       setTimeout(() => {
         document.getElementById('img').classList.remove('shake');
