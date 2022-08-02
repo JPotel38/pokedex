@@ -1903,7 +1903,7 @@ export class AllPokemonService {
     ];
   }
 
-  getDetailsPokemon(id: number) {
+    getDetailsPokemon(id: string) {
     return this.pokemonArray[id - 1];
   }
 
