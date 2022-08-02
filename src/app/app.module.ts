@@ -19,25 +19,24 @@ import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.p
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
-  declarations: [AppComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, JwtPaginationComponent, SigninComponent],
-  entryComponents: [],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    ReactiveFormsModule,
+    declarations: [AppComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, JwtPaginationComponent, SigninComponent],
+    imports: [
+        BrowserModule,
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: httpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        ReactiveFormsModule,
 
-  ],
-  providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
-  bootstrap: [AppComponent],
+    ],
+    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
