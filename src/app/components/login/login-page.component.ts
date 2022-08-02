@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
 import {TrainerService} from '../../shared/services/trainer.service';
@@ -10,16 +10,16 @@ import {TrainerService} from '../../shared/services/trainer.service';
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPage implements OnInit {
-  userForm: FormGroup;
+  userForm: UntypedFormGroup;
   user: User;
-  usernameCtrl: FormControl;
-  passwordCtrl: FormControl;
-  passwordConfirmCtrl: FormControl;
-  passwordForm: FormGroup;
+  usernameCtrl: UntypedFormControl;
+  passwordCtrl: UntypedFormControl;
+  passwordConfirmCtrl: UntypedFormControl;
+  passwordForm: UntypedFormGroup;
 
   constructor(private router: Router,
               private trainerService: TrainerService,
-              fb: FormBuilder
+              fb: UntypedFormBuilder
   ) {
     this.usernameCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
     });
   }
 
-  static passwordMatch(group: FormGroup): { matchingError: true } | null {
+  static passwordMatch(group: UntypedFormGroup): { matchingError: true } | null {
     const password = group.get('password').value;
     const confirm = group.get('passwordConfirm').value;
     return password === confirm ? null : {matchingError: true};
