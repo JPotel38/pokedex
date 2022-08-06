@@ -44,7 +44,7 @@ export class PokemonDetailsPage implements OnInit {
     });
   }
 
-  manageLevel(e: { detail: { value: number } }): void {
+  manageLevel(e): void {
     this.level = e.detail.value;
   }
 
