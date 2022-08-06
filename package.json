@@ -28,6 +28,7 @@
     "glob-to-regexp": "^0.4.1",
     "messageformat": "^2.3.0",
     "ngx-build-plus": "^13.0.1",
+    "ngx-pagination": "^6.0.2",
     "ngx-translate-messageformat-compiler": "^5.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -3,7 +3,7 @@ import {Pokemon} from '../interfaces/pokemon';
 import {TypesEnum} from '../enums/types.enum';
 import {HttpClient} from '@angular/common/http';
 import {ColorEnum} from '../enums/color.enum';
-import {BehaviorSubject, Observable, of} from 'rxjs';
+import {BehaviorSubject} from 'rxjs';
 import {StoneEnum} from '../enums/stone.enum';
 
 @Injectable({
@@ -1906,7 +1906,7 @@ export class AllPokemonService {
     return this.pokemonArray[Number(id) - 1];
   }
 
-  getAllPokemons(): Observable<BehaviorSubject<Array<Pokemon>>> {
-    return of(this.pokemonArray);
+  getAllPokemons(): BehaviorSubject<Array<Pokemon>> {
+    return this.pokemonArray;
   }
 }

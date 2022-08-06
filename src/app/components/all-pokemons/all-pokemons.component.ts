@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
-import {Pokemon} from '../../shared/interfaces/pokemon';
 
 @Component({
   selector: 'app-all-pokemons',
@@ -9,7 +8,7 @@ import {Pokemon} from '../../shared/interfaces/pokemon';
   styleUrls: ['./all-pokemons.component.scss'],
 })
 export class AllPokemonsComponent implements OnInit {
-  pokemonArrayByPages: Array<Pokemon>;
+  p: number = 1;
 
   constructor(
     public readonly allPokemon: AllPokemonService,
