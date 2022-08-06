@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-grid *ngIf="allPokemon.getAllPokemons() | async as PokemonArray">
+  <ion-grid *ngIf="allPokemon.getAllPokemons() | async">
     <ion-row>
       <ion-col *ngFor="let pokemon of pokemonArrayByPages" sizeLg="2" sizeXs="11">
         <ion-card (click)="goToDetails(pokemon.id)"
@@ -23,10 +23,6 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col offset="4">
-        <app-jw-pagination (changePage)="setPage($event)" [items]="PokemonArray" [pageSize]="24">
-        </app-jw-pagination>
-      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

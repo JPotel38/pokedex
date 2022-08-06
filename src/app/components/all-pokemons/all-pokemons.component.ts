@@ -24,9 +24,4 @@ export class AllPokemonsComponent implements OnInit {
     this.router.navigate([`pokemon-details/${id}`]);
   }
 
-  setPage(pokemonArrayByPages: any) {
-    console.log({pokemonArrayByPages})
-    this.pokemonArrayByPages = pokemonArrayByPages;
-  }
-
 }
