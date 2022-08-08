@@ -27,8 +27,6 @@ export class PokemonDetailsPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.pokemonId)
-    console.log(this.pokemon)
   }
 
   playAudio(): void {
