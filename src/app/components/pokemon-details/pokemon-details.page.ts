@@ -3,6 +3,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { StoneEnum } from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
+import {BehaviorSubject} from "rxjs";
+import {filter} from "rxjs/operators";
 
 @Component({
   selector: 'app-pokemon-details',
@@ -20,11 +22,13 @@ export class PokemonDetailsPage implements OnInit {
     private allPokemonService: AllPokemonService,
     private router: Router
   ) {
-    this.pokemonId = parseInt(this.activatedRoute.snapshot.params.id, 10);
-    this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId.toString());
+    this.pokemonId = this.activatedRoute.snapshot.params.id;
+    this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
   }
 
   ngOnInit() {
+    console.log(this.pokemonId)
+    console.log(this.pokemon)
   }
 
   playAudio(): void {

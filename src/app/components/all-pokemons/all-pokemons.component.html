@@ -1,7 +1,7 @@
 <ion-content>
-  <ion-grid *ngIf="allPokemon.getAllPokemons() | async as PokemonArray">
+  <ion-grid *ngIf="allPokemon.getAllPokemons()">
     <ion-row>
-      <ion-col *ngFor="let pokemon of PokemonArray | paginate: { itemsPerPage: 24, currentPage: p }" sizeLg="2" sizeXs="11">
+      <ion-col *ngFor="let pokemon of pokemonArray | paginate: { itemsPerPage: 24, currentPage: p }" sizeLg="2" sizeXs="11">
         <ion-card (click)="goToDetails(pokemon.id)"
                   [ngStyle]="{'cursor': 'pointer',
                   'background': pokemon.types.length == 1 ?

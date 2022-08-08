@@ -11,7 +11,7 @@ import {StoneEnum} from '../enums/stone.enum';
 })
 export class AllPokemonService {
 
-  pokemonArray = new BehaviorSubject<Array<Pokemon>>([
+  pokemonArray = [
     {
       id: 1,
       name: 'Bulbasaur',
@@ -1897,16 +1897,16 @@ export class AllPokemonService {
       description: 'When viewed through a microscope, this Pokémon\'s short, fine, delicate hair can be seen. ',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
-  ]);
+  ];
 
   constructor(readonly http: HttpClient) {
   }
 
-    getDetailsPokemon(id: string) {
-    return this.pokemonArray[Number(id) - 1];
+  getDetailsPokemon(id: number) {
+    return this.pokemonArray[id - 1];
   }
 
-  getAllPokemons(): BehaviorSubject<Array<Pokemon>> {
+  getAllPokemons(): Array<Pokemon> {
     return this.pokemonArray;
   }
 }
