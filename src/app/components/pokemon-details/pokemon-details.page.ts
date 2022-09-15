@@ -61,7 +61,7 @@ export class PokemonDetailsPage implements OnInit {
   }
 
   useStone(stone: StoneEnum): void {
-    const evolution = this.pokemonId + this.pokemon.stone.indexOf(stone) + 1;
+    const evolution = Number(this.pokemonId) + this.pokemon.stone.indexOf(stone) + 1;
     this.router.navigate([`pokemon-details/${evolution.toString()}`]);
   }
 }
