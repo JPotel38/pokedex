@@ -1047,13 +1047,13 @@ export class AllPokemonService {
     },
     {
       id: 83,
-      name: 'Farfetch\'d',
+      name: "Farfetch’d",
       types: [TypesEnum.normal, TypesEnum.flying],
       height: '0.8 m',
       weight: '15.0 kg',
       color: [ColorEnum.normalColor, ColorEnum.flyingColor],
-      img: './assets/images/Farfetch\'d.png',
-      audio: './assets/audio/Farfetch\'d.ogg',
+      img: "./assets/images/Farfetch’d.png",
+      audio: "./assets/audio/Farfetch’d.ogg",
       description: 'Lives where reedy plants grow. They are rarely seen, so it\'s thought their numbers are decreasing. ',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },

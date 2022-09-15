@@ -1,7 +1,8 @@
 <ion-content>
   <ion-grid *ngIf="allPokemon.getAllPokemons()">
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray | paginate: { itemsPerPage: 24, currentPage: p }" sizeLg="2" sizeXs="11">
+      <ion-col *ngFor="let pokemon of pokemonArray | paginate: { itemsPerPage: 24, currentPage: p }" sizeLg="2"
+               sizeXs="11">
         <ion-card (click)="goToDetails(pokemon.id)"
                   [ngStyle]="{'cursor': 'pointer',
                   'background': pokemon.types.length == 1 ?
@@ -9,7 +10,9 @@
                   }"
         >
           <ion-card-header>
-            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
+            <ion-card-title><img class="pokemon-image" src="../../../assets/images/{{pokemon.name}}.png"
+                                 alt="{{pokemon.name}}"/>
+              #{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
           </ion-card-header>
           <ion-card-content *ngIf="pokemon.types.length == 1">
             {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
