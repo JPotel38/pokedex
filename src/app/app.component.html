@@ -21,7 +21,7 @@
                     *ngIf="currentUrl !== '/login' && !user">{{'LOGIN' | translate}}
         </ion-button>
       </ion-col>
-      <ion-col *ngIf="trainerService.trainer | async as user">
+      <ion-col *ngIf="trainerService.user | async as user">
         <ion-label>Pokedex {{'OF' | translate}} {{user.login}}</ion-label>
         <ion-button color="light" class="button"
                     (click)="goAccount()">{{'ACCOUNT' | translate}}</ion-button>

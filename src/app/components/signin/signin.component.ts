@@ -51,15 +51,15 @@ export class SigninComponent implements OnInit {
   validate() {
     this.user = {
       login: this.userForm.get('name').value,
-      password: this.userForm.get('password').value
+      password: this.userForm.get('passwordForm').value.password
     };
     this.storeUser(this.user);
-    this.trainerService.trainer.next(this.user);
+    this.trainerService.user.next(this.userArray.pop());
     this.router.navigate([`/`]);
   }
 
   storeUser(user: User) {
-    localStorage.getItem('userArray');
+    this.userArray = JSON.parse(localStorage.getItem('userArray'));
     this.userArray.push(user);
     localStorage.setItem('userArray', JSON.stringify(this.userArray));
   }

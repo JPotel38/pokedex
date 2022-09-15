@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   langSelect: Array<string> = ['en', 'fr'];
   toggle = document.querySelector('#themeToggle');
   user: User;
-  currentUrl: any;
+  currentUrl: string;
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.trainerService.trainer.subscribe(user => this.user = user);
+    this.trainerService.user.subscribe(user => this.user = user);
   }
 
   selectedLang($event): void {
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
   }
 
   logOut() {
-    this.trainerService.trainer.next(null);
+    this.trainerService.user.next(null);
   }
 
   goSignin() {

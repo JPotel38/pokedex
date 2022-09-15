@@ -1,23 +1,24 @@
 <ion-content xmlns="http://www.w3.org/1999/html">
   <ion-title>{{'SIGNIN' | translate}}</ion-title>
   <form (ngSubmit)="validate()" [formGroup]="userForm">
+    <ion-grid>
     <ion-row>
-      <ion-col>
+      <ion-col size="2">
         <ion-label>{{'USERNAME' | translate}}:</ion-label>
-        <input formControlName="name" type="text">
+        <ion-input formControlName="name" type="text"></ion-input>
         <ion-label *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')">{{'USERNAME' | translate}}
           {{'IS_REQUIRED' | translate}}</ion-label>
       </ion-col>
-      <div formGroupName="passwordForm">
+      <form [formGroup]="passwordForm">
         <ion-col>
           <ion-label>{{'PASSWORD' | translate}}:</ion-label>
-          <input formControlName="password" type="password">
+          <ion-input formControlName="password" type="password"></ion-input>
           <ion-label
             *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
         </ion-col>
         <ion-col>
           <ion-label>{{'PASSWORD_CONFIRM' | translate}}:</ion-label>
-          <input formControlName="passwordConfirm" type="password">
+          <ion-input formControlName="passwordConfirm" type="password"></ion-input>
           <ion-label
             *ngIf="passwordConfirmCtrl.dirty && passwordConfirmCtrl.hasError('required')">{{'PASSWORD_CONFIRM_REQUIRED' | translate}}
           </ion-label>
@@ -25,8 +26,9 @@
         <ion-label *ngIf="passwordForm.dirty && passwordForm.hasError('matchingError')">
           {{'PASSWORD_NOT_MATCHING' | translate}}
         </ion-label>
-      </div>
+      </form>
     </ion-row>
     <ion-button [disabled]="userForm.invalid" type="submit">{{'VALIDATE' | translate}}</ion-button>
+    </ion-grid>
   </form>
 </ion-content>

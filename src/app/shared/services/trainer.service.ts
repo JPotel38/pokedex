@@ -6,7 +6,8 @@ import {User} from '../interfaces/user';
   providedIn: 'root'
 })
 export class TrainerService {
-  trainer: BehaviorSubject<User> = new BehaviorSubject(null);
-  getUser() {
+  user: BehaviorSubject<User> = new BehaviorSubject(null);
+  get User() {
+    return JSON.parse(localStorage.getItem('user'))
   }
 }
