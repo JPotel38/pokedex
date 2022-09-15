@@ -1,4 +1,3 @@
-<ion-content>
   <ion-grid *ngIf="allPokemon.getAllPokemons()">
     <ion-row>
       <ion-col *ngFor="let pokemon of pokemonArray | paginate: { itemsPerPage: 24, currentPage: p }" sizeLg="2"
@@ -29,4 +28,3 @@
       <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </ion-row>
   </ion-grid>
-</ion-content>
