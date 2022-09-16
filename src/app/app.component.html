@@ -5,14 +5,13 @@
     </ion-row>
     <ion-row>
         <ion-item>
-          <ion-select interface="popover" (ionChange)="selectedLang($event)" value="en">
-            <ion-select-option *ngFor="let lang of langSelect" [value]="lang"> {{ lang }}</ion-select-option>
+          <ion-select interface="popover" (ionChange)="selectedLang($event)" placeholder="Languages">
+            <ion-select-option *ngFor="let lang of langSelect" [value]="lang"> {{ lang | translate }}</ion-select-option>
           </ion-select>
         </ion-item>
-        <ion-item>
-          <ion-icon name="moon" slot="start"></ion-icon>
-          <ion-toggle color="dark" (ionChange)="checkToggle($event)" id="themeToggle" slot="end"></ion-toggle>
-        </ion-item>
+          <ion-button (click)="switchTheme()">
+            <ion-icon [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
+          </ion-button>
       <ion-col offset="8">
         <ion-button color="light" class="button" (click)="goSignin()"
                     *ngIf="currentUrl !== '/signin' && !user">{{'SIGNIN' | translate}}

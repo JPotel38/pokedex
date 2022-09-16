@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
 import {TrainerService} from './shared/services/trainer.service';
@@ -10,6 +10,7 @@ import {User} from './shared/interfaces/user';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  isChecked: boolean = false;
   langSelect: Array<string> = ['en', 'fr'];
   toggle = document.querySelector('#themeToggle');
   user: User;
@@ -35,9 +36,10 @@ export class AppComponent implements OnInit {
     this.router.navigate([`/`]);
   }
 
-  checkToggle(e): void {
-    const isChecked = e.detail.checked;
-    document.body.classList.toggle('dark', isChecked);
+  switchTheme(): void {
+    this.isChecked = this.isChecked == false;
+    console.log(this.isChecked)
+    document.body.classList.toggle('dark', this.isChecked);
   }
 
   goLogin() {
