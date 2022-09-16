@@ -1,29 +1,31 @@
-<ion-grid *ngIf="allPokemon.getAllPokemons()">
-  <ion-row>
-    <ion-col *ngFor="let pokemon of pokemonArray | paginate: { itemsPerPage: 24, currentPage: p }" sizeLg="2"
-             sizeXs="11">
-      <ion-card (click)="goToDetails(pokemon.id)"
-                [ngStyle]="{'cursor': 'pointer',
+<ion-content>
+  <ion-grid *ngIf="allPokemon.getAllPokemons()">
+    <ion-row>
+      <ion-col *ngFor="let pokemon of pokemonArray | paginate: { itemsPerPage: 24, currentPage: p }" sizeLg="2"
+               sizeXs="11">
+        <ion-card (click)="goToDetails(pokemon.id)"
+                  [ngStyle]="{'cursor': 'pointer',
                   'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
                   }"
-      >
-        <ion-card-header>
-          <ion-card-title><img class="pokemon-image" [src]="pokemon.img" alt="{{pokemon.name}}"/>
-            #{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content *ngIf="pokemon.types.length == 1">
-          {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
-          {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}
-        </ion-card-content>
-        <ion-card-content *ngIf="pokemon.types.length > 1">
-          {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
-          /{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
-  </ion-row>
-</ion-grid>
+        >
+          <ion-card-header>
+            <ion-card-title><img class="pokemon-image" [src]="pokemon.img" alt="{{pokemon.name}}"/>
+              #{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content *ngIf="pokemon.types.length == 1">
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
+            {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}
+          </ion-card-content>
+          <ion-card-content *ngIf="pokemon.types.length > 1">
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
+            /{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </ion-row>
+  </ion-grid>
+</ion-content>
