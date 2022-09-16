@@ -9,8 +9,11 @@
             <ion-select-option *ngFor="let lang of langSelect" [value]="lang"> {{ lang | translate }}</ion-select-option>
           </ion-select>
         </ion-item>
-          <ion-button (click)="switchTheme()">
-            <ion-icon [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
+          <ion-button fill="clear" class="theme-button" (click)="switchTheme()">
+            <ion-icon [ngStyle]="{'color': isChecked ?
+                  'yellow' : 'white'
+                  }"
+                      [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
           </ion-button>
       <ion-col offset="8">
         <ion-button color="light" class="button" (click)="goSignin()"
