@@ -1,5 +1,7 @@
 {
   "HOME": "Accueil",
+  "en": "Anglais",
+  "fr": "Français",
   "LOGIN": "Se connecter",
   "SIGNIN": "S'inscrire",
   "USERNAME": "Nom d'utilisateur",
@@ -11,6 +13,9 @@
   "VALIDATE": "Valider",
   "ACCOUNT": "Compte",
   "LOGOUT": "Déconnexion",
+  "SEARCH POKEMON": "Rechercher un Pokémon",
+  "FILTER ON": "Filtre sur : ",
+  "NAME": "Nom",
   "CARD_SUBJECT_ONE": "est un Pokemon de type",
   "CARD_SUBJECT_TWO": "est un Pokemon de type",
   "FIRST": "Première",
