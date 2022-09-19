@@ -1,7 +1,12 @@
 <ion-content>
-  <ion-grid *ngIf="allPokemon.getAllPokemons()">
+  <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray " size="2">
+      <ion-col>
+        <ion-input placeholder="{{'SEARCH POKEMON'| translate}}" type="text" [formControl]="pokemon" (keyup.enter)="search()"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let pokemon of pokemonArray" size="2">
         <ion-card (click)="goToDetails(pokemon.id)"
                   [ngStyle]="{'cursor': 'pointer',
                   'background': pokemon.types.length == 1 ?

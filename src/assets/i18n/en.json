@@ -13,6 +13,7 @@
   "VALIDATE": "Validate",
   "ACCOUNT": "Account",
   "LOGOUT": "Log Out",
+  "SEARCH POKEMON": "Search Pokémon",
   "CARD_SUBJECT_ONE": "is a",
   "CARD_SUBJECT_TWO": "is a dual-type",
   "FIRST": "First",
@@ -27,7 +28,7 @@
   "EXCHANGE": "Exchange",
   "ATTACKS": "Attacks",
   "NAMES": {
-    "Bulbasaur": "Bulbasaur",
+    "BULBASAUR": "Bulbasaur",
     "Ivysaur": "Ivysaur",
     "Venusaur": "Venusaur",
     "Charmander": "Charmander",

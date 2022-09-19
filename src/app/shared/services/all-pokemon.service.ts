@@ -3,7 +3,6 @@ import {Pokemon} from '../interfaces/pokemon';
 import {TypesEnum} from '../enums/types.enum';
 import {HttpClient} from '@angular/common/http';
 import {ColorEnum} from '../enums/color.enum';
-import {BehaviorSubject} from 'rxjs';
 import {StoneEnum} from '../enums/stone.enum';
 
 @Injectable({

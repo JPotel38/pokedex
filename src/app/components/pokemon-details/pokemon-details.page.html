@@ -15,10 +15,10 @@
         </ion-row>
         <ion-row>
           <ion-text *ngIf="pokemon.types.length == 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT' | translate}}
             {{'TYPES.' + pokemon.types[0] | translate}} {{'POKEMON' | translate}}</ion-text>
           <ion-text *ngIf="pokemon.types.length > 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
+            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
             /{{'TYPES.' + pokemon.types[1] | translate}} {{'POKEMON' | translate}}</ion-text>
           <ion-text [innerHTML]="'DESC.' + pokemon.name | translate"></ion-text>
         </ion-row>
