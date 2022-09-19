@@ -14,9 +14,10 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {LoginPage} from './components/login/login-page.component';
 import {SigninComponent} from './components/signin/signin.component';
 import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
-import {NgxPaginationModule} from "ngx-pagination";
 
-export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [AppComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, SigninComponent],
@@ -25,11 +26,11 @@ export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule,
     TranslateModule.forRoot({
+      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
-        useFactory: httpLoaderFactory,
+        useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
     }),

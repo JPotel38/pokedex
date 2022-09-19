@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
               public trainerService: TrainerService
   ) {
     translate.setDefaultLang('en');
+    translate.use('en');
     router.events.subscribe(() => this.currentUrl = router.url);
   }
 

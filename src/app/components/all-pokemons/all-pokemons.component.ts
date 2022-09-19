@@ -12,10 +12,10 @@ import {Subscription} from "rxjs";
   styleUrls: ['./all-pokemons.component.scss'],
 })
 export class AllPokemonsComponent implements OnDestroy {
-  p: number = 1;
   pokemonArray: Array<Pokemon>
   pokemon = new FormControl('');
   private translateServiceSubscription: Subscription;
+  filterByName: boolean = false;
 
   constructor(
     public readonly allPokemonService: AllPokemonService,
@@ -39,6 +39,7 @@ export class AllPokemonsComponent implements OnDestroy {
     if (!this.pokemon.value) {
       this.pokemonArray = this.allPokemonService.getAllPokemons();
     } else {
+      this.filterByName = true;
       this.translateServiceSubscription = this.translateService.getTranslation(this.translateService.currentLang)
         .subscribe(res => {
           for (const [key, value] of Object.entries(res.NAMES)) {
@@ -48,5 +49,11 @@ export class AllPokemonsComponent implements OnDestroy {
           }
         })
     }
+  }
+
+  clearName() {
+    this.pokemon.reset();
+    this.filterByName = false;
+    this.search();
   }
 }
