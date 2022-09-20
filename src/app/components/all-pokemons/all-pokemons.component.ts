@@ -59,13 +59,13 @@ export class AllPokemonsComponent implements OnDestroy {
     this.typeSelected = selectedType;
     this.isFilteredByType = true;
     this.pokemonArray = this.allPokemonService.getAllPokemons();
-    this.pokemonArray =  this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelected))
+    this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelected))
   }
 
   clearName() {
     this.pokemon.reset();
     this.isFilteredByName = false;
-    if(this.isFilteredByType) {
+    if (this.isFilteredByType) {
       this.filterByType(this.typeSelected);
     } else {
       this.pokemonArray = this.allPokemonService.getAllPokemons();
@@ -74,7 +74,7 @@ export class AllPokemonsComponent implements OnDestroy {
 
   clearType() {
     this.isFilteredByType = false;
-    if(this.isFilteredByName) {
+    if (this.isFilteredByName) {
       this.filterByName();
     } else {
       this.pokemonArray = this.allPokemonService.getAllPokemons();
