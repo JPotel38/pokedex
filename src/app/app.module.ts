@@ -14,11 +14,12 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {LoginPage} from './components/login/login-page.component';
 import {SigninComponent} from './components/signin/signin.component';
 import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
+import { TypeNamePipe } from './pipes/type-name.pipe';
 
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
-  declarations: [AppComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, SigninComponent],
+  declarations: [AppComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, SigninComponent, TypeNamePipe],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

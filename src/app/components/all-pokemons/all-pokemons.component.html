@@ -1,19 +1,67 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="2">
+      <ion-col sizeXs="12" sizeLg="2">
         <ion-input class="input" placeholder="{{'SEARCH POKEMON'| translate}}" type="text" [formControl]="pokemon"
-                   (keyup.enter)="search()"></ion-input>
+                   (keyup.enter)="filterByName()"></ion-input>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-text>Types :</ion-text>
+        <ion-button (click)="filterByType('normal')" [ngStyle]="{'--background': colorEnum.normalColor}">Normal
+        </ion-button>
+        <ion-button (click)="filterByType('fire')" [ngStyle]="{'--background': colorEnum.fireColor}">
+          {{'TYPES.fire' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('water')"
+                    [ngStyle]="{'--background': colorEnum.waterColor}">{{'TYPES.fire' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('grass')"
+                    [ngStyle]="{'--background': colorEnum.grassColor}">{{'TYPES.grass' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('electric')"
+                    [ngStyle]="{'--background': colorEnum.electricColor}">{{'TYPES.electric' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('ice')"
+                    [ngStyle]="{'--background': colorEnum.iceColor}">{{'TYPES.ice' | translate | typeName}}</ion-button>
+        <ion-button (click)="filterByType('fighting')"
+                    [ngStyle]="{'--background': colorEnum.fightingColor}">{{'TYPES.fighting' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('poison')"
+                    [ngStyle]="{'--background': colorEnum.poisonColor}">{{'TYPES.poison' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('ground')"
+                    [ngStyle]="{'--background': colorEnum.groundColor}">{{'TYPES.ground' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('flying')"
+                    [ngStyle]="{'--background': colorEnum.flyingColor}">{{'TYPES.flying' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('psychic')"
+                    [ngStyle]="{'--background': colorEnum.psychicColor}">{{'TYPES.psychic' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('bug')"
+                    [ngStyle]="{'--background': colorEnum.bugColor}">{{'TYPES.bug' | translate | typeName}}</ion-button>
+        <ion-button (click)="filterByType('rock')"
+                    [ngStyle]="{'--background': colorEnum.rockColor}">{{'TYPES.rock' | translate | typeName}}</ion-button>
+        <ion-button (click)="filterByType('ghost')"
+                    [ngStyle]="{'--background': colorEnum.ghostColor}">{{'TYPES.ghost' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('dragon')"
+                    [ngStyle]="{'--background': colorEnum.dragonColor}">{{'TYPES.dragon' | translate | typeName}}
+        </ion-button>
       </ion-col>
     </ion-row>
-      <ion-row *ngIf="filterByName">
-        {{'FILTER ON' | translate}}
-        <ion-chip>{{'NAME' | translate}}
-          <ion-icon name="close" (click)="clearName()"></ion-icon>
-        </ion-chip>
-      </ion-row>
+    <ion-row *ngIf="isFilteredByName||isFilteredByType">
+      <ion-text>{{'FILTER ON' | translate}}</ion-text>
+      <ion-chip *ngIf="isFilteredByName">{{'NAME' | translate}} : {{pokemon.value | titlecase}}
+        <ion-icon name="close" (click)="clearName()"></ion-icon>
+      </ion-chip>
+      <ion-chip *ngIf="isFilteredByType">Type :
+        {{'TYPES.' + typeSelected | translate | typeName | titlecase}}
+        <ion-icon name="close" (click)="clearType()"></ion-icon>
+      </ion-chip>
+    </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" size="2">
+      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="12" sizeMd="4" sizeXl="2">
         <ion-card (click)="goToDetails(pokemon.id)"
                   [ngStyle]="{'cursor': 'pointer',
                   'background': pokemon.types.length == 1 ?

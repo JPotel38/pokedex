@@ -4,18 +4,23 @@
       <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
     </ion-row>
     <ion-row>
+      <ion-col sizeXs="6" sizeLg="1">
         <ion-item>
           <ion-select interface="popover" (ionChange)="selectedLang($event)" placeholder="Languages">
-            <ion-select-option *ngFor="let lang of langSelect" [value]="lang"> {{ lang | translate }}</ion-select-option>
+            <ion-select-option *ngFor="let lang of langSelect"
+                               [value]="lang"> {{ lang | translate }}</ion-select-option>
           </ion-select>
         </ion-item>
-          <ion-button fill="clear" class="theme-button" (click)="switchTheme()">
-            <ion-icon [ngStyle]="{'color': isChecked ?
+      </ion-col>
+      <ion-col sizeXs="2">
+        <ion-button fill="clear" class="theme-button" (click)="switchTheme()">
+          <ion-icon [ngStyle]="{'color': isChecked ?
                   'yellow' : 'white'
                   }"
-                      [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
-          </ion-button>
-      <ion-col offset="7">
+                    [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col offsetLg="7">
         <ion-button color="light" class="button" (click)="goSignin()"
                     *ngIf="currentUrl !== '/signin' && !user">{{'SIGNIN' | translate}}
         </ion-button>

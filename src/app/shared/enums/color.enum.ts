@@ -6,7 +6,7 @@ export enum ColorEnum {
   flyingColor = 'rgb(168, 144, 240)',
   rockColor = 'rgb(189, 165, 90)',
   ghostColor = 'rgb(99, 99, 181)',
-  darknessColor = 'rgb(115, 90, 74)',
+  darkColor = 'rgb(115, 90, 74)',
   fightingColor = 'rgb(165, 82, 57)',
   steelColor = 'rgb(173, 165, 148)',
   dragonColor = 'rgb(136, 88, 246)',

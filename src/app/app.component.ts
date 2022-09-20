@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
 import {TrainerService} from './shared/services/trainer.service';
@@ -39,7 +39,6 @@ export class AppComponent implements OnInit {
 
   switchTheme(): void {
     this.isChecked = this.isChecked == false;
-    console.log(this.isChecked)
     document.body.classList.toggle('dark', this.isChecked);
   }
 
