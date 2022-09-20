@@ -5,6 +5,7 @@ import {Pokemon} from "../../shared/interfaces/pokemon";
 import {FormControl} from "@angular/forms";
 import {TranslateService} from "@ngx-translate/core";
 import {Subscription} from "rxjs";
+import {ColorEnum} from "../../shared/enums/color.enum";
 
 @Component({
   selector: 'app-all-pokemons',
@@ -15,7 +16,10 @@ export class AllPokemonsComponent implements OnDestroy {
   pokemonArray: Array<Pokemon>
   pokemon = new FormControl('');
   private translateServiceSubscription: Subscription;
-  filterByName: boolean = false;
+  isFilteredByName: boolean = false;
+  isFilteredByType: boolean = false;
+  colorEnum = ColorEnum;
+  typeSelected: string;
 
   constructor(
     public readonly allPokemonService: AllPokemonService,
@@ -35,11 +39,11 @@ export class AllPokemonsComponent implements OnDestroy {
     this.router.navigate([`pokemon-details/${id}`]);
   }
 
-  search() {
+  filterByName() {
     if (!this.pokemon.value) {
       this.pokemonArray = this.allPokemonService.getAllPokemons();
     } else {
-      this.filterByName = true;
+      this.isFilteredByName = true;
       this.translateServiceSubscription = this.translateService.getTranslation(this.translateService.currentLang)
         .subscribe(res => {
           for (const [key, value] of Object.entries(res.NAMES)) {
@@ -51,9 +55,29 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
+  filterByType(selectedType: string) {
+    this.typeSelected = selectedType;
+    this.isFilteredByType = true;
+    this.pokemonArray = this.allPokemonService.getAllPokemons();
+    this.pokemonArray =  this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelected))
+  }
+
   clearName() {
     this.pokemon.reset();
-    this.filterByName = false;
-    this.search();
+    this.isFilteredByName = false;
+    if(this.isFilteredByType) {
+      this.filterByType(this.typeSelected);
+    } else {
+      this.pokemonArray = this.allPokemonService.getAllPokemons();
+    }
+  }
+
+  clearType() {
+    this.isFilteredByType = false;
+    if(this.isFilteredByName) {
+      this.filterByName();
+    } else {
+      this.pokemonArray = this.allPokemonService.getAllPokemons();
+    }
   }
 }

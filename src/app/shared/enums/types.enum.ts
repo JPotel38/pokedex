@@ -6,7 +6,7 @@ export enum TypesEnum {
   flying = 'flying',
   rock = 'rock',
   ghost = 'ghost',
-  darkness = 'darkness',
+  dark = 'dark',
   fighting = 'fighting',
   steel = 'steel',
   dragon = 'dragon',
