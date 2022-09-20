@@ -15,9 +15,7 @@ import {LoginPage} from './components/login/login-page.component';
 import {SigninComponent} from './components/signin/signin.component';
 import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
+export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
   declarations: [AppComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, SigninComponent],
@@ -30,7 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: httpLoaderFactory,
         deps: [HttpClient]
       }
     }),
