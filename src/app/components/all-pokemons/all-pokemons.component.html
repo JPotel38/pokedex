@@ -61,7 +61,7 @@
       </ion-chip>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="12" sizeMd="4" sizeXl="2">
+      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="12" sizeMd="2">
         <ion-card (click)="goToDetails(pokemon.id)"
                   [ngStyle]="{'cursor': 'pointer',
                   'background': pokemon.types.length == 1 ?
@@ -69,9 +69,9 @@
                   }"
         >
           <ion-card-header>
-            <ion-card-title><img class="pokemon-image" [src]="pokemon.img" alt="{{pokemon.name}}"/>
-              #{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-title>
+            <ion-card-title><img class="pokemon-image" [src]="pokemon.img" alt="{{pokemon.name}}"/></ion-card-title>
           </ion-card-header>
+          <ion-card-content>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
