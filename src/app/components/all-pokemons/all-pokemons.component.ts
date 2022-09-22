@@ -58,8 +58,9 @@ export class AllPokemonsComponent implements OnDestroy {
   }
 
   filterByType(selectedType: string) {
-    this.typeSelectedArray.push(selectedType);
-    this.isFilteredByType = true;
+    if (!this.typeSelectedArray.includes(selectedType)) {
+      this.typeSelectedArray.push(selectedType)
+    }
     this.pokemonArray = this.allPokemonService.getAllPokemons();
     if (this.typeSelectedArray.length === 1) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelectedArray[0]))
@@ -78,14 +79,15 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  clearType(typeDeleted: string) {
-    this.isFilteredByType = false
+  clearType(index: number) {
     if (this.isFilteredByName) {
       this.filterByName();
     } else {
-      this.typeSelectedArray = this.typeSelectedArray.filter(type => type !== typeDeleted);
-        if (this.typeSelectedArray.length) {
-          this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelectedArray[0]))
+      this.typeSelectedArray.splice(index, 1);
+      if (!this.typeSelectedArray.length) {
+        this.pokemonArray = this.allPokemonService.getAllPokemons();
+      } else {
+        this.filterByType(this.typeSelectedArray[0])
       }
     }
   }
