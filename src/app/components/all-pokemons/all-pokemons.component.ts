@@ -1,5 +1,5 @@
-import {Component, OnDestroy} from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 import {Pokemon} from "../../shared/interfaces/pokemon";
 import {FormControl} from "@angular/forms";
@@ -13,27 +13,37 @@ import {UtilsService} from "../../shared/services/utils.service";
   templateUrl: './all-pokemons.component.html',
   styleUrls: ['./all-pokemons.component.scss'],
 })
-export class AllPokemonsComponent implements OnDestroy {
+export class AllPokemonsComponent implements OnInit, OnDestroy {
   pokemonArray: Array<Pokemon>
   pokemon = new FormControl('');
-  private translateServiceSubscription: Subscription;
   isFilteredByName: boolean = false;
   isFilteredByType: boolean = false;
   colorEnum = ColorEnum;
   typeSelectedArray: string[] = [];
+  private translateServiceSubscription: Subscription;
+  private activatedRouteSubscription: Subscription;
 
   constructor(
     public readonly allPokemonService: AllPokemonService,
+    private activatedRoute: ActivatedRoute,
     private translateService: TranslateService,
     private utilsService: UtilsService,
     public readonly router: Router
   ) {
-    this.pokemonArray = this.allPokemonService.getAllPokemons();
+  }
+
+  ngOnInit() {
+    this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
+      this.pokemonArray = allPokemon;
+    })
   }
 
   ngOnDestroy() {
     if (this.translateServiceSubscription) {
       this.translateServiceSubscription.unsubscribe();
+    }
+    if (this.activatedRouteSubscription) {
+      this.activatedRouteSubscription.unsubscribe();
     }
   }
 
