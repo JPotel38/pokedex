@@ -57,8 +57,8 @@
       </ion-col>
     </ion-row>
     <ion-row>
+        <ion-text *ngIf="typeSelectedArray.length || isFilteredByName">{{'FILTER ON' | translate}}</ion-text>
       <ion-col>
-        <ion-text>{{'FILTER ON' | translate}}</ion-text>
         <ion-chip *ngIf="isFilteredByName">{{'NAME' | translate}} : {{pokemon.value | titlecase}}
           <ion-icon name="close" (click)="clearName()"></ion-icon>
         </ion-chip>
@@ -73,7 +73,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="12" sizeMd="2">
+      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="12" sizeMd="1">
         <ion-card (click)="goToDetails(pokemon.id)"
                   [ngStyle]="{'cursor': 'pointer',
                   'background': pokemon.types.length == 1 ?
@@ -83,7 +83,7 @@
           <ion-card-header>
             <ion-card-title><img class="pokemon-image" [src]="pokemon.img" alt="{{pokemon.name}}"/></ion-card-title>
           </ion-card-header>
-          <ion-card-content>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-card-content>
+          <ion-card-content>#{{pokemon.id}} <br> {{'NAMES.' + pokemon.name | translate}}</ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
