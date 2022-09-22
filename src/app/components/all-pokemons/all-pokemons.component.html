@@ -48,17 +48,27 @@
         <ion-button (click)="filterByType('dragon')"
                     [ngStyle]="{'--background': colorEnum.dragonColor}">{{'TYPES.dragon' | translate | typeName}}
         </ion-button>
+        <ion-button (click)="filterByType('fairy')"
+                    [ngStyle]="{'--background': colorEnum.fairyColor}">{{'TYPES.fairy' | translate | typeName}}
+        </ion-button>
+        <ion-button (click)="filterByType('steel')"
+                    [ngStyle]="{'--background': colorEnum.steelColor}">{{'TYPES.steel' | translate | typeName}}
+        </ion-button>
       </ion-col>
     </ion-row>
     <ion-row *ngIf="isFilteredByName||isFilteredByType">
+      <ion-col>
       <ion-text>{{'FILTER ON' | translate}}</ion-text>
       <ion-chip *ngIf="isFilteredByName">{{'NAME' | translate}} : {{pokemon.value | titlecase}}
         <ion-icon name="close" (click)="clearName()"></ion-icon>
       </ion-chip>
+      </ion-col>
+      <ion-col *ngFor="let type of typeSelectedArray">
       <ion-chip *ngIf="isFilteredByType">Type :
-        {{'TYPES.' + typeSelected | translate | typeName | titlecase}}
-        <ion-icon name="close" (click)="clearType()"></ion-icon>
+        {{'TYPES.' + type | translate | typeName | titlecase}}
+        <ion-icon name="close" (click)="clearType(type)"></ion-icon>
       </ion-chip>
+      </ion-col>
     </ion-row>
     <ion-row>
       <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="12" sizeMd="2">
