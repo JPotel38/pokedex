@@ -1285,7 +1285,6 @@ export class AllPokemonService {
       id: 102,
       name: 'Exeggcute',
       stone: [StoneEnum.leaf],
-      evolutionLevel: 16,
       types: [TypesEnum.grass, TypesEnum.psychic],
       height: '0.4 m',
       weight: '2.5 kg ',
@@ -1715,7 +1714,6 @@ export class AllPokemonService {
     {
       id: 137,
       name: 'Porygon',
-      evolutionLevel: 16,
       types: [TypesEnum.normal],
       height: '0.8 m',
       weight: '36.5 kg ',
