@@ -20,16 +20,16 @@
                     [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
         </ion-button>
       </ion-col>
-      <ion-col offsetLg="6">
+      <ion-col offsetLg="6" *ngIf="!(trainerService.user | async).connected">
         <ion-button color="light" class="button" (click)="goSignin()"
-                    *ngIf="currentUrl !== '/signin' && !user">{{'SIGNIN' | translate}}
+                    *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
         </ion-button>
         <ion-button color="light" class="button" (click)="goLogin()"
-                    *ngIf="currentUrl !== '/login' && !user">{{'LOGIN' | translate}}
+                    *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
         </ion-button>
       </ion-col>
-      <ion-col *ngIf="trainerService.user | async as user">
-        <ion-label>Pokedex {{'OF' | translate}} {{user.login}}</ion-label>
+      <ion-col offsetLg="5" *ngIf="(trainerService.user | async).connected">
+        <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.user | async).login } }} </ion-label>
         <ion-button color="light" class="button"
                     (click)="goAccount()">{{'ACCOUNT' | translate}}</ion-button>
         <ion-button color="light" class="button" (click)="logOut()">{{'LOGOUT' | translate}}</ion-button>

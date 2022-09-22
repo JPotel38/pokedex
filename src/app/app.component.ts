@@ -1,20 +1,22 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
 import {TrainerService} from './shared/services/trainer.service';
 import {User} from './shared/interfaces/user';
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   isChecked: boolean = false;
   langSelect: Array<string> = ['en', 'fr'];
   toggle = document.querySelector('#themeToggle');
   user: User;
   currentUrl: string;
+  private trainerServiceSubscription: Subscription;
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
@@ -26,7 +28,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.trainerService.user.subscribe(user => this.user = user);
+    this.trainerServiceSubscription = this.trainerService.user.subscribe(user => this.user = user);
+  }
+
+  ngOnDestroy() {
+    if (this.trainerServiceSubscription) {
+      this.trainerServiceSubscription.unsubscribe();
+    }
   }
 
   selectedLang($event): void {
@@ -51,7 +59,7 @@ export class AppComponent implements OnInit {
   }
 
   logOut() {
-    this.trainerService.user.next(null);
+    this.trainerService.user.next({...this.user, connected: false});
   }
 
   goSignin() {
