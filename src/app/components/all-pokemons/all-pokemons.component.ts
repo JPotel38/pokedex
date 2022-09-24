@@ -73,16 +73,10 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
       this.typeSelectedArray.push(selectedType[0])
     }
     this.pokemonArray = this.allPokemonService.getAllPokemons();
-      console.log(this.typeSelectedArray)
     if (this.typeSelectedArray.length === 1) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelectedArray[0]))
     } else if (this.typeSelectedArray.length === 2) {
-
-      this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.every(value => {
-        return this.typeSelectedArray.includes(value);
-      }))
-      // this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.every((t => t === this.typeSelectedArray[0] && t === this.typeSelectedArray[1])))
-    }
+      this.pokemonArray = this.pokemonArray.filter(pokemon => this.utilsService.arrayEquals(pokemon.types, this.typeSelectedArray)) }
   }
 
   clearName() {
