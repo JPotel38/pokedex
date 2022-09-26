@@ -1,0 +1,13 @@
+<div class="team">
+  <ion-row>
+    <ion-col class="pokemon" *ngFor="let pokemon of this.trainerService.user.value.pokemonTeam"
+             (mouseenter)="mouseEnter(true)" (mouseleave)="mouseLeave(false)">
+      <img class="pokemon-image" [src]="pokemon.img" alt="{{pokemon.name}}"/>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-button *ngIf="displayCancelButton" class="delete-pokemon-from-team">
+      <ion-icon name="close" (click)="deletePokemon()"></ion-icon>
+    </ion-button>
+  </ion-row>
+</div>

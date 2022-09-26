@@ -7,6 +7,8 @@ import {TranslateService} from "@ngx-translate/core";
 import {Subscription} from "rxjs";
 import {ColorEnum} from "../../shared/enums/color.enum";
 import {UtilsService} from "../../shared/services/utils.service";
+import {TrainerService} from "../../shared/services/trainer.service";
+import {User} from "../../shared/interfaces/user";
 
 @Component({
   selector: 'app-all-pokemons',
@@ -22,13 +24,18 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   typeSelectedArray: string[] = [];
   private translateServiceSubscription: Subscription;
   private activatedRouteSubscription: Subscription;
+  private timer: number;
+  private preventSimpleClick: Boolean;
+  team: Array<Pokemon> = [];
+  private user: User;
 
   constructor(
     public readonly allPokemonService: AllPokemonService,
     private activatedRoute: ActivatedRoute,
     private translateService: TranslateService,
     private utilsService: UtilsService,
-    public readonly router: Router
+    public trainerService: TrainerService,
+    public readonly router: Router,
   ) {
   }
 
@@ -36,6 +43,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
       this.pokemonArray = allPokemon;
     })
+    this.user = this.trainerService.user.value;
   }
 
   ngOnDestroy() {
@@ -48,7 +56,14 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   }
 
   goToDetails(id: number) {
+    this.timer = 0;
+    this.preventSimpleClick = false;
+    let delay = 200;
+    this.timer = setTimeout(() => {
+      if(!this.preventSimpleClick){
     this.router.navigate([`pokemon-details/${id}`]);
+      }
+    }, delay);
   }
 
   filterByName() {
@@ -76,7 +91,8 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     if (this.typeSelectedArray.length === 1) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelectedArray[0]))
     } else if (this.typeSelectedArray.length === 2) {
-      this.pokemonArray = this.pokemonArray.filter(pokemon => this.utilsService.arrayEquals(pokemon.types, this.typeSelectedArray)) }
+      this.pokemonArray = this.pokemonArray.filter(pokemon => this.utilsService.arrayEquals(pokemon.types, this.typeSelectedArray))
+    }
   }
 
   clearName() {
@@ -101,5 +117,16 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
         this.filterByType(this.typeSelectedArray)
       }
     }
+  }
+
+  addPokemonToTeam(pokemon: Pokemon) {
+    this.preventSimpleClick = true;
+    this.team.push(pokemon);
+    this.trainerService.user.next({...this.user, pokemonTeam: this.team});
+    clearTimeout(this.timer);
+  }
+
+  redirectToSignin() {
+    this.router.navigate(['/signin'])
   }
 }

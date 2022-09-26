@@ -21,10 +21,10 @@
         </ion-button>
       </ion-col>
       <ion-col offsetLg="4" *ngIf="!(trainerService.user | async).connected">
-        <ion-button color="light" class="button" (click)="goSignin()"
+        <ion-button color="light" (click)="goSignin()"
                     *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
         </ion-button>
-        <ion-button color="light" class="button" (click)="goLogin()"
+        <ion-button color="light" (click)="goLogin()"
                     *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
         </ion-button>
       </ion-col>
