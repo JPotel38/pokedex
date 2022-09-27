@@ -122,7 +122,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   addPokemonToTeam(pokemon: Pokemon) {
     this.preventSimpleClick = true;
     this.team.push(pokemon);
-    this.trainerService.user.next({...this.user, pokemonTeam: this.team});
+    this.trainerService.setPokemonTeam(this.user, this.team);
     clearTimeout(this.timer);
   }
 

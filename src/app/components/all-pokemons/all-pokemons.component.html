@@ -102,5 +102,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <app-team [team]="team"></app-team>
+  <app-team [team]="team" *ngIf="trainerService.user.value.login"></app-team>
 </ion-content>
