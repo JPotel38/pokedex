@@ -52,7 +52,8 @@ export class SigninComponent implements OnInit {
     this.user = {
       login: this.userForm.get('name').value,
       password: this.userForm.get('passwordForm').value.password,
-      connected: true
+      connected: true,
+      pokemonTeam: []
     };
     this.trainerService.setUser(this.user);
     this.router.navigate([`/`]);

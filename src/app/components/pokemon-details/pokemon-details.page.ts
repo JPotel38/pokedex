@@ -30,20 +30,17 @@ export class PokemonDetailsPage implements OnInit {
   }
 
   playAudio(): void {
-    document.getElementById('img').classList.add('shake');
-    this.shaking();
     const audio = new Audio();
     audio.src = this.pokemon.audio;
+    document.getElementById('img').classList.add('shake');
+    this.shaking();
     audio.load();
     audio.play();
   }
 
-  shaking(): Promise<void> {
-    return new Promise(_ => {
+  shaking() {
       setTimeout(() => {
-        document.getElementById('img').classList.remove('shake');
       }, 1000);
-    });
   }
 
   manageLevel(e): void {

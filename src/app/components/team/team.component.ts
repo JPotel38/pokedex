@@ -10,9 +10,9 @@ import {TrainerService} from "../../shared/services/trainer.service";
 export class TeamComponent implements OnInit {
 
   @Input() team: Array<Pokemon>
-  private displayCancelButton: boolean = false;
+  displayCancelButton: boolean = false;
 
-  constructor(private trainerService: TrainerService
+  constructor(public trainerService: TrainerService
   ) {
   }
 
