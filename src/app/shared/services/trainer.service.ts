@@ -17,13 +17,14 @@ export class TrainerService {
   );
 
   setUser(user: User) {
-    console.log(user)
-
     this.user.next({...user});
   }
 
-  setPokemonTeam( pokemonTeam: Array<Pokemon>) {
-    console.log(this.user.value)
+  setPokemonTeam(pokemonTeam: Array<Pokemon>) {
     this.user.next({...this.user.value, pokemonTeam})
+  }
+
+  getPokemonTeam(){
+    return this.user.value.pokemonTeam
   }
 }

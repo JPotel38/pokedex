@@ -7,14 +7,18 @@
 .team {
   width: 40vw;
   height: 20vh;
-  background-color: rgba(96,230,239,255);
+  background-color: rgba(96, 230, 239, 255);
   border-radius: 50px;
+}
+
+.pokemon {
+  height: 75%;
 }
 
 .pokemon-image {
   height: 75%;
   background-color: transparent;
-  box-shadow: 0 0 60px 40px rgba(134,254,253,255);
+  box-shadow: 0 0 60px 40px rgba(134, 254, 253, 255);
 }
 
 .delete-pokemon-from-team {

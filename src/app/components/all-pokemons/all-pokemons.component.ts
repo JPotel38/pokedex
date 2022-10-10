@@ -56,14 +56,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   }
 
   goToDetails(id: number) {
-    this.timer = 0;
-    this.preventSimpleClick = false;
-    let delay = 200;
-    this.timer = setTimeout(() => {
-      if(!this.preventSimpleClick){
     this.router.navigate([`pokemon-details/${id}`]);
-      }
-    }, delay);
   }
 
   filterByName() {
@@ -120,10 +113,8 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   }
 
   addPokemonToTeam(pokemon: Pokemon) {
-    this.preventSimpleClick = true;
     this.team.push(pokemon);
     this.trainerService.setPokemonTeam(this.team);
-    clearTimeout(this.timer);
   }
 
   redirectToSignin() {

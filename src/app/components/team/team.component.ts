@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Pokemon} from 'src/app/shared/interfaces/pokemon';
+import {Component, OnInit} from '@angular/core';
 import {TrainerService} from "../../shared/services/trainer.service";
 
 @Component({
@@ -8,8 +7,6 @@ import {TrainerService} from "../../shared/services/trainer.service";
   styleUrls: ['./team.component.scss'],
 })
 export class TeamComponent implements OnInit {
-
-  @Input() team: Array<Pokemon>
   displayCancelButton: boolean = false;
 
   constructor(public trainerService: TrainerService
@@ -20,14 +17,10 @@ export class TeamComponent implements OnInit {
   }
 
   deletePokemon() {
-
+    this.displayCancelButton = false;
   }
 
-  mouseEnter(true1: boolean) {
-    this.displayCancelButton = true1
-  }
-
-  mouseLeave(b: boolean) {
-    this.displayCancelButton = b
+  mouseEnter() {
+    this.displayCancelButton = !this.displayCancelButton
   }
 }

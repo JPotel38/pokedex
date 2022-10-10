@@ -1,33 +1,12 @@
-<div class="team" *ngIf="trainerService.user | async as user">
-  <ion-row *ngIf="user.login">
+<div *ngIf="trainerService.user | async as user">
+  <ion-row *ngIf="user.login" class="team">
     <ion-col class="pokemon"
-             (mouseenter)="mouseEnter(true)" (mouseleave)="mouseLeave(false)">
-      <img *ngIf="user.pokemonTeam[0]" class="pokemon-image" [src]="user.pokemonTeam[0].img" alt="{{user.pokemonTeam[0].name}}"/>
-    </ion-col>
-    <ion-col class="pokemon"
-             (mouseenter)="mouseEnter(true)" (mouseleave)="mouseLeave(false)">
-      <img *ngIf="user.pokemonTeam[1]" class="pokemon-image" [src]="user.pokemonTeam[1].img" alt="{{user.pokemonTeam[1].name}}"/>
-    </ion-col>
-    <ion-col class="pokemon"
-             (mouseenter)="mouseEnter(true)" (mouseleave)="mouseLeave(false)">
-      <img *ngIf="user.pokemonTeam[2]" class="pokemon-image" [src]="user.pokemonTeam[2].img" alt="{{user.pokemonTeam[2].name}}"/>
-    </ion-col>
-    <ion-col class="pokemon"
-             (mouseenter)="mouseEnter(true)" (mouseleave)="mouseLeave(false)">
-      <img *ngIf="user.pokemonTeam[3]" class="pokemon-image" [src]="user.pokemonTeam[3].img" alt="{{user.pokemonTeam[3].name}}"/>
-    </ion-col>
-    <ion-col class="pokemon"
-             (mouseenter)="mouseEnter(true)" (mouseleave)="mouseLeave(false)">
-      <img *ngIf="user.pokemonTeam[4]" class="pokemon-image" [src]="user.pokemonTeam[4].img" alt="{{user.pokemonTeam[4].name}}"/>
-    </ion-col>
-    <ion-col class="pokemon"
-             (mouseenter)="mouseEnter(true)" (mouseleave)="mouseLeave(false)">
-      <img *ngIf="user.pokemonTeam[5]" class="pokemon-image" [src]="user.pokemonTeam[5].img" alt="{{user.pokemonTeam[5].name}}"/>
+             (mouseenter)="mouseEnter()" *ngFor="let pokemon of user.pokemonTeam; let i = index">
+      <img *ngIf="pokemon" class="pokemon-image" [src]="pokemon.img"
+           alt="{{pokemon.name}}"/>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-button *ngIf="displayCancelButton" class="delete-pokemon-from-team">
-      <ion-icon name="close" (click)="deletePokemon()"></ion-icon>
-    </ion-button>
-  </ion-row>
+  <ion-button *ngIf="displayCancelButton" class="delete-pokemon-from-team">
+    <ion-icon name="close" (click)="deletePokemon()"></ion-icon>
+  </ion-button>
 </div>
