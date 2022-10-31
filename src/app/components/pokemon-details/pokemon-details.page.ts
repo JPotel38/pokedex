@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import { StoneEnum } from 'src/app/shared/enums/stone.enum';
+import {StoneEnum} from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
-import {BehaviorSubject} from "rxjs";
-import {filter} from "rxjs/operators";
+import {TrainerService} from "../../shared/services/trainer.service";
 
 @Component({
   selector: 'app-pokemon-details',
@@ -16,11 +15,13 @@ export class PokemonDetailsPage implements OnInit {
   pokemonId: number;
   pokemon: Pokemon;
   level: number;
+  team: Array<Pokemon> = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private allPokemonService: AllPokemonService,
-    private router: Router
+    private router: Router,
+    public trainerService: TrainerService,
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
@@ -39,8 +40,8 @@ export class PokemonDetailsPage implements OnInit {
   }
 
   shaking() {
-      setTimeout(() => {
-      }, 1000);
+    setTimeout(() => {
+    }, 1000);
   }
 
   manageLevel(e): void {
@@ -60,5 +61,13 @@ export class PokemonDetailsPage implements OnInit {
   useStone(stone: StoneEnum): void {
     const evolution = Number(this.pokemonId) + this.pokemon.stone.indexOf(stone) + 1;
     this.router.navigate([`pokemon-details/${evolution.toString()}`]);
+  }
+
+  addPokemonToTeam(pokemon: Pokemon) {
+    this.trainerService.addPokemon(pokemon);
+  }
+
+  redirectToSignin() {
+    this.router.navigate(['/signin'])
   }
 }

@@ -77,30 +77,14 @@
         <ion-card [ngStyle]="{'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
                   }"
+                  (click)="goToDetails(pokemon.id)"
         >
           <ion-card-header>
-            <ion-card-title>#{{pokemon.id}}<img class="pokemon-image" [src]="pokemon.img" alt="{{pokemon.name}}"/>
+            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}
             </ion-card-title>
           </ion-card-header>
-          <ion-card-content>
-            <ion-row>{{'NAMES.' + pokemon.name | translate}}</ion-row>
-            <ion-row>
-              <ion-col sizeMd="3">
-                <ion-button class="card-button" color="light" [disabled]="team.length >= 6"
-                            (click)="trainerService.user.value.login ? addPokemonToTeam(pokemon) : redirectToSignin()">+
-                </ion-button>
-              </ion-col>
-              <ion-col sizeMd="3">
-                <ion-button class="card-button" color="light"
-                            (click)="goToDetails(pokemon.id)">
-                  <ion-icon name="search"></ion-icon>
-                </ion-button>
-              </ion-col>
-            </ion-row>
-          </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <app-team *ngIf="trainerService.user.value.login"></app-team>
 </ion-content>

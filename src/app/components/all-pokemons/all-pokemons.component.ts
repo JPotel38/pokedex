@@ -24,8 +24,6 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   typeSelectedArray: string[] = [];
   private translateServiceSubscription: Subscription;
   private activatedRouteSubscription: Subscription;
-  private timer: number;
-  private preventSimpleClick: Boolean;
   team: Array<Pokemon> = [];
   private user: User;
 
@@ -41,7 +39,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
-      this.pokemonArray = allPokemon;
+      this.pokemonArray = this.allPokemonService.getAllPokemons();
     })
     this.user = this.trainerService.user.value;
   }
@@ -112,12 +110,5 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  addPokemonToTeam(pokemon: Pokemon) {
-    this.team.push(pokemon);
-    this.trainerService.setPokemonTeam(this.team);
-  }
 
-  redirectToSignin() {
-    this.router.navigate(['/signin'])
-  }
 }

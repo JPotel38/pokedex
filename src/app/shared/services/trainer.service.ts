@@ -20,8 +20,9 @@ export class TrainerService {
     this.user.next({...user});
   }
 
-  setPokemonTeam(pokemonTeam: Array<Pokemon>) {
-    this.user.next({...this.user.value, pokemonTeam})
+  addPokemon(pokemon: Pokemon) {
+    this.user.value.pokemonTeam.push(pokemon)
+    this.user.next({...this.user.value})
   }
 
   getPokemonTeam(){

@@ -12,9 +12,9 @@ export interface Pokemon {
   gender?: GenderEnum;
   height: string;
   weight: string;
+  taux: number;
   color: Array<string>;
   img: string;
   audio: string;
-  description: string;
   attacks: Array<string>;
 }

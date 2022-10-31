@@ -1,14 +1,14 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {TrainerService} from "../../shared/services/trainer.service";
+import {Pokemon} from "../../shared/interfaces/pokemon";
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss'],
 })
-export class TeamComponent implements OnInit {
-  displayCancelButton: boolean = false;
-
+export class TeamComponent implements OnInit, AfterViewInit {
+  myTeam: Array<Pokemon>;
   constructor(public trainerService: TrainerService
   ) {
   }
@@ -16,11 +16,7 @@ export class TeamComponent implements OnInit {
   ngOnInit() {
   }
 
-  deletePokemon() {
-    this.displayCancelButton = false;
-  }
-
-  mouseEnter() {
-    this.displayCancelButton = !this.displayCancelButton
+  ngAfterViewInit() {
+    this.myTeam = this.trainerService.getPokemonTeam()
   }
 }

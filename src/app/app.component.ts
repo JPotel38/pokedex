@@ -17,6 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   user: User;
   currentUrl: string;
   private trainerServiceSubscription: Subscription;
+  private routingEventsSubscription: Subscription;
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
@@ -24,16 +25,20 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {
     translate.setDefaultLang('en');
     translate.use('en');
-    router.events.subscribe(() => this.currentUrl = router.url);
   }
 
   ngOnInit() {
+    this.routingEventsSubscription = this.router.events.subscribe(() => this.currentUrl = this.router.url);
     this.trainerServiceSubscription = this.trainerService.user.subscribe(user => this.user = user);
   }
 
   ngOnDestroy() {
     if (this.trainerServiceSubscription) {
       this.trainerServiceSubscription.unsubscribe();
+    }
+
+    if (this.routingEventsSubscription) {
+      this.routingEventsSubscription.unsubscribe();
     }
   }
 
@@ -65,5 +70,9 @@ export class AppComponent implements OnInit, OnDestroy {
   goSignin() {
     this.router.navigate([`signin`]);
 
+  }
+
+  goToTeam() {
+    this.router.navigate([`team`]);
   }
 }

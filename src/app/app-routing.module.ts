@@ -6,6 +6,7 @@ import {LoginPage} from './components/login/login-page.component';
 import {AccountComponent} from './components/account/account.component';
 import {SigninComponent} from './components/signin/signin.component';
 import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
+import {TeamComponent} from "./components/team/team.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'account',
     component: AccountComponent
+  },
+  {
+    path: 'team',
+    component: TeamComponent
   },
   {
     path: '',
