@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TrainerService} from "../../shared/services/trainer.service";
 
 @Component({
   selector: 'app-account',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(public trainerService: TrainerService) { }
 
   ngOnInit() {}
 

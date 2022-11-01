@@ -11,12 +11,18 @@ export class TrainerService {
     {
       login: '',
       password: '',
+      userName:'',
       connected: false,
       pokemonTeam: []
     }
   );
 
   setUser(user: User) {
+    this.user.subscribe(userSub => {
+      if(!userSub.userName){
+        userSub.userName = user.login
+      }
+    })
     this.user.next({...user});
   }
 
