@@ -25,6 +25,11 @@ export class TrainerService {
     this.user.next({...this.user.value})
   }
 
+  updatePokemonName(index: number, name: string){
+    this.user.value.pokemonTeam[index].name = name;
+    this.user.next({...this.user.value});
+  }
+
   getPokemonTeam(){
     return this.user.value.pokemonTeam
   }

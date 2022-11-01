@@ -1,20 +1,48 @@
 <ion-content>
   <ion-grid>
-    <ion-row>
-      <ion-col *ngFor="let pokemon of myTeam" sizeXs="12" sizeMd="2">
+    <ion-row *ngIf="(this.trainerService.user | async).pokemonTeam as pokemons">
+      <ion-col *ngFor="let pokemon of pokemons; let index = index" sizeXs="12" sizeMd="2">
         <ion-card [ngStyle]="{'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
                   }"
         >
           <ion-card-header>
-            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}
+            <ion-card-title>#{{pokemon.id}} {{pokemon.name}}
             </ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <ion-img id="img" [alt]="pokemon.name" [src]="pokemon.img"></ion-img>
+            <ion-button color="light" (click)="setOpen(true, index)">
+              <ion-icon name="pencil-sharp"></ion-icon>
+            </ion-button>
+            <ion-button color="light" (click)="deletePokemon(index)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
+  <ion-content>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+            <ion-buttons slot="end">
+              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-item>
+            <ion-label position="stacked">New Pokemon Name</ion-label>
+            <ion-input type="text" [formControl]="pokemonName"></ion-input>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-content>
 </ion-content>
