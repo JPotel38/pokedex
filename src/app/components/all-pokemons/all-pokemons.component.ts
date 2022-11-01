@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 import {Pokemon} from "../../shared/interfaces/pokemon";
 import {FormControl} from "@angular/forms";
@@ -35,11 +35,16 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     public trainerService: TrainerService,
     public readonly router: Router,
   ) {
+    router.events.subscribe(event => {
+      if (event instanceof NavigationStart && event.url === '/') {
+        this.typeSelectedArray = []
+      }
+    })
   }
 
   ngOnInit() {
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
-      this.pokemonArray = this.allPokemonService.getAllPokemons();
+      this.pokemonArray = allPokemon;
     })
     this.user = this.trainerService.user.value;
   }
