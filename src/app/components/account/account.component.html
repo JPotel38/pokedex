@@ -1,2 +1,7 @@
-<p>
-  {{trainerService.user.value.userName}}</p>
+<ion-title>{{trainerService.user.value.userName}}</ion-title>
+<form (ngSubmit)="validate()" [formGroup]="userForm">
+  <ion-label>Change username :</ion-label>
+  <ion-input type="text" [formControl]="userNameCtrl"></ion-input>
+  <ion-button color="light" type="submit">{{'VALIDATE' | translate}}</ion-button>
+</form>
+

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, UntypedFormGroup, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
 import {TrainerService} from '../../shared/services/trainer.service';
@@ -11,19 +11,19 @@ import {TrainerService} from '../../shared/services/trainer.service';
 })
 export class SigninComponent implements OnInit {
 
-  userForm: UntypedFormGroup;
+  userForm: FormGroup;
   user: User;
   userArray: Array<User> = [];
-  usernameCtrl: UntypedFormControl;
-  passwordCtrl: UntypedFormControl;
-  passwordConfirmCtrl: UntypedFormControl;
-  passwordForm: UntypedFormGroup;
+  loginCtrl: FormControl;
+  passwordCtrl: FormControl;
+  passwordConfirmCtrl: FormControl;
+  passwordForm: FormGroup;
 
   constructor(public readonly router: Router,
               public trainerService: TrainerService,
-              fb: UntypedFormBuilder
+              private fb: FormBuilder
   ) {
-    this.usernameCtrl = fb.control('', Validators.required);
+    this.loginCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
     this.passwordConfirmCtrl = fb.control('', Validators.required);
 
@@ -33,7 +33,7 @@ export class SigninComponent implements OnInit {
     );
 
     this.userForm = fb.group({
-      name: this.usernameCtrl,
+      login: this.loginCtrl,
       passwordForm: this.passwordForm,
       pokemonTeam: fb.control([])
     });
@@ -50,7 +50,8 @@ export class SigninComponent implements OnInit {
 
   validate() {
     this.user = {
-      login: this.userForm.get('name').value,
+      login: this.userForm.get('login').value,
+      userName: this.userForm.get('login').value,
       password: this.userForm.get('passwordForm').value.password,
       connected: true,
       pokemonTeam: []

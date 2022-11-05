@@ -29,7 +29,7 @@
         </ion-button>
       </ion-col>
       <ion-col offsetLg="5" *ngIf="(trainerService.user | async).connected">
-        <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.user | async).login } }} </ion-label>
+        <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.user | async).userName } }} </ion-label>
         <ion-button [disabled]="!trainerService.user.value.login" color="light" (click)="goToTeam()">
           <img src="assets/icons/pokeball.png" alt="pokeball" style="width: 30px">
           <ion-badge color="danger">{{trainerService.getPokemonTeam().length}}</ion-badge>

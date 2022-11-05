@@ -39,4 +39,8 @@ export class TrainerService {
   getPokemonTeam(){
     return this.user.value.pokemonTeam
   }
+
+  updateUserName(userNameCtrl: string) {
+    this.user.next({...this.user.value, userName: userNameCtrl});
+  }
 }

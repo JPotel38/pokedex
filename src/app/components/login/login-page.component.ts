@@ -39,7 +39,8 @@ export class LoginPage implements OnDestroy {
 
   validate() {
     this.user = {
-      login: this.userForm.get('name').value,
+      login: this.userForm.get('login').value,
+      userName: this.user.login,
       password: this.userForm.get('password').value,
       connected: true
     };
