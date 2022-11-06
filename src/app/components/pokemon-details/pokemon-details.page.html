@@ -55,7 +55,7 @@
           <ion-button (click)="nextPokemon()"
                       *ngIf="pokemon.evolutionLevel && level >= pokemon.evolutionLevel">{{'EVOLVE' | translate}}
           </ion-button>
-          <ion-button (click)="nextPokemon()" *ngIf="pokemon.exchange">{{'EXCHANGE' | translate}}</ion-button>
+          <ion-button color="light" (click)="nextPokemon()" *ngIf="pokemon.exchange">{{'EXCHANGE' | translate}}</ion-button>
           <div *ngFor="let stone of pokemon.stone">
             <ion-img (click)="useStone(stone)" id="stone" [src]='stone'></ion-img>
           </div>

@@ -6,7 +6,6 @@
                    (keyup.enter)="filterByName()"></ion-input>
       </ion-col>
       <ion-col size="auto">
-        <ion-text>Types :</ion-text>
         <ion-button (click)="filterByType(['normal'])" [ngStyle]="{'--background': colorEnum.normalColor}">Normal
         </ion-button>
         <ion-button (click)="filterByType(['fire'])" [ngStyle]="{'--background': colorEnum.fireColor}">
@@ -73,16 +72,19 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="12" sizeMd="2">
-        <ion-card [ngStyle]="{'background': pokemon.types.length == 1 ?
+      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="3" sizeMd="1">
+        <ion-card
+                  (click)="goToDetails(pokemon.id)"
+                  [ngStyle]="{'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
                   }"
-                  (click)="goToDetails(pokemon.id)"
         >
-          <ion-card-header>
-            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}
-            </ion-card-title>
-          </ion-card-header>
+          <ion-card-content>
+              <ion-thumbnail>
+                <ion-img class="icon" [alt]="pokemon.name" [src]="pokemon.icon"></ion-img>
+              </ion-thumbnail>
+<!--              <ion-label>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-label>-->
+          </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>

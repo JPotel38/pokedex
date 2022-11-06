@@ -8,7 +8,7 @@ export enum ColorEnum {
   ghostColor = 'rgb(99, 99, 181)',
   darkColor = 'rgb(115, 90, 74)',
   fightingColor = 'rgb(165, 82, 57)',
-  steelColor = 'rgb(173, 165, 148)',
+  steelColor = 'rgb(184, 184, 208)',
   dragonColor = 'rgb(136, 88, 246)',
   bugColor = 'rgb(173, 189, 33)',
   normalColor = 'rgb(173, 165, 148)',

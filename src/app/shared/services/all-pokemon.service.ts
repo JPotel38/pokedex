@@ -21,6 +21,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor],
       img: './assets/images/Bulbasaur.png',
+      icon: './assets/icons/Bulbasaur.png',
       audio: './assets/audio/Bulbasaur.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -34,6 +35,7 @@ export class AllPokemonService {
       taux: 32,
       color: [ColorEnum.grassColor],
       img: './assets/images/Ivysaur.png',
+      icon: './assets/icons/Ivysaur.png',
       audio: './assets/audio/Ivysaur.ogg',
       attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam']
     },
@@ -46,6 +48,7 @@ export class AllPokemonService {
       taux: 14,
       color: [ColorEnum.grassColor],
       img: './assets/images/Venusaur.png',
+      icon: './assets/icons/Venusaur.png',
       audio: './assets/audio/Venusaur.ogg',
       attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam']
     },
@@ -59,6 +62,7 @@ export class AllPokemonService {
       taux: 128,
       color: [ColorEnum.fireColor],
       img: './assets/images/Charmander.png',
+      icon: './assets/icons/Charmander.png',
       audio: './assets/audio/Charmander.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -72,6 +76,7 @@ export class AllPokemonService {
       taux: 66,
       color: [ColorEnum.fireColor],
       img: './assets/images/Charmeleon.png',
+      icon: './assets/icons/Charmeleon.png',
       audio: './assets/audio/Charmeleon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -84,6 +89,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Charizard.png',
+      icon: './assets/icons/Charizard.png',
       audio: './assets/audio/Charizard.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -97,6 +103,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Squirtle.png',
+      icon: './assets/icons/Squirtle.png',
       audio: './assets/audio/Squirtle.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -110,6 +117,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Wartortle.png',
+      icon: './assets/icons/Wartortle.png',
       audio: './assets/audio/Wartortle.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -122,6 +130,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Blastoise.png',
+      icon: './assets/icons/Blastoise.png',
       audio: './assets/audio/Blastoise.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -135,6 +144,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor],
       img: './assets/images/Caterpie.png',
+      icon: './assets/icons/Caterpie.png',
       audio: './assets/audio/Caterpie.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -148,6 +158,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor],
       img: './assets/images/Metapod.png',
+      icon: './assets/icons/Metapod.png',
       audio: './assets/audio/Metapod.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -160,6 +171,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor],
       img: './assets/images/Butterfree.png',
+      icon: './assets/icons/Butterfree.png',
       audio: './assets/audio/Butterfree.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -173,6 +185,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor],
       img: './assets/images/Weedle.png',
+      icon: './assets/icons/Weedle.png',
       audio: './assets/audio/Weedle.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -186,6 +199,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor],
       img: './assets/images/Kakuna.png',
+      icon: './assets/icons/Kakuna.png',
       audio: './assets/audio/Kakuna.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -198,6 +212,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor],
       img: './assets/images/Beedrill.png',
+      icon: './assets/icons/Beedrill.png',
       audio: './assets/audio/Beedrill.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -211,6 +226,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.flyingColor],
       img: './assets/images/Pidgey.png',
+      icon: './assets/icons/Pidgey.png',
       audio: './assets/audio/Pidgey.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -224,6 +240,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.flyingColor],
       img: './assets/images/Pidgeotto.png',
+      icon: './assets/icons/Pidgeotto.png',
       audio: './assets/audio/Pidgeotto.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -236,6 +253,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.flyingColor],
       img: './assets/images/Pidgeot.png',
+      icon: './assets/icons/Pidgeot.png',
       audio: './assets/audio/Pidgeot.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -249,6 +267,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Rattata.png',
+      icon: './assets/icons/Rattata.png',
       audio: './assets/audio/Rattata.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -261,6 +280,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Raticate.png',
+      icon: './assets/icons/Raticate.png',
       audio: './assets/audio/Raticate.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -274,6 +294,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor, ColorEnum.flyingColor],
       img: './assets/images/Spearow.png',
+      icon: './assets/icons/Spearow.png',
       audio: './assets/audio/Spearow.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -286,6 +307,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor, ColorEnum.flyingColor],
       img: './assets/images/Fearow.png',
+      icon: './assets/icons/Fearow.png',
       audio: './assets/audio/Fearow.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -299,6 +321,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Ekans.png',
+      icon: './assets/icons/Ekans.png',
       audio: './assets/audio/Ekans.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -311,6 +334,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Arbok.png',
+      icon: './assets/icons/Arbok.png',
       audio: './assets/audio/Arbok.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -324,6 +348,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor],
       img: './assets/images/Pikachu.png',
+      icon: './assets/icons/Pikachu.png',
       audio: './assets/audio/Pikachu.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -336,6 +361,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor],
       img: './assets/images/Raichu.png',
+      icon: './assets/icons/Raichu.png',
       audio: './assets/audio/Raichu.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -349,6 +375,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor],
       img: './assets/images/Sandshrew.png',
+      icon: './assets/icons/Sandshrew.png',
       audio: './assets/audio/Sandshrew.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -361,6 +388,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor],
       img: './assets/images/Sandslash.png',
+      icon: './assets/icons/Sandslash.png',
       audio: './assets/audio/Sandslash.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -374,7 +402,8 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Nidoran♀.png',
-      audio: './assets/audio/Nidoran.ogg',
+      icon: './assets/icons/Nidoran♀.png',
+      audio: './assets/audio/Nidoran♀.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
     {
@@ -387,6 +416,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Nidorina.png',
+      icon: './assets/icons/Nidorina.png',
       audio: './assets/audio/Nidorina.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -399,6 +429,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor, ColorEnum.groundColor],
       img: './assets/images/Nidoqueen.png',
+      icon: './assets/icons/Nidoqueen.png',
       audio: './assets/audio/Nidoqueen.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -412,7 +443,8 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Nidoran♂.png',
-      audio: './assets/audio/Nidoran.ogg',
+      icon: './assets/icons/Nidoran♂.png',
+      audio: './assets/audio/Nidoran♂.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
     {
@@ -425,6 +457,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Nidorino.png',
+      icon: './assets/icons/Nidorino.png',
       audio: './assets/audio/Nidorino.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -437,6 +470,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor, ColorEnum.groundColor],
       img: './assets/images/Nidoking.png',
+      icon: './assets/icons/Nidoking.png',
       audio: './assets/audio/Nidoking.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -450,6 +484,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fairyColor],
       img: './assets/images/Clefairy.png',
+      icon: './assets/icons/Clefairy.png',
       audio: './assets/audio/Clefairy.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -462,6 +497,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fairyColor],
       img: './assets/images/Clefable.png',
+      icon: './assets/icons/Clefable.png',
       audio: './assets/audio/Clefable.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -475,6 +511,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Vulpix.png',
+      icon: './assets/icons/Vulpix.png',
       audio: './assets/audio/Vulpix.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -487,6 +524,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Ninetales.png',
+      icon: './assets/icons/Ninetales.png',
       audio: './assets/audio/Ninetales.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -500,6 +538,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor, ColorEnum.fairyColor],
       img: './assets/images/Jigglypuff.png',
+      icon: './assets/icons/Jigglypuff.png',
       audio: './assets/audio/Jigglypuff.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -512,6 +551,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor, ColorEnum.fairyColor],
       img: './assets/images/Wigglytuff.png',
+      icon: './assets/icons/Wigglytuff.png',
       audio: './assets/audio/Wigglytuff.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -525,6 +565,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor, ColorEnum.flyingColor],
       img: './assets/images/Zubat.png',
+      icon: './assets/icons/Zubat.png',
       audio: './assets/audio/Zubat.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -537,6 +578,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor, ColorEnum.flyingColor],
       img: './assets/images/Golbat.png',
+      icon: './assets/icons/Golbat.png',
       audio: './assets/audio/Golbat.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -550,6 +592,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.poisonColor],
       img: './assets/images/Oddish.png',
+      icon: './assets/icons/Oddish.png',
       audio: './assets/audio/Oddish.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -563,6 +606,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.poisonColor],
       img: './assets/images/Gloom.png',
+      icon: './assets/icons/Gloom.png',
       audio: './assets/audio/Gloom.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -575,6 +619,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.poisonColor],
       img: './assets/images/Vileplume.png',
+      icon: './assets/icons/Vileplume.png',
       audio: './assets/audio/Vileplume.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -588,6 +633,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor, ColorEnum.grassColor],
       img: './assets/images/Paras.png',
+      icon: './assets/icons/Paras.png',
       audio: './assets/audio/Paras.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -600,6 +646,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor, ColorEnum.grassColor],
       img: './assets/images/Parasect.png',
+      icon: './assets/icons/Parasect.png',
       audio: './assets/audio/Parasect.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -613,6 +660,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor, ColorEnum.poisonColor],
       img: './assets/images/Venonat.png',
+      icon: './assets/icons/Venonat.png',
       audio: './assets/audio/Venonat.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -625,6 +673,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor, ColorEnum.poisonColor],
       img: './assets/images/Venomoth.png',
+      icon: './assets/icons/Venomoth.png',
       audio: './assets/audio/Venomoth.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -638,6 +687,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor],
       img: './assets/images/Diglett.png',
+      icon: './assets/icons/Diglett.png',
       audio: './assets/audio/Diglett.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -650,6 +700,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor],
       img: './assets/images/Dugtrio.png',
+      icon: './assets/icons/Dugtrio.png',
       audio: './assets/audio/Dugtrio.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -663,6 +714,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Meowth.png',
+      icon: './assets/icons/Meowth.png',
       audio: './assets/audio/Meowth.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -675,6 +727,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Persian.png',
+      icon: './assets/icons/Persian.png',
       audio: './assets/audio/Persian.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -688,6 +741,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Psyduck.png',
+      icon: './assets/icons/Psyduck.png',
       audio: './assets/audio/Psyduck.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -700,6 +754,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Golduck.png',
+      icon: './assets/icons/Golduck.png',
       audio: './assets/audio/Golduck.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -713,6 +768,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fightingColor],
       img: './assets/images/Mankey.png',
+      icon: './assets/icons/Mankey.png',
       audio: './assets/audio/Mankey.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -725,6 +781,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fightingColor],
       img: './assets/images/Primeape.png',
+      icon: './assets/icons/Primeape.png',
       audio: './assets/audio/Primeape.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -738,6 +795,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Growlithe.png',
+      icon: './assets/icons/Growlithe.png',
       audio: './assets/audio/Growlithe.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -750,6 +808,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Arcanine.png',
+      icon: './assets/icons/Arcanine.png',
       audio: './assets/audio/Arcanine.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -763,6 +822,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Poliwag.png',
+      icon: './assets/icons/Poliwag.png',
       audio: './assets/audio/Poliwag.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -777,6 +837,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Poliwhirl.png',
+      icon: './assets/icons/Poliwhirl.png',
       audio: './assets/audio/Poliwhirl.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -789,6 +850,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.fightingColor],
       img: './assets/images/Poliwrath.png',
+      icon: './assets/icons/Poliwrath.png',
       audio: './assets/audio/Poliwrath.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -802,6 +864,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor],
       img: './assets/images/Abra.png',
+      icon: './assets/icons/Abra.png',
       audio: './assets/audio/Abra.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -815,6 +878,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor],
       img: './assets/images/Kadabra.png',
+      icon: './assets/icons/Kadabra.png',
       audio: './assets/audio/Kadabra.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -827,6 +891,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor],
       img: './assets/images/Alakazam.png',
+      icon: './assets/icons/Alakazam.png',
       audio: './assets/audio/Alakazam.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -840,6 +905,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fightingColor],
       img: './assets/images/Machop.png',
+      icon: './assets/icons/Machop.png',
       audio: './assets/audio/Machop.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -853,6 +919,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fightingColor],
       img: './assets/images/Machoke.png',
+      icon: './assets/icons/Machoke.png',
       audio: './assets/audio/Machoke.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -865,6 +932,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fightingColor],
       img: './assets/images/Machamp.png',
+      icon: './assets/icons/Machamp.png',
       audio: './assets/audio/Machamp.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -878,6 +946,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.poisonColor],
       img: './assets/images/Bellsprout.png',
+      icon: './assets/icons/Bellsprout.png',
       audio: './assets/audio/Bellsprout.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -891,6 +960,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.poisonColor],
       img: './assets/images/Weepinbell.png',
+      icon: './assets/icons/Weepinbell.png',
       audio: './assets/audio/Weepinbell.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -903,6 +973,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.poisonColor],
       img: './assets/images/Victreebel.png',
+      icon: './assets/icons/Victreebel.png',
       audio: './assets/audio/Victreebel.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -916,6 +987,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.poisonColor],
       img: './assets/images/Tentacool.png',
+      icon: './assets/icons/Tentacool.png',
       audio: './assets/audio/Tentacool.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -928,6 +1000,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.poisonColor],
       img: './assets/images/Tentacruel.png',
+      icon: './assets/icons/Tentacruel.png',
       audio: './assets/audio/Tentacruel.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -941,6 +1014,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.groundColor],
       img: './assets/images/Geodude.png',
+      icon: './assets/icons/Geodude.png',
       audio: './assets/audio/Geodude.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -954,6 +1028,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.groundColor],
       img: './assets/images/Graveler.png',
+      icon: './assets/icons/Graveler.png',
       audio: './assets/audio/Graveler.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -966,6 +1041,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.groundColor],
       img: './assets/images/Golem.png',
+      icon: './assets/icons/Golem.png',
       audio: './assets/audio/Golem.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -979,6 +1055,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Ponyta.png',
+      icon: './assets/icons/Ponyta.png',
       audio: './assets/audio/Ponyta.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -991,6 +1068,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Rapidash.png',
+      icon: './assets/icons/Rapidash.png',
       audio: './assets/audio/Rapidash.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1004,6 +1082,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.psychicColor],
       img: './assets/images/Slowpoke.png',
+      icon: './assets/icons/Slowpoke.png',
       audio: './assets/audio/Slowpoke.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1016,6 +1095,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.psychicColor],
       img: './assets/images/Slowbro.png',
+      icon: './assets/icons/Slowbro.png',
       audio: './assets/audio/Slowbro.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1029,6 +1109,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor, ColorEnum.steelColor],
       img: './assets/images/Magnemite.png',
+      icon: './assets/icons/Magnemite.png',
       audio: './assets/audio/Magnemite.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1041,6 +1122,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor, ColorEnum.steelColor],
       img: './assets/images/Magneton.png',
+      icon: './assets/icons/Magneton.png',
       audio: './assets/audio/Magneton.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -1053,6 +1135,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor, ColorEnum.flyingColor],
       img: "./assets/images/Farfetch’d.png",
+      icon: './assets/icons/Farfetch’d.png',
       audio: "./assets/audio/Farfetch’d.ogg",
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1066,6 +1149,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor, ColorEnum.flyingColor],
       img: './assets/images/Doduo.png',
+      icon: './assets/icons/Doduo.png',
       audio: './assets/audio/Doduov.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1078,6 +1162,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor, ColorEnum.flyingColor],
       img: './assets/images/Dodrio.png',
+      icon: './assets/icons/Dodrio.png',
       audio: './assets/audio/Dodrio.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1091,6 +1176,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Seel.png',
+      icon: './assets/icons/Seel.png',
       audio: './assets/audio/Seel.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1103,6 +1189,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.iceColor],
       img: './assets/images/Dewgong.png',
+      icon: './assets/icons/Dewgong.png',
       audio: './assets/audio/Dewgong.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1116,6 +1203,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Grimer.png',
+      icon: './assets/icons/Grimer.png',
       audio: './assets/audio/Grimer.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1128,6 +1216,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Muk.png',
+      icon: './assets/icons/Muk.png',
       audio: './assets/audio/Muk.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -1141,6 +1230,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Shellder.png',
+      icon: './assets/icons/Shellder.png',
       audio: './assets/audio/Shellder.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1153,6 +1243,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.iceColor],
       img: './assets/images/Cloyster.png',
+      icon: './assets/icons/Cloyster.png',
       audio: './assets/audio/Cloyster.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1166,6 +1257,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.ghostColor, ColorEnum.poisonColor],
       img: './assets/images/Gastly.png',
+      icon: './assets/icons/Gastly.png',
       audio: './assets/audio/Gastly.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1179,6 +1271,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.ghostColor, ColorEnum.poisonColor],
       img: './assets/images/Haunter.png',
+      icon: './assets/icons/Haunter.png',
       audio: './assets/audio/Haunter.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1191,6 +1284,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.ghostColor, ColorEnum.poisonColor],
       img: './assets/images/Gengar.png',
+      icon: './assets/icons/Gengar.png',
       audio: './assets/audio/Gengar.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1203,6 +1297,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor],
       img: './assets/images/Onix.png',
+      icon: './assets/icons/Onix.png',
       audio: './assets/audio/Onix.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1216,6 +1311,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor],
       img: './assets/images/Drowzee.png',
+      icon: './assets/icons/Drowzee.png',
       audio: './assets/audio/Drowzee.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -1228,6 +1324,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor],
       img: './assets/images/Hypno.png',
+      icon: './assets/icons/Hypno.png',
       audio: './assets/audio/Hypno.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1241,6 +1338,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Krabby.png',
+      icon: './assets/icons/Krabby.png',
       audio: './assets/audio/Krabby.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1253,6 +1351,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Kingler.png',
+      icon: './assets/icons/Kingler.png',
       audio: './assets/audio/Kingler.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1266,6 +1365,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor],
       img: './assets/images/Voltorb.png',
+      icon: './assets/icons/Voltorb.png',
       audio: './assets/audio/Voltorb.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1278,6 +1378,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor],
       img: './assets/images/Electrode.png',
+      icon: './assets/icons/Electrode.png',
       audio: './assets/audio/Electrode.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1291,6 +1392,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.psychicColor],
       img: './assets/images/Exeggcute.png',
+      icon: './assets/icons/Exeggcute.png',
       audio: './assets/audio/Exeggcute.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1303,6 +1405,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor, ColorEnum.psychicColor],
       img: './assets/images/Exeggutor.png',
+      icon: './assets/icons/Exeggutor.png',
       audio: './assets/audio/Exeggutor.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1316,6 +1419,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor],
       img: './assets/images/Cubone.png',
+      icon: './assets/icons/Cubone.png',
       audio: './assets/audio/Cubone.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1328,6 +1432,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor],
       img: './assets/images/Marowak.png',
+      icon: './assets/icons/Marowak.png',
       audio: './assets/audio/Marowak.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1340,6 +1445,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fightingColor],
       img: './assets/images/Hitmonlee.png',
+      icon: './assets/icons/Hitmonlee.png',
       audio: './assets/audio/Hitmonlee.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1352,6 +1458,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fightingColor],
       img: './assets/images/Hitmonchan.png',
+      icon: './assets/icons/Hitmonchan.png',
       audio: './assets/audio/Hitmonchan.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1364,6 +1471,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Lickitung.png',
+      icon: './assets/icons/Lickitung.png',
       audio: './assets/audio/Lickitung.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1377,6 +1485,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Koffing.png',
+      icon: './assets/icons/Koffing.png',
       audio: './assets/audio/Koffing.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1389,6 +1498,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.poisonColor],
       img: './assets/images/Weezing.png',
+      icon: './assets/icons/Weezing.png',
       audio: './assets/audio/Weezing.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -1402,6 +1512,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor, ColorEnum.rockColor],
       img: './assets/images/Rhyhorn.png',
+      icon: './assets/icons/Rhyhorn.png',
       audio: './assets/audio/Rhyhorn.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1414,6 +1525,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.groundColor, ColorEnum.rockColor],
       img: './assets/images/Rhydon.png',
+      icon: './assets/icons/Rhydon.png',
       audio: './assets/audio/Rhydon.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1426,6 +1538,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Chansey.png',
+      icon: './assets/icons/Chansey.png',
       audio: './assets/audio/Chansey.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1438,6 +1551,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.grassColor],
       img: './assets/images/Tangela.png',
+      icon: './assets/icons/Tangela.png',
       audio: './assets/audio/Tangela.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1450,6 +1564,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Kangaskhan.png',
+      icon: './assets/icons/Kangaskhan.png',
       audio: './assets/audio/Kangaskhan.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1463,6 +1578,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Horsea.png',
+      icon: './assets/icons/Horsea.png',
       audio: './assets/audio/Horsea.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1476,6 +1592,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Seadra.png',
+      icon: './assets/icons/Seadra.png',
       audio: './assets/audio/Seadra.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1489,6 +1606,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Goldeen.png',
+      icon: './assets/icons/Goldeen.png',
       audio: './assets/audio/Goldeen.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1501,6 +1619,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Seaking.png',
+      icon: './assets/icons/Seaking.png',
       audio: './assets/audio/Seaking.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1514,6 +1633,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Staryu.png',
+      icon: './assets/icons/Staryu.png',
       audio: './assets/audio/Staryu.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1526,6 +1646,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.psychicColor],
       img: './assets/images/Starmie.png',
+      icon: './assets/icons/Starmie.png',
       audio: './assets/audio/Starmie.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1538,6 +1659,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor, ColorEnum.fairyColor],
       img: './assets/images/MrMime.png',
+      icon: './assets/icons/MrMime.png',
       audio: './assets/audio/MrMime.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1550,6 +1672,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor, ColorEnum.flyingColor],
       img: './assets/images/Scyther.png',
+      icon: './assets/icons/Scyther.png',
       audio: './assets/audio/Scyther.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1562,6 +1685,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.iceColor, ColorEnum.psychicColor],
       img: './assets/images/Jynx.png',
+      icon: './assets/icons/Jynx.png',
       audio: './assets/audio/Jynx.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1574,6 +1698,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor],
       img: './assets/images/Electabuzz.png',
+      icon: './assets/icons/Electabuzz.png',
       audio: './assets/audio/Electabuzz.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1586,6 +1711,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Magmar.png',
+      icon: './assets/icons/Magmar.png',
       audio: './assets/audio/Magmar.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1598,6 +1724,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.bugColor],
       img: './assets/images/Pinsir.png',
+      icon: './assets/icons/Pinsir.png',
       audio: './assets/audio/Pinsir.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1610,6 +1737,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Tauros.png',
+      icon: './assets/icons/Tauros.png',
       audio: './assets/audio/Tauros.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1623,6 +1751,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Magikarp.png',
+      icon: './assets/icons/Magikarp.png',
       audio: './assets/audio/Magikarp.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1635,6 +1764,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.flyingColor],
       img: './assets/images/Gyarados.png',
+      icon: './assets/icons/Gyarados.png',
       audio: './assets/audio/Gyarados.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -1647,6 +1777,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor, ColorEnum.iceColor],
       img: './assets/images/Lapras.png',
+      icon: './assets/icons/Lapras.png',
       audio: './assets/audio/Lapras.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1659,6 +1790,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Ditto.png',
+      icon: './assets/icons/Ditto.png',
       audio: './assets/audio/Ditto.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1672,6 +1804,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Eevee.png',
+      icon: './assets/icons/Eevee.png',
       audio: './assets/audio/Eevee.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1684,6 +1817,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.waterColor],
       img: './assets/images/Vaporeon.png',
+      icon: './assets/icons/Vaporeon.png',
       audio: './assets/audio/Vaporeon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1696,6 +1830,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor],
       img: './assets/images/Jolteon.png',
+      icon: './assets/icons/Jolteon.png',
       audio: './assets/audio/Jolteon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1708,6 +1843,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor],
       img: './assets/images/Flareon.png',
+      icon: './assets/icons/Flareon.png',
       audio: './assets/audio/Flareon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1720,6 +1856,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Porygon.png',
+      icon: './assets/icons/Porygon.png',
       audio: './assets/audio/Porygon.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1733,6 +1870,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.waterColor],
       img: './assets/images/Omanyte.png',
+      icon: './assets/icons/Omanyte.png',
       audio: './assets/audio/Omanyte.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -1745,6 +1883,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.waterColor],
       img: './assets/images/Omastar.png',
+      icon: './assets/icons/Omastar.png',
       audio: './assets/audio/Omastar.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1757,6 +1896,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.waterColor],
       img: './assets/images/Kabuto.png',
+      icon: './assets/icons/Kabuto.png',
       audio: './assets/audio/Kabuto.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1769,6 +1909,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.waterColor],
       img: './assets/images/Kabutops.png',
+      icon: './assets/icons/Kabutops.png',
       audio: './assets/audio/Kabutops.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1781,6 +1922,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.rockColor, ColorEnum.flyingColor],
       img: './assets/images/Aerodactyl.png',
+      icon: './assets/icons/Aerodactyl.png',
       audio: './assets/audio/Aerodactyl.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1793,6 +1935,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.normalColor],
       img: './assets/images/Snorlax.png',
+      icon: './assets/icons/Snorlax.png',
       audio: './assets/audio/Snorlax.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1805,6 +1948,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.iceColor, ColorEnum.flyingColor],
       img: './assets/images/Articuno.png',
+      icon: './assets/icons/Articuno.png',
       audio: './assets/audio/Articuno.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },
@@ -1817,6 +1961,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.electricColor, ColorEnum.flyingColor],
       img: './assets/images/Zapdos.png',
+      icon: './assets/icons/Zapdos.png',
       audio: './assets/audio/Zapdos.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
     },
@@ -1829,6 +1974,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.fireColor, ColorEnum.flyingColor],
       img: './assets/images/Moltres.png',
+      icon: './assets/icons/Moltres.png',
       audio: './assets/audio/Moltres.ogg',
       attacks: ['Tackle', 'String Shot']
     },
@@ -1842,6 +1988,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.dragonColor],
       img: './assets/images/Dratini.png',
+      icon: './assets/icons/Dratini.png',
       audio: './assets/audio/Dratini.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
     },
@@ -1855,6 +2002,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.dragonColor],
       img: './assets/images/Dragonair.png',
+      icon: './assets/icons/Dragonair.png',
       audio: './assets/audio/Dragonair.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
     },
@@ -1867,6 +2015,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.dragonColor, ColorEnum.flyingColor],
       img: './assets/images/Dragonite.png',
+      icon: './assets/icons/Dragonite.png',
       audio: './assets/audio/Dragonite.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
     },
@@ -1879,6 +2028,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor],
       img: './assets/images/Mewtwo.png',
+      icon: './assets/icons/Mewtwo.png',
       audio: './assets/audio/Mewtwo.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
     },
@@ -1891,6 +2041,7 @@ export class AllPokemonService {
       taux: 125,
       color: [ColorEnum.psychicColor],
       img: './assets/images/Mew.png',
+      icon: './assets/icons/Mew.png',
       audio: './assets/audio/Mew.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
     },

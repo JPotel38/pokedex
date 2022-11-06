@@ -15,6 +15,7 @@ export interface Pokemon {
   taux: number;
   color: Array<string>;
   img: string;
+  icon: string;
   audio: string;
   attacks: Array<string>;
 }
