@@ -1,5 +1,12 @@
 import {Component, OnDestroy} from '@angular/core';
-import {UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  UntypedFormBuilder,
+  UntypedFormControl,
+  UntypedFormGroup,
+  Validators
+} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
 import {TrainerService} from '../../shared/services/trainer.service';
@@ -11,10 +18,10 @@ import {Subscription} from "rxjs";
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPage implements OnDestroy {
-  userForm: UntypedFormGroup;
+  userForm: FormGroup;
   user: User;
-  usernameCtrl: UntypedFormControl;
-  passwordCtrl: UntypedFormControl;
+  loginCtrl: FormControl;
+  passwordCtrl: FormControl;
   private storedUser: User;
   private trainerServiceSubscription: Subscription;
 
@@ -22,11 +29,11 @@ export class LoginPage implements OnDestroy {
               private trainerService: TrainerService,
               fb: UntypedFormBuilder
   ) {
-    this.usernameCtrl = fb.control('', Validators.required);
+    this.loginCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
 
     this.userForm = fb.group({
-      name: this.usernameCtrl,
+      login: this.loginCtrl,
       password: this.passwordCtrl
     });
   }
@@ -39,9 +46,9 @@ export class LoginPage implements OnDestroy {
 
   validate() {
     this.user = {
-      login: this.userForm.get('login').value,
+      login: this.userForm.get('loginCtrl').value,
       userName: this.user.login,
-      password: this.userForm.get('password').value,
+      password: this.userForm.get('passwordCtrl').value,
       connected: true
     };
     this.trainerServiceSubscription = this.trainerService.user.subscribe(storedUser => {
