@@ -1,7 +1,9 @@
 <ion-content>
   <ion-grid>
     <ion-row class="ion-justify-content-center">
-      <h2 [innerHTML]="'NAMES.' + pokemon.name | translate"></h2>
+      <ion-title class="ion-text-center">
+        #{{pokemonId}} {{'NAMES.' + pokemon.name | translate}}
+      </ion-title>
     </ion-row>
     <ion-row>
       <ion-col size="1">
@@ -16,7 +18,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col sizeLg="10" pushLg="5">
+      <ion-col sizeLg="10" pushLg="4">
         <ion-row>
           <ion-img id="img" (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img"></ion-img>
         </ion-row>
@@ -38,7 +40,7 @@
           </ion-button>
         </ion-row>
         <ion-row>
-          <ion-col sizeLg="1">
+          <ion-col sizeLg="2">
             <ion-text>{{'WEIGHT' | translate}}: {{pokemon.weight}}</ion-text>
           </ion-col>
           <ion-col>

@@ -20,7 +20,7 @@
                     [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
         </ion-button>
       </ion-col>
-      <ion-col offsetLg="4" *ngIf="!(trainerService.user | async).connected">
+      <ion-col offsetLg="5" *ngIf="!(trainerService.user | async).connected">
         <ion-button color="light" (click)="goSignin()"
                     *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
         </ion-button>

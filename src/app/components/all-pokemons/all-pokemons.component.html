@@ -6,51 +6,53 @@
                    (keyup.enter)="filterByName()"></ion-input>
       </ion-col>
       <ion-col size="auto">
-        <ion-button (click)="filterByType(['normal'])" [ngStyle]="{'--background': colorEnum.normalColor}">Normal
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['normal'])"
+                    [ngStyle]="{'--background': colorEnum.normalColor}">Normal
         </ion-button>
-        <ion-button (click)="filterByType(['fire'])" [ngStyle]="{'--background': colorEnum.fireColor}">
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['fire'])"
+                    [ngStyle]="{'--background': colorEnum.fireColor}">
           {{'TYPES.fire' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['water'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['water'])"
                     [ngStyle]="{'--background': colorEnum.waterColor}">{{'TYPES.water' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['grass'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['grass'])"
                     [ngStyle]="{'--background': colorEnum.grassColor}">{{'TYPES.grass' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['electric'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['electric'])"
                     [ngStyle]="{'--background': colorEnum.electricColor}">{{'TYPES.electric' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['ice'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['ice'])"
                     [ngStyle]="{'--background': colorEnum.iceColor}">{{'TYPES.ice' | translate | typeName}}</ion-button>
-        <ion-button (click)="filterByType(['fighting'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['fighting'])"
                     [ngStyle]="{'--background': colorEnum.fightingColor}">{{'TYPES.fighting' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['poison'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['poison'])"
                     [ngStyle]="{'--background': colorEnum.poisonColor}">{{'TYPES.poison' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['ground'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['ground'])"
                     [ngStyle]="{'--background': colorEnum.groundColor}">{{'TYPES.ground' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['flying'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['flying'])"
                     [ngStyle]="{'--background': colorEnum.flyingColor}">{{'TYPES.flying' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['psychic'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['psychic'])"
                     [ngStyle]="{'--background': colorEnum.psychicColor}">{{'TYPES.psychic' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['bug'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['bug'])"
                     [ngStyle]="{'--background': colorEnum.bugColor}">{{'TYPES.bug' | translate | typeName}}</ion-button>
-        <ion-button (click)="filterByType(['rock'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['rock'])"
                     [ngStyle]="{'--background': colorEnum.rockColor}">{{'TYPES.rock' | translate | typeName}}</ion-button>
-        <ion-button (click)="filterByType(['ghost'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['ghost'])"
                     [ngStyle]="{'--background': colorEnum.ghostColor}">{{'TYPES.ghost' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['dragon'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['dragon'])"
                     [ngStyle]="{'--background': colorEnum.dragonColor}">{{'TYPES.dragon' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['fairy'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['fairy'])"
                     [ngStyle]="{'--background': colorEnum.fairyColor}">{{'TYPES.fairy' | translate | typeName}}
         </ion-button>
-        <ion-button (click)="filterByType(['steel'])"
+        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['steel'])"
                     [ngStyle]="{'--background': colorEnum.steelColor}">{{'TYPES.steel' | translate | typeName}}
         </ion-button>
       </ion-col>
@@ -72,18 +74,18 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="3" sizeMd="1">
+      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="4" sizeMd="1">
         <ion-card
-                  (click)="goToDetails(pokemon.id)"
-                  [ngStyle]="{'background': pokemon.types.length == 1 ?
+          (click)="goToDetails(pokemon.id)"
+          [ngStyle]="{'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
                   }"
         >
           <ion-card-content>
-              <ion-thumbnail>
-                <ion-img class="icon" [alt]="pokemon.name" [src]="pokemon.icon"></ion-img>
-              </ion-thumbnail>
-<!--              <ion-label>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-label>-->
+            <ion-thumbnail>
+              <ion-img class="icon" [alt]="pokemon.name" [src]="pokemon.icon"></ion-img>
+            </ion-thumbnail>
+            <!--              <ion-label>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-label>-->
           </ion-card-content>
         </ion-card>
       </ion-col>
