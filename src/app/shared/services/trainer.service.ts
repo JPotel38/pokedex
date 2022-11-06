@@ -27,7 +27,8 @@ export class TrainerService {
   }
 
   addPokemon(pokemon: Pokemon) {
-    this.user.value.pokemonTeam.push(pokemon)
+    const addedPokemon = {...pokemon}
+    this.user.value.pokemonTeam.push(addedPokemon)
     this.user.next({...this.user.value})
   }
 
@@ -37,7 +38,7 @@ export class TrainerService {
   }
 
   getPokemonTeam(){
-    return this.user.value.pokemonTeam
+    return JSON.parse(JSON.stringify(this.user.value.pokemonTeam))
   }
 
   updateUserName(userNameCtrl: string) {

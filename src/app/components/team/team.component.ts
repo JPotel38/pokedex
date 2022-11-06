@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {TrainerService} from "../../shared/services/trainer.service";
-import {Pokemon} from "../../shared/interfaces/pokemon";
 import {FormControl} from "@angular/forms";
 import {IonModal} from "@ionic/angular";
 
