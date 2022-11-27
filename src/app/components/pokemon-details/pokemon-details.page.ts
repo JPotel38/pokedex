@@ -33,15 +33,9 @@ export class PokemonDetailsPage implements OnInit {
   playAudio(): void {
     const audio = new Audio();
     audio.src = this.pokemon.audio;
-    document.getElementById('img').classList.add('shake');
-    this.shaking();
+    document.getElementById('img').classList.toggle('shake');
     audio.load();
     audio.play();
-  }
-
-  shaking() {
-    setTimeout(() => {
-    }, 1000);
   }
 
   manageLevel(e): void {
@@ -59,8 +53,8 @@ export class PokemonDetailsPage implements OnInit {
   }
 
   useStone(stone: StoneEnum): void {
-    const evolution = Number(this.pokemonId) + this.pokemon.stone.indexOf(stone) + 1;
-    this.router.navigate([`pokemon-details/${evolution.toString()}`]);
+    const evolution = (Number(this.pokemonId) + this.pokemon.stone.indexOf(stone) + 1).toString();
+    this.router.navigate([`pokemon-details/${evolution}`]);
   }
 
   addPokemonToTeam(pokemon: Pokemon) {
