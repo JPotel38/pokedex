@@ -1,45 +1,5 @@
 <ion-app>
-  <ion-header>
-    <ion-row>
-      <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
-    </ion-row>
-    <ion-row>
-      <ion-col sizeXs="6" sizeLg="2">
-        <ion-item>
-          <ion-select interface="popover" (ionChange)="selectedLang($event)" placeholder="Languages">
-            <ion-select-option *ngFor="let lang of langSelect"
-                               [value]="lang"> {{ lang | translate }}</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
-      <ion-col sizeXs="2">
-        <ion-button fill="clear" class="theme-button" (click)="switchTheme()">
-          <ion-icon [ngStyle]="{'color': isChecked ?
-                  'yellow' : 'white'
-                  }"
-                    [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
-        </ion-button>
-      </ion-col>
-      <ion-col offsetLg="5" *ngIf="!(trainerService.user | async).connected">
-        <ion-button color="light" (click)="goSignin()"
-                    *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
-        </ion-button>
-        <ion-button color="light" (click)="goLogin()"
-                    *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
-        </ion-button>
-      </ion-col>
-      <ion-col offsetLg="5" *ngIf="(trainerService.user | async).connected">
-        <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.user | async).userName } }} </ion-label>
-        <ion-button [disabled]="!trainerService.user.value.login" color="light" (click)="goToTeam()">
-          <img src="assets/icons/pokeball.png" alt="pokeball" style="width: 30px">
-          <ion-badge color="danger">{{trainerService.getPokemonTeam().length}}</ion-badge>
-        </ion-button>
-        <ion-button color="light" class="button"
-                    (click)="goAccount()">{{'ACCOUNT' | translate}}</ion-button>
-        <ion-button color="light" class="button" (click)="logOut()">{{'LOGOUT' | translate}}</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-header>
+  <app-header></app-header>
   <ion-content>
     <ion-router-outlet></ion-router-outlet>
   </ion-content>
