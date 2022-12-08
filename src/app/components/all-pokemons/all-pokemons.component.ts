@@ -9,6 +9,7 @@ import {ColorEnum} from "../../shared/enums/color.enum";
 import {UtilsService} from "../../shared/services/utils.service";
 import {TrainerService} from "../../shared/services/trainer.service";
 import {User} from "../../shared/interfaces/user";
+import {TypesEnum} from "../../shared/enums/types.enum";
 
 @Component({
   selector: 'app-all-pokemons',
@@ -21,6 +22,8 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   isFilteredByName: boolean = false;
   isFilteredByType: boolean = false;
   colorEnum = ColorEnum;
+
+  allTypes = Object.values(TypesEnum);
   typeSelectedArray: string[] = [];
   private translateServiceSubscription: Subscription;
   private activatedRouteSubscription: Subscription;
@@ -58,6 +61,9 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
+  color(type){
+    return ColorEnum[type + 'Color']
+  }
   goToDetails(id: number) {
     this.router.navigate([`pokemon-details/${id}`]);
   }

@@ -6,54 +6,8 @@
                    (keyup.enter)="filterByName()"></ion-input>
       </ion-col>
       <ion-col size="auto">
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['normal'])"
-                    [ngStyle]="{'--background': colorEnum.normalColor}">Normal
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['fire'])"
-                    [ngStyle]="{'--background': colorEnum.fireColor}">
-          {{'TYPES.fire' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['water'])"
-                    [ngStyle]="{'--background': colorEnum.waterColor}">{{'TYPES.water' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['grass'])"
-                    [ngStyle]="{'--background': colorEnum.grassColor}">{{'TYPES.grass' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['electric'])"
-                    [ngStyle]="{'--background': colorEnum.electricColor}">{{'TYPES.electric' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['ice'])"
-                    [ngStyle]="{'--background': colorEnum.iceColor}">{{'TYPES.ice' | translate | typeName}}</ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['fighting'])"
-                    [ngStyle]="{'--background': colorEnum.fightingColor}">{{'TYPES.fighting' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['poison'])"
-                    [ngStyle]="{'--background': colorEnum.poisonColor}">{{'TYPES.poison' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['ground'])"
-                    [ngStyle]="{'--background': colorEnum.groundColor}">{{'TYPES.ground' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['flying'])"
-                    [ngStyle]="{'--background': colorEnum.flyingColor}">{{'TYPES.flying' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['psychic'])"
-                    [ngStyle]="{'--background': colorEnum.psychicColor}">{{'TYPES.psychic' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['bug'])"
-                    [ngStyle]="{'--background': colorEnum.bugColor}">{{'TYPES.bug' | translate | typeName}}</ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['rock'])"
-                    [ngStyle]="{'--background': colorEnum.rockColor}">{{'TYPES.rock' | translate | typeName}}</ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['ghost'])"
-                    [ngStyle]="{'--background': colorEnum.ghostColor}">{{'TYPES.ghost' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['dragon'])"
-                    [ngStyle]="{'--background': colorEnum.dragonColor}">{{'TYPES.dragon' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['fairy'])"
-                    [ngStyle]="{'--background': colorEnum.fairyColor}">{{'TYPES.fairy' | translate | typeName}}
-        </ion-button>
-        <ion-button [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType(['steel'])"
-                    [ngStyle]="{'--background': colorEnum.steelColor}">{{'TYPES.steel' | translate | typeName}}
+        <ion-button *ngFor="let type of allTypes" [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType([type])"
+                    [ngStyle]="{'--background': color(type)}">{{'TYPES.' + type | translate | typeName }}
         </ion-button>
       </ion-col>
     </ion-row>
