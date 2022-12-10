@@ -1,9 +1,9 @@
 <ion-header>
   <ion-row>
     <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
-    <ion-col sizeXs="6" sizeLg="1" offsetLg="5">
+    <ion-col sizeXs="6" sizeLg="1" offsetLg="7">
       <ion-item>
-          <ion-icon name="language-outline"></ion-icon>
+        <ion-icon name="language-outline"></ion-icon>
         <ion-select interface="popover" (ionChange)="selectedLang($event)">
           <ion-select-option *ngFor="let lang of langSelect"
                              [value]="lang"> {{ lang | translate }}</ion-select-option>
@@ -18,8 +18,8 @@
                   [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
       </ion-button>
     </ion-col>
-    <ion-col>
-      <ion-button shape="round" size="large"
+    <ion-col offsetXs="1">
+      <ion-button shape="round" size="small"
                   color="light" (click)="presentPopover($event)">
         <ion-icon name="person-circle-outline">
         </ion-icon>
@@ -29,14 +29,18 @@
       <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
         <ng-template>
           <ion-item>
-            <ion-col offsetLg="5" *ngIf="!(trainerService.user | async).connected">
-              <ion-button color="light" (click)="goSignin()"
-                          *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
-              </ion-button>
-              <ion-button color="light" (click)="goLogin()"
-                          *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
-              </ion-button>
-            </ion-col>
+            <ion-row>
+              <ion-col *ngIf="!(trainerService.user | async).connected">
+                <ion-button color="light" (click)="goSignin()"
+                            *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
+                </ion-button>
+              </ion-col>
+              <ion-col *ngIf="!(trainerService.user | async).connected">
+                <ion-button color="light" (click)="goLogin()"
+                            *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
+                </ion-button>
+              </ion-col>
+            </ion-row>
           </ion-item>
         </ng-template>
       </ion-popover>
