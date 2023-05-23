@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, UntypedFormGroup, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
@@ -9,15 +9,14 @@ import {TrainerService} from '../../shared/services/trainer.service';
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss'],
 })
-export class SigninComponent implements OnInit {
-
-  userForm: FormGroup;
-  user: User;
-  userArray: Array<User> = [];
-  loginCtrl: FormControl;
-  passwordCtrl: FormControl;
-  passwordConfirmCtrl: FormControl;
-  passwordForm: FormGroup;
+export class SigninComponent {
+  public userForm: FormGroup;
+  public user: User;
+  public userArray: Array<User> = [];
+  public loginCtrl: FormControl;
+  public passwordCtrl: FormControl;
+  public passwordConfirmCtrl: FormControl;
+  public passwordForm: FormGroup;
 
   constructor(public readonly router: Router,
               public trainerService: TrainerService,
@@ -45,10 +44,7 @@ export class SigninComponent implements OnInit {
     return password === confirm ? null : {matchingError: true};
   }
 
-  ngOnInit() {
-  }
-
-  validate() {
+  validate(): void {
     this.user = {
       login: this.userForm.get('login').value,
       userName: this.userForm.get('login').value,

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StoneEnum} from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../shared/interfaces/pokemon';
@@ -10,12 +10,11 @@ import {TrainerService} from "../../shared/services/trainer.service";
   templateUrl: './pokemon-details.page.html',
   styleUrls: ['./pokemon-details.page.scss'],
 })
-export class PokemonDetailsPage implements OnInit {
-
-  pokemonId: number;
-  pokemon: Pokemon;
-  level: number;
-  team: Array<Pokemon> = [];
+export class PokemonDetailsPage {
+  public pokemonId: number;
+  public pokemon: Pokemon;
+  public level: number;
+  public team: Array<Pokemon> = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -25,9 +24,6 @@ export class PokemonDetailsPage implements OnInit {
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
-  }
-
-  ngOnInit() {
   }
 
   playAudio(): void {
@@ -57,11 +53,11 @@ export class PokemonDetailsPage implements OnInit {
     this.router.navigate([`pokemon-details/${evolution}`]);
   }
 
-  addPokemonToTeam(pokemon: Pokemon) {
+  addPokemonToTeam(pokemon: Pokemon): void {
     this.trainerService.addPokemon(pokemon);
   }
 
-  redirectToSignin() {
+  redirectToSignin(): void {
     this.router.navigate(['/signin'])
   }
 }

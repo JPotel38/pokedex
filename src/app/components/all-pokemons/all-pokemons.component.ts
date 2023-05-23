@@ -22,12 +22,11 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   isFilteredByName: boolean = false;
   isFilteredByType: boolean = false;
   colorEnum = ColorEnum;
-
   allTypes = Object.values(TypesEnum);
   typeSelectedArray: string[] = [];
+  team: Array<Pokemon> = [];
   private translateServiceSubscription: Subscription;
   private activatedRouteSubscription: Subscription;
-  team: Array<Pokemon> = [];
   private user: User;
 
   constructor(
@@ -45,14 +44,14 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     })
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
       this.pokemonArray = allPokemon;
     })
     this.user = this.trainerService.user.value;
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.translateServiceSubscription) {
       this.translateServiceSubscription.unsubscribe();
     }
@@ -61,14 +60,15 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  color(type){
+  color(type: string): string {
     return ColorEnum[type + 'Color']
   }
-  goToDetails(id: number) {
+
+  goToDetails(id: number): void {
     this.router.navigate([`pokemon-details/${id}`]);
   }
 
-  filterByName() {
+  filterByName(): void {
     if (!this.pokemon.value) {
       this.pokemonArray = this.allPokemonService.getAllPokemons();
     } else {
@@ -84,7 +84,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  filterByType(selectedType: Array<string>) {
+  filterByType(selectedType: Array<string>): void {
     this.isFilteredByType = true;
     if (!this.typeSelectedArray.find(typeSelected => typeSelected === selectedType[0])) {
       this.typeSelectedArray.push(selectedType[0])
@@ -97,7 +97,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  clearName() {
+  clearName(): void {
     this.pokemon.reset();
     this.isFilteredByName = false;
     if (this.isFilteredByType) {
@@ -107,7 +107,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  clearType(index: number) {
+  clearType(index: number): void {
     if (this.isFilteredByName) {
       this.filterByName();
     } else {
@@ -120,6 +120,4 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
       }
     }
   }
-
-
 }

@@ -11,37 +11,37 @@ export class TrainerService {
     {
       login: '',
       password: '',
-      userName:'',
+      userName: '',
       connected: false,
       pokemonTeam: []
     }
   );
 
-  setUser(user: User) {
+  setUser(user: User): void {
     this.user.subscribe(userSub => {
-      if(!userSub.userName){
+      if (!userSub.userName) {
         userSub.userName = user.login
       }
     })
     this.user.next({...user});
   }
 
-  addPokemon(pokemon: Pokemon) {
+  addPokemon(pokemon: Pokemon): void {
     const addedPokemon = {...pokemon}
     this.user.value.pokemonTeam.push(addedPokemon)
     this.user.next({...this.user.value})
   }
 
-  updatePokemonName(index: number, name: string){
+  updatePokemonName(index: number, name: string): void {
     this.user.value.pokemonTeam[index].name = name;
     this.user.next({...this.user.value});
   }
 
-  getPokemonTeam(){
+  getPokemonTeam(): Array<Pokemon> {
     return JSON.parse(JSON.stringify(this.user.value.pokemonTeam))
   }
 
-  updateUserName(userNameCtrl: string) {
+  updateUserName(userNameCtrl: string): void {
     this.user.next({...this.user.value, userName: userNameCtrl});
   }
 }

@@ -1,12 +1,5 @@
 import {Component, OnDestroy} from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  UntypedFormBuilder,
-  UntypedFormControl,
-  UntypedFormGroup,
-  Validators
-} from '@angular/forms';
+import {FormControl, FormGroup, UntypedFormBuilder, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
 import {TrainerService} from '../../shared/services/trainer.service';
@@ -18,10 +11,10 @@ import {Subscription} from "rxjs";
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPage implements OnDestroy {
-  userForm: FormGroup;
-  user: User;
-  loginCtrl: FormControl;
-  passwordCtrl: FormControl;
+  public userForm: FormGroup;
+  public user: User;
+  public loginCtrl: FormControl;
+  public passwordCtrl: FormControl;
   private storedUser: User;
   private trainerServiceSubscription: Subscription;
 
@@ -38,13 +31,13 @@ export class LoginPage implements OnDestroy {
     });
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.trainerServiceSubscription) {
       this.trainerServiceSubscription.unsubscribe();
     }
   }
 
-  validate() {
+  validate(): void {
     this.user = {
       login: this.userForm.get('loginCtrl').value,
       userName: this.user.login,
@@ -61,7 +54,6 @@ export class LoginPage implements OnDestroy {
     } else {
       alert('Unknown user');
     }
-
   }
 
   success(userArray: Array<User>): User {

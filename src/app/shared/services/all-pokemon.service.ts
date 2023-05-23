@@ -9,8 +9,7 @@ import {StoneEnum} from '../enums/stone.enum';
   providedIn: 'root'
 })
 export class AllPokemonService {
-
-  pokemonArray: Array<Pokemon> = [
+  public pokemonArray: Array<Pokemon> = [
     {
       id: 1,
       name: 'Bulbasaur',
@@ -2050,7 +2049,7 @@ export class AllPokemonService {
   constructor(readonly http: HttpClient) {
   }
 
-  getDetailsPokemon(id: number) {
+  getDetailsPokemon(id: number): Pokemon {
     return this.pokemonArray[id - 1];
   }
 
