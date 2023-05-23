@@ -1,7 +1,7 @@
 <ion-header>
   <ion-row>
     <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
-    <ion-col sizeXs="6" sizeLg="1" offsetLg="7">
+    <ion-col size="auto" offset="9">
       <ion-item>
         <ion-icon name="language-outline"></ion-icon>
         <ion-select interface="popover" (ionChange)="selectedLang($event)">
@@ -10,7 +10,7 @@
         </ion-select>
       </ion-item>
     </ion-col>
-    <ion-col size="1">
+    <ion-col size="auto">
       <ion-button fill="clear" class="theme-button" (click)="switchTheme()">
         <ion-icon [ngStyle]="{'color': isChecked ?
                   'yellow' : 'white'
@@ -18,7 +18,7 @@
                   [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
       </ion-button>
     </ion-col>
-    <ion-col size="1">
+    <ion-col size="auto">
       <ion-button shape="round" size="small"
                   color="light" (click)="presentPopover($event)">
         <ion-icon name="person-circle-outline">
