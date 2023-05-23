@@ -28,7 +28,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="4" sizeMd="1">
+      <ion-col *ngFor="let pokemon of pokemonArray" size="auto">
         <ion-card
           (click)="goToDetails(pokemon.id)"
           [ngStyle]="{'background': pokemon.types.length == 1 ?
