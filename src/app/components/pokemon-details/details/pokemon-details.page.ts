@@ -1,20 +1,22 @@
-import {Component} from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StoneEnum} from 'src/app/shared/enums/stone.enum';
-import {Pokemon} from '../../shared/interfaces/pokemon';
-import {AllPokemonService} from '../../shared/services/all-pokemon.service';
-import {TrainerService} from "../../shared/services/trainer.service";
+import {Pokemon} from '../../../shared/interfaces/pokemon';
+import {AllPokemonService} from '../../../shared/services/all-pokemon.service';
+import {TrainerService} from "../../../shared/services/trainer.service";
 
 @Component({
   selector: 'app-pokemon-details',
   templateUrl: './pokemon-details.page.html',
   styleUrls: ['./pokemon-details.page.scss'],
 })
-export class PokemonDetailsPage {
+export class PokemonDetailsPage implements OnChanges{
   public pokemonId: number;
   public pokemon: Pokemon;
   public level: number;
   public team: Array<Pokemon> = [];
+  @Input()
+  public navigate: number;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -24,6 +26,10 @@ export class PokemonDetailsPage {
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
+  }
+
+  ngOnChanges(): void {
+    this.router.navigate([`pokemon-details/${this.navigate}`]);
   }
 
   playAudio(): void {
@@ -36,16 +42,6 @@ export class PokemonDetailsPage {
 
   manageLevel(e): void {
     this.level = e.detail.value;
-  }
-
-  previousPokemon(): void {
-    this.pokemonId--;
-    this.router.navigate([`pokemon-details/${this.pokemonId.toString()}`]);
-  }
-
-  nextPokemon(): void {
-    this.pokemonId++;
-    this.router.navigate([`pokemon-details/${this.pokemonId.toString()}`]);
   }
 
   useStone(stone: StoneEnum): void {
