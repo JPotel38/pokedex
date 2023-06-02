@@ -10,7 +10,7 @@ import {TrainerService} from "../../../shared/services/trainer.service";
   templateUrl: './pokemon-details.page.html',
   styleUrls: ['./pokemon-details.page.scss'],
 })
-export class PokemonDetailsPage implements OnChanges{
+export class PokemonDetailsPage implements OnChanges {
   public pokemonId: number;
   public pokemon: Pokemon;
   public level: number;

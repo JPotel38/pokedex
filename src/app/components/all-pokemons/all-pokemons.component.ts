@@ -17,14 +17,15 @@ import {TypesEnum} from "../../shared/enums/types.enum";
   styleUrls: ['./all-pokemons.component.scss'],
 })
 export class AllPokemonsComponent implements OnInit, OnDestroy {
-  pokemonArray: Array<Pokemon>
-  pokemon = new FormControl('');
-  isFilteredByName: boolean = false;
-  isFilteredByType: boolean = false;
-  colorEnum = ColorEnum;
-  allTypes = Object.values(TypesEnum);
-  typeSelectedArray: string[] = [];
-  team: Array<Pokemon> = [];
+  public pokemonArray: Array<Pokemon>
+  public pokemon = new FormControl('');
+  public isFilteredByName: boolean = false;
+  public isFilteredByType: boolean = false;
+  public isFilteredByLegendary: boolean = false;
+  public colorEnum = ColorEnum;
+  public allTypes = Object.values(TypesEnum);
+  public typeSelectedArray: string[] = [];
+  public team: Array<Pokemon> = [];
   private translateServiceSubscription: Subscription;
   private activatedRouteSubscription: Subscription;
   private user: User;
@@ -97,9 +98,14 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  clearName(): void {
+  filterLegendary() {
+    this.isFilteredByLegendary = true;
+    this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary);
+  }
+
+  clearFilter(filter: string): void {
     this.pokemon.reset();
-    this.isFilteredByName = false;
+    this[filter] = false;
     if (this.isFilteredByType) {
       this.filterByType(this.typeSelectedArray);
     } else {

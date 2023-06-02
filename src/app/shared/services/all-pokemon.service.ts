@@ -22,7 +22,9 @@ export class AllPokemonService {
       img: './assets/images/Bulbasaur.png',
       icon: './assets/icons/Bulbasaur.png',
       audio: './assets/audio/Bulbasaur.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 2,
@@ -36,7 +38,9 @@ export class AllPokemonService {
       img: './assets/images/Ivysaur.png',
       icon: './assets/icons/Ivysaur.png',
       audio: './assets/audio/Ivysaur.ogg',
-      attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam']
+      attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 3,
@@ -49,7 +53,9 @@ export class AllPokemonService {
       img: './assets/images/Venusaur.png',
       icon: './assets/icons/Venusaur.png',
       audio: './assets/audio/Venusaur.ogg',
-      attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam']
+      attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 4,
@@ -63,7 +69,9 @@ export class AllPokemonService {
       img: './assets/images/Charmander.png',
       icon: './assets/icons/Charmander.png',
       audio: './assets/audio/Charmander.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 5,
@@ -77,7 +85,9 @@ export class AllPokemonService {
       img: './assets/images/Charmeleon.png',
       icon: './assets/icons/Charmeleon.png',
       audio: './assets/audio/Charmeleon.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 6,
@@ -90,7 +100,9 @@ export class AllPokemonService {
       img: './assets/images/Charizard.png',
       icon: './assets/icons/Charizard.png',
       audio: './assets/audio/Charizard.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 7,
@@ -104,7 +116,9 @@ export class AllPokemonService {
       img: './assets/images/Squirtle.png',
       icon: './assets/icons/Squirtle.png',
       audio: './assets/audio/Squirtle.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 8,
@@ -118,7 +132,9 @@ export class AllPokemonService {
       img: './assets/images/Wartortle.png',
       icon: './assets/icons/Wartortle.png',
       audio: './assets/audio/Wartortle.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 9,
@@ -131,7 +147,9 @@ export class AllPokemonService {
       img: './assets/images/Blastoise.png',
       icon: './assets/icons/Blastoise.png',
       audio: './assets/audio/Blastoise.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 10,
@@ -145,7 +163,9 @@ export class AllPokemonService {
       img: './assets/images/Caterpie.png',
       icon: './assets/icons/Caterpie.png',
       audio: './assets/audio/Caterpie.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 11,
@@ -159,7 +179,9 @@ export class AllPokemonService {
       img: './assets/images/Metapod.png',
       icon: './assets/icons/Metapod.png',
       audio: './assets/audio/Metapod.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 12,
@@ -172,7 +194,9 @@ export class AllPokemonService {
       img: './assets/images/Butterfree.png',
       icon: './assets/icons/Butterfree.png',
       audio: './assets/audio/Butterfree.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 13,
@@ -186,7 +210,9 @@ export class AllPokemonService {
       img: './assets/images/Weedle.png',
       icon: './assets/icons/Weedle.png',
       audio: './assets/audio/Weedle.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 14,
@@ -200,7 +226,9 @@ export class AllPokemonService {
       img: './assets/images/Kakuna.png',
       icon: './assets/icons/Kakuna.png',
       audio: './assets/audio/Kakuna.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 15,
@@ -213,7 +241,9 @@ export class AllPokemonService {
       img: './assets/images/Beedrill.png',
       icon: './assets/icons/Beedrill.png',
       audio: './assets/audio/Beedrill.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 16,
@@ -227,7 +257,9 @@ export class AllPokemonService {
       img: './assets/images/Pidgey.png',
       icon: './assets/icons/Pidgey.png',
       audio: './assets/audio/Pidgey.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 17,
@@ -241,7 +273,9 @@ export class AllPokemonService {
       img: './assets/images/Pidgeotto.png',
       icon: './assets/icons/Pidgeotto.png',
       audio: './assets/audio/Pidgeotto.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 18,
@@ -254,7 +288,9 @@ export class AllPokemonService {
       img: './assets/images/Pidgeot.png',
       icon: './assets/icons/Pidgeot.png',
       audio: './assets/audio/Pidgeot.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 19,
@@ -268,7 +304,9 @@ export class AllPokemonService {
       img: './assets/images/Rattata.png',
       icon: './assets/icons/Rattata.png',
       audio: './assets/audio/Rattata.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 20,
@@ -281,7 +319,9 @@ export class AllPokemonService {
       img: './assets/images/Raticate.png',
       icon: './assets/icons/Raticate.png',
       audio: './assets/audio/Raticate.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 21,
@@ -295,7 +335,9 @@ export class AllPokemonService {
       img: './assets/images/Spearow.png',
       icon: './assets/icons/Spearow.png',
       audio: './assets/audio/Spearow.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 22,
@@ -308,7 +350,9 @@ export class AllPokemonService {
       img: './assets/images/Fearow.png',
       icon: './assets/icons/Fearow.png',
       audio: './assets/audio/Fearow.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 23,
@@ -322,7 +366,9 @@ export class AllPokemonService {
       img: './assets/images/Ekans.png',
       icon: './assets/icons/Ekans.png',
       audio: './assets/audio/Ekans.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 24,
@@ -335,7 +381,9 @@ export class AllPokemonService {
       img: './assets/images/Arbok.png',
       icon: './assets/icons/Arbok.png',
       audio: './assets/audio/Arbok.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 25,
@@ -349,7 +397,9 @@ export class AllPokemonService {
       img: './assets/images/Pikachu.png',
       icon: './assets/icons/Pikachu.png',
       audio: './assets/audio/Pikachu.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 26,
@@ -362,7 +412,9 @@ export class AllPokemonService {
       img: './assets/images/Raichu.png',
       icon: './assets/icons/Raichu.png',
       audio: './assets/audio/Raichu.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 27,
@@ -376,7 +428,9 @@ export class AllPokemonService {
       img: './assets/images/Sandshrew.png',
       icon: './assets/icons/Sandshrew.png',
       audio: './assets/audio/Sandshrew.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 28,
@@ -389,7 +443,9 @@ export class AllPokemonService {
       img: './assets/images/Sandslash.png',
       icon: './assets/icons/Sandslash.png',
       audio: './assets/audio/Sandslash.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 29,
@@ -403,7 +459,9 @@ export class AllPokemonService {
       img: './assets/images/Nidoran♀.png',
       icon: './assets/icons/Nidoran♀.png',
       audio: './assets/audio/Nidoran♀.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 30,
@@ -417,7 +475,9 @@ export class AllPokemonService {
       img: './assets/images/Nidorina.png',
       icon: './assets/icons/Nidorina.png',
       audio: './assets/audio/Nidorina.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 31,
@@ -430,7 +490,9 @@ export class AllPokemonService {
       img: './assets/images/Nidoqueen.png',
       icon: './assets/icons/Nidoqueen.png',
       audio: './assets/audio/Nidoqueen.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 32,
@@ -444,7 +506,9 @@ export class AllPokemonService {
       img: './assets/images/Nidoran♂.png',
       icon: './assets/icons/Nidoran♂.png',
       audio: './assets/audio/Nidoran♂.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 33,
@@ -458,7 +522,9 @@ export class AllPokemonService {
       img: './assets/images/Nidorino.png',
       icon: './assets/icons/Nidorino.png',
       audio: './assets/audio/Nidorino.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 34,
@@ -471,7 +537,9 @@ export class AllPokemonService {
       img: './assets/images/Nidoking.png',
       icon: './assets/icons/Nidoking.png',
       audio: './assets/audio/Nidoking.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 35,
@@ -485,7 +553,9 @@ export class AllPokemonService {
       img: './assets/images/Clefairy.png',
       icon: './assets/icons/Clefairy.png',
       audio: './assets/audio/Clefairy.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 36,
@@ -498,7 +568,9 @@ export class AllPokemonService {
       img: './assets/images/Clefable.png',
       icon: './assets/icons/Clefable.png',
       audio: './assets/audio/Clefable.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 37,
@@ -512,7 +584,9 @@ export class AllPokemonService {
       img: './assets/images/Vulpix.png',
       icon: './assets/icons/Vulpix.png',
       audio: './assets/audio/Vulpix.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 38,
@@ -525,7 +599,9 @@ export class AllPokemonService {
       img: './assets/images/Ninetales.png',
       icon: './assets/icons/Ninetales.png',
       audio: './assets/audio/Ninetales.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 39,
@@ -539,7 +615,9 @@ export class AllPokemonService {
       img: './assets/images/Jigglypuff.png',
       icon: './assets/icons/Jigglypuff.png',
       audio: './assets/audio/Jigglypuff.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 40,
@@ -552,7 +630,9 @@ export class AllPokemonService {
       img: './assets/images/Wigglytuff.png',
       icon: './assets/icons/Wigglytuff.png',
       audio: './assets/audio/Wigglytuff.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 41,
@@ -566,7 +646,9 @@ export class AllPokemonService {
       img: './assets/images/Zubat.png',
       icon: './assets/icons/Zubat.png',
       audio: './assets/audio/Zubat.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 42,
@@ -579,7 +661,9 @@ export class AllPokemonService {
       img: './assets/images/Golbat.png',
       icon: './assets/icons/Golbat.png',
       audio: './assets/audio/Golbat.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 43,
@@ -593,7 +677,9 @@ export class AllPokemonService {
       img: './assets/images/Oddish.png',
       icon: './assets/icons/Oddish.png',
       audio: './assets/audio/Oddish.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 44,
@@ -607,7 +693,9 @@ export class AllPokemonService {
       img: './assets/images/Gloom.png',
       icon: './assets/icons/Gloom.png',
       audio: './assets/audio/Gloom.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 45,
@@ -620,7 +708,9 @@ export class AllPokemonService {
       img: './assets/images/Vileplume.png',
       icon: './assets/icons/Vileplume.png',
       audio: './assets/audio/Vileplume.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 46,
@@ -634,7 +724,9 @@ export class AllPokemonService {
       img: './assets/images/Paras.png',
       icon: './assets/icons/Paras.png',
       audio: './assets/audio/Paras.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 47,
@@ -647,7 +739,9 @@ export class AllPokemonService {
       img: './assets/images/Parasect.png',
       icon: './assets/icons/Parasect.png',
       audio: './assets/audio/Parasect.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 48,
@@ -661,7 +755,9 @@ export class AllPokemonService {
       img: './assets/images/Venonat.png',
       icon: './assets/icons/Venonat.png',
       audio: './assets/audio/Venonat.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 49,
@@ -674,7 +770,9 @@ export class AllPokemonService {
       img: './assets/images/Venomoth.png',
       icon: './assets/icons/Venomoth.png',
       audio: './assets/audio/Venomoth.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 50,
@@ -688,7 +786,9 @@ export class AllPokemonService {
       img: './assets/images/Diglett.png',
       icon: './assets/icons/Diglett.png',
       audio: './assets/audio/Diglett.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 51,
@@ -701,7 +801,9 @@ export class AllPokemonService {
       img: './assets/images/Dugtrio.png',
       icon: './assets/icons/Dugtrio.png',
       audio: './assets/audio/Dugtrio.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 52,
@@ -715,7 +817,9 @@ export class AllPokemonService {
       img: './assets/images/Meowth.png',
       icon: './assets/icons/Meowth.png',
       audio: './assets/audio/Meowth.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 53,
@@ -728,7 +832,9 @@ export class AllPokemonService {
       img: './assets/images/Persian.png',
       icon: './assets/icons/Persian.png',
       audio: './assets/audio/Persian.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 54,
@@ -742,7 +848,9 @@ export class AllPokemonService {
       img: './assets/images/Psyduck.png',
       icon: './assets/icons/Psyduck.png',
       audio: './assets/audio/Psyduck.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 55,
@@ -755,7 +863,9 @@ export class AllPokemonService {
       img: './assets/images/Golduck.png',
       icon: './assets/icons/Golduck.png',
       audio: './assets/audio/Golduck.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 56,
@@ -769,7 +879,9 @@ export class AllPokemonService {
       img: './assets/images/Mankey.png',
       icon: './assets/icons/Mankey.png',
       audio: './assets/audio/Mankey.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 57,
@@ -782,7 +894,9 @@ export class AllPokemonService {
       img: './assets/images/Primeape.png',
       icon: './assets/icons/Primeape.png',
       audio: './assets/audio/Primeape.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 58,
@@ -796,7 +910,9 @@ export class AllPokemonService {
       img: './assets/images/Growlithe.png',
       icon: './assets/icons/Growlithe.png',
       audio: './assets/audio/Growlithe.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 59,
@@ -809,7 +925,9 @@ export class AllPokemonService {
       img: './assets/images/Arcanine.png',
       icon: './assets/icons/Arcanine.png',
       audio: './assets/audio/Arcanine.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 60,
@@ -823,7 +941,9 @@ export class AllPokemonService {
       img: './assets/images/Poliwag.png',
       icon: './assets/icons/Poliwag.png',
       audio: './assets/audio/Poliwag.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 61,
@@ -838,7 +958,9 @@ export class AllPokemonService {
       img: './assets/images/Poliwhirl.png',
       icon: './assets/icons/Poliwhirl.png',
       audio: './assets/audio/Poliwhirl.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 62,
@@ -851,7 +973,9 @@ export class AllPokemonService {
       img: './assets/images/Poliwrath.png',
       icon: './assets/icons/Poliwrath.png',
       audio: './assets/audio/Poliwrath.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 63,
@@ -865,7 +989,9 @@ export class AllPokemonService {
       img: './assets/images/Abra.png',
       icon: './assets/icons/Abra.png',
       audio: './assets/audio/Abra.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 64,
@@ -879,7 +1005,9 @@ export class AllPokemonService {
       img: './assets/images/Kadabra.png',
       icon: './assets/icons/Kadabra.png',
       audio: './assets/audio/Kadabra.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 65,
@@ -892,7 +1020,9 @@ export class AllPokemonService {
       img: './assets/images/Alakazam.png',
       icon: './assets/icons/Alakazam.png',
       audio: './assets/audio/Alakazam.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 66,
@@ -906,7 +1036,9 @@ export class AllPokemonService {
       img: './assets/images/Machop.png',
       icon: './assets/icons/Machop.png',
       audio: './assets/audio/Machop.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 67,
@@ -920,7 +1052,9 @@ export class AllPokemonService {
       img: './assets/images/Machoke.png',
       icon: './assets/icons/Machoke.png',
       audio: './assets/audio/Machoke.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 68,
@@ -933,7 +1067,9 @@ export class AllPokemonService {
       img: './assets/images/Machamp.png',
       icon: './assets/icons/Machamp.png',
       audio: './assets/audio/Machamp.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 69,
@@ -947,7 +1083,9 @@ export class AllPokemonService {
       img: './assets/images/Bellsprout.png',
       icon: './assets/icons/Bellsprout.png',
       audio: './assets/audio/Bellsprout.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 70,
@@ -961,7 +1099,9 @@ export class AllPokemonService {
       img: './assets/images/Weepinbell.png',
       icon: './assets/icons/Weepinbell.png',
       audio: './assets/audio/Weepinbell.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 71,
@@ -974,7 +1114,9 @@ export class AllPokemonService {
       img: './assets/images/Victreebel.png',
       icon: './assets/icons/Victreebel.png',
       audio: './assets/audio/Victreebel.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 72,
@@ -988,7 +1130,9 @@ export class AllPokemonService {
       img: './assets/images/Tentacool.png',
       icon: './assets/icons/Tentacool.png',
       audio: './assets/audio/Tentacool.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 73,
@@ -1001,7 +1145,9 @@ export class AllPokemonService {
       img: './assets/images/Tentacruel.png',
       icon: './assets/icons/Tentacruel.png',
       audio: './assets/audio/Tentacruel.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 74,
@@ -1015,7 +1161,9 @@ export class AllPokemonService {
       img: './assets/images/Geodude.png',
       icon: './assets/icons/Geodude.png',
       audio: './assets/audio/Geodude.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 75,
@@ -1029,7 +1177,9 @@ export class AllPokemonService {
       img: './assets/images/Graveler.png',
       icon: './assets/icons/Graveler.png',
       audio: './assets/audio/Graveler.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 76,
@@ -1042,7 +1192,9 @@ export class AllPokemonService {
       img: './assets/images/Golem.png',
       icon: './assets/icons/Golem.png',
       audio: './assets/audio/Golem.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 77,
@@ -1056,7 +1208,9 @@ export class AllPokemonService {
       img: './assets/images/Ponyta.png',
       icon: './assets/icons/Ponyta.png',
       audio: './assets/audio/Ponyta.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 78,
@@ -1069,7 +1223,9 @@ export class AllPokemonService {
       img: './assets/images/Rapidash.png',
       icon: './assets/icons/Rapidash.png',
       audio: './assets/audio/Rapidash.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 79,
@@ -1083,7 +1239,9 @@ export class AllPokemonService {
       img: './assets/images/Slowpoke.png',
       icon: './assets/icons/Slowpoke.png',
       audio: './assets/audio/Slowpoke.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 80,
@@ -1096,7 +1254,9 @@ export class AllPokemonService {
       img: './assets/images/Slowbro.png',
       icon: './assets/icons/Slowbro.png',
       audio: './assets/audio/Slowbro.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 81,
@@ -1110,7 +1270,9 @@ export class AllPokemonService {
       img: './assets/images/Magnemite.png',
       icon: './assets/icons/Magnemite.png',
       audio: './assets/audio/Magnemite.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 82,
@@ -1123,7 +1285,9 @@ export class AllPokemonService {
       img: './assets/images/Magneton.png',
       icon: './assets/icons/Magneton.png',
       audio: './assets/audio/Magneton.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 83,
@@ -1136,7 +1300,9 @@ export class AllPokemonService {
       img: "./assets/images/Farfetch’d.png",
       icon: './assets/icons/Farfetch’d.png',
       audio: "./assets/audio/Farfetch’d.ogg",
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 84,
@@ -1150,7 +1316,9 @@ export class AllPokemonService {
       img: './assets/images/Doduo.png',
       icon: './assets/icons/Doduo.png',
       audio: './assets/audio/Doduov.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 85,
@@ -1163,7 +1331,9 @@ export class AllPokemonService {
       img: './assets/images/Dodrio.png',
       icon: './assets/icons/Dodrio.png',
       audio: './assets/audio/Dodrio.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 86,
@@ -1177,7 +1347,9 @@ export class AllPokemonService {
       img: './assets/images/Seel.png',
       icon: './assets/icons/Seel.png',
       audio: './assets/audio/Seel.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 87,
@@ -1190,7 +1362,9 @@ export class AllPokemonService {
       img: './assets/images/Dewgong.png',
       icon: './assets/icons/Dewgong.png',
       audio: './assets/audio/Dewgong.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 88,
@@ -1204,7 +1378,9 @@ export class AllPokemonService {
       img: './assets/images/Grimer.png',
       icon: './assets/icons/Grimer.png',
       audio: './assets/audio/Grimer.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 89,
@@ -1217,7 +1393,9 @@ export class AllPokemonService {
       img: './assets/images/Muk.png',
       icon: './assets/icons/Muk.png',
       audio: './assets/audio/Muk.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 90,
@@ -1231,7 +1409,9 @@ export class AllPokemonService {
       img: './assets/images/Shellder.png',
       icon: './assets/icons/Shellder.png',
       audio: './assets/audio/Shellder.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 91,
@@ -1244,7 +1424,9 @@ export class AllPokemonService {
       img: './assets/images/Cloyster.png',
       icon: './assets/icons/Cloyster.png',
       audio: './assets/audio/Cloyster.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 92,
@@ -1258,7 +1440,9 @@ export class AllPokemonService {
       img: './assets/images/Gastly.png',
       icon: './assets/icons/Gastly.png',
       audio: './assets/audio/Gastly.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 93,
@@ -1272,7 +1456,9 @@ export class AllPokemonService {
       img: './assets/images/Haunter.png',
       icon: './assets/icons/Haunter.png',
       audio: './assets/audio/Haunter.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 94,
@@ -1285,7 +1471,9 @@ export class AllPokemonService {
       img: './assets/images/Gengar.png',
       icon: './assets/icons/Gengar.png',
       audio: './assets/audio/Gengar.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 95,
@@ -1298,7 +1486,9 @@ export class AllPokemonService {
       img: './assets/images/Onix.png',
       icon: './assets/icons/Onix.png',
       audio: './assets/audio/Onix.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 96,
@@ -1312,7 +1502,9 @@ export class AllPokemonService {
       img: './assets/images/Drowzee.png',
       icon: './assets/icons/Drowzee.png',
       audio: './assets/audio/Drowzee.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 97,
@@ -1325,7 +1517,9 @@ export class AllPokemonService {
       img: './assets/images/Hypno.png',
       icon: './assets/icons/Hypno.png',
       audio: './assets/audio/Hypno.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 98,
@@ -1339,7 +1533,9 @@ export class AllPokemonService {
       img: './assets/images/Krabby.png',
       icon: './assets/icons/Krabby.png',
       audio: './assets/audio/Krabby.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 99,
@@ -1352,7 +1548,9 @@ export class AllPokemonService {
       img: './assets/images/Kingler.png',
       icon: './assets/icons/Kingler.png',
       audio: './assets/audio/Kingler.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 100,
@@ -1366,7 +1564,9 @@ export class AllPokemonService {
       img: './assets/images/Voltorb.png',
       icon: './assets/icons/Voltorb.png',
       audio: './assets/audio/Voltorb.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 101,
@@ -1379,7 +1579,9 @@ export class AllPokemonService {
       img: './assets/images/Electrode.png',
       icon: './assets/icons/Electrode.png',
       audio: './assets/audio/Electrode.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 102,
@@ -1393,7 +1595,9 @@ export class AllPokemonService {
       img: './assets/images/Exeggcute.png',
       icon: './assets/icons/Exeggcute.png',
       audio: './assets/audio/Exeggcute.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 103,
@@ -1406,7 +1610,9 @@ export class AllPokemonService {
       img: './assets/images/Exeggutor.png',
       icon: './assets/icons/Exeggutor.png',
       audio: './assets/audio/Exeggutor.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 104,
@@ -1420,7 +1626,9 @@ export class AllPokemonService {
       img: './assets/images/Cubone.png',
       icon: './assets/icons/Cubone.png',
       audio: './assets/audio/Cubone.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 105,
@@ -1433,7 +1641,9 @@ export class AllPokemonService {
       img: './assets/images/Marowak.png',
       icon: './assets/icons/Marowak.png',
       audio: './assets/audio/Marowak.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 106,
@@ -1446,7 +1656,9 @@ export class AllPokemonService {
       img: './assets/images/Hitmonlee.png',
       icon: './assets/icons/Hitmonlee.png',
       audio: './assets/audio/Hitmonlee.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 107,
@@ -1459,7 +1671,9 @@ export class AllPokemonService {
       img: './assets/images/Hitmonchan.png',
       icon: './assets/icons/Hitmonchan.png',
       audio: './assets/audio/Hitmonchan.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 108,
@@ -1472,7 +1686,9 @@ export class AllPokemonService {
       img: './assets/images/Lickitung.png',
       icon: './assets/icons/Lickitung.png',
       audio: './assets/audio/Lickitung.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 109,
@@ -1486,7 +1702,9 @@ export class AllPokemonService {
       img: './assets/images/Koffing.png',
       icon: './assets/icons/Koffing.png',
       audio: './assets/audio/Koffing.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 110,
@@ -1499,7 +1717,9 @@ export class AllPokemonService {
       img: './assets/images/Weezing.png',
       icon: './assets/icons/Weezing.png',
       audio: './assets/audio/Weezing.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 111,
@@ -1513,7 +1733,9 @@ export class AllPokemonService {
       img: './assets/images/Rhyhorn.png',
       icon: './assets/icons/Rhyhorn.png',
       audio: './assets/audio/Rhyhorn.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 112,
@@ -1526,7 +1748,9 @@ export class AllPokemonService {
       img: './assets/images/Rhydon.png',
       icon: './assets/icons/Rhydon.png',
       audio: './assets/audio/Rhydon.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 113,
@@ -1539,7 +1763,9 @@ export class AllPokemonService {
       img: './assets/images/Chansey.png',
       icon: './assets/icons/Chansey.png',
       audio: './assets/audio/Chansey.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 114,
@@ -1552,7 +1778,9 @@ export class AllPokemonService {
       img: './assets/images/Tangela.png',
       icon: './assets/icons/Tangela.png',
       audio: './assets/audio/Tangela.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 115,
@@ -1565,7 +1793,9 @@ export class AllPokemonService {
       img: './assets/images/Kangaskhan.png',
       icon: './assets/icons/Kangaskhan.png',
       audio: './assets/audio/Kangaskhan.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 116,
@@ -1579,7 +1809,9 @@ export class AllPokemonService {
       img: './assets/images/Horsea.png',
       icon: './assets/icons/Horsea.png',
       audio: './assets/audio/Horsea.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 117,
@@ -1593,7 +1825,9 @@ export class AllPokemonService {
       img: './assets/images/Seadra.png',
       icon: './assets/icons/Seadra.png',
       audio: './assets/audio/Seadra.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 118,
@@ -1607,7 +1841,9 @@ export class AllPokemonService {
       img: './assets/images/Goldeen.png',
       icon: './assets/icons/Goldeen.png',
       audio: './assets/audio/Goldeen.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 119,
@@ -1620,7 +1856,9 @@ export class AllPokemonService {
       img: './assets/images/Seaking.png',
       icon: './assets/icons/Seaking.png',
       audio: './assets/audio/Seaking.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 120,
@@ -1634,7 +1872,9 @@ export class AllPokemonService {
       img: './assets/images/Staryu.png',
       icon: './assets/icons/Staryu.png',
       audio: './assets/audio/Staryu.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 121,
@@ -1647,7 +1887,9 @@ export class AllPokemonService {
       img: './assets/images/Starmie.png',
       icon: './assets/icons/Starmie.png',
       audio: './assets/audio/Starmie.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 122,
@@ -1660,7 +1902,9 @@ export class AllPokemonService {
       img: './assets/images/MrMime.png',
       icon: './assets/icons/MrMime.png',
       audio: './assets/audio/MrMime.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 123,
@@ -1673,7 +1917,9 @@ export class AllPokemonService {
       img: './assets/images/Scyther.png',
       icon: './assets/icons/Scyther.png',
       audio: './assets/audio/Scyther.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 124,
@@ -1686,7 +1932,9 @@ export class AllPokemonService {
       img: './assets/images/Jynx.png',
       icon: './assets/icons/Jynx.png',
       audio: './assets/audio/Jynx.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 125,
@@ -1699,7 +1947,9 @@ export class AllPokemonService {
       img: './assets/images/Electabuzz.png',
       icon: './assets/icons/Electabuzz.png',
       audio: './assets/audio/Electabuzz.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 126,
@@ -1712,7 +1962,9 @@ export class AllPokemonService {
       img: './assets/images/Magmar.png',
       icon: './assets/icons/Magmar.png',
       audio: './assets/audio/Magmar.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 127,
@@ -1725,7 +1977,9 @@ export class AllPokemonService {
       img: './assets/images/Pinsir.png',
       icon: './assets/icons/Pinsir.png',
       audio: './assets/audio/Pinsir.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 128,
@@ -1738,7 +1992,9 @@ export class AllPokemonService {
       img: './assets/images/Tauros.png',
       icon: './assets/icons/Tauros.png',
       audio: './assets/audio/Tauros.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 129,
@@ -1752,7 +2008,9 @@ export class AllPokemonService {
       img: './assets/images/Magikarp.png',
       icon: './assets/icons/Magikarp.png',
       audio: './assets/audio/Magikarp.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 130,
@@ -1765,7 +2023,9 @@ export class AllPokemonService {
       img: './assets/images/Gyarados.png',
       icon: './assets/icons/Gyarados.png',
       audio: './assets/audio/Gyarados.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 131,
@@ -1778,7 +2038,9 @@ export class AllPokemonService {
       img: './assets/images/Lapras.png',
       icon: './assets/icons/Lapras.png',
       audio: './assets/audio/Lapras.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 132,
@@ -1791,7 +2053,9 @@ export class AllPokemonService {
       img: './assets/images/Ditto.png',
       icon: './assets/icons/Ditto.png',
       audio: './assets/audio/Ditto.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 133,
@@ -1805,7 +2069,9 @@ export class AllPokemonService {
       img: './assets/images/Eevee.png',
       icon: './assets/icons/Eevee.png',
       audio: './assets/audio/Eevee.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 134,
@@ -1818,7 +2084,9 @@ export class AllPokemonService {
       img: './assets/images/Vaporeon.png',
       icon: './assets/icons/Vaporeon.png',
       audio: './assets/audio/Vaporeon.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 135,
@@ -1831,7 +2099,9 @@ export class AllPokemonService {
       img: './assets/images/Jolteon.png',
       icon: './assets/icons/Jolteon.png',
       audio: './assets/audio/Jolteon.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 136,
@@ -1844,7 +2114,9 @@ export class AllPokemonService {
       img: './assets/images/Flareon.png',
       icon: './assets/icons/Flareon.png',
       audio: './assets/audio/Flareon.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 137,
@@ -1857,7 +2129,9 @@ export class AllPokemonService {
       img: './assets/images/Porygon.png',
       icon: './assets/icons/Porygon.png',
       audio: './assets/audio/Porygon.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 138,
@@ -1871,7 +2145,9 @@ export class AllPokemonService {
       img: './assets/images/Omanyte.png',
       icon: './assets/icons/Omanyte.png',
       audio: './assets/audio/Omanyte.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 139,
@@ -1884,7 +2160,9 @@ export class AllPokemonService {
       img: './assets/images/Omastar.png',
       icon: './assets/icons/Omastar.png',
       audio: './assets/audio/Omastar.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 140,
@@ -1897,7 +2175,9 @@ export class AllPokemonService {
       img: './assets/images/Kabuto.png',
       icon: './assets/icons/Kabuto.png',
       audio: './assets/audio/Kabuto.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 141,
@@ -1910,7 +2190,9 @@ export class AllPokemonService {
       img: './assets/images/Kabutops.png',
       icon: './assets/icons/Kabutops.png',
       audio: './assets/audio/Kabutops.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 142,
@@ -1923,7 +2205,9 @@ export class AllPokemonService {
       img: './assets/images/Aerodactyl.png',
       icon: './assets/icons/Aerodactyl.png',
       audio: './assets/audio/Aerodactyl.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 143,
@@ -1936,7 +2220,9 @@ export class AllPokemonService {
       img: './assets/images/Snorlax.png',
       icon: './assets/icons/Snorlax.png',
       audio: './assets/audio/Snorlax.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 144,
@@ -1949,7 +2235,9 @@ export class AllPokemonService {
       img: './assets/images/Articuno.png',
       icon: './assets/icons/Articuno.png',
       audio: './assets/audio/Articuno.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: true,
+      generation: '1'
     },
     {
       id: 145,
@@ -1962,7 +2250,9 @@ export class AllPokemonService {
       img: './assets/images/Zapdos.png',
       icon: './assets/icons/Zapdos.png',
       audio: './assets/audio/Zapdos.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw']
+      attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
+      isLegendary: true,
+      generation: '1'
     },
     {
       id: 146,
@@ -1975,7 +2265,9 @@ export class AllPokemonService {
       img: './assets/images/Moltres.png',
       icon: './assets/icons/Moltres.png',
       audio: './assets/audio/Moltres.ogg',
-      attacks: ['Tackle', 'String Shot']
+      attacks: ['Tackle', 'String Shot'],
+      isLegendary: true,
+      generation: '1'
     },
     {
       id: 147,
@@ -1989,7 +2281,9 @@ export class AllPokemonService {
       img: './assets/images/Dratini.png',
       icon: './assets/icons/Dratini.png',
       audio: './assets/audio/Dratini.ogg',
-      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind']
+      attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 148,
@@ -2003,7 +2297,9 @@ export class AllPokemonService {
       img: './assets/images/Dragonair.png',
       icon: './assets/icons/Dragonair.png',
       audio: './assets/audio/Dragonair.ogg',
-      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip']
+      attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 149,
@@ -2016,7 +2312,9 @@ export class AllPokemonService {
       img: './assets/images/Dragonite.png',
       icon: './assets/icons/Dragonite.png',
       audio: './assets/audio/Dragonite.ogg',
-      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave']
+      attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
+      isLegendary: false,
+      generation: '1'
     },
     {
       id: 150,
@@ -2029,7 +2327,9 @@ export class AllPokemonService {
       img: './assets/images/Mewtwo.png',
       icon: './assets/icons/Mewtwo.png',
       audio: './assets/audio/Mewtwo.ogg',
-      attacks: ['Scratch', 'Growl', 'Ember', 'Leer']
+      attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
+      isLegendary: true,
+      generation: '1'
     },
     {
       id: 151,
@@ -2042,7 +2342,9 @@ export class AllPokemonService {
       img: './assets/images/Mew.png',
       icon: './assets/icons/Mew.png',
       audio: './assets/audio/Mew.ogg',
-      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun']
+      attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
+      isLegendary: true,
+      generation: '1'
     },
   ];
 

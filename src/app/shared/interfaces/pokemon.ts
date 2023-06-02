@@ -18,4 +18,6 @@ export interface Pokemon {
   icon: string;
   audio: string;
   attacks: Array<string>;
+  isLegendary: boolean;
+  generation: string;
 }
