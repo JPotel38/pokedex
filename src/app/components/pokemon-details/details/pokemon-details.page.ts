@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StoneEnum} from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../../shared/interfaces/pokemon';
@@ -17,6 +17,7 @@ export class PokemonDetailsPage implements OnChanges {
   public team: Array<Pokemon> = [];
   @Input()
   public navigate: number;
+  @Output() evolve: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -55,5 +56,9 @@ export class PokemonDetailsPage implements OnChanges {
 
   redirectToSignin(): void {
     this.router.navigate(['/signin'])
+  }
+
+  nextPokemon() {
+    this.evolve.emit()
   }
 }
