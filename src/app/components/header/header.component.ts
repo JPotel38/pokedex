@@ -44,8 +44,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  selectedLang(event: CustomEvent): void {
-    this.translate.use(event.detail.value);
+  selectedLang(event: Event): void {
+    const customEvent = event as CustomEvent;
+    this.translate.use(customEvent.detail.value);
   }
 
   goBackToPokedex(): void {
