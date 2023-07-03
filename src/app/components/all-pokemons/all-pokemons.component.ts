@@ -17,17 +17,17 @@ import {TypesEnum} from "../../shared/enums/types.enum";
   styleUrls: ['./all-pokemons.component.scss'],
 })
 export class AllPokemonsComponent implements OnInit, OnDestroy {
-  pokemonArray: Array<Pokemon>
-  pokemon = new FormControl('');
-  isFilteredByName: boolean = false;
-  isFilteredByType: boolean = false;
-  colorEnum = ColorEnum;
-
-  allTypes = Object.values(TypesEnum);
-  typeSelectedArray: string[] = [];
+  public pokemonArray: Array<Pokemon>
+  public pokemon = new FormControl('');
+  public isFilteredByName: boolean = false;
+  public isFilteredByType: boolean = false;
+  public isFilteredByLegendary: boolean = false;
+  public colorEnum = ColorEnum;
+  public allTypes = Object.values(TypesEnum);
+  public typeSelectedArray: string[] = [];
+  public team: Array<Pokemon> = [];
   private translateServiceSubscription: Subscription;
   private activatedRouteSubscription: Subscription;
-  team: Array<Pokemon> = [];
   private user: User;
 
   constructor(
@@ -45,14 +45,14 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     })
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
       this.pokemonArray = allPokemon;
     })
     this.user = this.trainerService.user.value;
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.translateServiceSubscription) {
       this.translateServiceSubscription.unsubscribe();
     }
@@ -61,14 +61,15 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  color(type){
+  color(type: string): string {
     return ColorEnum[type + 'Color']
   }
-  goToDetails(id: number) {
+
+  goToDetails(id: number): void {
     this.router.navigate([`pokemon-details/${id}`]);
   }
 
-  filterByName() {
+  filterByName(): void {
     if (!this.pokemon.value) {
       this.pokemonArray = this.allPokemonService.getAllPokemons();
     } else {
@@ -84,7 +85,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  filterByType(selectedType: Array<string>) {
+  filterByType(selectedType: Array<string>): void {
     this.isFilteredByType = true;
     if (!this.typeSelectedArray.find(typeSelected => typeSelected === selectedType[0])) {
       this.typeSelectedArray.push(selectedType[0])
@@ -97,9 +98,14 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  clearName() {
+  filterLegendary() {
+    this.isFilteredByLegendary = true;
+    this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary);
+  }
+
+  clearFilter(filter: string): void {
     this.pokemon.reset();
-    this.isFilteredByName = false;
+    this[filter] = false;
     if (this.isFilteredByType) {
       this.filterByType(this.typeSelectedArray);
     } else {
@@ -107,7 +113,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     }
   }
 
-  clearType(index: number) {
+  clearType(index: number): void {
     if (this.isFilteredByName) {
       this.filterByName();
     } else {
@@ -120,6 +126,4 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
       }
     }
   }
-
-
 }

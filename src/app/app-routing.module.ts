@@ -5,13 +5,14 @@ import {AllPokemonResolver} from './shared/resolver/all-pokemon-resolver.service
 import {LoginPage} from './components/login/login-page.component';
 import {AccountComponent} from './components/account/account.component';
 import {SigninComponent} from './components/signin/signin.component';
-import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
+import {PokemonDetailsPage} from "./components/pokemon-details/details/pokemon-details.page";
 import {TeamComponent} from "./components/team/team.component";
+import {PokemonContainerComponent} from "./components/pokemon-details/pokemon-container/pokemon-container.component";
 
 const routes: Routes = [
   {
     path: 'pokemon-details/:id',
-    component: PokemonDetailsPage
+    component: PokemonContainerComponent
   },
   {
     path: 'login',

@@ -13,16 +13,27 @@ import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.compo
 import {ReactiveFormsModule} from '@angular/forms';
 import {LoginPage} from './components/login/login-page.component';
 import {SigninComponent} from './components/signin/signin.component';
-import {PokemonDetailsPage} from "./components/pokemon-details/pokemon-details.page";
+import {PokemonDetailsPage} from "./components/pokemon-details/details/pokemon-details.page";
 import {TypeNamePipe} from './pipes/type-name.pipe';
 import {TeamComponent} from "./components/team/team.component";
 import {AccountComponent} from "./components/account/account.component";
 import {HeaderComponent} from "./components/header/header.component";
+import {PokemonContainerComponent} from "./components/pokemon-details/pokemon-container/pokemon-container.component";
 
 export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, PokemonDetailsPage, AllPokemonsComponent, LoginPage, SigninComponent, TypeNamePipe, TeamComponent, AccountComponent, HeaderComponent],
+  declarations: [AppComponent,
+    HeaderComponent,
+    PokemonDetailsPage,
+    PokemonContainerComponent,
+    AllPokemonsComponent,
+    LoginPage,
+    SigninComponent,
+    TypeNamePipe,
+    TeamComponent,
+    AccountComponent,
+    HeaderComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

@@ -1,34 +1,47 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col sizeXs="12" sizeMd="3">
-        <ion-searchbar placeholder="{{'SEARCH POKEMON'| translate}}" [formControl]="pokemon"
-                   (keyup.enter)="filterByName()"></ion-searchbar>
+      <ion-col sizeMd="3" sizeXs="12">
+        <ion-searchbar (keyup.enter)="filterByName()" [formControl]="pokemon"
+                       placeholder="{{'SEARCH POKEMON'| translate}}"></ion-searchbar>
       </ion-col>
       <ion-col size="auto">
-        <ion-button *ngFor="let type of allTypes" [disabled]="this.typeSelectedArray.length === 2" (click)="filterByType([type])"
+        <ion-button (click)="filterByType([type])" *ngFor="let type of allTypes"
+                    [disabled]="this.typeSelectedArray.length === 2"
                     [ngStyle]="{'--background': color(type)}">{{'TYPES.' + type | translate | typeName }}
         </ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-text *ngIf="typeSelectedArray.length || isFilteredByName">{{'FILTER ON' | translate}}</ion-text>
+      <ion-col size="auto">
+        <ion-button (click)="filterLegendary()"
+                    [ngStyle]="{'--background': 'gold', 'box-shadow': '0px 0px 10px gold'}">{{'LEGENDARY'| translate }}</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-text
+        *ngIf="typeSelectedArray.length || isFilteredByName || isFilteredByLegendary">{{'FILTER ON' | translate}}</ion-text>
       <ion-col>
         <ion-chip *ngIf="isFilteredByName">{{'NAME' | translate}} : {{pokemon.value | titlecase}}
-          <ion-icon name="close" (click)="clearName()"></ion-icon>
+          <ion-icon (click)="clearFilter('isFilteredByName')" name="close"></ion-icon>
         </ion-chip>
       </ion-col>
       <ion-col>
         <ion-chip *ngFor="let type of typeSelectedArray;let i = index">
           <ion-label>Type :
             {{'TYPES.' + type | translate | typeName | titlecase}}
-            <ion-icon name="close" (click)="clearType(i)"></ion-icon>
+            <ion-icon (click)="clearType(i)" name="close"></ion-icon>
+          </ion-label>
+        </ion-chip>
+        <ion-chip *ngIf="isFilteredByLegendary">
+          <ion-label>{{'LEGENDARY'| translate }}
+            <ion-icon (click)="clearFilter('isFilteredByLegendary')" name="close"></ion-icon>
           </ion-label>
         </ion-chip>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" sizeXs="4" sizeMd="1">
+      <ion-col *ngFor="let pokemon of pokemonArray" size="auto">
         <ion-card
           (click)="goToDetails(pokemon.id)"
           [ngStyle]="{'background': pokemon.types.length == 1 ?
@@ -37,9 +50,8 @@
         >
           <ion-card-content>
             <ion-thumbnail>
-              <ion-img class="icon" [alt]="pokemon.name" [src]="pokemon.icon"></ion-img>
+              <ion-img [alt]="pokemon.name" [src]="pokemon.icon" class="icon"></ion-img>
             </ion-thumbnail>
-            <!--              <ion-label>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}</ion-label>-->
           </ion-card-content>
         </ion-card>
       </ion-col>

@@ -4,7 +4,6 @@ import {Subscription} from "rxjs";
 import {TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
 import {TrainerService} from "../../shared/services/trainer.service";
-import {IonModal} from "@ionic/angular";
 
 @Component({
   selector: 'app-header',
@@ -12,15 +11,15 @@ import {IonModal} from "@ionic/angular";
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  isChecked: boolean = false;
-  langSelect: Array<string> = ['en', 'fr'];
-  toggle = document.querySelector('#themeToggle');
-  user: User;
-  currentUrl: string;
+  public isChecked: boolean = false;
+  public langSelect: Array<string> = ['en', 'fr'];
+  public toggle = document.querySelector('#themeToggle');
+  public user: User;
+  public currentUrl: string;
+  public isOpen: boolean = false;
   private trainerServiceSubscription: Subscription;
   private routingEventsSubscription: Subscription;
   @ViewChild('popover') popover;
-  isOpen = false;
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
@@ -30,12 +29,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     translate.use('en');
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.routingEventsSubscription = this.router.events.subscribe(() => this.currentUrl = this.router.url);
     this.trainerServiceSubscription = this.trainerService.user.subscribe(user => this.user = user);
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.trainerServiceSubscription) {
       this.trainerServiceSubscription.unsubscribe();
     }
@@ -45,8 +44,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  selectedLang($event): void {
-    this.translate.use($event.target.value);
+  selectedLang(event: CustomEvent): void {
+    this.translate.use(event.detail.value);
   }
 
   goBackToPokedex(): void {
@@ -58,27 +57,27 @@ export class HeaderComponent implements OnInit, OnDestroy {
     document.body.classList.toggle('dark', this.isChecked);
   }
 
-  goLogin() {
+  goLogin(): void {
     this.router.navigate([`login`]);
   }
 
-  goAccount() {
+  goAccount(): void {
     this.router.navigate([`account`]);
   }
 
-  logOut() {
+  logOut(): void {
     this.trainerService.user.next({...this.user, connected: false});
   }
 
-  goSignin() {
+  goSignin(): void {
     this.router.navigate([`signin`]);
   }
 
-  goToTeam() {
+  goToTeam(): void {
     this.router.navigate([`team`]);
   }
 
-  presentPopover(e: Event) {
+  presentPopover(e: Event): void {
     this.popover.event = e;
     this.isOpen = true;
   }

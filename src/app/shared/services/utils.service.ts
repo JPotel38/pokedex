@@ -4,7 +4,7 @@ import {Injectable} from "@angular/core";
   providedIn: 'root'
 })
 export class UtilsService {
-  arrayEquals(pokemonType: string[], typeSelected: string[]) {
+  arrayEquals(pokemonType: string[], typeSelected: string[]): boolean {
     return Array.isArray(pokemonType) &&
       Array.isArray(typeSelected) &&
       pokemonType.length === typeSelected.length &&
