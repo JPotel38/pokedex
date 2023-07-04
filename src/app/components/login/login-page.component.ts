@@ -1,5 +1,5 @@
 import {Component, OnDestroy} from '@angular/core';
-import {FormControl, FormGroup, UntypedFormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
 import {TrainerService} from '../../shared/services/trainer.service';
@@ -20,7 +20,7 @@ export class LoginPage implements OnDestroy {
 
   constructor(private router: Router,
               private trainerService: TrainerService,
-              fb: UntypedFormBuilder
+              fb: FormBuilder
   ) {
     this.loginCtrl = fb.control('', Validators.required);
     this.passwordCtrl = fb.control('', Validators.required);
