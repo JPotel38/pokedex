@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import '../../../theme/variables';
 
-ion-title {
+.main-title {
   cursor: pointer;
-  font-size: 30px;
+  font-size: 3vw;
   font-family: 'Press Start 2P', cursive;
+  padding: 0;
 }

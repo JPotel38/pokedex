@@ -1,7 +1,9 @@
 <ion-header>
   <ion-row>
-    <ion-title (click)="goBackToPokedex()">Pokedex</ion-title>
-    <ion-col size="auto" offset="9">
+    <ion-col size="4">
+    <ion-title class="main-title" (click)="goBackToPokedex()">Pokedex</ion-title>
+    </ion-col>
+    <ion-col size="auto" offset-sm="4">
       <ion-item>
         <ion-icon name="language-outline"></ion-icon>
         <ion-select interface="popover" (ionChange)="selectedLang($event)">
