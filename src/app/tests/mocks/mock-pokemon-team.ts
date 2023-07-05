@@ -17,7 +17,7 @@ export const mockPokemon = {
   generation: '1'
 };
 
-export const mockPokemonList = [
+export const mockPokemonTeam = [
   {
     id: 1,
     name: 'Bulbasaur',

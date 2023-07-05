@@ -51,7 +51,7 @@ export class PokemonDetailsPage implements OnChanges {
   }
 
   addPokemonToTeam(pokemon: Pokemon): void {
-    this.trainerService.addPokemon(pokemon);
+    this.trainerService.addPokemonToTeam(pokemon);
   }
 
   redirectToSignin(): void {

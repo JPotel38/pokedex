@@ -26,7 +26,7 @@ export class TrainerService {
     this.$user.next({...user});
   }
 
-  addPokemon(pokemon: Pokemon): void {
+  addPokemonToTeam(pokemon: Pokemon): void {
     const addedPokemon = {...pokemon}
     this.$user.value.pokemonTeam.push(addedPokemon)
     this.$user.next({...this.$user.value})
