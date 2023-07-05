@@ -5,7 +5,7 @@ import {TeamComponent} from './team.component';
 import {TrainerService} from "../../shared/services/trainer.service";
 import {TypesEnum} from "../../shared/enums/types.enum";
 import {ColorEnum} from "../../shared/enums/color.enum";
-import {mockPokemonList} from "../../tests/mocks/mock-pokemon-team";
+import {mockPokemonTeam} from "../../tests/mocks/mock-pokemon-team";
 
 describe('TeamComponent', () => {
   let teamComponent: TeamComponent;
@@ -16,8 +16,8 @@ describe('TeamComponent', () => {
     password: 'pass',
     userName: 'Sacha',
     connected: true,
-    pokemonTeam: mockPokemonList
-  }
+    pokemonTeam: mockPokemonTeam
+  };
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -32,22 +32,23 @@ describe('TeamComponent', () => {
     fixture.detectChanges();
   }));
 
-  afterEach(waitForAsync((done: DoneFn) => {
-    trainerService.$user.next({
-      login: '',
-      password: '',
-      userName: '',
-      connected: false,
-      pokemonTeam: []
-    });
-  }))
+  afterEach(() => {
+    const updatedUserObject = {
+      ...userObject,
+      pokemonTeam: [...mockPokemonTeam]
+    };
+
+    trainerService.$user.next(updatedUserObject);
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
     expect(teamComponent).toBeTruthy();
   });
 
   it('should delete pokemon from team', () => {
-    trainerService.$user.value.pokemonTeam.splice(1, 1)
+    trainerService.$user.value.pokemonTeam.splice(1, 1);
+    fixture.detectChanges();
     expect(trainerService.$user.value.pokemonTeam).toEqual([{
       id: 1,
       name: 'Bulbasaur',
