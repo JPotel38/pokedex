@@ -30,12 +30,12 @@
         <ng-template>
           <ion-item>
             <ion-row>
-              <ion-col *ngIf="!(trainerService.user | async).connected">
+              <ion-col *ngIf="!(trainerService.$user | async).connected">
                 <ion-button color="light" (click)="goSignin()"
                             *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
                 </ion-button>
               </ion-col>
-              <ion-col *ngIf="!(trainerService.user | async).connected">
+              <ion-col *ngIf="!(trainerService.$user | async).connected">
                 <ion-button color="light" (click)="goLogin()"
                             *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
                 </ion-button>
@@ -45,9 +45,9 @@
         </ng-template>
       </ion-popover>
     </ion-content>
-    <ion-col offsetLg="5" *ngIf="(trainerService.user | async).connected">
-      <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.user | async).userName} }} </ion-label>
-      <ion-button [disabled]="!trainerService.user.value.login" color="light" (click)="goToTeam()">
+    <ion-col offsetLg="5" *ngIf="(trainerService.$user | async).connected">
+      <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.$user | async).userName} }} </ion-label>
+      <ion-button [disabled]="!trainerService.$user.value.login" color="light" (click)="goToTeam()">
         <img src="../../../assets/icons/pokeball.png" alt="pokeball" style="width: 30px">
         <ion-badge color="danger">{{trainerService.getPokemonTeam().length}}</ion-badge>
       </ion-button>

@@ -44,7 +44,7 @@ export class LoginPage implements OnDestroy {
       password: this.userForm.get('passwordCtrl').value,
       connected: true
     };
-    this.trainerServiceSubscription = this.trainerService.user.subscribe(storedUser => {
+    this.trainerServiceSubscription = this.trainerService.$user.subscribe(storedUser => {
         this.storedUser = storedUser
       }
     )

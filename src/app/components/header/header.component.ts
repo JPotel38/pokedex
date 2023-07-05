@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.routingEventsSubscription = this.router.events.subscribe(() => this.currentUrl = this.router.url);
-    this.trainerServiceSubscription = this.trainerService.user.subscribe(user => this.user = user);
+    this.trainerServiceSubscription = this.trainerService.$user.subscribe(user => this.user = user);
   }
 
   ngOnDestroy(): void {
@@ -67,7 +67,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   logOut(): void {
-    this.trainerService.user.next({...this.user, connected: false});
+    this.trainerService.$user.next({...this.user, connected: false});
   }
 
   goSignin(): void {

@@ -49,7 +49,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
       this.pokemonArray = allPokemon;
     })
-    this.user = this.trainerService.user.value;
+    this.user = this.trainerService.$user.value;
   }
 
   ngOnDestroy(): void {

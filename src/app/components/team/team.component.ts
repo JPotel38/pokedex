@@ -14,7 +14,6 @@ export class TeamComponent {
   public index: number;
   @ViewChild(IonModal) modal: IonModal;
 
-
   constructor(public trainerService: TrainerService
   ) {
   }
@@ -25,7 +24,7 @@ export class TeamComponent {
   }
 
   deletePokemon(index: number): void {
-    this.trainerService.user.value.pokemonTeam.splice(index, 1)
+    this.trainerService.$user.value.pokemonTeam.splice(index, 1)
   }
 
   cancel(): void {
