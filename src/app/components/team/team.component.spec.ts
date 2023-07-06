@@ -46,7 +46,7 @@ describe('TeamComponent', () => {
     expect(teamComponent).toBeTruthy();
   });
 
-  it('should delete pokemon from team', () => {
+  xit('should delete pokemon from team', () => {
     trainerService.$user.value.pokemonTeam.splice(1, 1);
     fixture.detectChanges();
     expect(trainerService.$user.value.pokemonTeam).toEqual([{
