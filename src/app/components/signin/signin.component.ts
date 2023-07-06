@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, UntypedFormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
 import {TrainerService} from '../../shared/services/trainer.service';
@@ -38,7 +38,7 @@ export class SigninComponent {
     });
   }
 
-  static passwordMatch(group: UntypedFormGroup): { matchingError: true } | null {
+  static passwordMatch(group: FormGroup): { matchingError: true } | null {
     const password = group.get('password').value;
     const confirm = group.get('passwordConfirm').value;
     return password === confirm ? null : {matchingError: true};

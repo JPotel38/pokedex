@@ -23,7 +23,7 @@
         </ion-row>
         <ion-row>
           <ion-button color="light"
-                      (click)="trainerService.user.value.login ? addPokemonToTeam(pokemon) : redirectToSignin()"> {{'ADD' | translate}}
+                      (click)="trainerService.$user.value.login ? addPokemonToTeam(pokemon) : redirectToSignin()"> {{'ADD' | translate}}
           </ion-button>
         </ion-row>
         <ion-row>

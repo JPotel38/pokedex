@@ -2,6 +2,9 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { HeaderComponent } from './header.component';
+import {TranslateModule} from "@ngx-translate/core";
+import {ChildrenOutletContexts, UrlSerializer} from "@angular/router";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -10,7 +13,8 @@ describe('HeaderComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HeaderComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), TranslateModule.forRoot(), RouterTestingModule],
+      providers: [UrlSerializer, ChildrenOutletContexts]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
