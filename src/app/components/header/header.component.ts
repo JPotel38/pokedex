@@ -25,13 +25,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
               public readonly router: Router,
               public trainerService: TrainerService
   ) {
-    translate.setDefaultLang('en');
-    translate.use('en');
   }
 
   ngOnInit(): void {
     this.routingEventsSubscription = this.router.events.subscribe(() => this.currentUrl = this.router.url);
-    this.trainerServiceSubscription = this.trainerService.$user.subscribe(user => this.user = user);
+    // this.trainerServiceSubscription = this.trainerService.usersList.subscribe(user => this.user = user);
   }
 
   ngOnDestroy(): void {
@@ -58,24 +56,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     document.body.classList.toggle('dark', this.isChecked);
   }
 
-  goLogin(): void {
-    this.router.navigate([`login`]);
-  }
-
-  goAccount(): void {
-    this.router.navigate([`account`]);
-  }
-
   logOut(): void {
-    this.trainerService.$user.next({...this.user, connected: false});
+    // this.trainerService.usersList.next({...this.user, connected: false});
   }
 
-  goSignin(): void {
-    this.router.navigate([`signin`]);
-  }
-
-  goToTeam(): void {
-    this.router.navigate([`team`]);
+  handleNavigation(route: string): void {
+    this.router.navigate([route]);
+    if (this.isOpen) this.isOpen = false;
   }
 
   presentPopover(e: Event): void {

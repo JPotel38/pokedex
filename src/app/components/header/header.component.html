@@ -32,13 +32,13 @@
         <ng-template>
           <ion-item>
             <ion-row>
-              <ion-col *ngIf="!(trainerService.$user | async).connected">
-                <ion-button color="light" (click)="goSignin()"
+              <ion-col *ngIf="!(trainerService.usersList | async).connected">
+                <ion-button color="light" (click)="handleNavigation('signin')"
                             *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
                 </ion-button>
               </ion-col>
-              <ion-col *ngIf="!(trainerService.$user | async).connected">
-                <ion-button color="light" (click)="goLogin()"
+              <ion-col *ngIf="!(trainerService.usersList | async).connected">
+                <ion-button color="light" (click)="handleNavigation('login')"
                             *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
                 </ion-button>
               </ion-col>
@@ -47,14 +47,14 @@
         </ng-template>
       </ion-popover>
     </ion-content>
-    <ion-col offsetLg="5" *ngIf="(trainerService.$user | async).connected">
-      <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.$user | async).userName} }} </ion-label>
-      <ion-button [disabled]="!trainerService.$user.value.login" color="light" (click)="goToTeam()">
+    <ion-col offsetLg="5" *ngIf="(trainerService.usersList | async).connected">
+      <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.usersList | async).userName} }} </ion-label>
+      <ion-button [disabled]="!trainerService.usersList.value.login" color="light" (click)="handleNavigation('team')">
         <img src="../../../assets/icons/pokeball.png" alt="pokeball" style="width: 30px">
         <ion-badge color="danger">{{trainerService.getPokemonTeam().length}}</ion-badge>
       </ion-button>
       <ion-button color="light" class="button"
-                  (click)="goAccount()">{{'ACCOUNT' | translate}}</ion-button>
+                  (click)="handleNavigation('account')">{{'ACCOUNT' | translate}}</ion-button>
       <ion-button color="light" class="button" (click)="logOut()">{{'LOGOUT' | translate}}</ion-button>
     </ion-col>
   </ion-row>
