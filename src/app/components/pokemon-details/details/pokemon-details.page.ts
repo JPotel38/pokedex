@@ -1,32 +1,48 @@
-import {Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StoneEnum} from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../../shared/services/all-pokemon.service';
-import {TrainerService} from "../../../shared/services/trainer.service";
+import {UserService} from "../../../shared/services/user.service";
+import {User} from "../../../shared/interfaces/user";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-pokemon-details',
   templateUrl: './pokemon-details.page.html',
   styleUrls: ['./pokemon-details.page.scss'],
 })
-export class PokemonDetailsPage implements OnChanges {
+export class PokemonDetailsPage implements OnInit, OnDestroy, OnChanges {
   public pokemonId: number;
   public pokemon: Pokemon;
   public level: number;
   public team: Array<Pokemon> = [];
+  public user: User;
+  public currentUser: User;
   @Input()
   public navigate: number;
-  @Output() evolve: EventEmitter<void> = new EventEmitter<void>();
+  @Output()
+  evolve: EventEmitter<void> = new EventEmitter<void>();
+  private userServiceSubscription: Subscription;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private allPokemonService: AllPokemonService,
     private router: Router,
-    public trainerService: TrainerService,
+    public userService: UserService,
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
+  }
+
+  ngOnInit(): void {
+    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => {
+      this.currentUser = user;
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.userServiceSubscription) this.userServiceSubscription.unsubscribe();
   }
 
   ngOnChanges(): void {
@@ -48,10 +64,6 @@ export class PokemonDetailsPage implements OnChanges {
   useStone(stone: StoneEnum): void {
     const evolution = (Number(this.pokemonId) + this.pokemon.stone.indexOf(stone) + 1).toString();
     this.router.navigate([`pokemon-details/${evolution}`]);
-  }
-
-  addPokemonToTeam(pokemon: Pokemon): void {
-    this.trainerService.addPokemonToTeam(pokemon);
   }
 
   redirectToSignin(): void {

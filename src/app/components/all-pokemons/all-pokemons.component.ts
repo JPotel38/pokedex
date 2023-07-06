@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 import {Pokemon} from "../../shared/interfaces/pokemon";
@@ -7,7 +7,7 @@ import {TranslateService} from "@ngx-translate/core";
 import {Subscription} from "rxjs";
 import {ColorEnum} from "../../shared/enums/color.enum";
 import {UtilsService} from "../../shared/services/utils.service";
-import {TrainerService} from "../../shared/services/trainer.service";
+import {UserService} from "../../shared/services/user.service";
 import {User} from "../../shared/interfaces/user";
 import {TypesEnum} from "../../shared/enums/types.enum";
 
@@ -16,7 +16,7 @@ import {TypesEnum} from "../../shared/enums/types.enum";
   templateUrl: './all-pokemons.component.html',
   styleUrls: ['./all-pokemons.component.scss'],
 })
-export class AllPokemonsComponent implements OnInit, OnDestroy {
+export class AllPokemonsComponent implements OnDestroy {
   public pokemonArray: Array<Pokemon>
   public pokemon = new FormControl('');
   public isFilteredByName: boolean = false;
@@ -27,29 +27,27 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
   public typeSelectedArray: string[] = [];
   public team: Array<Pokemon> = [];
   private translateServiceSubscription: Subscription;
-  private activatedRouteSubscription: Subscription;
+  private readonly activatedRouteSubscription: Subscription;
   private user: User;
+  private userSubscription: Subscription;
 
   constructor(
     public readonly allPokemonService: AllPokemonService,
     private activatedRoute: ActivatedRoute,
     private translateService: TranslateService,
     private utilsService: UtilsService,
-    public trainerService: TrainerService,
+    public userService: UserService,
     public readonly router: Router,
   ) {
     router.events.subscribe(event => {
       if (event instanceof NavigationStart && event.url === '/') {
-        this.typeSelectedArray = []
+        this.typeSelectedArray = [];
       }
-    })
-  }
-
-  ngOnInit(): void {
+    });
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
       this.pokemonArray = allPokemon;
     })
-    this.user = this.trainerService.$user.value;
+    this.userSubscription = this.userService.currentUser$.subscribe(cU => this.$user = cU);
   }
 
   ngOnDestroy(): void {
@@ -78,7 +76,7 @@ export class AllPokemonsComponent implements OnInit, OnDestroy {
         .subscribe(res => {
           for (const [key, value] of Object.entries(res.NAMES)) {
             if (this.pokemon.value.charAt(0).toUpperCase() + this.pokemon.value.slice(1) === value) {
-              this.pokemonArray = this.pokemonArray.filter(result => result.name === key)
+              this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.name === key)
             }
           }
         })

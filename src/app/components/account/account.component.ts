@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TrainerService} from "../../shared/services/trainer.service";
+import {UserService} from "../../shared/services/user.service";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
@@ -12,7 +12,7 @@ export class AccountComponent {
   public userForm: FormGroup;
   public userNameCtrl: FormControl;
 
-  constructor(public trainerService: TrainerService,
+  constructor(public userService: UserService,
               public readonly router: Router,
               private fb: FormBuilder
   ) {
@@ -23,7 +23,7 @@ export class AccountComponent {
   }
 
   validate(): void {
-    this.trainerService.updateUserName(this.userForm.get('userName').value);
+    // this.trainerService.updateUserName(this.userForm.get('userName').value);
     this.router.navigate([`/`]);
   }
 }

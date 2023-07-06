@@ -3,7 +3,7 @@ import {User} from "../../shared/interfaces/user";
 import {Subscription} from "rxjs";
 import {TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
-import {TrainerService} from "../../shared/services/trainer.service";
+import {UserService} from "../../shared/services/user.service";
 
 @Component({
   selector: 'app-header',
@@ -14,32 +14,27 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public isChecked: boolean = false;
   public langSelect: Array<string> = ['en', 'fr'];
   public toggle = document.querySelector('#themeToggle');
-  public user: User;
+  public currentUser: User;
   public currentUrl: string;
   public isOpen: boolean = false;
-  private trainerServiceSubscription: Subscription;
+  private userServiceSubscription: Subscription;
   private routingEventsSubscription: Subscription;
   @ViewChild('popover') popover;
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
-              public trainerService: TrainerService
+              public userService: UserService
   ) {
   }
 
   ngOnInit(): void {
     this.routingEventsSubscription = this.router.events.subscribe(() => this.currentUrl = this.router.url);
-    // this.trainerServiceSubscription = this.trainerService.usersList.subscribe(user => this.user = user);
+    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => this.currentUser = user);
   }
 
   ngOnDestroy(): void {
-    if (this.trainerServiceSubscription) {
-      this.trainerServiceSubscription.unsubscribe();
-    }
-
-    if (this.routingEventsSubscription) {
-      this.routingEventsSubscription.unsubscribe();
-    }
+    if (this.userServiceSubscription) this.userServiceSubscription.unsubscribe();
+    if (this.routingEventsSubscription) this.routingEventsSubscription.unsubscribe();
   }
 
   selectedLang(event: Event): void {
@@ -57,7 +52,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   logOut(): void {
-    // this.trainerService.usersList.next({...this.user, connected: false});
+    this.userService.currentUser$.next(undefined);
   }
 
   handleNavigation(route: string): void {

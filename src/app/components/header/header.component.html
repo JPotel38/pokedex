@@ -3,59 +3,59 @@
     <ion-col size="4">
     <ion-title class="main-title" (click)="goBackToPokedex()">Pokedex</ion-title>
     </ion-col>
-    <ion-col size="auto" offset-sm="4">
+    <ion-col offset-sm="4" size="auto">
       <ion-item>
         <ion-icon name="language-outline"></ion-icon>
-        <ion-select interface="popover" (ionChange)="selectedLang($event)">
+        <ion-select (ionChange)="selectedLang($event)" interface="popover">
           <ion-select-option *ngFor="let lang of langSelect"
                              [value]="lang"> {{ lang | translate }}</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-col>
     <ion-col size="auto">
-      <ion-button fill="clear" class="theme-button" (click)="switchTheme()">
-        <ion-icon [ngStyle]="{'color': isChecked ?
+      <ion-button (click)="switchTheme()" class="theme-button" fill="clear">
+        <ion-icon [name]="isChecked ? 'sunny-outline' : 'moon'"
+                  [ngStyle]="{'color': isChecked ?
                   'yellow' : 'white'
-                  }"
-                  [name]="isChecked ? 'sunny-outline' : 'moon'"></ion-icon>
+                  }"></ion-icon>
       </ion-button>
     </ion-col>
     <ion-col size="auto">
-      <ion-button shape="round" size="small"
-                  color="light" (click)="presentPopover($event)">
+      <ion-button (click)="presentPopover($event)" color="light"
+                  shape="round" size="small">
         <ion-icon name="person-circle-outline">
         </ion-icon>
       </ion-button>
     </ion-col>
     <ion-content>
-      <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+      <ion-popover #popover (didDismiss)="isOpen = false" [isOpen]="isOpen">
         <ng-template>
           <ion-item>
             <ion-row>
-              <ion-col *ngIf="!(trainerService.usersList | async).connected">
-                <ion-button color="light" (click)="handleNavigation('signin')"
-                            *ngIf="currentUrl !== '/signin'">{{'SIGNIN' | translate}}
+              <ion-col *ngIf="!currentUser">
+                <ion-button (click)="handleNavigation('signin')" *ngIf="currentUrl !== '/signin'"
+                            color="light">{{'SIGNIN' | translate}}
+                </ion-button>
+                <ion-button (click)="handleNavigation('login')" *ngIf="currentUrl !== '/login'"
+                            color="light">{{'LOGIN' | translate}}
                 </ion-button>
               </ion-col>
-              <ion-col *ngIf="!(trainerService.usersList | async).connected">
-                <ion-button color="light" (click)="handleNavigation('login')"
-                            *ngIf="currentUrl !== '/login'">{{'LOGIN' | translate}}
-                </ion-button>
+              <ion-col *ngIf="currentUser">
+                <ion-button (click)="handleNavigation('account')" class="button"
+                            color="light">{{'ACCOUNT' | translate}}</ion-button>
+                <ion-button (click)="logOut()" class="button" color="light">{{'LOGOUT' | translate}}</ion-button>
               </ion-col>
             </ion-row>
           </ion-item>
         </ng-template>
       </ion-popover>
     </ion-content>
-    <ion-col offsetLg="5" *ngIf="(trainerService.usersList | async).connected">
-      <ion-label>{{'USER POKEDEX' | translate : {user: (trainerService.usersList | async).userName} }} </ion-label>
-      <ion-button [disabled]="!trainerService.usersList.value.login" color="light" (click)="handleNavigation('team')">
-        <img src="../../../assets/icons/pokeball.png" alt="pokeball" style="width: 30px">
-        <ion-badge color="danger">{{trainerService.getPokemonTeam().length}}</ion-badge>
+    <ion-col *ngIf="currentUser" offsetLg="5">
+      <ion-label>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-label>
+      <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
+        <img alt="pokeball" src="../../../assets/icons/pokeball.png" style="width: 30px">
+        <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>
       </ion-button>
-      <ion-button color="light" class="button"
-                  (click)="handleNavigation('account')">{{'ACCOUNT' | translate}}</ion-button>
-      <ion-button color="light" class="button" (click)="logOut()">{{'LOGOUT' | translate}}</ion-button>
     </ion-col>
   </ion-row>
 </ion-header>
