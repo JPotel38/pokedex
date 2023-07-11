@@ -47,7 +47,7 @@ export class AllPokemonsComponent implements OnDestroy {
     this.activatedRouteSubscription = this.activatedRoute.data.subscribe(({allPokemon}) => {
       this.pokemonArray = allPokemon;
     })
-    this.userSubscription = this.userService.currentUser$.subscribe(cU => this.$user = cU);
+    this.userSubscription = this.userService.currentUser$.subscribe(cU => this.user = cU);
   }
 
   ngOnDestroy(): void {
