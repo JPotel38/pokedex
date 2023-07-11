@@ -7,3 +7,20 @@
   font-family: 'Press Start 2P', cursive;
   padding: 0;
 }
+
+ion-popover {
+  --width: 12%;
+}
+
+.nav-link {
+  margin: 5px;
+}
+.nav-link:hover {
+  background-color: #898989;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
