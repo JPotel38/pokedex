@@ -32,27 +32,32 @@
         <ng-template>
           <ion-item>
             <ion-grid>
-              <ion-row *ngIf="!currentUser && currentUrl !== '/signin'" class="nav-link">
-                <ion-icon name="log-in-outline"></ion-icon>
-                <a (click)="handleNavigation('signin')">{{'SIGNIN' | translate}}
-                </a>
-              </ion-row>
-              <ion-row *ngIf="!currentUser && currentUrl !== '/login'" class="nav-link">
-                <ion-icon name="log-in-outline"></ion-icon>
-                <a (click)="handleNavigation('login')">{{'LOGIN' | translate}}
-                </a>
-              </ion-row>
-              <ion-row *ngIf="currentUser" class="nav-link">
-                <ion-button (click)="handleNavigation('account')" class="button"
-                            color="light">{{'ACCOUNT' | translate}}</ion-button>
-                <ion-button (click)="logOut()" class="button" color="light">{{'LOGOUT' | translate}}</ion-button>
-              </ion-row>
+              <ng-container *ngIf="!currentUser.userName">
+                <ion-row class="nav-link">
+                  <ion-icon name="person-outline"></ion-icon>
+                  <a (click)="handleNavigation('signin')">{{'SIGNIN' | translate}}
+                  </a>
+                </ion-row>
+                <ion-row class="nav-link">
+                  <ion-icon name="log-in-outline"></ion-icon>
+                  <a (click)="handleNavigation('login')">{{'LOGIN' | translate}}
+                  </a>
+                </ion-row>
+              </ng-container>
+              <ng-container *ngIf="currentUser.userName">
+                <ion-row class="nav-link">
+                  <a (click)="handleNavigation('account')">{{'ACCOUNT' | translate}}</a>
+                </ion-row>
+                <ion-row class="nav-link">
+                  <a (click)="logOut()">{{'LOGOUT' | translate}}</a>
+                </ion-row>
+              </ng-container>
             </ion-grid>
           </ion-item>
         </ng-template>
       </ion-popover>
     </ion-content>
-    <ion-col *ngIf="currentUser" offsetLg="5">
+    <ion-col *ngIf="currentUser.userName" offsetLg="5">
       <ion-label>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-label>
       <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
         <img alt="pokeball" src="../../../assets/icons/pokeball.png" style="width: 30px">
