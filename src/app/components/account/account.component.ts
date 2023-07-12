@@ -23,7 +23,7 @@ export class AccountComponent {
   }
 
   validate(): void {
-    // this.trainerService.updateUserName(this.userForm.get('userName').value);
+    this.userService.updateUserName(this.userForm.get('userName').value);
     this.router.navigate([`/`]);
   }
 }
