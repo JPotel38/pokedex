@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {TrainerService} from "../../../shared/services/trainer.service";
+import {UserService} from "../../../shared/services/user.service";
 
 @Component({
   selector: 'app-pokemon-container',
@@ -12,7 +12,7 @@ export class PokemonContainerComponent {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    public trainerService: TrainerService,
+    public userService: UserService,
   ) {
   }
 

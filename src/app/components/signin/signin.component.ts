@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
-import {TrainerService} from '../../shared/services/trainer.service';
+import {UserService} from '../../shared/services/user.service';
 
 @Component({
   selector: 'app-signin',
@@ -19,7 +19,7 @@ export class SigninComponent {
   public passwordForm: FormGroup;
 
   constructor(public readonly router: Router,
-              public trainerService: TrainerService,
+              public userService: UserService,
               private fb: FormBuilder
   ) {
     this.loginCtrl = fb.control('', Validators.required);
@@ -49,10 +49,9 @@ export class SigninComponent {
       login: this.userForm.get('login').value,
       userName: this.userForm.get('login').value,
       password: this.userForm.get('passwordForm').value.password,
-      connected: true,
       pokemonTeam: []
     };
-    this.trainerService.setUser(this.user);
+    this.userService.storeUser(this.user);
     this.router.navigate([`/`]);
   }
 }

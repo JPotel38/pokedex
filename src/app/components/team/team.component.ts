@@ -1,6 +1,8 @@
-import {Component, ViewChild} from '@angular/core';
-import {TrainerService} from "../../shared/services/trainer.service";
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {UserService} from "../../shared/services/user.service";
 import {FormControl} from "@angular/forms";
+import {Subscription} from "rxjs";
+import {User} from "../../shared/interfaces/user";
 import {IonModal} from "@ionic/angular";
 
 @Component({
@@ -8,14 +10,24 @@ import {IonModal} from "@ionic/angular";
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss'],
 })
-export class TeamComponent {
+export class TeamComponent implements OnInit, OnDestroy {
   public isModalOpen = false;
   public pokemonName = new FormControl('');
   public index: number;
+  public currentUser: User;
   @ViewChild(IonModal) modal: IonModal;
+  private userServiceSubscription: Subscription;
 
-  constructor(public trainerService: TrainerService
+  constructor(public userService: UserService
   ) {
+  }
+
+  ngOnInit(): void {
+    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => {this.currentUser = user;});
+  }
+
+  ngOnDestroy(): void {
+    if (this.userServiceSubscription) this.userServiceSubscription.unsubscribe();
   }
 
   setOpen(isOpen: boolean, index: number): void {
@@ -24,7 +36,7 @@ export class TeamComponent {
   }
 
   deletePokemon(index: number): void {
-    this.trainerService.$user.value.pokemonTeam.splice(index, 1)
+    this.userService.deletePokemon(index);
   }
 
   cancel(): void {
@@ -33,7 +45,7 @@ export class TeamComponent {
   }
 
   confirm(): void {
-    this.trainerService.updatePokemonName(this.index, this.pokemonName.value);
+    this.userService.updatePokemonName(this.index, this.pokemonName.value);
     this.modal.dismiss(this.pokemonName, 'confirm');
     this.isModalOpen = false;
   }

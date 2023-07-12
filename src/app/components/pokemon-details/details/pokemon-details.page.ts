@@ -3,7 +3,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {StoneEnum} from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../../shared/services/all-pokemon.service';
-import {TrainerService} from "../../../shared/services/trainer.service";
+import {UserService} from "../../../shared/services/user.service";
+import {User} from "../../../shared/interfaces/user";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-pokemon-details',
@@ -15,18 +17,23 @@ export class PokemonDetailsPage implements OnChanges {
   public pokemon: Pokemon;
   public level: number;
   public team: Array<Pokemon> = [];
+  public user: User;
+  public currentUser: User;
   @Input()
   public navigate: number;
-  @Output() evolve: EventEmitter<void> = new EventEmitter<void>();
+  @Output()
+  evolve: EventEmitter<void> = new EventEmitter<void>();
+  public userObservable$: Subject<User>;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private allPokemonService: AllPokemonService,
     private router: Router,
-    public trainerService: TrainerService,
+    public userService: UserService,
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
+    this.userObservable$ = this.userService.currentUser$;
   }
 
   ngOnChanges(): void {
@@ -48,10 +55,6 @@ export class PokemonDetailsPage implements OnChanges {
   useStone(stone: StoneEnum): void {
     const evolution = (Number(this.pokemonId) + this.pokemon.stone.indexOf(stone) + 1).toString();
     this.router.navigate([`pokemon-details/${evolution}`]);
-  }
-
-  addPokemonToTeam(pokemon: Pokemon): void {
-    this.trainerService.addPokemonToTeam(pokemon);
   }
 
   redirectToSignin(): void {

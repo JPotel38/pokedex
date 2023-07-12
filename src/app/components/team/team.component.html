@@ -1,13 +1,13 @@
 <ion-content>
   <ion-grid>
-    <ion-row *ngIf="(this.trainerService.$user | async).pokemonTeam as pokemons">
-      <ion-col *ngFor="let pokemon of pokemons; let index = index" sizeXs="12" sizeMd="2">
+    <ion-row *ngIf="currentUser">
+      <ion-col *ngFor="let pokemon of currentUser.pokemonTeam; let index = index" sizeXs="12" sizeMd="2">
         <ion-card [ngStyle]="{'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
                   }"
         >
           <ion-card-header>
-            <ion-card-title>#{{pokemon.id}} {{pokemon.name}}
+            <ion-card-title>#{{pokemon.id}} {{'NAMES.' + pokemon.name | translate}}
             </ion-card-title>
           </ion-card-header>
           <ion-card-content>
@@ -29,16 +29,16 @@
         <ion-header>
           <ion-toolbar>
             <ion-buttons slot="start">
-              <ion-button (click)="cancel()">Cancel</ion-button>
+              <ion-button (click)="cancel()">{{'CANCEL' | translate}}</ion-button>
             </ion-buttons>
             <ion-buttons slot="end">
-              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+              <ion-button (click)="confirm()" [strong]="true">{{'CONFIRM' | translate}}</ion-button>
             </ion-buttons>
           </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
           <ion-item>
-            <ion-label position="stacked">New Pokemon Name</ion-label>
+            <ion-label position="stacked">{{'NEW_POKEMON_NAME' | translate}} :</ion-label>
             <ion-input type="text" [formControl]="pokemonName"></ion-input>
           </ion-item>
         </ion-content>

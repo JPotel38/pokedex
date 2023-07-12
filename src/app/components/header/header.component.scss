@@ -7,3 +7,27 @@
   font-family: 'Press Start 2P', cursive;
   padding: 0;
 }
+
+ion-popover {
+  --width: 12%;
+}
+
+.nav-link {
+  padding: 10px;
+  margin: 2px 0;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  background-color: #D3D3D3;
+}
+
+ion-icon {
+  width: 24px;
+  height: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}

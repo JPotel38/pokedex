@@ -1,10 +1,10 @@
 import {TestBed} from '@angular/core/testing';
 
-import {TrainerService} from './trainer.service';
+import {UserService} from './user.service';
 import {mockPokemon, mockPokemonTeam} from "../../tests/mocks/mock-pokemon-team";
 
-describe('TrainerService', () => {
-  let trainerService: TrainerService;
+describe('UserService', () => {
+  let trainerService: UserService;
   let pokemonTeam = mockPokemonTeam;
   let pokemon = mockPokemon;
 
@@ -18,7 +18,7 @@ describe('TrainerService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    trainerService = TestBed.inject(TrainerService);
+    trainerService = TestBed.inject(UserService);
     trainerService.$user.next(userObject);
   });
 

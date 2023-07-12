@@ -11,7 +11,7 @@ export class AllPokemonResolver {
   constructor(private allPokemon: AllPokemonService) {
   }
 
-  resolve(): Observable<Array<Pokemon>> | Promise<Array<Pokemon>> | Array<Pokemon> {
+  resolve(): Array<Pokemon> {
     return this.allPokemon.getAllPokemons();
   }
 }

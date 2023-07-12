@@ -2,7 +2,7 @@ import {Component, OnDestroy} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {User} from '../../shared/interfaces/user';
 import {Router} from '@angular/router';
-import {TrainerService} from '../../shared/services/trainer.service';
+import {UserService} from '../../shared/services/user.service';
 import {Subscription} from "rxjs";
 
 @Component({
@@ -15,11 +15,10 @@ export class LoginPage implements OnDestroy {
   public user: User;
   public loginCtrl: FormControl;
   public passwordCtrl: FormControl;
-  private storedUser: User;
-  private trainerServiceSubscription: Subscription;
+  private userServiceSubscription: Subscription;
 
   constructor(private router: Router,
-              private trainerService: TrainerService,
+              private userService: UserService,
               fb: FormBuilder
   ) {
     this.loginCtrl = fb.control('', Validators.required);
@@ -32,24 +31,22 @@ export class LoginPage implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.trainerServiceSubscription) {
-      this.trainerServiceSubscription.unsubscribe();
+    if (this.userServiceSubscription) {
+      this.userServiceSubscription.unsubscribe();
     }
   }
 
   validate(): void {
     this.user = {
-      login: this.userForm.get('loginCtrl').value,
-      userName: this.user.login,
-      password: this.userForm.get('passwordCtrl').value,
-      connected: true
+      login: this.userForm.get('login').value,
+      userName: this.userForm.get('login').value,
+      password: this.userForm.get('password').value,
+      pokemonTeam: []
     };
-    this.trainerServiceSubscription = this.trainerService.$user.subscribe(storedUser => {
-        this.storedUser = storedUser
-      }
-    )
-    if (this.user.login === this.storedUser.login && this.user.password === this.storedUser.password) {
-      this.trainerService.setUser({...this.user})
+
+    const registeredUser = this.userService.getUser();
+    if (registeredUser.userName === this.user.userName && registeredUser.password === this.user.password) {
+      this.userService.currentUser$.next(this.user);
       this.router.navigate([`/`]);
     } else {
       alert('Unknown user');
