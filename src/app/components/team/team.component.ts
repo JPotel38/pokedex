@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {UserService} from "../../shared/services/user.service";
 import {FormControl} from "@angular/forms";
-import {IonModal} from "@ionic/angular";
 import {Subscription} from "rxjs";
 import {User} from "../../shared/interfaces/user";
+import {IonModal} from "@ionic/angular";
 
 @Component({
   selector: 'app-team',
@@ -36,7 +36,7 @@ export class TeamComponent implements OnInit, OnDestroy {
   }
 
   deletePokemon(index: number): void {
-    // this.trainerService.usersList.value.pokemonTeam.splice(index, 1)
+    this.userService.deletePokemon(index);
   }
 
   cancel(): void {
