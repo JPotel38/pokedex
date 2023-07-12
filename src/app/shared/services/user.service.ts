@@ -8,13 +8,15 @@ import {Pokemon} from "../interfaces/pokemon";
 })
 export class UserService {
   usersList$: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
-  currentUser$: Subject<User> = new Subject<User>();
+  currentUser$: BehaviorSubject<User> = new BehaviorSubject<User>({login: "", password: "", userName: "", pokemonTeam: []});
   usersArray: User[] = [];
 
   storeUser(user: User): void {
-    const currentUsersList = this.usersList$.getValue();
-    currentUsersList.push(user);
-    this.usersList$.next(currentUsersList);
+    sessionStorage.setItem("user", JSON.stringify(user));
+  }
+
+  getUser() {
+    return JSON.parse(sessionStorage.getItem("user"));
   }
 
   addPokemon(pokemon: Pokemon): void {
