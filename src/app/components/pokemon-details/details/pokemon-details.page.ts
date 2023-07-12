@@ -1,18 +1,18 @@
-import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StoneEnum} from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../../shared/services/all-pokemon.service';
 import {UserService} from "../../../shared/services/user.service";
 import {User} from "../../../shared/interfaces/user";
-import {Subscription} from "rxjs";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-pokemon-details',
   templateUrl: './pokemon-details.page.html',
   styleUrls: ['./pokemon-details.page.scss'],
 })
-export class PokemonDetailsPage implements OnInit, OnDestroy, OnChanges {
+export class PokemonDetailsPage implements OnChanges {
   public pokemonId: number;
   public pokemon: Pokemon;
   public level: number;
@@ -23,7 +23,7 @@ export class PokemonDetailsPage implements OnInit, OnDestroy, OnChanges {
   public navigate: number;
   @Output()
   evolve: EventEmitter<void> = new EventEmitter<void>();
-  private userServiceSubscription: Subscription;
+  public userObservable$: Subject<User>;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -33,16 +33,7 @@ export class PokemonDetailsPage implements OnInit, OnDestroy, OnChanges {
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
-  }
-
-  ngOnInit(): void {
-    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => {
-      this.currentUser = user;
-    });
-  }
-
-  ngOnDestroy(): void {
-    if (this.userServiceSubscription) this.userServiceSubscription.unsubscribe();
+    this.userObservable$ = this.userService.currentUser$;
   }
 
   ngOnChanges(): void {
