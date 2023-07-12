@@ -38,7 +38,6 @@ import {I18nModule} from "./shared/modules/i18n.module";
     ReactiveFormsModule,
 
   ],
-  providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
