@@ -15,7 +15,6 @@ export class LoginPage implements OnDestroy {
   public user: User;
   public loginCtrl: FormControl;
   public passwordCtrl: FormControl;
-  private storedUser: User[];
   private userServiceSubscription: Subscription;
 
   constructor(private router: Router,
@@ -42,15 +41,12 @@ export class LoginPage implements OnDestroy {
       login: this.userForm.get('login').value,
       userName: this.userForm.get('login').value,
       password: this.userForm.get('password').value,
+      pokemonTeam: []
     };
 
-    this.userServiceSubscription = this.userService.usersList$.subscribe(storedUser => {
-        this.storedUser = storedUser;
-      }
-    );
-    const currentUser = (this.storedUser.find(sU => this.user.login === sU.login && this.user.password === sU.password));
-    if (currentUser) {
-      this.userService.currentUser$.next(currentUser)
+    const registeredUser = this.userService.getUser();
+    if (registeredUser.userName === this.user.userName && registeredUser.password === this.user.password) {
+      this.userService.currentUser$.next(this.user);
       this.router.navigate([`/`]);
     } else {
       alert('Unknown user');
