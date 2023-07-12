@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {BehaviorSubject, Subject} from 'rxjs';
+import {BehaviorSubject} from 'rxjs';
 import {User} from '../interfaces/user';
 import {Pokemon} from "../interfaces/pokemon";
 
@@ -7,9 +7,12 @@ import {Pokemon} from "../interfaces/pokemon";
   providedIn: 'root'
 })
 export class UserService {
-  usersList$: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
-  currentUser$: BehaviorSubject<User> = new BehaviorSubject<User>({login: "", password: "", userName: "", pokemonTeam: []});
-  usersArray: User[] = [];
+  currentUser$: BehaviorSubject<User> = new BehaviorSubject<User>({
+    login: "",
+    password: "",
+    userName: "",
+    pokemonTeam: []
+  });
 
   storeUser(user: User): void {
     sessionStorage.setItem("user", JSON.stringify(user));
@@ -19,17 +22,19 @@ export class UserService {
     return JSON.parse(sessionStorage.getItem("user"));
   }
 
+  updateUserName(userNameCtrl: string): void {
+    this.currentUser$.subscribe(user => user.userName = userNameCtrl);
+  }
+
   addPokemon(pokemon: Pokemon): void {
     this.currentUser$.subscribe(user => {
         user.pokemonTeam.push(pokemon);
       }
     );
-    this.usersList$.next({...this.usersList$.value})
   }
 
   updatePokemonName(index: number, name: string): void {
     this.currentUser$.subscribe(user => user.pokemonTeam[index].name = name);
-    this.usersList$.next({...this.usersList$.value});
   }
 
   getPokemonTeam(): Array<Pokemon> {
@@ -40,7 +45,8 @@ export class UserService {
     return pokemonTeam;
   }
 
-  // updateUserName(userNameCtrl: string): void {
-  //   this.usersList.next({...this.usersList.value, userName: userNameCtrl});
-  // }
+  deletePokemon(index: number): void {
+    this.currentUser$.subscribe(user => user.pokemonTeam.splice(index, 1));
+  }
+
 }
