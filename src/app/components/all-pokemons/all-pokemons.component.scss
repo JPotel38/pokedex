@@ -1,11 +1,12 @@
-ion-card-content {
-  color: #0d0d0d;
-}
-
 ion-card {
   cursor: pointer;
 }
 
 .icon {
   margin: 0;
+}
+
+.legendary-button {
+  --background: #FFD700;
+  box-shadow: 0 0 10px gold
 }
