@@ -58,10 +58,10 @@ export class PokemonDetailsPage implements OnChanges {
   }
 
   redirectToSignin(): void {
-    this.router.navigate(['/signin'])
+    this.router.navigate(['/signin']);
   }
 
   nextPokemon() {
-    this.evolve.emit()
+    this.evolve.emit();
   }
 }

@@ -3,7 +3,7 @@
 
 .main-title {
   cursor: pointer;
-  font-size: 3vw;
+  font-size: 24px;
   font-family: 'Press Start 2P', cursive;
   padding: 0;
 }
@@ -15,11 +15,10 @@ ion-popover {
 .nav-link {
   padding: 10px;
   margin: 2px 0;
-}
-
-.nav-link:hover {
-  cursor: pointer;
-  background-color: #D3D3D3;
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-link;
+  }
 }
 
 ion-icon {
@@ -29,5 +28,5 @@ ion-icon {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: $black;
 }
