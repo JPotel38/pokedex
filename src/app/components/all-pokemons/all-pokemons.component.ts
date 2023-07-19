@@ -83,11 +83,9 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  filterByType(selectedType: Array<string>): void {
+  filterByType(typeArray: string[]): void {
+    this.typeSelectedArray = typeArray;
     this.isFilteredByType = true;
-    if (!this.typeSelectedArray.find(typeSelected => typeSelected === selectedType[0])) {
-      this.typeSelectedArray.push(selectedType[0])
-    }
     this.pokemonArray = this.allPokemonService.getAllPokemons();
     if (this.typeSelectedArray.length === 1) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.types.find(type => type === this.typeSelectedArray[0]))
@@ -123,5 +121,10 @@ export class AllPokemonsComponent implements OnDestroy {
         this.filterByType(this.typeSelectedArray)
       }
     }
+  }
+
+  handleChange($event: any) {
+    console.log($event)
+
   }
 }

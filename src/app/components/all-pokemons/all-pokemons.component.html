@@ -1,20 +1,28 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col sizeMd="3" sizeXs="12">
+      <ion-col sizeXs="12" sizeLg="3">
         <ion-searchbar (keyup.enter)="filterByName()" [formControl]="pokemon"
                        placeholder="{{'SEARCH POKEMON'| translate}}"></ion-searchbar>
       </ion-col>
       <ion-col size="auto">
-        <ion-button (click)="filterByType([type])" *ngFor="let type of allTypes"
-                    [disabled]="this.typeSelectedArray.length === 2"
-                    [ngStyle]="{'--background': color(type)}">{{'TYPES.' + type | translate | typeName }}
-        </ion-button>
+        <ion-list>
+          <ion-item>
+            <ion-select [multiple]="true" aria-label="Pokémon type"
+                        placeholder="Select a Pokémon type"
+                        [disabled]="this.typeSelectedArray.length === 2"
+                        (ionChange)="filterByType($event.detail.value)"
+            >
+              <ion-select-option *ngFor="let type of allTypes"
+                                 value="{{type}}">{{'TYPES.' + type | translate | typeName }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="auto">
-        <ion-button class="legendary-button" (click)="filterLegendary()">{{'LEGENDARY'| translate }}</ion-button>
+        <ion-button (click)="filterLegendary()" class="legendary-button">{{'LEGENDARY'| translate }}</ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -40,7 +48,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" size="6" sizeSm="4" sizeMd="3" sizeLg="2" sizeXl="1">
+      <ion-col *ngFor="let pokemon of pokemonArray" size="6" sizeLg="2" sizeMd="3" sizeSm="4" sizeXl="1">
         <ion-card
           (click)="goToDetails(pokemon.id)"
           [ngStyle]="{'background': pokemon.types.length == 1 ?
