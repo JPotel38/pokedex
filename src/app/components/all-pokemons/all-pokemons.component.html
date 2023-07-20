@@ -1,17 +1,16 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col sizeXs="12" sizeLg="3">
+      <ion-col sizeLg="3" sizeXs="12">
         <ion-searchbar (keyup.enter)="filterByName()" [formControl]="pokemon"
                        placeholder="{{'SEARCH POKEMON'| translate}}"></ion-searchbar>
       </ion-col>
       <ion-col size="auto">
         <ion-list>
           <ion-item>
-            <ion-select [multiple]="true" aria-label="Pokémon type"
+            <ion-select (ionChange)="filterByType($event.detail.value)" [multiple]="true"
+                        aria-label="Pokémon type"
                         placeholder="Select a Pokémon type"
-                        [disabled]="this.typeSelectedArray.length === 2"
-                        (ionChange)="filterByType($event.detail.value)"
             >
               <ion-select-option *ngFor="let type of allTypes"
                                  value="{{type}}">{{'TYPES.' + type | translate | typeName }}</ion-select-option>
@@ -47,19 +46,23 @@
         </ion-chip>
       </ion-col>
     </ion-row>
+  </ion-grid>
+  <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" size="6" sizeLg="2" sizeMd="3" sizeSm="4" sizeXl="1">
+      <ion-col *ngFor="let pokemon of pokemonArray" size="12" sizeMd="3">
         <ion-card
           (click)="goToDetails(pokemon.id)"
-          [ngStyle]="{'background': pokemon.types.length == 1 ?
-                  pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
+          [ngStyle]="{'border-image': pokemon.types.length == 1 ?
+                  'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[0]+ ') 25'
+                  : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ') 25'
                   }"
         >
-          <ion-card-content>
-            <ion-thumbnail>
+          <ion-card-header>
               <ion-img [alt]="pokemon.name" [src]="pokemon.icon" class="icon"></ion-img>
-            </ion-thumbnail>
-          </ion-card-content>
+            <ion-card-title>
+              {{'NAMES.' + pokemon.name | translate}}
+            </ion-card-title>
+          </ion-card-header>
         </ion-card>
       </ion-col>
     </ion-row>
