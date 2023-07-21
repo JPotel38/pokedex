@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
-import {IonicModule} from '@ionic/angular';
+import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './shared/modules/app-routing.module';
@@ -17,6 +17,7 @@ import {HeaderComponent} from "./components/header/header.component";
 import {PokemonContainerComponent} from "./components/pokemon-details/pokemon-container/pokemon-container.component";
 import {I18nModule} from "./shared/modules/i18n.module";
 import {FooterComponent} from "./components/footer/footer.component";
+import {RouteReuseStrategy} from "@angular/router";
 
 @NgModule({
   declarations: [AppComponent,
