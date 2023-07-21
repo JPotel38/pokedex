@@ -4,6 +4,7 @@ import {Subscription} from "rxjs";
 import {TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
 import {UserService} from "../../shared/services/user.service";
+import {UtilsService} from "../../shared/services/utils.service";
 
 @Component({
   selector: 'app-header',
@@ -23,7 +24,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(private translate: TranslateService,
               public readonly router: Router,
-              public userService: UserService
+              public userService: UserService,
+              public utilsService: UtilsService
   ) {
   }
 
@@ -40,10 +42,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   selectedLang(event: Event): void {
     const customEvent = event as CustomEvent;
     this.translate.use(customEvent.detail.value);
-  }
-
-  goBackToPokedex(): void {
-    this.router.navigate([`/`]);
   }
 
   switchTheme(): void {

@@ -1,12 +1,9 @@
-<ion-header>
+<ion-header class="ion-hide-sm-down">
   <ion-toolbar>
     <ion-grid>
       <ion-row class="ion-justify-content-around">
         <ion-col class="ion-hide-sm-down" size="2">
-          <ion-title (click)="goBackToPokedex()" class="main-title">Pokédex</ion-title>
-        </ion-col>
-        <ion-col class="ion-hide-sm-up" sizeMd="1">
-          <ion-icon (click)="goBackToPokedex()" name="home-outline"></ion-icon>
+          <ion-title (click)="utilsService.goBackToPokedex()" class="main-title">Pokédex</ion-title>
         </ion-col>
         <ion-col size="auto">
           <ion-row>
@@ -27,7 +24,7 @@
                   }"></ion-icon>
               </ion-button>
             </ion-col>
-            <ion-col size="auto">
+            <ion-col size="auto" class="ion-hide-sm-down">
               <ion-button (click)="presentPopover($event)" color="light"
                           shape="round" size="small">
                 <ion-icon name="person-circle-outline">
@@ -38,8 +35,6 @@
           <ion-content>
             <ion-popover #popover (didDismiss)="isOpen = false" [isOpen]="isOpen">
               <ng-template>
-                <ion-item>
-                  <ion-grid>
                     <ng-container *ngIf="!currentUser.userName">
                       <ion-row class="nav-link ion-align-items-end">
                         <ion-icon name="person-outline"></ion-icon>
@@ -60,8 +55,6 @@
                         <a (click)="logOut()">{{'LOGOUT' | translate}}</a>
                       </ion-row>
                     </ng-container>
-                  </ion-grid>
-                </ion-item>
               </ng-template>
             </ion-popover>
           </ion-content>
