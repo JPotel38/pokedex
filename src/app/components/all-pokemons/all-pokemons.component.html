@@ -10,7 +10,7 @@
           <ion-item>
             <ion-select (ionChange)="filterByType($event.detail.value)" [multiple]="true"
                         aria-label="Pokémon type"
-                        placeholder="Select a Pokémon type"
+                        placeholder="{{'SEARCH TYPE'| translate}}"
             >
               <ion-select-option *ngFor="let type of allTypes"
                                  value="{{type}}">{{'TYPES.' + type | translate | typeName }}</ion-select-option>
@@ -18,8 +18,6 @@
           </ion-item>
         </ion-list>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col size="auto">
         <ion-button (click)="filterLegendary()" class="legendary-button">{{'LEGENDARY'| translate }}</ion-button>
       </ion-col>
@@ -49,7 +47,7 @@
   </ion-grid>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" size="12" sizeMd="3">
+      <ion-col *ngFor="let pokemon of pokemonArray"  size="12" sizeMd="3">
         <ion-card
           (click)="goToDetails(pokemon.id)"
           [ngStyle]="{'border-image': pokemon.types.length == 1 ?
@@ -58,7 +56,7 @@
                   }"
         >
           <ion-card-header>
-              <ion-img [alt]="pokemon.name" [src]="pokemon.icon" class="icon"></ion-img>
+              <ion-img [alt]="pokemon.name" [src]="pokemon.img" class="icon"></ion-img>
             <ion-card-title>
               {{'NAMES.' + pokemon.name | translate}}
             </ion-card-title>
