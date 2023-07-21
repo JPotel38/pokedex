@@ -8,7 +8,7 @@
       <ion-col size="auto">
         <ion-list>
           <ion-item>
-            <ion-select (ionChange)="filterByType($event.detail.value)" [multiple]="true"
+            <ion-select (ionChange)="filterByType($event)" [multiple]="true"
                         aria-label="Pokémon type"
                         placeholder="{{'SEARCH TYPE'| translate}}"
             >

@@ -83,8 +83,8 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  filterByType(typeArray: string[]): void {
-    this.typeSelectedArray = typeArray;
+  filterByType(types): void {
+    this.typeSelectedArray = Array.isArray(types) ? types : types.detail.value;
     this.isFilteredByType = true;
     this.pokemonArray = this.allPokemonService.getAllPokemons();
     if (this.typeSelectedArray.length === 1) {
