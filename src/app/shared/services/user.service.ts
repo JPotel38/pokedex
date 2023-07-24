@@ -22,6 +22,10 @@ export class UserService {
     return JSON.parse(sessionStorage.getItem("user"));
   }
 
+  logOut() {
+    this.currentUser$.next(undefined);
+  }
+
   updateUserName(userNameCtrl: string): void {
     this.currentUser$.subscribe(user => user.userName = userNameCtrl);
   }

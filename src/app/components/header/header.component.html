@@ -32,33 +32,12 @@
               </ion-button>
             </ion-col>
           </ion-row>
-          <ion-content>
+        </ion-col>
             <ion-popover #popover (didDismiss)="isOpen = false" [isOpen]="isOpen">
               <ng-template>
-                <ng-container *ngIf="!currentUser.userName">
-                  <ion-row class="nav-link ion-align-items-end">
-                    <ion-icon name="person-outline"></ion-icon>
-                    <a (click)="handleNavigation('signin')">{{'SIGNIN' | translate}}
-                    </a>
-                  </ion-row>
-                  <ion-row class="nav-link ion-align-items-end">
-                    <ion-icon name="log-in-outline"></ion-icon>
-                    <a (click)="handleNavigation('login')">{{'LOGIN' | translate}}
-                    </a>
-                  </ion-row>
-                </ng-container>
-                <ng-container *ngIf="currentUser.userName">
-                  <ion-row class="nav-link ion-align-items-end">
-                    <a (click)="handleNavigation('account')">{{'ACCOUNT' | translate}}</a>
-                  </ion-row>
-                  <ion-row class="nav-link ion-align-items-end">
-                    <a (click)="logOut()">{{'LOGOUT' | translate}}</a>
-                  </ion-row>
-                </ng-container>
+                <app-user-popover (open)="dismiss($event)"></app-user-popover>
               </ng-template>
             </ion-popover>
-          </ion-content>
-        </ion-col>
         <ion-col *ngIf="currentUser.userName" offsetLg="5">
           <ion-label>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-label>
           <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">

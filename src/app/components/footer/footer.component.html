@@ -10,6 +10,13 @@
           </ion-icon>
         </ion-col>
       </ion-row>
+        <ion-content>
+          <ion-popover #popover (didDismiss)="isOpen = false" [isOpen]="isOpen">
+            <ng-template>
+              <app-user-popover (open)="dismiss($event)"></app-user-popover>
+            </ng-template>
+          </ion-popover>
+        </ion-content>
     </ion-grid>
   </ion-toolbar>
 </ion-footer>

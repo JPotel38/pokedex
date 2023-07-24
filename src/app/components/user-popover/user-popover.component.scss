@@ -1,0 +1,15 @@
+@import '../../../theme/variables';
+
+.nav-link {
+  padding: 10px;
+  margin: 2px 0;
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-link;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}

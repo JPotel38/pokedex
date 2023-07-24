@@ -49,10 +49,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     document.body.classList.toggle('dark', this.isChecked);
   }
 
-  logOut(): void {
-    this.userService.currentUser$.next(undefined);
-  }
-
   handleNavigation(route: string): void {
     this.router.navigate([route]);
     if (this.isOpen) this.isOpen = false;
@@ -61,6 +57,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   presentPopover(e: Event): void {
     this.popover.event = e;
     this.isOpen = true;
+  }
+
+  dismiss($event: boolean) {
+    this.isOpen = $event;
   }
 }
 

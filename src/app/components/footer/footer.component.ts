@@ -1,5 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {UtilsService} from "../../shared/services/utils.service";
+import {Router} from "@angular/router";
+import {UserService} from "../../shared/services/user.service";
+import {User} from "../../shared/interfaces/user";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-footer',
@@ -7,13 +11,22 @@ import {UtilsService} from "../../shared/services/utils.service";
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-  @ViewChild('popover') popover;
   public isOpen: boolean = false;
+  public currentUser: User;
+  private userServiceSubscription: Subscription;
+  @ViewChild('popover') popover;
 
-  constructor(public utilsService: UtilsService) {
+  constructor(public utilsService: UtilsService,
+              public readonly router: Router,
+              public userService: UserService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => this.currentUser = user);
+  }
+
+  ngOnDestroy(): void {
+    if (this.userServiceSubscription) this.userServiceSubscription.unsubscribe();
   }
 
   presentPopover(e: Event): void {
@@ -21,4 +34,7 @@ export class FooterComponent implements OnInit {
     this.isOpen = true;
   }
 
+  dismiss($event: boolean) {
+    this.isOpen = $event;
+  }
 }
