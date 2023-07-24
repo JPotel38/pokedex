@@ -95,8 +95,8 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  filterLegendary(e: CustomEvent) {
-    this.isFilteredByLegendary = this.isChecked = e.detail.checked;
+  filterLegendary(event: any) {
+    this.isFilteredByLegendary = this.isChecked = event.detail.checked;
     if (this.isFilteredByLegendary) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
     } else {
