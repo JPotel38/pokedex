@@ -5,24 +5,25 @@ import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './shared/modules/app-routing.module';
-import {AllPokemonsComponent} from './components/all-pokemons/all-pokemons.component';
+import {AllPokemonsComponent} from './pages/all-pokemons/all-pokemons.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {LoginPage} from './components/login/login-page.component';
-import {SigninComponent} from './components/signin/signin.component';
-import {PokemonDetailsPage} from "./components/pokemon-details/details/pokemon-details.page";
+import {LoginPage} from './pages/login/login-page.component';
+import {SigninComponent} from './pages/signin/signin.component';
 import {TypeNamePipe} from './pipes/type-name.pipe';
-import {TeamComponent} from "./components/team/team.component";
-import {AccountComponent} from "./components/account/account.component";
+import {TeamComponent} from "./pages/team/team.component";
+import {AccountComponent} from "./pages/account/account.component";
 import {HeaderComponent} from "./components/header/header.component";
-import {PokemonContainerComponent} from "./components/pokemon-details/pokemon-container/pokemon-container.component";
+import {PokemonContainerComponent} from "./pages/pokemon-details/pokemon-container/pokemon-container.component";
 import {I18nModule} from "./shared/modules/i18n.module";
 import {FooterComponent} from "./components/footer/footer.component";
 import {RouteReuseStrategy} from "@angular/router";
+import {PokemonDetailsComponent} from "./pages/pokemon-details/details/pokemon-details.component";
+import {UserPopoverComponent} from "./components/user-popover/user-popover.component";
 
 @NgModule({
   declarations: [AppComponent,
     HeaderComponent,
-    PokemonDetailsPage,
+    PokemonDetailsComponent,
     PokemonContainerComponent,
     AllPokemonsComponent,
     LoginPage,
@@ -31,7 +32,7 @@ import {RouteReuseStrategy} from "@angular/router";
     TeamComponent,
     AccountComponent,
     HeaderComponent,
-    FooterComponent],
+    FooterComponent, UserPopoverComponent],
   imports: [
     BrowserModule,
     I18nModule,

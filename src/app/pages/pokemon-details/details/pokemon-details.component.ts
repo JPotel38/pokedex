@@ -9,10 +9,10 @@ import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-pokemon-details',
-  templateUrl: './pokemon-details.page.html',
-  styleUrls: ['./pokemon-details.page.scss'],
+  templateUrl: './pokemon-details.component.html',
+  styleUrls: ['./pokemon-details.component.scss'],
 })
-export class PokemonDetailsPage implements OnChanges {
+export class PokemonDetailsComponent implements OnChanges {
   public pokemonId: number;
   public pokemon: Pokemon;
   public level: number;

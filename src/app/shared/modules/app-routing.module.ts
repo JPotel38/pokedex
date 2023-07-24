@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {AllPokemonsComponent} from '../../components/all-pokemons/all-pokemons.component';
+import {AllPokemonsComponent} from '../../pages/all-pokemons/all-pokemons.component';
 import {AllPokemonResolver} from '../resolver/all-pokemon-resolver.service';
-import {LoginPage} from '../../components/login/login-page.component';
-import {AccountComponent} from '../../components/account/account.component';
-import {SigninComponent} from '../../components/signin/signin.component';
-import {TeamComponent} from "../../components/team/team.component";
+import {LoginPage} from '../../pages/login/login-page.component';
+import {AccountComponent} from '../../pages/account/account.component';
+import {SigninComponent} from '../../pages/signin/signin.component';
+import {TeamComponent} from "../../pages/team/team.component";
 import {
   PokemonContainerComponent
-} from "../../components/pokemon-details/pokemon-container/pokemon-container.component";
+} from "../../pages/pokemon-details/pokemon-container/pokemon-container.component";
 
 const routes: Routes = [
   {
