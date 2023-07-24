@@ -3,8 +3,7 @@
     <ion-title>{{userService.currentUser$.value.userName}}</ion-title>
   </ion-row>
   <form (ngSubmit)="validate()" [formGroup]="userForm">
-    <ion-label>{{'CHANGE_USERNAME' | translate }} :</ion-label>
-    <ion-input [formControl]="userNameCtrl" type="text"></ion-input>
+    <ion-input [formControl]="userNameCtrl" type="text" label="{{'CHANGE_USERNAME' | translate }} :"></ion-input>
     <ion-button color="light" type="submit">{{'VALIDATE' | translate}}</ion-button>
   </form>
 </ion-grid>
