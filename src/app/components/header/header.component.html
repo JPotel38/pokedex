@@ -24,7 +24,7 @@
                   }"></ion-icon>
               </ion-button>
             </ion-col>
-            <ion-col size="auto" class="ion-hide-sm-down">
+            <ion-col class="ion-hide-sm-down" size="auto">
               <ion-button (click)="presentPopover($event)" color="light"
                           shape="round" size="small">
                 <ion-icon name="person-circle-outline">
@@ -35,26 +35,26 @@
           <ion-content>
             <ion-popover #popover (didDismiss)="isOpen = false" [isOpen]="isOpen">
               <ng-template>
-                    <ng-container *ngIf="!currentUser.userName">
-                      <ion-row class="nav-link ion-align-items-end">
-                        <ion-icon name="person-outline"></ion-icon>
-                        <a (click)="handleNavigation('signin')">{{'SIGNIN' | translate}}
-                        </a>
-                      </ion-row>
-                      <ion-row class="nav-link ion-align-items-end">
-                        <ion-icon name="log-in-outline"></ion-icon>
-                        <a (click)="handleNavigation('login')">{{'LOGIN' | translate}}
-                        </a>
-                      </ion-row>
-                    </ng-container>
-                    <ng-container *ngIf="currentUser.userName">
-                      <ion-row class="nav-link ion-align-items-end">
-                        <a (click)="handleNavigation('account')">{{'ACCOUNT' | translate}}</a>
-                      </ion-row>
-                      <ion-row class="nav-link ion-align-items-end">
-                        <a (click)="logOut()">{{'LOGOUT' | translate}}</a>
-                      </ion-row>
-                    </ng-container>
+                <ng-container *ngIf="!currentUser.userName">
+                  <ion-row class="nav-link ion-align-items-end">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <a (click)="handleNavigation('signin')">{{'SIGNIN' | translate}}
+                    </a>
+                  </ion-row>
+                  <ion-row class="nav-link ion-align-items-end">
+                    <ion-icon name="log-in-outline"></ion-icon>
+                    <a (click)="handleNavigation('login')">{{'LOGIN' | translate}}
+                    </a>
+                  </ion-row>
+                </ng-container>
+                <ng-container *ngIf="currentUser.userName">
+                  <ion-row class="nav-link ion-align-items-end">
+                    <a (click)="handleNavigation('account')">{{'ACCOUNT' | translate}}</a>
+                  </ion-row>
+                  <ion-row class="nav-link ion-align-items-end">
+                    <a (click)="logOut()">{{'LOGOUT' | translate}}</a>
+                  </ion-row>
+                </ng-container>
               </ng-template>
             </ion-popover>
           </ion-content>

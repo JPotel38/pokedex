@@ -26,6 +26,7 @@ export class AllPokemonsComponent implements OnDestroy {
   public allTypes = Object.values(TypesEnum);
   public typeSelectedArray: string[] = [];
   public team: Array<Pokemon> = [];
+  isChecked: boolean = false;
   private translateServiceSubscription: Subscription;
   private readonly activatedRouteSubscription: Subscription;
   private user: User;
@@ -94,9 +95,13 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  filterLegendary() {
-    this.isFilteredByLegendary = true;
-    this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary);
+  filterLegendary(e: CustomEvent) {
+    this.isFilteredByLegendary = this.isChecked = e.detail.checked;
+    if (this.isFilteredByLegendary) {
+      this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
+    } else {
+      this.pokemonArray = this.allPokemonService.getAllPokemons();
+    }
   }
 
   clearFilter(filter: string): void {
@@ -105,6 +110,9 @@ export class AllPokemonsComponent implements OnDestroy {
     if (this.isFilteredByType) {
       this.filterByType(this.typeSelectedArray);
     } else {
+      if (filter === 'isFilteredByLegendary') {
+        this.isChecked = false;
+      }
       this.pokemonArray = this.allPokemonService.getAllPokemons();
     }
   }
@@ -121,10 +129,5 @@ export class AllPokemonsComponent implements OnDestroy {
         this.filterByType(this.typeSelectedArray)
       }
     }
-  }
-
-  handleChange($event: any) {
-    console.log($event)
-
   }
 }

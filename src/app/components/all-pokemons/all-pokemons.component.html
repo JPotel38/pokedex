@@ -18,8 +18,10 @@
           </ion-item>
         </ion-list>
       </ion-col>
-      <ion-col size="auto">
-        <ion-button (click)="filterLegendary()" class="legendary-button">{{'LEGENDARY'| translate }}</ion-button>
+      <ion-col class="ion-align-self-center">
+        <ion-toggle (ionChange)="filterLegendary($event)" [checked]="isChecked" aria-label="Legendary filter"
+                    color="warning">{{'LEGENDARY'| translate }}
+        </ion-toggle>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -47,7 +49,7 @@
   </ion-grid>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray"  size="12" sizeMd="3">
+      <ion-col *ngFor="let pokemon of pokemonArray" size="12" sizeMd="3">
         <ion-card
           (click)="goToDetails(pokemon.id)"
           [ngStyle]="{'border-image': pokemon.types.length == 1 ?
@@ -56,7 +58,7 @@
                   }"
         >
           <ion-card-header>
-              <ion-img [alt]="pokemon.name" [src]="pokemon.img" class="icon"></ion-img>
+            <ion-img [alt]="pokemon.name" [src]="pokemon.img" class="icon"></ion-img>
             <ion-card-title>
               {{'NAMES.' + pokemon.name | translate}}
             </ion-card-title>
