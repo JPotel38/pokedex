@@ -24,7 +24,8 @@ export class AllPokemonService {
       audio: './assets/audio/Bulbasaur.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 2,
@@ -40,7 +41,8 @@ export class AllPokemonService {
       audio: './assets/audio/Ivysaur.ogg',
       attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 3,
@@ -55,7 +57,8 @@ export class AllPokemonService {
       audio: './assets/audio/Venusaur.ogg',
       attacks: [' Vine Whip', 'Razor Leaf', ' Seed Bomb', 'Solar Beam'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 4,
@@ -71,7 +74,8 @@ export class AllPokemonService {
       audio: './assets/audio/Charmander.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 5,
@@ -87,7 +91,8 @@ export class AllPokemonService {
       audio: './assets/audio/Charmeleon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 6,
@@ -102,7 +107,8 @@ export class AllPokemonService {
       audio: './assets/audio/Charizard.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 7,
@@ -118,7 +124,8 @@ export class AllPokemonService {
       audio: './assets/audio/Squirtle.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 8,
@@ -134,7 +141,8 @@ export class AllPokemonService {
       audio: './assets/audio/Wartortle.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 9,
@@ -149,7 +157,8 @@ export class AllPokemonService {
       audio: './assets/audio/Blastoise.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 10,
@@ -165,7 +174,8 @@ export class AllPokemonService {
       audio: './assets/audio/Caterpie.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 11,
@@ -181,7 +191,8 @@ export class AllPokemonService {
       audio: './assets/audio/Metapod.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 12,
@@ -196,7 +207,8 @@ export class AllPokemonService {
       audio: './assets/audio/Butterfree.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 13,
@@ -212,7 +224,8 @@ export class AllPokemonService {
       audio: './assets/audio/Weedle.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 14,
@@ -228,7 +241,8 @@ export class AllPokemonService {
       audio: './assets/audio/Kakuna.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 15,
@@ -243,7 +257,8 @@ export class AllPokemonService {
       audio: './assets/audio/Beedrill.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 16,
@@ -259,7 +274,8 @@ export class AllPokemonService {
       audio: './assets/audio/Pidgey.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 17,
@@ -275,7 +291,8 @@ export class AllPokemonService {
       audio: './assets/audio/Pidgeotto.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 18,
@@ -290,7 +307,8 @@ export class AllPokemonService {
       audio: './assets/audio/Pidgeot.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 19,
@@ -306,7 +324,8 @@ export class AllPokemonService {
       audio: './assets/audio/Rattata.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 20,
@@ -321,7 +340,8 @@ export class AllPokemonService {
       audio: './assets/audio/Raticate.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 21,
@@ -337,7 +357,8 @@ export class AllPokemonService {
       audio: './assets/audio/Spearow.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 22,
@@ -352,7 +373,8 @@ export class AllPokemonService {
       audio: './assets/audio/Fearow.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 23,
@@ -368,7 +390,8 @@ export class AllPokemonService {
       audio: './assets/audio/Ekans.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 24,
@@ -383,7 +406,8 @@ export class AllPokemonService {
       audio: './assets/audio/Arbok.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 25,
@@ -399,7 +423,8 @@ export class AllPokemonService {
       audio: './assets/audio/Pikachu.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 26,
@@ -414,7 +439,8 @@ export class AllPokemonService {
       audio: './assets/audio/Raichu.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 27,
@@ -430,7 +456,8 @@ export class AllPokemonService {
       audio: './assets/audio/Sandshrew.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 28,
@@ -445,7 +472,8 @@ export class AllPokemonService {
       audio: './assets/audio/Sandslash.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 29,
@@ -461,7 +489,8 @@ export class AllPokemonService {
       audio: './assets/audio/Nidoran♀.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 30,
@@ -477,7 +506,8 @@ export class AllPokemonService {
       audio: './assets/audio/Nidorina.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 31,
@@ -492,7 +522,8 @@ export class AllPokemonService {
       audio: './assets/audio/Nidoqueen.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 32,
@@ -508,7 +539,8 @@ export class AllPokemonService {
       audio: './assets/audio/Nidoran♂.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 33,
@@ -524,7 +556,8 @@ export class AllPokemonService {
       audio: './assets/audio/Nidorino.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 34,
@@ -539,7 +572,8 @@ export class AllPokemonService {
       audio: './assets/audio/Nidoking.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 35,
@@ -555,7 +589,8 @@ export class AllPokemonService {
       audio: './assets/audio/Clefairy.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 36,
@@ -570,7 +605,8 @@ export class AllPokemonService {
       audio: './assets/audio/Clefable.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 37,
@@ -586,7 +622,8 @@ export class AllPokemonService {
       audio: './assets/audio/Vulpix.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 38,
@@ -601,7 +638,8 @@ export class AllPokemonService {
       audio: './assets/audio/Ninetales.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 39,
@@ -617,7 +655,8 @@ export class AllPokemonService {
       audio: './assets/audio/Jigglypuff.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 40,
@@ -632,7 +671,8 @@ export class AllPokemonService {
       audio: './assets/audio/Wigglytuff.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 41,
@@ -648,7 +688,8 @@ export class AllPokemonService {
       audio: './assets/audio/Zubat.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 42,
@@ -663,7 +704,8 @@ export class AllPokemonService {
       audio: './assets/audio/Golbat.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 43,
@@ -679,7 +721,8 @@ export class AllPokemonService {
       audio: './assets/audio/Oddish.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 44,
@@ -695,7 +738,8 @@ export class AllPokemonService {
       audio: './assets/audio/Gloom.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 45,
@@ -710,7 +754,8 @@ export class AllPokemonService {
       audio: './assets/audio/Vileplume.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 46,
@@ -726,7 +771,8 @@ export class AllPokemonService {
       audio: './assets/audio/Paras.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 47,
@@ -741,7 +787,8 @@ export class AllPokemonService {
       audio: './assets/audio/Parasect.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 48,
@@ -757,7 +804,8 @@ export class AllPokemonService {
       audio: './assets/audio/Venonat.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 49,
@@ -772,7 +820,8 @@ export class AllPokemonService {
       audio: './assets/audio/Venomoth.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 50,
@@ -788,7 +837,8 @@ export class AllPokemonService {
       audio: './assets/audio/Diglett.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 51,
@@ -803,7 +853,8 @@ export class AllPokemonService {
       audio: './assets/audio/Dugtrio.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 52,
@@ -819,7 +870,8 @@ export class AllPokemonService {
       audio: './assets/audio/Meowth.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 53,
@@ -834,7 +886,8 @@ export class AllPokemonService {
       audio: './assets/audio/Persian.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 54,
@@ -850,7 +903,8 @@ export class AllPokemonService {
       audio: './assets/audio/Psyduck.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 55,
@@ -865,7 +919,8 @@ export class AllPokemonService {
       audio: './assets/audio/Golduck.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 56,
@@ -881,7 +936,8 @@ export class AllPokemonService {
       audio: './assets/audio/Mankey.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 57,
@@ -896,7 +952,8 @@ export class AllPokemonService {
       audio: './assets/audio/Primeape.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 58,
@@ -912,7 +969,8 @@ export class AllPokemonService {
       audio: './assets/audio/Growlithe.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 59,
@@ -927,7 +985,8 @@ export class AllPokemonService {
       audio: './assets/audio/Arcanine.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 60,
@@ -943,7 +1002,8 @@ export class AllPokemonService {
       audio: './assets/audio/Poliwag.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 61,
@@ -960,7 +1020,8 @@ export class AllPokemonService {
       audio: './assets/audio/Poliwhirl.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 62,
@@ -975,7 +1036,8 @@ export class AllPokemonService {
       audio: './assets/audio/Poliwrath.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 63,
@@ -991,7 +1053,8 @@ export class AllPokemonService {
       audio: './assets/audio/Abra.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 64,
@@ -1007,7 +1070,8 @@ export class AllPokemonService {
       audio: './assets/audio/Kadabra.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 65,
@@ -1022,7 +1086,8 @@ export class AllPokemonService {
       audio: './assets/audio/Alakazam.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 66,
@@ -1038,7 +1103,8 @@ export class AllPokemonService {
       audio: './assets/audio/Machop.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 67,
@@ -1054,7 +1120,8 @@ export class AllPokemonService {
       audio: './assets/audio/Machoke.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 68,
@@ -1069,7 +1136,8 @@ export class AllPokemonService {
       audio: './assets/audio/Machamp.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 69,
@@ -1085,7 +1153,8 @@ export class AllPokemonService {
       audio: './assets/audio/Bellsprout.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 70,
@@ -1101,7 +1170,8 @@ export class AllPokemonService {
       audio: './assets/audio/Weepinbell.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 71,
@@ -1116,7 +1186,8 @@ export class AllPokemonService {
       audio: './assets/audio/Victreebel.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 72,
@@ -1132,7 +1203,8 @@ export class AllPokemonService {
       audio: './assets/audio/Tentacool.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 73,
@@ -1147,7 +1219,8 @@ export class AllPokemonService {
       audio: './assets/audio/Tentacruel.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 74,
@@ -1163,7 +1236,8 @@ export class AllPokemonService {
       audio: './assets/audio/Geodude.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 75,
@@ -1179,7 +1253,8 @@ export class AllPokemonService {
       audio: './assets/audio/Graveler.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 76,
@@ -1194,7 +1269,8 @@ export class AllPokemonService {
       audio: './assets/audio/Golem.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 77,
@@ -1210,7 +1286,8 @@ export class AllPokemonService {
       audio: './assets/audio/Ponyta.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 78,
@@ -1225,7 +1302,8 @@ export class AllPokemonService {
       audio: './assets/audio/Rapidash.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 79,
@@ -1241,7 +1319,8 @@ export class AllPokemonService {
       audio: './assets/audio/Slowpoke.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 80,
@@ -1256,7 +1335,8 @@ export class AllPokemonService {
       audio: './assets/audio/Slowbro.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 81,
@@ -1272,7 +1352,8 @@ export class AllPokemonService {
       audio: './assets/audio/Magnemite.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 82,
@@ -1287,7 +1368,8 @@ export class AllPokemonService {
       audio: './assets/audio/Magneton.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 83,
@@ -1302,7 +1384,8 @@ export class AllPokemonService {
       audio: "./assets/audio/Farfetch’d.ogg",
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 84,
@@ -1318,7 +1401,8 @@ export class AllPokemonService {
       audio: './assets/audio/Doduov.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 85,
@@ -1333,7 +1417,8 @@ export class AllPokemonService {
       audio: './assets/audio/Dodrio.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 86,
@@ -1349,7 +1434,8 @@ export class AllPokemonService {
       audio: './assets/audio/Seel.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 87,
@@ -1364,7 +1450,8 @@ export class AllPokemonService {
       audio: './assets/audio/Dewgong.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 88,
@@ -1380,7 +1467,8 @@ export class AllPokemonService {
       audio: './assets/audio/Grimer.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 89,
@@ -1395,7 +1483,8 @@ export class AllPokemonService {
       audio: './assets/audio/Muk.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 90,
@@ -1411,7 +1500,8 @@ export class AllPokemonService {
       audio: './assets/audio/Shellder.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 91,
@@ -1426,7 +1516,8 @@ export class AllPokemonService {
       audio: './assets/audio/Cloyster.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 92,
@@ -1442,7 +1533,8 @@ export class AllPokemonService {
       audio: './assets/audio/Gastly.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 93,
@@ -1458,7 +1550,8 @@ export class AllPokemonService {
       audio: './assets/audio/Haunter.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 94,
@@ -1473,7 +1566,8 @@ export class AllPokemonService {
       audio: './assets/audio/Gengar.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 95,
@@ -1488,7 +1582,8 @@ export class AllPokemonService {
       audio: './assets/audio/Onix.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 96,
@@ -1504,7 +1599,8 @@ export class AllPokemonService {
       audio: './assets/audio/Drowzee.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 97,
@@ -1519,7 +1615,8 @@ export class AllPokemonService {
       audio: './assets/audio/Hypno.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 98,
@@ -1535,7 +1632,8 @@ export class AllPokemonService {
       audio: './assets/audio/Krabby.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 99,
@@ -1550,7 +1648,8 @@ export class AllPokemonService {
       audio: './assets/audio/Kingler.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 100,
@@ -1566,7 +1665,8 @@ export class AllPokemonService {
       audio: './assets/audio/Voltorb.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 101,
@@ -1581,7 +1681,8 @@ export class AllPokemonService {
       audio: './assets/audio/Electrode.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 102,
@@ -1597,7 +1698,8 @@ export class AllPokemonService {
       audio: './assets/audio/Exeggcute.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 103,
@@ -1612,7 +1714,8 @@ export class AllPokemonService {
       audio: './assets/audio/Exeggutor.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 104,
@@ -1628,7 +1731,8 @@ export class AllPokemonService {
       audio: './assets/audio/Cubone.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 105,
@@ -1643,7 +1747,8 @@ export class AllPokemonService {
       audio: './assets/audio/Marowak.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 106,
@@ -1658,7 +1763,8 @@ export class AllPokemonService {
       audio: './assets/audio/Hitmonlee.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 107,
@@ -1673,7 +1779,8 @@ export class AllPokemonService {
       audio: './assets/audio/Hitmonchan.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 108,
@@ -1688,7 +1795,8 @@ export class AllPokemonService {
       audio: './assets/audio/Lickitung.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 109,
@@ -1704,7 +1812,8 @@ export class AllPokemonService {
       audio: './assets/audio/Koffing.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 110,
@@ -1719,7 +1828,8 @@ export class AllPokemonService {
       audio: './assets/audio/Weezing.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 111,
@@ -1735,7 +1845,8 @@ export class AllPokemonService {
       audio: './assets/audio/Rhyhorn.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 112,
@@ -1750,7 +1861,8 @@ export class AllPokemonService {
       audio: './assets/audio/Rhydon.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 113,
@@ -1765,7 +1877,8 @@ export class AllPokemonService {
       audio: './assets/audio/Chansey.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 114,
@@ -1780,7 +1893,8 @@ export class AllPokemonService {
       audio: './assets/audio/Tangela.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 115,
@@ -1795,7 +1909,8 @@ export class AllPokemonService {
       audio: './assets/audio/Kangaskhan.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 116,
@@ -1811,7 +1926,8 @@ export class AllPokemonService {
       audio: './assets/audio/Horsea.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 117,
@@ -1827,7 +1943,8 @@ export class AllPokemonService {
       audio: './assets/audio/Seadra.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 118,
@@ -1843,7 +1960,8 @@ export class AllPokemonService {
       audio: './assets/audio/Goldeen.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 119,
@@ -1858,7 +1976,8 @@ export class AllPokemonService {
       audio: './assets/audio/Seaking.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 120,
@@ -1874,7 +1993,8 @@ export class AllPokemonService {
       audio: './assets/audio/Staryu.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 15625
     },
     {
       id: 121,
@@ -1889,7 +2009,8 @@ export class AllPokemonService {
       audio: './assets/audio/Starmie.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 122,
@@ -1904,7 +2025,8 @@ export class AllPokemonService {
       audio: './assets/audio/MrMime.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 123,
@@ -1919,7 +2041,8 @@ export class AllPokemonService {
       audio: './assets/audio/Scyther.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 124,
@@ -1934,7 +2057,8 @@ export class AllPokemonService {
       audio: './assets/audio/Jynx.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 125,
@@ -1949,7 +2073,8 @@ export class AllPokemonService {
       audio: './assets/audio/Electabuzz.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 126,
@@ -1964,7 +2089,8 @@ export class AllPokemonService {
       audio: './assets/audio/Magmar.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 127,
@@ -1979,7 +2105,8 @@ export class AllPokemonService {
       audio: './assets/audio/Pinsir.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 128,
@@ -1994,7 +2121,8 @@ export class AllPokemonService {
       audio: './assets/audio/Tauros.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 129,
@@ -2010,7 +2138,8 @@ export class AllPokemonService {
       audio: './assets/audio/Magikarp.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 109011.25
     },
     {
       id: 130,
@@ -2025,7 +2154,8 @@ export class AllPokemonService {
       audio: './assets/audio/Gyarados.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 131,
@@ -2040,7 +2170,8 @@ export class AllPokemonService {
       audio: './assets/audio/Lapras.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 132,
@@ -2055,7 +2186,8 @@ export class AllPokemonService {
       audio: './assets/audio/Ditto.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 133,
@@ -2071,7 +2203,8 @@ export class AllPokemonService {
       audio: './assets/audio/Eevee.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 134,
@@ -2086,7 +2219,8 @@ export class AllPokemonService {
       audio: './assets/audio/Vaporeon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 135,
@@ -2101,7 +2235,8 @@ export class AllPokemonService {
       audio: './assets/audio/Jolteon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 136,
@@ -2116,7 +2251,8 @@ export class AllPokemonService {
       audio: './assets/audio/Flareon.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 137,
@@ -2131,7 +2267,8 @@ export class AllPokemonService {
       audio: './assets/audio/Porygon.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 138,
@@ -2147,7 +2284,8 @@ export class AllPokemonService {
       audio: './assets/audio/Omanyte.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 139,
@@ -2162,7 +2300,8 @@ export class AllPokemonService {
       audio: './assets/audio/Omastar.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 140,
@@ -2177,7 +2316,8 @@ export class AllPokemonService {
       audio: './assets/audio/Kabuto.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 141,
@@ -2192,7 +2332,8 @@ export class AllPokemonService {
       audio: './assets/audio/Kabutops.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 142,
@@ -2207,7 +2348,8 @@ export class AllPokemonService {
       audio: './assets/audio/Aerodactyl.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 143,
@@ -2222,7 +2364,8 @@ export class AllPokemonService {
       audio: './assets/audio/Snorlax.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 144,
@@ -2237,7 +2380,8 @@ export class AllPokemonService {
       audio: './assets/audio/Articuno.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: true,
-      generation: '1'
+      generation: '1',
+      encounterRate: 1
     },
     {
       id: 145,
@@ -2252,7 +2396,8 @@ export class AllPokemonService {
       audio: './assets/audio/Zapdos.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Water Gun', 'Withdraw'],
       isLegendary: true,
-      generation: '1'
+      generation: '1',
+      encounterRate: 1
     },
     {
       id: 146,
@@ -2267,7 +2412,8 @@ export class AllPokemonService {
       audio: './assets/audio/Moltres.ogg',
       attacks: ['Tackle', 'String Shot'],
       isLegendary: true,
-      generation: '1'
+      generation: '1',
+      encounterRate: 1
     },
     {
       id: 147,
@@ -2283,7 +2429,8 @@ export class AllPokemonService {
       audio: './assets/audio/Dratini.ogg',
       attacks: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 2083.33
     },
     {
       id: 148,
@@ -2299,7 +2446,8 @@ export class AllPokemonService {
       audio: './assets/audio/Dragonair.ogg',
       attacks: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 208.33
     },
     {
       id: 149,
@@ -2314,7 +2462,8 @@ export class AllPokemonService {
       audio: './assets/audio/Dragonite.ogg',
       attacks: [' ThunderShock', 'Growl', ' Tail Whip', 'Thunder Wave'],
       isLegendary: false,
-      generation: '1'
+      generation: '1',
+      encounterRate: 25
     },
     {
       id: 150,
@@ -2329,7 +2478,8 @@ export class AllPokemonService {
       audio: './assets/audio/Mewtwo.ogg',
       attacks: ['Scratch', 'Growl', 'Ember', 'Leer'],
       isLegendary: true,
-      generation: '1'
+      generation: '1',
+      encounterRate: 1
     },
     {
       id: 151,
@@ -2344,7 +2494,8 @@ export class AllPokemonService {
       audio: './assets/audio/Mew.ogg',
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: true,
-      generation: '1'
+      generation: '1',
+      encounterRate: 0.1
     },
   ];
 

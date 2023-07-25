@@ -20,4 +20,5 @@ export interface Pokemon {
   attacks: Array<string>;
   isLegendary: boolean;
   generation: string;
+  encounterRate: number;
 }
