@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-grid>
+    <ion-button (click)="launchEncounter()" color="light">{{'ENCOUNTER' | translate}} !</ion-button>
+    <ng-container *ngIf="randomPokemon">
+      <ion-row class="ion-justify-content-center">
+        <ion-title class="ion-text-center">
+          #{{randomPokemon.id}} {{'NAMES.' + randomPokemon.name | translate}}
+        </ion-title>
+      </ion-row>
+      <ion-row>
+        <ion-col offsetLg="6" sizeLg="2">
+          <ion-img [alt]="randomPokemon.name" [src]="randomPokemon.img" id="img"></ion-img>
+          <ion-row>
+            <ion-text *ngIf="randomPokemon.types.length == 1">
+              {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
+              {{'TYPES.' + randomPokemon.types[0] | translate}}.
+            </ion-text>
+            <ion-text *ngIf="randomPokemon.types.length > 1">
+              {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + randomPokemon.types[0] | translate}}
+              /{{'TYPES.' + randomPokemon.types[1] | translate}}.
+            </ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>
