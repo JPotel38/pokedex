@@ -19,11 +19,11 @@ export class PokemonDetailsComponent implements OnChanges {
   public team: Array<Pokemon> = [];
   public user: User;
   public currentUser: User;
+  public userObservable$: Subject<User>;
   @Input()
   public navigate: number;
   @Output()
   evolve: EventEmitter<void> = new EventEmitter<void>();
-  public userObservable$: Subject<User>;
 
   constructor(
     private activatedRoute: ActivatedRoute,
