@@ -37,6 +37,7 @@
   "LEVEL": "Level",
   "EVOLVE": "Evolve",
   "EXCHANGE": "Exchange",
+  "ENCOUNTER": "Encounter",
   "ATTACKS": "Attacks",
   "TYPES": {
     "fire": "Fire-type",
