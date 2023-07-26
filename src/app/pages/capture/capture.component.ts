@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AllPokemonService} from "../../shared/services/all-pokemon.service";
 import {Pokemon} from "../../shared/interfaces/pokemon";
+import {UserService} from "../../shared/services/user.service";
+import {Subject} from "rxjs";
+import {User} from "../../shared/interfaces/user";
 
 @Component({
   selector: 'app-capture',
@@ -9,8 +12,12 @@ import {Pokemon} from "../../shared/interfaces/pokemon";
 })
 export class CaptureComponent implements OnInit {
   public randomPokemon: Pokemon;
+  public userObservable$: Subject<User>;
 
-  constructor(public allPokemonService: AllPokemonService) {
+  constructor(public allPokemonService: AllPokemonService,
+              public userService: UserService) {
+    this.userObservable$ = this.userService.currentUser$;
+
   }
 
   ngOnInit() {

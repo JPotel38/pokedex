@@ -19,7 +19,6 @@ export class PokemonDetailsComponent implements OnChanges {
   public team: Array<Pokemon> = [];
   public user: User;
   public currentUser: User;
-  public userObservable$: Subject<User>;
   @Input()
   public navigate: number;
   @Output()
@@ -33,7 +32,6 @@ export class PokemonDetailsComponent implements OnChanges {
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
-    this.userObservable$ = this.userService.currentUser$;
   }
 
   ngOnChanges(): void {
