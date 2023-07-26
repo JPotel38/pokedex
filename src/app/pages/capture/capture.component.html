@@ -22,9 +22,9 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="(userObservable$ | async).userName">
+      <ion-row *ngIf="(userObservable$ | async).userName" class="ion-justify-content-center">
         <ion-button (click)="userService.addPokemon(randomPokemon)"
-                    color="light"> {{'CATCH' | translate}}
+                    color="success"> {{'CATCH' | translate}}
         </ion-button>
       </ion-row>
     </ng-container>
