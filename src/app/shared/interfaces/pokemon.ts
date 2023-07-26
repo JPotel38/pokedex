@@ -5,6 +5,7 @@ import {StoneEnum} from '../enums/stone.enum';
 export interface Pokemon {
   id: number;
   name: string;
+  chosenName?: string;
   evolutionLevel?: number;
   stone?: Array<StoneEnum>;
   exchange?: boolean;
