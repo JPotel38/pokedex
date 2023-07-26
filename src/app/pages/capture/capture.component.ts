@@ -13,6 +13,7 @@ import {User} from "../../shared/interfaces/user";
 export class CaptureComponent implements OnInit {
   public randomPokemon: Pokemon;
   public userObservable$: Subject<User>;
+  alreadyCatch: boolean;
   private allPokemonArray: Array<Pokemon>;
   private totalWeight: number;
   private normalizedChoices: Pokemon[];
@@ -24,7 +25,7 @@ export class CaptureComponent implements OnInit {
   }
 
   ngOnInit() {
-  this.allPokemonArray = this.allPokemonService.getAllPokemons();
+    this.allPokemonArray = this.allPokemonService.getAllPokemons();
     this.totalWeight = this.allPokemonArray.reduce((sum, pokemon) => sum + pokemon.encounterRate, 0);
     this.normalizedChoices = this.allPokemonArray.map(pokemon => {
       return {
@@ -35,6 +36,7 @@ export class CaptureComponent implements OnInit {
   }
 
   launchEncounter() {
+    this.alreadyCatch = false;
     this.randomPokemon = this.computeEncounter();
   }
 
@@ -57,5 +59,12 @@ export class CaptureComponent implements OnInit {
 
   }
 
+  addPokemon(pokemon: Pokemon): void {
+    this.userObservable$.subscribe(user => {
+        user.pokemonTeam.push(pokemon);
+      }
+    );
+    this.alreadyCatch = true;
+  }
 
 }
