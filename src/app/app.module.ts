@@ -19,6 +19,7 @@ import {FooterComponent} from "./components/footer/footer.component";
 import {RouteReuseStrategy} from "@angular/router";
 import {PokemonDetailsComponent} from "./pages/pokemon-details/details/pokemon-details.component";
 import {UserPopoverComponent} from "./components/user-popover/user-popover.component";
+import {CaptureComponent} from "./pages/capture/capture.component";
 
 @NgModule({
   declarations: [AppComponent,
@@ -26,13 +27,15 @@ import {UserPopoverComponent} from "./components/user-popover/user-popover.compo
     PokemonDetailsComponent,
     PokemonContainerComponent,
     AllPokemonsComponent,
+    CaptureComponent,
     LoginPage,
     SigninComponent,
     TypeNamePipe,
     TeamComponent,
     AccountComponent,
     HeaderComponent,
-    FooterComponent, UserPopoverComponent],
+    FooterComponent,
+    UserPopoverComponent],
   imports: [
     BrowserModule,
     I18nModule,

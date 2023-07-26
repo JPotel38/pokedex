@@ -2495,7 +2495,7 @@ export class AllPokemonService {
       attacks: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun'],
       isLegendary: true,
       generation: '1',
-      encounterRate: 0.1
+      encounterRate: 1
     },
   ];
 
