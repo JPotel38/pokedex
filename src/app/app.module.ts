@@ -7,7 +7,7 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './shared/modules/app-routing.module';
 import {AllPokemonsComponent} from './pages/all-pokemons/all-pokemons.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {LoginPage} from './pages/login/login-page.component';
+import {LoginComponent} from './pages/login/login.component';
 import {SigninComponent} from './pages/signin/signin.component';
 import {TypeNamePipe} from './pipes/type-name.pipe';
 import {TeamComponent} from "./pages/team/team.component";
@@ -26,7 +26,7 @@ import {UserPopoverComponent} from "./components/user-popover/user-popover.compo
     PokemonDetailsComponent,
     PokemonContainerComponent,
     AllPokemonsComponent,
-    LoginPage,
+    LoginComponent,
     SigninComponent,
     TypeNamePipe,
     TeamComponent,

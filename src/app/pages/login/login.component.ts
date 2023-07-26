@@ -6,11 +6,11 @@ import {UserService} from '../../shared/services/user.service';
 import {Subscription} from "rxjs";
 
 @Component({
-  selector: 'app-account',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginPage implements OnDestroy {
+export class LoginComponent implements OnDestroy {
   public userForm: FormGroup;
   public user: User;
   public loginCtrl: FormControl;
