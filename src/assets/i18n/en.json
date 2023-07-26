@@ -18,7 +18,7 @@
   "SELECT TYPE": "Type(s)",
   "FILTER ON": "Filter on :",
   "DETAILS": "Details",
-  "ADD": "Add to team",
+  "CATCH": "Catch",
   "NAME": "Name",
   "CARD_SUBJECT_ONE": "is",
   "CARD_SUBJECT_TWO": "is dual-type",
@@ -37,6 +37,7 @@
   "LEVEL": "Level",
   "EVOLVE": "Evolve",
   "EXCHANGE": "Exchange",
+  "ENCOUNTER": "Encounter",
   "ATTACKS": "Attacks",
   "TYPES": {
     "fire": "Fire-type",

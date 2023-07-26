@@ -23,11 +23,6 @@
             {{'DESC.' + pokemon.name | translate}}
           </ion-col>
         </ion-row>
-        <ion-row *ngIf="(userObservable$ | async).userName">
-          <ion-button (click)="userService.addPokemon(pokemon)"
-                      color="light"> {{'ADD' | translate}}
-          </ion-button>
-        </ion-row>
         <ion-row>
           <ion-col sizeLg="3">
             <ion-text>{{'WEIGHT' | translate}}: {{pokemon.weight}}</ion-text>

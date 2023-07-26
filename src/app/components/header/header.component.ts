@@ -62,5 +62,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   dismiss($event: boolean) {
     this.isOpen = $event;
   }
+
+  goToCaptureMode() {
+    this.router.navigate(['capture']);
+  }
 }
 

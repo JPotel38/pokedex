@@ -9,6 +9,7 @@ import {TeamComponent} from "../../pages/team/team.component";
 import {
   PokemonContainerComponent
 } from "../../pages/pokemon-details/pokemon-container/pokemon-container.component";
+import {CaptureComponent} from "../../pages/capture/capture.component";
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'team',
     component: TeamComponent
+  },
+  {
+    path: 'capture',
+    component: CaptureComponent
   },
   {
     path: '',

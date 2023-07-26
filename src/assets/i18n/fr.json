@@ -19,7 +19,7 @@
   "FILTER ON": "Filtre sur : ",
   "NAME": "Nom",
   "DETAILS": "Détails",
-  "ADD": "Ajouter à l'équipe",
+  "CATCH": "Capturer",
   "CARD_SUBJECT_ONE": "est de type",
   "CARD_SUBJECT_TWO": "est de type",
   "FIRST": "Première",
@@ -37,6 +37,7 @@
   "LEVEL": "Niveau",
   "EVOLVE": "Evoluer",
   "EXCHANGE": "Echanger",
+  "ENCOUNTER": "Rencontre",
   "ATTACKS": "Attaques",
   "TYPES": {
     "fire": "Feu",

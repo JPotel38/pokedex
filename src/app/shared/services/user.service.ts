@@ -38,7 +38,7 @@ export class UserService {
   }
 
   updatePokemonName(index: number, name: string): void {
-    this.currentUser$.subscribe(user => user.pokemonTeam[index].name = name);
+    this.currentUser$.subscribe(user => user.pokemonTeam[index].chosenName = name);
   }
 
   getPokemonTeam(): Array<Pokemon> {

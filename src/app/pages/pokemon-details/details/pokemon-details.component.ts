@@ -23,7 +23,6 @@ export class PokemonDetailsComponent implements OnChanges {
   public navigate: number;
   @Output()
   evolve: EventEmitter<void> = new EventEmitter<void>();
-  public userObservable$: Subject<User>;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -33,7 +32,6 @@ export class PokemonDetailsComponent implements OnChanges {
   ) {
     this.pokemonId = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
-    this.userObservable$ = this.userService.currentUser$;
   }
 
   ngOnChanges(): void {
