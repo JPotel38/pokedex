@@ -1,11 +1,11 @@
 <ion-content>
   <ion-grid>
-    <ion-row>
+    <ion-row class="ion-justify-content-center">
       <ion-col sizeLg="3" sizeXs="12">
         <ion-searchbar (keyup.enter)="filterByName()" [formControl]="pokemon"
                        placeholder="{{'SEARCH POKEMON'| translate}}"></ion-searchbar>
       </ion-col>
-      <ion-col size="auto">
+      <ion-col size="6" sizeLg="2">
         <ion-list>
           <ion-item>
             <ion-select (ionChange)="filterByType($event)" [multiple]="true"
@@ -18,7 +18,7 @@
           </ion-item>
         </ion-list>
       </ion-col>
-      <ion-col class="ion-align-self-center">
+      <ion-col size="6" sizeLg="2" class="ion-align-self-center">
         <ion-toggle (ionChange)="filterLegendary($event)" [checked]="isChecked" aria-label="Legendary filter"
                     color="warning">{{'LEGENDARY'| translate }}
         </ion-toggle>

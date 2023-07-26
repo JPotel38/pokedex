@@ -1,12 +1,10 @@
 <ion-grid>
-  <ion-row>
-    <ion-title>{{'SIGNIN' | translate}}</ion-title>
-  </ion-row>
   <form (ngSubmit)="validate()" [formGroup]="userForm">
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-input [formControl]="loginCtrl" label="{{'USERNAME' | translate}}" type="text"></ion-input>
+          <ion-input [formControl]="loginCtrl" label="{{'USERNAME' | translate}}" labelPlacement="floating"
+                     type="text"></ion-input>
           <ion-text *ngIf="loginCtrl.dirty && loginCtrl.hasError('required')" color="danger">{{'USERNAME' | translate}}
             {{'IS_REQUIRED' | translate}}</ion-text>
         </ion-item>
@@ -15,7 +13,8 @@
     <form [formGroup]="passwordForm">
       <ion-row>
         <ion-item>
-          <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" type="password"></ion-input>
+          <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" labelPlacement="floating"
+                     type="password"></ion-input>
           <ion-text *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')"
                     color="danger">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}
             >
@@ -25,7 +24,7 @@
       <ion-row>
         <ion-item>
           <ion-input [formControl]="passwordConfirmCtrl" label="{{'PASSWORD_CONFIRM' | translate}}"
-                     type="password"></ion-input>
+                     labelPlacement="floating" type="password"></ion-input>
           <ion-text *ngIf="passwordConfirmCtrl.dirty && passwordConfirmCtrl.hasError('required')"
                     color="danger">{{'PASSWORD_CONFIRM_REQUIRED' | translate}}
           </ion-text>
@@ -38,7 +37,10 @@
       </ion-text>
     </ion-row>
     <ion-row>
-      <ion-button [disabled]="userForm.invalid" color="light" type="submit">{{'VALIDATE' | translate}}</ion-button>
+      <ion-col class="ion-padding-top">
+        <ion-button [disabled]="userForm.invalid" class="signin-button" color="light"
+                    type="submit">{{'SIGNIN' | translate}}</ion-button>
+      </ion-col>
     </ion-row>
   </form>
 </ion-grid>

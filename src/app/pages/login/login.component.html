@@ -1,12 +1,10 @@
 <ion-grid>
-  <ion-row>
-    <ion-title>{{'LOGIN' | translate}}</ion-title>
-  </ion-row>
   <form (ngSubmit)="validate()" [formGroup]="userForm">
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-input [formControl]="loginCtrl" type="text" label="{{'USERNAME' | translate}}"></ion-input>
+          <ion-input [formControl]="loginCtrl" label="{{'USERNAME' | translate}}" labelPlacement="floating"
+                     type="text"></ion-input>
           <ion-label *ngIf="loginCtrl.dirty && loginCtrl.hasError('required')">
             * {{'USERNAME' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
         </ion-item>
@@ -15,13 +13,18 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-input [formControl]="passwordCtrl" type="password" label="{{'PASSWORD' | translate}}"></ion-input>
+          <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" labelPlacement="floating"
+                     type="password"></ion-input>
           <ion-label
             *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
-    <ion-button [disabled]="userForm.invalid" type="submit">{{'VALIDATE' | translate}}</ion-button>
+    <ion-row>
+      <ion-col class="ion-padding-top">
+        <ion-button [disabled]="userForm.invalid" color="light" type="submit" class="login-button">{{'LOGIN' | translate}}</ion-button>
+      </ion-col>
+    </ion-row>
   </form>
 </ion-grid>
 
