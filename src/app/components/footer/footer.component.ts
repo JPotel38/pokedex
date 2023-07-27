@@ -13,8 +13,8 @@ import {Subscription} from "rxjs";
 export class FooterComponent implements OnInit {
   public isOpen: boolean = false;
   public currentUser: User;
-  private userServiceSubscription: Subscription;
   @ViewChild('popover') popover;
+  private userServiceSubscription: Subscription;
 
   constructor(public utilsService: UtilsService,
               public readonly router: Router,
@@ -37,4 +37,10 @@ export class FooterComponent implements OnInit {
   dismiss($event: boolean) {
     this.isOpen = $event;
   }
+
+  handleNavigation(route: string): void {
+    this.router.navigate([route]);
+    if (this.isOpen) this.isOpen = false;
+  }
+
 }
