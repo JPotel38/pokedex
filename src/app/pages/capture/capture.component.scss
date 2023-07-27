@@ -2,7 +2,17 @@ ion-grid {
   height: 80%;
 }
 
-ion-button[slot='fixed'] {
+ion-img {
+  height: 420px;
+}
+
+.catch-button {
+  top: 80%;
+  width: 100%;
+  height: 45px;
+}
+
+.encounter-button {
   top: 90%;
   width: 100%;
   height: 45px;
