@@ -22,4 +22,5 @@ export interface Pokemon {
   isLegendary: boolean;
   generation: string;
   encounterRate: number;
+  normalizedWeight?: number;
 }

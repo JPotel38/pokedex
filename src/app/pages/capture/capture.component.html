@@ -7,8 +7,8 @@
           #{{randomPokemon.id}} {{'NAMES.' + randomPokemon.name | translate}}
         </ion-title>
       </ion-row>
-      <ion-row>
-        <ion-col offsetLg="6" sizeLg="2">
+      <ion-row class="ion-justify-content-center">
+        <ion-col sizeLg="3">
           <ion-img [alt]="randomPokemon.name" [src]="randomPokemon.img" id="img"></ion-img>
           <ion-row>
             <ion-text *ngIf="randomPokemon.types.length == 1">
@@ -22,11 +22,16 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="(userObservable$ | async).userName" class="ion-justify-content-center">
-        <ion-button (click)="userService.addPokemon(randomPokemon)"
-                    color="success"> {{'CATCH' | translate}}
+      <ion-row *ngIf="(userObservable$ | async).userName; else elseBlock" class="ion-justify-content-center" class="ion-justify-content-center">
+        <ion-button (click)="addPokemon(randomPokemon)"
+                    [disabled]="alreadyCatch" color="success"> {{'CATCH' | translate}}
         </ion-button>
       </ion-row>
+      <ng-template #elseBlock>
+        <ion-row class="ion-justify-content-center">
+          <ion-text color="success">Log in to catch Pokémon !</ion-text>
+        </ion-row>
+      </ng-template>
     </ng-container>
   </ion-grid>
 </ion-content>

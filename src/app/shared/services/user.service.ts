@@ -30,13 +30,6 @@ export class UserService {
     this.currentUser$.subscribe(user => user.userName = userNameCtrl);
   }
 
-  addPokemon(pokemon: Pokemon): void {
-    this.currentUser$.subscribe(user => {
-        user.pokemonTeam.push(pokemon);
-      }
-    );
-  }
-
   updatePokemonName(index: number, name: string): void {
     this.currentUser$.subscribe(user => user.pokemonTeam[index].chosenName = name);
   }
