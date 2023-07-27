@@ -5,11 +5,11 @@
         <ion-col class="ion-hide-sm-down" size="6">
           <ion-title (click)="utilsService.goBackToPokedex()" class="main-title">Pokédex</ion-title>
         </ion-col>
-        <ion-col sizeLg="1">
+        <ion-col sizeLg="2">
           <ion-button (click)="goToCaptureMode()" color="light">{{'CATCH' | translate}} Mode</ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-row>
+          <ion-row class="ion-align-items-center">
             <ion-col size="auto">
               <ion-item class="lang-selector">
                 <ion-icon name="language-outline"></ion-icon>
@@ -28,11 +28,8 @@
               </ion-button>
             </ion-col>
             <ion-col class="ion-hide-sm-down" size="auto">
-              <ion-button (click)="presentPopover($event)" color="light"
-                          shape="round" size="small">
-                <ion-icon name="person-circle-outline">
-                </ion-icon>
-              </ion-button>
+              <ion-icon class="user-icon" (click)="presentPopover($event)" name="person-circle-outline">
+              </ion-icon>
             </ion-col>
           </ion-row>
         </ion-col>

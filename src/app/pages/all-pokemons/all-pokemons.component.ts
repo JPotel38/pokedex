@@ -130,4 +130,8 @@ export class AllPokemonsComponent implements OnDestroy {
       }
     }
   }
+
+  goToCaptureMode() {
+    this.router.navigate(['capture']);
+  }
 }
