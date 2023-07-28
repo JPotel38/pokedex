@@ -9,17 +9,22 @@
       <ion-row class="ion-justify-content-center">
         <ion-col size="8" sizeLg="3">
           <ion-img [alt]="randomPokemon.name" [src]="randomPokemon.img" id="img"></ion-img>
+          <ion-row>
+            <ion-text *ngIf="randomPokemon.types.length == 1">
+              {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
+              {{'TYPES.' + randomPokemon.types[0] | translate}}.
+            </ion-text>
+            <ion-text *ngIf="randomPokemon.types.length > 1">
+              {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + randomPokemon.types[0] | translate}}
+              /{{'TYPES.' + randomPokemon.types[1] | translate}}.
+            </ion-text>
+          </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-text *ngIf="randomPokemon.types.length == 1">
-          {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
-          {{'TYPES.' + randomPokemon.types[0] | translate}}.
-        </ion-text>
-        <ion-text *ngIf="randomPokemon.types.length > 1">
-          {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + randomPokemon.types[0] | translate}}
-          /{{'TYPES.' + randomPokemon.types[1] | translate}}.
-        </ion-text>
+      <ion-row *ngIf="currentUser.userName; else elseBlock" class="ion-justify-content-center">
+        <ion-button (click)="addPokemon(randomPokemon)"
+                    [disabled]="alreadyCatch" color="light"> {{'CATCH' | translate}}
+        </ion-button>
       </ion-row>
       <ion-row *ngIf="!(userObservable$ | async).userName" class="ion-justify-content-center">
         <ion-text color="success">Log in to catch Pokémon !</ion-text>

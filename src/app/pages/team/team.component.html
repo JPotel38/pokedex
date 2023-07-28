@@ -1,6 +1,6 @@
 <ion-content>
   <ion-grid>
-    <ion-row *ngIf="currentUser">
+    <ion-row *ngIf="currentUser.pokemonTeam">
       <ion-col *ngFor="let pokemon of currentUser.pokemonTeam; let index = index" sizeMd="2" sizeXs="12">
         <ion-card [ngStyle]="{'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'

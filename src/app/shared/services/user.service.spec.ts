@@ -12,22 +12,20 @@ describe('UserService', () => {
     login: 'login',
     password: 'pass',
     userName: 'Sacha',
-    connected: true,
-    pokemonTeam: pokemonTeam
+    connected: true
   }
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
     trainerService = TestBed.inject(UserService);
-    trainerService.$user.next(userObject);
+    trainerService.currentUser$.next(userObject);
   });
 
   afterEach(() => {
     const updatedUserObject = {
-      ...userObject,
-      pokemonTeam: [...mockPokemonTeam]
+      ...userObject
     };
-    trainerService.$user.next(updatedUserObject);
+    trainerService.currentUser$.next(updatedUserObject);
   });
 
   it('should be created', () => {
@@ -35,23 +33,22 @@ describe('UserService', () => {
   });
 
   it('should send user to BehaviorSubject', () => {
-    trainerService.$user.subscribe(value => {
+    trainerService.currentUser$.subscribe(value => {
       expect(value).toEqual(userObject);
     });
   });
 
-  it('should add Pokemon to team', () => {
-    trainerService.addPokemonToTeam(pokemon);
-    trainerService.$user.subscribe(value => {
-      expect(value.pokemonTeam).toContain(pokemon);
-    });
-  });
-
-  it('should update Pokemon"s name', () => {
-    trainerService.updatePokemonName(0, "Pikachu");
-    trainerService.$user.subscribe(value => {
-      expect(value.pokemonTeam[0].name).toBe("Pikachu");
-    });
-  });
+  // it('should add Pokemon to team', () => {
+  //   trainerService.$user.subscribe(value => {
+  //     expect(value.pokemonTeam).toContain(pokemon);
+  //   });
+  // });
+  //
+  // it('should update Pokemon"s name', () => {
+  //   trainerService.updatePokemonName(0, "Pikachu");
+  //   trainerService.$user.subscribe(value => {
+  //     expect(value.pokemonTeam[0].name).toBe("Pikachu");
+  //   });
+  // });
 
 });

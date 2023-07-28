@@ -41,19 +41,14 @@ export class LoginComponent implements OnDestroy {
       login: this.userForm.get('login').value,
       userName: this.userForm.get('login').value,
       password: this.userForm.get('password').value,
-      pokemonTeam: []
     };
 
-    const registeredUser = this.userService.getUser();
+    const registeredUser = this.userService.getStoredUser();
     if (registeredUser.userName === this.user.userName && registeredUser.password === this.user.password) {
-      this.userService.currentUser$.next(this.user);
+      this.userService.currentUser$.next(registeredUser);
       this.router.navigate([`/`]);
     } else {
       alert('Unknown user');
     }
-  }
-
-  success(userArray: Array<User>): User {
-    return userArray.find(user => JSON.stringify(user) === JSON.stringify(this.user));
   }
 }
