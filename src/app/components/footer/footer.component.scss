@@ -1,9 +1,14 @@
+ion-popover {
+  --offset-y: -10%;
+  --width: 150px;
+}
+
 .home-icon {
   width: 30px;
   height: 30px;
 }
 
-ion-popover {
-  --offset-y: -10%;
-  --width: 150px;
+.pokeball-img {
+  width: 30px;
 }
+

@@ -7,7 +7,7 @@
         </ion-col>
         <ion-col *ngIf="currentUser.userName" size="3">
           <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
-            <img alt="pokeball" src="../../../assets/icons/pokeball.png" style="width: 30px">
+            <ion-img class="pokeball-img" alt="pokeball" src='./assets/icons/pokeball.png'></ion-img>
             <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>
           </ion-button>
         </ion-col>
