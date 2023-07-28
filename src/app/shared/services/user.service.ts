@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {User} from '../interfaces/user';
 import {Pokemon} from "../interfaces/pokemon";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -14,36 +15,37 @@ export class UserService {
     pokemonTeam: []
   });
 
-  storeUser(user: User): void {
-    sessionStorage.setItem("user", JSON.stringify(user));
+  constructor(public readonly router: Router) {
   }
 
-  getUser() {
-    return JSON.parse(sessionStorage.getItem("user"));
+  storeUser(user: User): void {
+    localStorage.setItem("user", JSON.stringify(user));
+  }
+
+  getStoredUser() {
+    return JSON.parse(localStorage.getItem("user"));
   }
 
   logOut() {
-    this.currentUser$.next(undefined);
+    this.currentUser$.next({
+      login: "",
+      password: "",
+      userName: "",
+      pokemonTeam: []
+    });
+    this.router.navigate([`/`]);
   }
 
   updateUserName(userNameCtrl: string): void {
     this.currentUser$.subscribe(user => user.userName = userNameCtrl);
   }
 
-  updatePokemonName(index: number, name: string): void {
-    this.currentUser$.subscribe(user => user.pokemonTeam[index].chosenName = name);
-  }
-
   getPokemonTeam(): Array<Pokemon> {
-    let pokemonTeam = [];
+    let pokemonTeam = this.getStoredUser().pokemonTeam;
     this.currentUser$.subscribe(user => {
-      pokemonTeam = user.pokemonTeam
+      if (user) {pokemonTeam = this.getStoredUser().pokemonTeam}
     });
-    return pokemonTeam;
-  }
-
-  deletePokemon(index: number): void {
-    this.currentUser$.subscribe(user => user.pokemonTeam.splice(index, 1));
+    return this.getStoredUser().pokemonTeam;
   }
 
 }

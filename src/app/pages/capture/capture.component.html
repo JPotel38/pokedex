@@ -22,7 +22,7 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="(userObservable$ | async).userName; else elseBlock" class="ion-justify-content-center">
+      <ion-row *ngIf="currentUser.userName; else elseBlock" class="ion-justify-content-center">
         <ion-button (click)="addPokemon(randomPokemon)"
                     [disabled]="alreadyCatch" color="light"> {{'CATCH' | translate}}
         </ion-button>

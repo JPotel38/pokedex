@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AllPokemonService} from "../../shared/services/all-pokemon.service";
 import {Pokemon} from "../../shared/interfaces/pokemon";
 import {UserService} from "../../shared/services/user.service";
-import {Subject} from "rxjs";
+import {Subscription} from "rxjs";
 import {User} from "../../shared/interfaces/user";
 
 @Component({
@@ -10,21 +10,24 @@ import {User} from "../../shared/interfaces/user";
   templateUrl: './capture.component.html',
   styleUrls: ['./capture.component.scss'],
 })
-export class CaptureComponent implements OnInit {
+export class CaptureComponent implements OnInit, OnDestroy {
   public randomPokemon: Pokemon;
-  public userObservable$: Subject<User>;
   alreadyCatch: boolean;
+  public currentUser: User;
   private allPokemonArray: Array<Pokemon>;
   private totalWeight: number;
   private normalizedChoices: Pokemon[];
+  private userServiceSubscription: Subscription;
 
   constructor(public allPokemonService: AllPokemonService,
               public userService: UserService) {
-    this.userObservable$ = this.userService.currentUser$;
 
   }
 
   ngOnInit() {
+    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => {
+      this.currentUser = user;
+    });
     this.allPokemonArray = this.allPokemonService.getAllPokemons();
     this.totalWeight = this.allPokemonArray.reduce((sum, pokemon) => sum + pokemon.encounterRate, 0);
     this.normalizedChoices = this.allPokemonArray.map(pokemon => {
@@ -33,6 +36,10 @@ export class CaptureComponent implements OnInit {
         normalizedWeight: pokemon.encounterRate / this.totalWeight,
       };
     });
+  }
+
+  ngOnDestroy() {
+    if (this.userServiceSubscription) this.userServiceSubscription.unsubscribe();
   }
 
   launchEncounter() {
@@ -60,11 +67,15 @@ export class CaptureComponent implements OnInit {
   }
 
   addPokemon(pokemon: Pokemon): void {
-    this.userObservable$.subscribe(user => {
-        user.pokemonTeam.push(pokemon);
-      }
-    );
+    this.currentUser.pokemonTeam.push(pokemon);
     this.alreadyCatch = true;
+    this.storePokemonToTeam(pokemon);
+  }
+
+  storePokemonToTeam(pokemon: Pokemon) {
+    const currentUser: User = this.userService.getStoredUser();
+    currentUser.pokemonTeam.push(pokemon);
+    localStorage.setItem('user', JSON.stringify(currentUser));
   }
 
 }

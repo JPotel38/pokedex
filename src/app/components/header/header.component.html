@@ -41,13 +41,15 @@
             <app-user-popover (open)="dismiss($event)"></app-user-popover>
           </ng-template>
         </ion-popover>
-        <ion-col *ngIf="currentUser.userName" sizeLg="2">
-          <ion-label>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-label>
-          <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
-            <img alt="pokeball" src="../../../assets/icons/pokeball.png" style="width: 30px">
-            <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>
-          </ion-button>
-        </ion-col>
+        <ng-container *ngIf="currentUser.userName">
+          <ion-col sizeLg="2">
+            <ion-label>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-label>
+            <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
+              <img alt="pokeball" src="../../../assets/icons/pokeball.png" style="width: 30px">
+              <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>
+            </ion-button>
+          </ion-col>
+        </ng-container>
       </ion-row>
     </ion-grid>
   </ion-toolbar>

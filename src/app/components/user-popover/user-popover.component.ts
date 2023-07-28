@@ -33,4 +33,9 @@ export class UserPopoverComponent implements OnInit {
     this.router.navigate([route]);
     if (isOpen) this.open.emit(false);
   }
+
+  logOut() {
+    this.userService.logOut();
+    this.open.emit(false);
+  }
 }

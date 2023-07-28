@@ -6,11 +6,11 @@ import {UserService} from '../../shared/services/user.service';
 import {Subscription} from "rxjs";
 
 @Component({
-  selector: 'app-account',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginPage implements OnDestroy {
+export class LoginComponent implements OnDestroy {
   public userForm: FormGroup;
   public user: User;
   public loginCtrl: FormControl;
@@ -41,19 +41,14 @@ export class LoginPage implements OnDestroy {
       login: this.userForm.get('login').value,
       userName: this.userForm.get('login').value,
       password: this.userForm.get('password').value,
-      pokemonTeam: []
     };
 
-    const registeredUser = this.userService.getUser();
+    const registeredUser = this.userService.getStoredUser();
     if (registeredUser.userName === this.user.userName && registeredUser.password === this.user.password) {
-      this.userService.currentUser$.next(this.user);
+      this.userService.currentUser$.next(registeredUser);
       this.router.navigate([`/`]);
     } else {
       alert('Unknown user');
     }
-  }
-
-  success(userArray: Array<User>): User {
-    return userArray.find(user => JSON.stringify(user) === JSON.stringify(this.user));
   }
 }

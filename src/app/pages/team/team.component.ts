@@ -23,7 +23,9 @@ export class TeamComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => {this.currentUser = user;});
+    this.userServiceSubscription = this.userService.currentUser$.subscribe(user => {
+      this.currentUser = user;
+    });
   }
 
   ngOnDestroy(): void {
@@ -35,18 +37,28 @@ export class TeamComponent implements OnInit, OnDestroy {
     this.index = index;
   }
 
-  deletePokemon(index: number): void {
-    this.userService.deletePokemon(index);
-  }
-
   cancel(): void {
     this.modal.dismiss(null, 'cancel');
     this.isModalOpen = false;
   }
 
   confirm(): void {
-    this.userService.updatePokemonName(this.index, this.pokemonName.value);
+    this.updatePokemonName(this.index, this.pokemonName.value);
     this.modal.dismiss(this.pokemonName, 'confirm');
     this.isModalOpen = false;
+  }
+
+  updatePokemonName(index: number, name: string): void {
+    const storedUser: User = this.userService.getStoredUser();
+    storedUser.pokemonTeam[index].chosenName = name;
+    localStorage.setItem('user', JSON.stringify(storedUser));
+    this.currentUser.pokemonTeam = storedUser.pokemonTeam;
+  }
+
+  deletePokemon(index: number): void {
+    const storedUser: User = this.userService.getStoredUser();
+    storedUser.pokemonTeam.splice(index, 1);
+    localStorage.setItem('user', JSON.stringify(storedUser));
+    this.currentUser.pokemonTeam = storedUser.pokemonTeam;
   }
 }

@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {AllPokemonsComponent} from '../../pages/all-pokemons/all-pokemons.component';
 import {AllPokemonResolver} from '../resolver/all-pokemon-resolver.service';
-import {LoginPage} from '../../pages/login/login-page.component';
+import {LoginComponent} from '../../pages/login/login.component';
 import {AccountComponent} from '../../pages/account/account.component';
 import {SigninComponent} from '../../pages/signin/signin.component';
 import {TeamComponent} from "../../pages/team/team.component";
@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginPage
+    component: LoginComponent
   },
   {
     path: 'signin',
