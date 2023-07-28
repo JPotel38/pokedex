@@ -1,7 +1,7 @@
 <ion-grid>
   <form (ngSubmit)="validate()" [formGroup]="userForm">
-    <ion-row>
-      <ion-col>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" sizeLg="3">
         <ion-item>
           <ion-input [formControl]="loginCtrl" label="{{'USERNAME' | translate}}" labelPlacement="floating"
                      type="text"></ion-input>
@@ -10,8 +10,8 @@
         </ion-item>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" sizeLg="3">
         <ion-item>
           <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" labelPlacement="floating"
                      type="password"></ion-input>
@@ -20,8 +20,8 @@
         </ion-item>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col class="ion-padding-top">
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-padding-top" size="12" sizeLg="3">
         <ion-button [disabled]="userForm.invalid" color="light" type="submit" class="login-button">{{'LOGIN' | translate}}</ion-button>
       </ion-col>
     </ion-row>

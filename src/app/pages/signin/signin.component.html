@@ -1,7 +1,7 @@
 <ion-grid>
   <form (ngSubmit)="validate()" [formGroup]="userForm">
-    <ion-row>
-      <ion-col>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" sizeLg="3">
         <ion-item>
           <ion-input [formControl]="loginCtrl" label="{{'USERNAME' | translate}}" labelPlacement="floating"
                      type="text"></ion-input>
@@ -11,33 +11,35 @@
       </ion-col>
     </ion-row>
     <form [formGroup]="passwordForm">
-      <ion-row>
-        <ion-item>
-          <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" labelPlacement="floating"
-                     type="password"></ion-input>
-          <ion-text *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')"
-                    color="danger">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}
-            >
-          </ion-text>
-        </ion-item>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" sizeLg="3">
+          <ion-item>
+            <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" labelPlacement="floating"
+                       type="password"></ion-input>
+            <ion-text *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')"
+                      color="danger">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}
+            </ion-text>
+          </ion-item>
+        </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-item>
-          <ion-input [formControl]="passwordConfirmCtrl" label="{{'PASSWORD_CONFIRM' | translate}}"
-                     labelPlacement="floating" type="password"></ion-input>
-          <ion-text *ngIf="passwordConfirmCtrl.dirty && passwordConfirmCtrl.hasError('required')"
-                    color="danger">{{'PASSWORD_CONFIRM_REQUIRED' | translate}}
-          </ion-text>
-        </ion-item>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" sizeLg="3">
+          <ion-item>
+            <ion-input [formControl]="passwordConfirmCtrl" label="{{'PASSWORD_CONFIRM' | translate}}"
+                       labelPlacement="floating" type="password"></ion-input>
+          </ion-item>
+        </ion-col>
       </ion-row>
     </form>
-    <ion-row>
-      <ion-text *ngIf="passwordForm.dirty && passwordForm.hasError('matchingError')" color="danger">
-        {{'PASSWORD_NOT_MATCHING' | translate}}
-      </ion-text>
+    <ion-row class="ion-justify-content-center">
+      <ion-col sizeLg="3">
+        <ion-text *ngIf="passwordForm.dirty && passwordForm.hasError('matchingError')" color="danger">
+          {{'PASSWORD_NOT_MATCHING' | translate}}
+        </ion-text>
+      </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col class="ion-padding-top">
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-padding-top" size="12" sizeLg="3">
         <ion-button [disabled]="userForm.invalid" class="signin-button" color="light"
                     type="submit">{{'SIGNIN' | translate}}</ion-button>
       </ion-col>
