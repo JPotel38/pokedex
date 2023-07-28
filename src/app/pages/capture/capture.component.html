@@ -21,21 +21,12 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="currentUser.userName; else elseBlock" class="ion-justify-content-center">
-        <ion-button (click)="addPokemon(randomPokemon)"
-                    [disabled]="alreadyCatch" color="light"> {{'CATCH' | translate}}
-        </ion-button>
-      </ion-row>
-      <ion-row *ngIf="!(userObservable$ | async).userName" class="ion-justify-content-center">
-        <ion-text color="success">Log in to catch Pokémon !</ion-text>
-      </ion-row>
     </ng-container>
   </ion-grid>
   <ion-button (click)="addPokemon(randomPokemon)"
-              *ngIf="(userObservable$ | async).userName && randomPokemon"
+              *ngIf="currentUser.userName && randomPokemon"
               [disabled]="alreadyCatch"
-              class="catch-button" color="success"
-              slot="fixed"> {{'CATCH' | translate}}
+              class="catch-button" color="success"> {{'CATCH' | translate}}
   </ion-button>
   <ion-button (click)="launchEncounter()" class="encounter-button" color="light"
               slot="fixed">{{'ENCOUNTER' | translate}} !
