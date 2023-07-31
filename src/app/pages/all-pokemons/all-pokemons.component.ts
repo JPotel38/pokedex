@@ -84,7 +84,7 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  filterByType(types): void {
+  filterByType(types: string[] | CustomEvent): void {
     this.typeSelectedArray = Array.isArray(types) ? types : types.detail.value;
     this.isFilteredByType = true;
     this.pokemonArray = this.allPokemonService.getAllPokemons();
@@ -93,9 +93,12 @@ export class AllPokemonsComponent implements OnDestroy {
     } else if (this.typeSelectedArray.length === 2) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => this.utilsService.arrayEquals(pokemon.types, this.typeSelectedArray))
     }
+    if(this.isFilteredByLegendary) {
+      this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
+    }
   }
 
-  filterLegendary(event: CustomEvent) {
+  filterLegendary(event: CustomEvent): void {
     this.isFilteredByLegendary = this.isChecked = event.detail.checked;
     if (this.isFilteredByLegendary) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
@@ -108,17 +111,11 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  clearFilter(filter: string): void {
+  clearName(): void {
     this.pokemon.reset();
-    this[filter] = false;
-    if (this.isFilteredByType) {
-      this.filterByType(this.typeSelectedArray);
-    } else {
-      if (filter === 'isFilteredByLegendary') {
-        this.isChecked = false;
-      }
-      this.pokemonArray = this.allPokemonService.getAllPokemons();
-    }
+    this.isFilteredByName = false;
+    if (this.isFilteredByType) this.filterByType(this.typeSelectedArray);
+    this.pokemonArray = this.allPokemonService.getAllPokemons();
   }
 
   clearType(index: number): void {
@@ -129,13 +126,25 @@ export class AllPokemonsComponent implements OnDestroy {
       if (!this.typeSelectedArray.length) {
         this.isFilteredByType = false;
         this.pokemonArray = this.allPokemonService.getAllPokemons();
+        if(this.isFilteredByLegendary) {
+          this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
+        }
       } else {
         this.filterByType(this.typeSelectedArray)
       }
     }
   }
 
-  goToCaptureMode() {
+  goToCaptureMode(): void {
     this.router.navigate(['capture']);
+  }
+
+  clearLegendary(): void {
+    this.isFilteredByLegendary = this.isChecked = false;
+    if (this.isFilteredByType) {
+      this.filterByType(this.typeSelectedArray);
+    } else {
+      this.pokemonArray = this.allPokemonService.getAllPokemons();
+    }
   }
 }

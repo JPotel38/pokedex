@@ -10,7 +10,7 @@
     <ion-row class="ion-justify-content-center">
       <ion-col sizeLg="3" sizeXs="12">
         <ion-searchbar (keyup.enter)="filterByName()" [formControl]="pokemon"
-                       placeholder="{{'SEARCH POKEMON'| translate}}"></ion-searchbar>
+                       placeholder="{{'SEARCH POKEMON'| translate}}" (ionClear)="clearName()"></ion-searchbar>
       </ion-col>
       <ion-col size="6" sizeLg="2">
         <ion-list>
@@ -35,7 +35,7 @@
       <ion-text *ngIf="typeSelectedArray.length || isFilteredByName || isFilteredByLegendary">{{'FILTER ON' | translate}}</ion-text>
       <ion-col *ngIf="isFilteredByName">
         <ion-chip>{{'NAME' | translate}} : {{pokemon.value | titlecase}}
-          <ion-icon (click)="clearFilter('isFilteredByName')" name="close"></ion-icon>
+          <ion-icon (click)="clearName()" name="close"></ion-icon>
         </ion-chip>
       </ion-col>
       <ion-col>
@@ -47,7 +47,7 @@
         </ion-chip>
         <ion-chip *ngIf="isFilteredByLegendary">
           <ion-label>{{'LEGENDARY'| translate }}
-            <ion-icon (click)="clearFilter('isFilteredByLegendary')" name="close"></ion-icon>
+            <ion-icon (click)="clearLegendary()" name="close"></ion-icon>
           </ion-label>
         </ion-chip>
       </ion-col>
