@@ -95,12 +95,16 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  filterLegendary(event: any) {
+  filterLegendary(event: CustomEvent) {
     this.isFilteredByLegendary = this.isChecked = event.detail.checked;
     if (this.isFilteredByLegendary) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
     } else {
-      this.pokemonArray = this.allPokemonService.getAllPokemons();
+      if (this.isFilteredByType) {
+        this.filterByType(this.typeSelectedArray);
+      } else {
+        this.pokemonArray = this.allPokemonService.getAllPokemons();
+      }
     }
   }
 

@@ -1,7 +1,7 @@
 <ion-content>
   <ion-grid>
     <ion-row class="ion-justify-content-center">
-      <ion-col sizeXs="6" class="ion-hide-sm-up">
+      <ion-col class="ion-hide-sm-up" sizeXs="6">
         <ion-button (click)="goToCaptureMode()" color="light">{{'CATCH MODE' | translate}}</ion-button>
       </ion-col>
     </ion-row>
@@ -25,17 +25,16 @@
           </ion-item>
         </ion-list>
       </ion-col>
-      <ion-col size="6" sizeLg="2" class="ion-align-self-center">
+      <ion-col class="ion-align-self-center" size="6" sizeLg="2">
         <ion-toggle (ionChange)="filterLegendary($event)" [checked]="isChecked" aria-label="Legendary filter"
                     color="warning">{{'LEGENDARY'| translate }}
         </ion-toggle>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-text
-        *ngIf="typeSelectedArray.length || isFilteredByName || isFilteredByLegendary">{{'FILTER ON' | translate}}</ion-text>
-      <ion-col>
-        <ion-chip *ngIf="isFilteredByName">{{'NAME' | translate}} : {{pokemon.value | titlecase}}
+    <ion-row class="ion-align-items-center">
+      <ion-text *ngIf="typeSelectedArray.length || isFilteredByName || isFilteredByLegendary">{{'FILTER ON' | translate}}</ion-text>
+      <ion-col *ngIf="isFilteredByName">
+        <ion-chip>{{'NAME' | translate}} : {{pokemon.value | titlecase}}
           <ion-icon (click)="clearFilter('isFilteredByName')" name="close"></ion-icon>
         </ion-chip>
       </ion-col>
