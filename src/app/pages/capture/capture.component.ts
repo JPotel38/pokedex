@@ -4,6 +4,7 @@ import {Pokemon} from "../../shared/interfaces/pokemon";
 import {UserService} from "../../shared/services/user.service";
 import {Subscription} from "rxjs";
 import {User} from "../../shared/interfaces/user";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-capture',
@@ -12,7 +13,7 @@ import {User} from "../../shared/interfaces/user";
 })
 export class CaptureComponent implements OnInit, OnDestroy {
   public randomPokemon: Pokemon;
-  alreadyCatch: boolean;
+  public alreadyCatch: boolean;
   public currentUser: User;
   private allPokemonArray: Array<Pokemon>;
   private totalWeight: number;
@@ -20,7 +21,8 @@ export class CaptureComponent implements OnInit, OnDestroy {
   private userServiceSubscription: Subscription;
 
   constructor(public allPokemonService: AllPokemonService,
-              public userService: UserService) {
+              public userService: UserService,
+              public readonly router: Router) {
 
   }
 
@@ -67,9 +69,13 @@ export class CaptureComponent implements OnInit, OnDestroy {
   }
 
   addPokemon(pokemon: Pokemon): void {
-    this.currentUser.pokemonTeam.push(pokemon);
-    this.alreadyCatch = true;
-    this.storePokemonToTeam(pokemon);
+    if (this.currentUser.userName) {
+      this.currentUser.pokemonTeam.push(pokemon);
+      this.alreadyCatch = true;
+      this.storePokemonToTeam(pokemon);
+    } else {
+      this.router.navigate(['login'])
+    }
   }
 
   storePokemonToTeam(pokemon: Pokemon) {

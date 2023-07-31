@@ -24,7 +24,7 @@
     </ng-container>
   </ion-grid>
   <ion-button (click)="addPokemon(randomPokemon)"
-              *ngIf="currentUser.userName && randomPokemon"
+              *ngIf="randomPokemon"
               [disabled]="alreadyCatch"
               class="catch-button" color="success"> {{'CATCH' | translate}}
   </ion-button>
