@@ -15,7 +15,7 @@
       <ion-col size="6" sizeLg="2">
         <ion-list>
           <ion-item>
-            <ion-select (ionChange)="filterByType($event)" [multiple]="true"
+            <ion-select (ionChange)="filterByType($event.detail.value)" [multiple]="true"
                         aria-label="Pokémon type"
                         placeholder="{{'SELECT TYPE'| translate}}"
             >
@@ -26,7 +26,8 @@
         </ion-list>
       </ion-col>
       <ion-col class="ion-align-self-center" size="6" sizeLg="2">
-        <ion-toggle (ionChange)="filterLegendary($event)" [checked]="isChecked" aria-label="Legendary filter"
+        <ion-toggle (ionChange)="filterLegendary($event.detail.checked)" [checked]="isChecked"
+                    aria-label="Legendary filter"
                     color="warning">{{'LEGENDARY'| translate }}
         </ion-toggle>
       </ion-col>

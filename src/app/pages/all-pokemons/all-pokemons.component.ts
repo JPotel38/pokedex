@@ -84,8 +84,8 @@ export class AllPokemonsComponent implements OnDestroy {
     }
   }
 
-  filterByType(types: string[] | CustomEvent): void {
-    this.typeSelectedArray = Array.isArray(types) ? types : types.detail.value;
+  filterByType(types: string[]): void {
+    this.typeSelectedArray = types;
     this.isFilteredByType = true;
     this.pokemonArray = this.allPokemonService.getAllPokemons();
     if (this.typeSelectedArray.length === 1) {
@@ -93,13 +93,13 @@ export class AllPokemonsComponent implements OnDestroy {
     } else if (this.typeSelectedArray.length === 2) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => this.utilsService.arrayEquals(pokemon.types, this.typeSelectedArray))
     }
-    if(this.isFilteredByLegendary) {
+    if (this.isFilteredByLegendary) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
     }
   }
 
-  filterLegendary(event: CustomEvent): void {
-    this.isFilteredByLegendary = this.isChecked = event.detail.checked;
+  filterLegendary(event: boolean): void {
+    this.isFilteredByLegendary = this.isChecked = event;
     if (this.isFilteredByLegendary) {
       this.pokemonArray = this.pokemonArray.filter(pokemon => pokemon.isLegendary)
     } else {
