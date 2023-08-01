@@ -1,10 +1,12 @@
+@import '../../../theme/variables';
+
 ion-card {
   cursor: pointer;
   border: 3px solid;
 }
 
 ion-card-header ion-img {
-height: 15em;
+  height: 15em;
 }
 
 ion-card-title {
@@ -17,6 +19,6 @@ ion-card-title {
 }
 
 .legendary-button {
-  --background: #FFD700;
-  box-shadow: 0 0 10px gold
+  --background: $gold;
+  box-shadow: 0 0 10px $gold;
 }
