@@ -26,7 +26,7 @@ export class AllPokemonsComponent implements OnDestroy {
   public allTypes = Object.values(TypesEnum);
   public typeSelectedArray: string[] = [];
   public team: Array<Pokemon> = [];
-  isChecked: boolean = false;
+  public isChecked: boolean = false;
   private translateServiceSubscription: Subscription;
   private readonly activatedRouteSubscription: Subscription;
   private user: User;

@@ -29,12 +29,12 @@ export class UserPopoverComponent implements OnInit {
     if (this.userServiceSubscription) this.userServiceSubscription.unsubscribe();
   }
 
-  handleNavigation(route: string, isOpen: boolean) {
+  handleNavigation(route: string, isOpen: boolean): void {
     this.router.navigate([route]);
     if (isOpen) this.open.emit(false);
   }
 
-  logOut() {
+  logOut(): void {
     this.userService.logOut();
     this.open.emit(false);
   }

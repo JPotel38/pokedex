@@ -8,7 +8,7 @@ import {UserService} from "../../../shared/services/user.service";
   styleUrls: ['./pokemon-container.component.scss'],
 })
 export class PokemonContainerComponent {
-  pokemonId = this.activatedRoute.snapshot.params.id;
+  public pokemonId = this.activatedRoute.snapshot.params.id;
 
   constructor(
     private activatedRoute: ActivatedRoute,

@@ -15,8 +15,8 @@ export class TeamComponent implements OnInit, OnDestroy {
   public pokemonName = new FormControl('');
   public index: number;
   public currentUser: User;
-  @ViewChild(IonModal) modal: IonModal;
   private userServiceSubscription: Subscription;
+  @ViewChild(IonModal) modal: IonModal;
 
   constructor(public userService: UserService
   ) {

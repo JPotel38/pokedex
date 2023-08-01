@@ -13,8 +13,8 @@ import {Subscription} from "rxjs";
 export class FooterComponent implements OnInit {
   public isOpen: boolean = false;
   public currentUser: User;
-  @ViewChild('popover') popover;
   private userServiceSubscription: Subscription;
+  @ViewChild('popover') popover;
 
   constructor(public utilsService: UtilsService,
               public readonly router: Router,

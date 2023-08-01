@@ -5,7 +5,6 @@ import {Pokemon} from '../../../shared/interfaces/pokemon';
 import {AllPokemonService} from '../../../shared/services/all-pokemon.service';
 import {UserService} from "../../../shared/services/user.service";
 import {User} from "../../../shared/interfaces/user";
-import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-pokemon-details',
@@ -22,7 +21,7 @@ export class PokemonDetailsComponent implements OnChanges {
   @Input()
   public navigate: number;
   @Output()
-  evolve: EventEmitter<void> = new EventEmitter<void>();
+  public evolve: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -59,7 +58,7 @@ export class PokemonDetailsComponent implements OnChanges {
     this.router.navigate(['/signin']);
   }
 
-  nextPokemon() {
+  nextPokemon(): void {
     this.evolve.emit();
   }
 }
