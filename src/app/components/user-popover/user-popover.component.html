@@ -1,20 +1,20 @@
 <ng-container *ngIf="!currentUser.userName">
-  <ion-row class="nav-link ion-align-items-end">
+  <ion-row class="ion-align-items-center">
     <ion-icon name="person-outline"></ion-icon>
     <ion-nav-link (click)="handleNavigation('signin', true)">{{'SIGNIN' | translate}}
     </ion-nav-link>
   </ion-row>
-  <ion-row class="nav-link ion-align-items-end">
+  <ion-row class="ion-align-items-center">
     <ion-icon name="log-in-outline"></ion-icon>
-    <a (click)="handleNavigation('login', true)">{{'LOGIN' | translate}}
-    </a>
+    <ion-nav-link (click)="handleNavigation('login', true)">{{'LOGIN' | translate}}
+    </ion-nav-link>
   </ion-row>
 </ng-container>
 <ng-container *ngIf="currentUser.userName">
-  <ion-row class="nav-link ion-align-items-end">
+  <ion-row class="ion-align-items-center">
     <ion-nav-link (click)="handleNavigation('account', true)">{{'ACCOUNT' | translate}}</ion-nav-link>
   </ion-row>
-  <ion-row class="nav-link ion-align-items-end">
-    <a (click)="logOut()">{{'LOGOUT' | translate}}</a>
+  <ion-row class="ion-align-items-center">
+    <ion-nav-link (click)="logOut()">{{'LOGOUT' | translate}}</ion-nav-link>
   </ion-row>
 </ng-container>
