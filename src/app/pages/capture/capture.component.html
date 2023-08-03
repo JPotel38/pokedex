@@ -9,7 +9,7 @@
       <ion-row class="ion-justify-content-center">
         <ion-col size="9" sizeLg="3">
           <ion-img [alt]="randomPokemon.name" [src]="randomPokemon.img" id="img"></ion-img>
-          <ion-row>
+          <ion-row class="ion-justify-content-center">
             <ion-text *ngIf="randomPokemon.types.length == 1">
               {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
               {{'TYPES.' + randomPokemon.types[0] | translate}}.

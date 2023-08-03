@@ -1,17 +1,23 @@
 @import '../../../theme/variables';
 
+.card-grid {
+  width: 75%;
+}
+
 ion-card {
   cursor: pointer;
   border: 3px solid;
 }
 
 ion-card-header ion-img {
-  height: 15em;
+  height: 10em;
 }
 
 ion-card-title {
   width: 6em;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .icon {

@@ -7,10 +7,10 @@
     </ion-row>
     <ion-item-divider class="ion-hide-sm-up">
     </ion-item-divider>
-    <ion-row class="ion-justify-content-center">
+    <ion-row class="ion-justify-content-center ion-align-items-center ion-justify-content-center">
       <ion-col sizeLg="3" sizeXs="12">
-        <ion-searchbar (keyup.enter)="filterByName()" [formControl]="pokemon"
-                       placeholder="{{'SEARCH POKEMON'| translate}}" (ionClear)="clearName()"></ion-searchbar>
+        <ion-searchbar (ionClear)="clearName()" (keyup.enter)="filterByName()"
+                       [formControl]="pokemon" placeholder="{{'SEARCH POKEMON'| translate}}"></ion-searchbar>
       </ion-col>
       <ion-col size="6" sizeLg="2">
         <ion-list>
@@ -33,7 +33,8 @@
       </ion-col>
     </ion-row>
     <ion-row class="ion-align-items-center">
-      <ion-text *ngIf="typeSelectedArray.length || isFilteredByName || isFilteredByLegendary">{{'FILTER ON' | translate}}</ion-text>
+      <ion-text
+        *ngIf="typeSelectedArray.length || isFilteredByName || isFilteredByLegendary">{{'FILTER ON' | translate}}</ion-text>
       <ion-col *ngIf="isFilteredByName">
         <ion-chip>{{'NAME' | translate}} : {{pokemon.value | titlecase}}
           <ion-icon (click)="clearName()" name="close"></ion-icon>
@@ -56,9 +57,9 @@
   </ion-grid>
   <ion-item-divider>
   </ion-item-divider>
-  <ion-grid>
+  <ion-grid class="card-grid">
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" size="12" sizeMd="3">
+      <ion-col *ngFor="let pokemon of pokemonArray" size="12" sizeMd="4">
         <ion-card
           (click)="goToDetails(pokemon.id)"
           [ngStyle]="{'border-image': pokemon.types.length == 1 ?
