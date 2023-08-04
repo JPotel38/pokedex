@@ -1,7 +1,16 @@
 @import '../../../theme/variables';
 
-.card-grid {
-  width: 75%;
+
+@media (max-width: 728px) {
+  .card-grid {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    width: 75%;
+  }
 }
 
 ion-card {
@@ -18,10 +27,6 @@ ion-card-title {
   margin: auto;
   display: flex;
   justify-content: center;
-}
-
-.icon {
-  margin: 0;
 }
 
 .legendary-button {
