@@ -28,7 +28,7 @@
               </ion-button>
             </ion-col>
             <ion-col class="ion-hide-sm-down" size="auto">
-              <ion-icon class="user-icon" (click)="presentPopover($event)" name="person-circle-outline">
+              <ion-icon (click)="presentPopover($event)" class="icon" name="person-circle-outline">
               </ion-icon>
             </ion-col>
           </ion-row>
@@ -42,7 +42,7 @@
           <ion-col sizeLg="2">
             <ion-label>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-label>
             <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
-              <img alt="pokeball" src="../../../assets/icons/pokeball.png" style="width: 30px">
+              <img alt="pokeball" class="icon" src='./assets/icons/pokeball.png'>
               <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>
             </ion-button>
           </ion-col>
