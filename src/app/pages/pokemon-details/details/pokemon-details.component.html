@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content class="ion-align-self-center">
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-title class="ion-text-center">
@@ -6,9 +6,11 @@
       </ion-title>
     </ion-row>
     <ion-row>
-      <ion-col pushLg="4" sizeLg="10">
-        <ion-img (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img" id="img"></ion-img>
-        <ion-row>
+      <ion-col>
+        <ion-row class="ion-justify-content-center">
+          <ion-img (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img" id="img"></ion-img>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
           <ion-text *ngIf="pokemon.types.length == 1">
             {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
             {{'TYPES.' + pokemon.types[0] | translate}}.
@@ -18,26 +20,22 @@
             /{{'TYPES.' + pokemon.types[1] | translate}}.
           </ion-text>
         </ion-row>
-        <ion-row>
-          <ion-col sizeLg="8">
-            {{'DESC.' + pokemon.name | translate}}
-          </ion-col>
+        <ion-row class="ion-justify-content-center">
+          {{'DESC.' + pokemon.name | translate}}
         </ion-row>
-        <ion-row>
+        <ion-row class="ion-justify-content-center">
           <ion-col sizeLg="3">
             <ion-text>{{'WEIGHT' | translate}}: {{pokemon.weight}}</ion-text>
           </ion-col>
-          <ion-col>
+          <ion-col sizeLg="3">
             <ion-text>{{'HEIGHT' | translate}}: {{pokemon.height}}</ion-text>
           </ion-col>
         </ion-row>
-        <ion-row>
-          <ion-col sizeLg="4">
-            <ion-item>
-              <ion-input (ionChange)="manageLevel($event)" label="{{'LEVEL' | translate}} :" max="100" min="1"
-                         type="number"></ion-input>
-            </ion-item>
-          </ion-col>
+        <ion-row class="ion-justify-content-center">
+          <ion-item>
+            <ion-input (ionChange)="manageLevel($event)" label="{{'LEVEL' | translate}} :" max="100" min="1"
+                       type="number"></ion-input>
+          </ion-item>
         </ion-row>
         <ion-row>
           <ion-button (click)="nextPokemon()" *ngIf="pokemon.evolutionLevel && level >= pokemon.evolutionLevel"
