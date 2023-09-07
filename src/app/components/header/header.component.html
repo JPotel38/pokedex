@@ -40,7 +40,7 @@
         </ion-popover>
         <ng-container *ngIf="currentUser.userName">
           <ion-col sizeLg="2">
-            <ion-label>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-label>
+            <ion-text>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-text>
             <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
               <img alt="pokeball" class="icon" src='./assets/icons/pokeball.png'>
               <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>

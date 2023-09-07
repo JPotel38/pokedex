@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
@@ -13,19 +13,18 @@ import {TypeNamePipe} from './pipes/type-name.pipe';
 import {TeamComponent} from "./pages/team/team.component";
 import {AccountComponent} from "./pages/account/account.component";
 import {HeaderComponent} from "./components/header/header.component";
-import {PokemonContainerComponent} from "./pages/pokemon-details/pokemon-container/pokemon-container.component";
 import {I18nModule} from "./shared/modules/i18n.module";
 import {FooterComponent} from "./components/footer/footer.component";
 import {RouteReuseStrategy} from "@angular/router";
 import {PokemonDetailsComponent} from "./pages/pokemon-details/details/pokemon-details.component";
 import {UserPopoverComponent} from "./components/user-popover/user-popover.component";
 import {CaptureComponent} from "./pages/capture/capture.component";
+import {SlideComponent} from "./pages/pokemon-details/slide/slide.component";
 
 @NgModule({
   declarations: [AppComponent,
     HeaderComponent,
     PokemonDetailsComponent,
-    PokemonContainerComponent,
     AllPokemonsComponent,
     CaptureComponent,
     LoginComponent,
@@ -35,17 +34,18 @@ import {CaptureComponent} from "./pages/capture/capture.component";
     AccountComponent,
     HeaderComponent,
     FooterComponent,
+    SlideComponent,
     UserPopoverComponent],
   imports: [
     BrowserModule,
     I18nModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    ReactiveFormsModule,
-
+    ReactiveFormsModule
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
-  bootstrap: [AppComponent]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

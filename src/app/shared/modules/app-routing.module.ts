@@ -6,15 +6,13 @@ import {LoginComponent} from '../../pages/login/login.component';
 import {AccountComponent} from '../../pages/account/account.component';
 import {SigninComponent} from '../../pages/signin/signin.component';
 import {TeamComponent} from "../../pages/team/team.component";
-import {
-  PokemonContainerComponent
-} from "../../pages/pokemon-details/pokemon-container/pokemon-container.component";
 import {CaptureComponent} from "../../pages/capture/capture.component";
+import {SlideComponent} from "../../pages/pokemon-details/slide/slide.component";
 
 const routes: Routes = [
   {
     path: 'pokemon-details/:id',
-    component: PokemonContainerComponent
+    component: SlideComponent
   },
   {
     path: 'login',

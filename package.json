@@ -29,10 +29,11 @@
     "chokidar": "^3.5.3",
     "glob-to-regexp": "^0.4.1",
     "messageformat": "^2.3.0",
-    "ngx-build-plus": "^11.0.0",
+    "ngx-build-plus": "^16.0.0",
     "ngx-pagination": "^6.0.2",
     "ngx-translate-messageformat-compiler": "^5.1.0",
-    "rxjs": "~6.6.0",
+    "rxjs": "^7.8.1",
+    "swiper": "^10.2.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },

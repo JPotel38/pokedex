@@ -22,7 +22,6 @@ export class AllPokemonsComponent implements OnDestroy {
   public isFilteredByName: boolean = false;
   public isFilteredByType: boolean = false;
   public isFilteredByLegendary: boolean = false;
-  public colorEnum = ColorEnum;
   public allTypes = Object.values(TypesEnum);
   public typeSelectedArray: string[] = [];
   public team: Array<Pokemon> = [];

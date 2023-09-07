@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StoneEnum} from 'src/app/shared/enums/stone.enum';
 import {Pokemon} from '../../../shared/interfaces/pokemon';
@@ -11,15 +11,13 @@ import {User} from "../../../shared/interfaces/user";
   templateUrl: './pokemon-details.component.html',
   styleUrls: ['./pokemon-details.component.scss'],
 })
-export class PokemonDetailsComponent implements OnChanges {
-  public pokemonId: number;
-  public pokemon: Pokemon;
+export class PokemonDetailsComponent {
   public level: number;
   public team: Array<Pokemon> = [];
   public user: User;
   public currentUser: User;
   @Input()
-  public navigate: number;
+  public pokemon: Pokemon;
   @Output()
   public evolve: EventEmitter<void> = new EventEmitter<void>();
 
@@ -29,12 +27,6 @@ export class PokemonDetailsComponent implements OnChanges {
     private router: Router,
     public userService: UserService,
   ) {
-    this.pokemonId = this.activatedRoute.snapshot.params.id;
-    this.pokemon = this.allPokemonService.getDetailsPokemon(this.pokemonId);
-  }
-
-  ngOnChanges(): void {
-    this.router.navigate([`pokemon-details/${this.navigate}`]);
   }
 
   playAudio(): void {
@@ -50,7 +42,7 @@ export class PokemonDetailsComponent implements OnChanges {
   }
 
   useStone(stone: StoneEnum): void {
-    const evolution = (Number(this.pokemonId) + this.pokemon.stone.indexOf(stone) + 1).toString();
+    const evolution = (Number(this.pokemon.id) + this.pokemon.stone.indexOf(stone) + 1).toString();
     this.router.navigate([`pokemon-details/${evolution}`]);
   }
 
