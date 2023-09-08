@@ -38,6 +38,7 @@ export class CaptureComponent implements OnInit, OnDestroy {
         normalizedWeight: pokemon.encounterRate / this.totalWeight,
       };
     });
+    this.launchEncounter();
   }
 
   ngOnDestroy() {
@@ -73,6 +74,7 @@ export class CaptureComponent implements OnInit, OnDestroy {
       this.currentUser.pokemonTeam.push(pokemon);
       this.alreadyCatch = true;
       this.storePokemonToTeam(pokemon);
+      this.launchEncounter();
     } else {
       this.router.navigate(['login'])
     }

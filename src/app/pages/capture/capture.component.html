@@ -1,34 +1,24 @@
 <ion-content>
-  <ion-grid>
-    <ng-container *ngIf="randomPokemon">
-      <ion-row class="ion-justify-content-center">
-        <ion-title class="ion-text-center">
-          #{{randomPokemon.id}} {{'NAMES.' + randomPokemon.name | translate}}
-        </ion-title>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="9" sizeLg="3">
-          <ion-img [alt]="randomPokemon.name" [src]="randomPokemon.img" id="img"></ion-img>
-          <ion-row class="ion-justify-content-center">
-            <ion-text *ngIf="randomPokemon.types.length == 1">
-              {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
-              {{'TYPES.' + randomPokemon.types[0] | translate}}.
-            </ion-text>
-            <ion-text *ngIf="randomPokemon.types.length > 1">
-              {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + randomPokemon.types[0] | translate}}
-              /{{'TYPES.' + randomPokemon.types[1] | translate}}.
-            </ion-text>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-    </ng-container>
-  </ion-grid>
-  <ion-button (click)="addPokemon(randomPokemon)"
-              *ngIf="randomPokemon"
-              [disabled]="alreadyCatch"
-              class="catch-button" color="success"> {{'CATCH' | translate}}
-  </ion-button>
-  <ion-button (click)="launchEncounter()" class="encounter-button" color="light"
-              slot="fixed">{{'ENCOUNTER' | translate}} !
-  </ion-button>
+
+  <ion-card>
+    <ion-img [alt]="randomPokemon.name"
+             [ngStyle]="randomPokemon.color.length < 2 ? {'background-color': randomPokemon.color[0] } : {'background': 'linear-gradient(to right,' + randomPokemon.color[0] + ' 0%,' + randomPokemon.color[1] + ' 100%)'}"
+             [src]="randomPokemon.img"
+             id="pokemon-img"></ion-img>
+    <ion-card-header>
+      <ion-card-title>#{{randomPokemon.id}} {{'NAMES.' + randomPokemon.name | translate}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text *ngIf="randomPokemon.types.length == 1">
+        {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
+        {{'TYPES.' + randomPokemon.types[0] | translate}}.
+      </ion-text>
+      <ion-text *ngIf="randomPokemon.types.length > 1">
+        {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + randomPokemon.types[0] | translate}}
+        /{{'TYPES.' + randomPokemon.types[1] | translate}}.
+      </ion-text>
+    </ion-card-content>
+    <ion-icon (click)="launchEncounter()" class="icon-lg" color="danger" name="close-circle-outline"></ion-icon>
+    <ion-icon (click)="addPokemon(randomPokemon)" class="icon-lg" color="success" name="heart"></ion-icon>
+  </ion-card>
 </ion-content>
