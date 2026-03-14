@@ -11,14 +11,19 @@
           <ion-img (click)="playAudio()" [alt]="pokemon.name" [src]="pokemon.img" id="img"></ion-img>
         </ion-row>
         <ion-row class="ion-justify-content-center">
-          <ion-text *ngIf="pokemon.types.length == 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
-            {{'TYPES.' + pokemon.types[0] | translate}}.
-          </ion-text>
-          <ion-text *ngIf="pokemon.types.length > 1">
-            {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + pokemon.types[0] | translate}}
-            /{{'TYPES.' + pokemon.types[1] | translate}}.
-          </ion-text>
+          @if (pokemon.types.length == 1) {
+          <ion-text>
+          {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
+          {{'TYPES.' + pokemon.types[0] | translate}}.
+            </ion-text>
+          }
+          @if (pokemon.types.length > 1) {
+          <ion-text>
+          {{'NAMES.' + pokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{
+          'TYPES.' + pokemon.types[0] | translate}}
+          /{{'TYPES.' + pokemon.types[1] | translate}}.
+            </ion-text>
+          }
         </ion-row>
         <ion-row class="ion-justify-content-center">
           {{'DESC.' + pokemon.name | translate}}
@@ -38,14 +43,20 @@
           </ion-item>
         </ion-row>
         <ion-row>
-          <ion-button (click)="nextPokemon()" *ngIf="pokemon.evolutionLevel && level >= pokemon.evolutionLevel"
-                      color="success">{{'EVOLVE' | translate}}
+          @if (pokemon.evolutionLevel && level >= pokemon.evolutionLevel) {
+          <ion-button (click)="nextPokemon()"
+            color="success">{{'EVOLVE' | translate}}
           </ion-button>
-          <ion-button (click)="nextPokemon()" *ngIf="pokemon.exchange"
-                      color="light">{{'EXCHANGE' | translate}}</ion-button>
-          <div *ngFor="let stone of pokemon.stone">
+          }
+          @if (pokemon.exchange) {
+          <ion-button (click)="nextPokemon()"
+          color="light">{{'EXCHANGE' | translate}}</ion-button>
+          }
+          @for (stone of pokemon.stone; track stone) {
+          <div>
             <ion-img (click)="useStone(stone)" [src]='stone' id="stone"></ion-img>
           </div>
+          }
         </ion-row>
       </ion-col>
     </ion-row>

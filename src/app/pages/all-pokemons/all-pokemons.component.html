@@ -19,8 +19,10 @@
                         aria-label="Pokémon type"
                         placeholder="{{'SELECT TYPE'| translate}}"
             >
-              <ion-select-option *ngFor="let type of allTypes"
-                                 value="{{type}}">{{'TYPES.' + type | translate | typeName }}</ion-select-option>
+              @for (type of allTypes; track type) {
+              <ion-select-option
+              value="{{type}}">{{'TYPES.' + type | translate | typeName }}</ion-select-option>
+              }
             </ion-select>
           </ion-item>
         </ion-list>
@@ -33,25 +35,33 @@
       </ion-col>
     </ion-row>
     <ion-row class="ion-align-items-center">
+      @if (typeSelectedArray.length || isFilteredByName || isFilteredByLegendary) {
       <ion-text
-        *ngIf="typeSelectedArray.length || isFilteredByName || isFilteredByLegendary">{{'FILTER ON' | translate}}</ion-text>
-      <ion-col *ngIf="isFilteredByName">
-        <ion-chip>{{'NAME' | translate}} : {{pokemon.value | titlecase}}
-          <ion-icon (click)="clearName()" name="close"></ion-icon>
-        </ion-chip>
-      </ion-col>
+      >{{'FILTER ON' | translate}}</ion-text>
+      }
+      @if (isFilteredByName) {
       <ion-col>
-        <ion-chip *ngFor="let type of typeSelectedArray;let i = index">
+        <ion-chip>{{'NAME' | translate}} : {{pokemon.value | titlecase}}
+      <ion-icon (click)="clearName()" name="close"></ion-icon>
+    </ion-chip>
+  </ion-col>
+      }
+      <ion-col>
+        @for (type of typeSelectedArray; track type; let i = $index) {
+        <ion-chip>
           <ion-label>Type :
-            {{'TYPES.' + type | translate | typeName | titlecase}}
-            <ion-icon (click)="clearType(i)" name="close"></ion-icon>
-          </ion-label>
-        </ion-chip>
-        <ion-chip *ngIf="isFilteredByLegendary">
+        {{'TYPES.' + type | translate | typeName | titlecase}}
+        <ion-icon (click)="clearType(i)" name="close"></ion-icon>
+      </ion-label>
+    </ion-chip>
+        }
+        @if (isFilteredByLegendary) {
+        <ion-chip>
           <ion-label>{{'LEGENDARY'| translate }}
-            <ion-icon (click)="clearLegendary()" name="close"></ion-icon>
-          </ion-label>
-        </ion-chip>
+        <ion-icon (click)="clearLegendary()" name="close"></ion-icon>
+      </ion-label>
+    </ion-chip>
+        }
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -59,22 +69,24 @@
   </ion-item-divider>
   <ion-grid class="card-grid">
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemonArray" size="12" sizeMd="4">
+      @for (pokemon of pokemonArray; track pokemon) {
+      <ion-col size="12" sizeMd="4">
         <ion-card
           (click)="goToDetails(pokemon.id)"
-          [ngStyle]="{'border-image': pokemon.types.length == 1 ?
-                  'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[0]+ ') 25'
-                  : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ') 25'
-                  }"
-        >
-          <ion-card-header>
-            <ion-img [alt]="pokemon.name" [src]="pokemon.img"></ion-img>
-            <ion-card-title>
-              {{'NAMES.' + pokemon.name | translate}}
-            </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
+        [ngStyle]="{'border-image': pokemon.types.length == 1 ?
+      'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[0]+ ') 25'
+      : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ') 25'
+      }"
+            >
+            <ion-card-header>
+              <ion-img [alt]="pokemon.name" [src]="pokemon.img"></ion-img>
+              <ion-card-title>
+      {{'NAMES.' + pokemon.name | translate}}
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-col>
+      }
     </ion-row>
   </ion-grid>
 </ion-content>
