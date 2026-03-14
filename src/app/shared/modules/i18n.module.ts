@@ -1,4 +1,4 @@
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClient, provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {NgModule} from "@angular/core";
@@ -7,18 +7,14 @@ export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
 
 
 @NgModule({
-  imports: [
-    HttpClientModule,
-    TranslateModule.forRoot({
-      defaultLanguage: 'en',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
-  ],
-  exports: [TranslateModule]
+  exports: [TranslateModule], imports: [TranslateModule.forRoot({
+    defaultLanguage: 'en',
+    loader: {
+      provide: TranslateLoader,
+      useFactory: httpLoaderFactory,
+      deps: [HttpClient]
+    }
+  })], providers: [provideHttpClient(withInterceptorsFromDi())]
 })
 export class I18nModule {
   constructor(translate: TranslateService) {
