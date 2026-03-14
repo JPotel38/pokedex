@@ -10,6 +10,7 @@ import {UtilsService} from "../../shared/services/utils.service";
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  standalone: false
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   public isChecked: boolean = false;

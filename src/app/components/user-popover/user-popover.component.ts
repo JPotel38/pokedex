@@ -9,6 +9,7 @@ import {Router} from "@angular/router";
   selector: 'app-user-popover',
   templateUrl: './user-popover.component.html',
   styleUrls: ['./user-popover.component.scss'],
+  standalone: false
 })
 export class UserPopoverComponent implements OnInit {
   public currentUser: User;

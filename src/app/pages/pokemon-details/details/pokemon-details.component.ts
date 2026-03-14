@@ -10,6 +10,7 @@ import {User} from "../../../shared/interfaces/user";
   selector: 'app-pokemon-details',
   templateUrl: './pokemon-details.component.html',
   styleUrls: ['./pokemon-details.component.scss'],
+  standalone: false
 })
 export class PokemonDetailsComponent {
   public level: number;

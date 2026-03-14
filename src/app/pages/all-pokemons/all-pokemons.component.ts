@@ -15,6 +15,7 @@ import {TypesEnum} from "../../shared/enums/types.enum";
   selector: 'app-all-pokemons',
   templateUrl: './all-pokemons.component.html',
   styleUrls: ['./all-pokemons.component.scss'],
+  standalone: false
 })
 export class AllPokemonsComponent implements OnDestroy {
   public pokemonArray: Array<Pokemon>
