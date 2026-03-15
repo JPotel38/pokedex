@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { CaptureComponent } from './capture.component';
+import {CaptureComponent} from './capture.component';
 
 describe('CaptureComponent', () => {
   let component: CaptureComponent;
@@ -9,8 +9,7 @@ describe('CaptureComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CaptureComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), CaptureComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(CaptureComponent);

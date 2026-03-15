@@ -15,8 +15,7 @@ describe('AllPokemonsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AllPokemonsComponent, TypeNamePipe],
-      imports: [IonicModule.forRoot(), I18nModule, FormsModule, ReactiveFormsModule],
+      imports: [IonicModule.forRoot(), I18nModule, FormsModule, ReactiveFormsModule, AllPokemonsComponent, TypeNamePipe],
       providers: [
         TranslateService,
         provideHttpClient(withInterceptorsFromDi()),

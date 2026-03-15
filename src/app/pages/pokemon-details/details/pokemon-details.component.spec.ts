@@ -14,8 +14,7 @@ describe('PokemonDetailsPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [PokemonDetailsComponent, TranslatePipe],
-      imports: [IonicModule.forRoot(), I18nModule],
+      imports: [IonicModule.forRoot(), I18nModule, PokemonDetailsComponent, TranslatePipe],
       providers: [
         TranslateService,
         {
