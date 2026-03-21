@@ -10,7 +10,6 @@ import {Router} from "@angular/router";
   selector: 'app-capture',
   templateUrl: './capture.component.html',
   styleUrls: ['./capture.component.scss'],
-  standalone: false
 })
 export class CaptureComponent implements OnInit, OnDestroy {
   public randomPokemon: Pokemon;

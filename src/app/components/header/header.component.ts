@@ -1,17 +1,19 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {User} from "../../shared/interfaces/user";
 import {Subscription} from "rxjs";
-import {TranslateService} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
 import {UserService} from "../../shared/services/user.service";
 import {UtilsService} from "../../shared/services/utils.service";
+import {IonicModule} from "@ionic/angular";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  standalone: false
+  imports: [TranslateModule, IonicModule]
 })
+
 export class HeaderComponent implements OnInit, OnDestroy {
   public isChecked: boolean = false;
   public langSelect: Array<string> = ['en', 'fr'];

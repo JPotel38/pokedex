@@ -7,7 +7,6 @@ import {Pokemon} from "../../../shared/interfaces/pokemon";
   selector: 'app-slide',
   templateUrl: './slide.component.html',
   styleUrls: ['./slide.component.scss'],
-  standalone: false
 })
 export class SlideComponent implements OnInit {
   public pokemonId: number;

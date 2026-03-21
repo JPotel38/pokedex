@@ -4,12 +4,14 @@ import {Router} from "@angular/router";
 import {UserService} from "../../shared/services/user.service";
 import {User} from "../../shared/interfaces/user";
 import {Subscription} from "rxjs";
+import {TranslateModule} from "@ngx-translate/core";
+import {IonicModule} from "@ionic/angular";
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
-  standalone: false
+  imports: [TranslateModule, IonicModule]
 })
 export class FooterComponent implements OnInit {
   public isOpen: boolean = false;

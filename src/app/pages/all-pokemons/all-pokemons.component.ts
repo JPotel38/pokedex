@@ -3,7 +3,7 @@ import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {AllPokemonService} from '../../shared/services/all-pokemon.service';
 import {Pokemon} from "../../shared/interfaces/pokemon";
 import {FormControl} from "@angular/forms";
-import {TranslateService} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {Subscription} from "rxjs";
 import {ColorEnum} from "../../shared/enums/color.enum";
 import {UtilsService} from "../../shared/services/utils.service";
@@ -15,7 +15,7 @@ import {TypesEnum} from "../../shared/enums/types.enum";
   selector: 'app-all-pokemons',
   templateUrl: './all-pokemons.component.html',
   styleUrls: ['./all-pokemons.component.scss'],
-  standalone: false
+  imports: [TranslateModule]
 })
 export class AllPokemonsComponent implements OnDestroy {
   public pokemonArray: Array<Pokemon>
@@ -73,7 +73,7 @@ export class AllPokemonsComponent implements OnDestroy {
       this.pokemonArray = this.allPokemonService.getAllPokemons();
     } else {
       this.isFilteredByName = true;
-      this.translateServiceSubscription = this.translateService.getTranslation(this.translateService.currentLang)
+      this.translateServiceSubscription = this.translateService.get(this.translateService.currentLang)
         .subscribe(res => {
           for (const [key, value] of Object.entries(res.NAMES)) {
             if (this.pokemon.value.charAt(0).toUpperCase() + this.pokemon.value.slice(1) === value) {

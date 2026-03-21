@@ -8,7 +8,6 @@ import {UserService} from '../../shared/services/user.service';
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss'],
-  standalone: false
 })
 export class SigninComponent {
   public userForm: FormGroup;

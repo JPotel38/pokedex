@@ -3,7 +3,7 @@ import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {NgModule} from "@angular/core";
 
-export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
+export const httpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader();
 
 
 @NgModule({
@@ -25,5 +25,5 @@ export class I18nModule {
 }
 
 export function translateLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient);
+  return new TranslateHttpLoader();
 }

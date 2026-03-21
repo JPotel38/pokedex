@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import '../../../theme/variables';
+@use '../../../theme/variables';
 
 .main-title {
   cursor: pointer;
   font-size: 1.5em;
-  font-family: 'Press Start 2P', cursive;
   height: 100%;
 }
 
