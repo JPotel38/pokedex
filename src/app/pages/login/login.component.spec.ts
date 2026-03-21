@@ -13,10 +13,10 @@ describe('LoginComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginComponent, TranslatePipe],
-      imports: [IonicModule.forRoot(), RouterTestingModule, FormsModule, ReactiveFormsModule, I18nModule],
+      imports: [IonicModule.forRoot(), RouterTestingModule, FormsModule, ReactiveFormsModule, I18nModule, LoginComponent, TranslatePipe],
       providers: [
-        TranslateService]
+        TranslateService
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoginComponent);

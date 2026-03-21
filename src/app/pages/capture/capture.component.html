@@ -9,14 +9,19 @@
       <ion-card-title>#{{randomPokemon.id}} {{'NAMES.' + randomPokemon.name | translate}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-text *ngIf="randomPokemon.types.length == 1">
-        {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
-        {{'TYPES.' + randomPokemon.types[0] | translate}}.
-      </ion-text>
-      <ion-text *ngIf="randomPokemon.types.length > 1">
-        {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{'TYPES.' + randomPokemon.types[0] | translate}}
-        /{{'TYPES.' + randomPokemon.types[1] | translate}}.
-      </ion-text>
+      @if (randomPokemon.types.length == 1) {
+      <ion-text>
+      {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_ONE' | translate}}
+      {{'TYPES.' + randomPokemon.types[0] | translate}}.
+        </ion-text>
+      }
+      @if (randomPokemon.types.length > 1) {
+      <ion-text>
+      {{'NAMES.' + randomPokemon.name | translate}} {{'CARD_SUBJECT_TWO' | translate}} {{
+      'TYPES.' + randomPokemon.types[0] | translate}}
+      /{{'TYPES.' + randomPokemon.types[1] | translate}}.
+        </ion-text>
+      }
     </ion-card-content>
     <ion-icon (click)="launchEncounter()" class="icon-lg" color="danger" name="close-circle-outline"></ion-icon>
     <ion-icon (click)="addPokemon(randomPokemon)" class="icon-lg" color="success" name="heart"></ion-icon>

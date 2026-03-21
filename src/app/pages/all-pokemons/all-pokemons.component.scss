@@ -1,4 +1,4 @@
-@import '../../../theme/variables';
+@use '../../../theme/variables';
 
 @media (max-width: 728px) {
   .card-grid {
@@ -29,6 +29,6 @@ ion-card-title {
 }
 
 .legendary-button {
-  --background: $gold;
-  box-shadow: 0 0 10px $gold;
+  --background: #FFD700FF;
+  box-shadow: 0 0 10px #FFD700FF;
 }

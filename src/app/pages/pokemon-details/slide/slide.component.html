@@ -1,7 +1,9 @@
 <ion-content>
   <swiper-container hash-navigation="true" initialSlide="{{initPokemon}}" navigation="true">
-    <swiper-slide *ngFor="let pokemon of pokemonArray">
+    @for (pokemon of pokemonArray; track pokemon) {
+    <swiper-slide>
       <app-pokemon-details [pokemon]="pokemon"></app-pokemon-details>
     </swiper-slide>
+    }
   </swiper-container>
 </ion-content>

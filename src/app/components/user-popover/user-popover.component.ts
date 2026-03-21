@@ -4,11 +4,14 @@ import {User} from "../../shared/interfaces/user";
 import {UserService} from "../../shared/services/user.service";
 import {Subscription} from "rxjs";
 import {Router} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
+import {IonicModule} from "@ionic/angular";
 
 @Component({
   selector: 'app-user-popover',
   templateUrl: './user-popover.component.html',
   styleUrls: ['./user-popover.component.scss'],
+  imports: [TranslateModule, IonicModule]
 })
 export class UserPopoverComponent implements OnInit {
   public currentUser: User;

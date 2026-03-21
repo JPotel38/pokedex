@@ -1,7 +1,7 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {TestBed, waitForAsync} from '@angular/core/testing';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {TranslateModule} from "@ngx-translate/core";
 
 describe('AppComponent', () => {
@@ -9,8 +9,7 @@ describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
 
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [TranslateModule.forRoot()],
+      imports: [TranslateModule.forRoot(), AppComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   }));

@@ -21,8 +21,7 @@ describe('TeamComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [TeamComponent],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), TeamComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(TeamComponent);

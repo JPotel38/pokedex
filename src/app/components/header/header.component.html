@@ -14,8 +14,10 @@
               <ion-item class="lang-selector">
                 <ion-icon name="language-outline"></ion-icon>
                 <ion-select (ionChange)="selectedLang($event)" interface="popover">
-                  <ion-select-option *ngFor="let lang of langSelect"
-                                     [value]="lang"> {{ lang | translate }}</ion-select-option>
+                  @for (lang of langSelect; track lang) {
+                  <ion-select-option
+                  [value]="lang"> {{ lang | translate }}</ion-select-option>
+                  }
                 </ion-select>
               </ion-item>
             </ion-col>
@@ -38,15 +40,15 @@
             <app-user-popover (open)="dismiss($event)"></app-user-popover>
           </ng-template>
         </ion-popover>
-        <ng-container *ngIf="currentUser.userName">
-          <ion-col sizeLg="2">
-            <ion-text>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-text>
+        @if (currentUser.userName) {
+        <ion-col sizeLg="2">
+          <ion-text>{{'USER POKEDEX' | translate : {user: currentUser.userName} }} </ion-text>
             <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
               <img alt="pokeball" class="icon" src='./assets/icons/pokeball.png'>
               <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>
             </ion-button>
           </ion-col>
-        </ng-container>
+        }
       </ion-row>
     </ion-grid>
   </ion-toolbar>

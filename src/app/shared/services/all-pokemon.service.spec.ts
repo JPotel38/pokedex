@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { AllPokemonService } from './all-pokemon.service';
-import {HttpClient} from "@angular/common/http";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {AllPokemonService} from './all-pokemon.service';
+import {HttpClient, provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
+import {provideHttpClientTesting} from "@angular/common/http/testing";
 
 describe('AllPokemonService', () => {
   let allPokemonService: AllPokemonService;
@@ -10,7 +10,8 @@ describe('AllPokemonService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      imports: [],
+      providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
     });
     allPokemonService = TestBed.inject(AllPokemonService);
     httpClient = TestBed.inject(HttpClient);

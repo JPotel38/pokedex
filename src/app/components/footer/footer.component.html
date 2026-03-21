@@ -5,12 +5,14 @@
         <ion-col class="ion-align-self-center" size="2">
           <ion-icon (click)="utilsService.goBackToPokedex()" class="home-icon" name="home-outline"></ion-icon>
         </ion-col>
-        <ion-col *ngIf="currentUser.userName" size="3">
+        @if (currentUser.userName) {
+        <ion-col size="3">
           <ion-button (click)="handleNavigation('team')" [disabled]="!currentUser.login" color="light">
             <ion-img class="pokeball-img" alt="pokeball" src='./assets/icons/pokeball.png'></ion-img>
             <ion-badge color="danger">{{userService.getPokemonTeam().length}}</ion-badge>
-          </ion-button>
-        </ion-col>
+            </ion-button>
+          </ion-col>
+        }
         <ion-col class="ion-align-self-center" size="2">
           <ion-icon (click)="presentPopover($event)" class="icon" name="person-circle-outline">
           </ion-icon>

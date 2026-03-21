@@ -13,8 +13,7 @@ describe('SigninComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [SigninComponent, TranslatePipe],
-      imports: [IonicModule.forRoot(), RouterTestingModule, FormsModule, ReactiveFormsModule, I18nModule],
+      imports: [IonicModule.forRoot(), RouterTestingModule, FormsModule, ReactiveFormsModule, I18nModule, SigninComponent, TranslatePipe],
       providers: [
         TranslateService
       ]

@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { UserPopoverComponent } from './user-popover.component';
+import {UserPopoverComponent} from './user-popover.component';
 
 describe('UserPopoverComponent', () => {
   let component: UserPopoverComponent;
@@ -9,8 +9,7 @@ describe('UserPopoverComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserPopoverComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), UserPopoverComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(UserPopoverComponent);

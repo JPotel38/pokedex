@@ -5,8 +5,10 @@
         <ion-item>
           <ion-input [formControl]="loginCtrl" label="{{'USERNAME' | translate}}" labelPlacement="floating"
                      type="text"></ion-input>
-          <ion-label *ngIf="loginCtrl.dirty && loginCtrl.hasError('required')">
-            * {{'USERNAME' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
+          @if (loginCtrl.dirty && loginCtrl.hasError('required')) {
+          <ion-label>
+          * {{'USERNAME' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
+          }
         </ion-item>
       </ion-col>
     </ion-row>
@@ -15,8 +17,10 @@
         <ion-item>
           <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" labelPlacement="floating"
                      type="password"></ion-input>
+          @if (passwordCtrl.dirty && passwordCtrl.hasError('required')) {
           <ion-label
-            *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
+          >{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}</ion-label>
+          }
         </ion-item>
       </ion-col>
     </ion-row>

@@ -1,51 +1,56 @@
 <ion-content>
   <ion-grid>
-    <ion-row *ngIf="currentUser.pokemonTeam">
-      <ion-col *ngFor="let pokemon of currentUser.pokemonTeam; let index = index" sizeMd="2" sizeXs="12">
-        <ion-card [ngStyle]="{'background': pokemon.types.length == 1 ?
+    @if (currentUser.pokemonTeam) {
+    <ion-row>
+      @for (pokemon of currentUser.pokemonTeam; track pokemon; let index = $index) {
+    <ion-col sizeMd="2" sizeXs="12">
+      <ion-card [ngStyle]="{'background': pokemon.types.length == 1 ?
                   pokemon.color[0] : 'linear-gradient(to right,'+ pokemon.color[0] + ',' + pokemon.color[1]+ ')'
                   }"
-        >
-          <ion-card-header>
-            <ion-card-title *ngIf="pokemon.chosenName; else elseBlock">{{pokemon.chosenName}}
-            </ion-card-title>
-            <ng-template #elseBlock>
-              <ion-card-title>{{'NAMES.' + pokemon.name | translate}}</ion-card-title>
-            </ng-template>
-          </ion-card-header>
-          <ion-card-content>
-            <ion-img [alt]="pokemon.name" [src]="pokemon.img" id="img"></ion-img>
-            <ion-button (click)="setOpen(true, index)" color="light">
-              <ion-icon name="pencil-sharp"></ion-icon>
-            </ion-button>
-            <ion-button (click)="deletePokemon(index)" color="light">
-              <ion-icon name="trash"></ion-icon>
-            </ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
+      >
+        <ion-card-header>
+          @if (pokemon.chosenName) {
+          <ion-card-title>{{pokemon.chosenName}}
+          </ion-card-title>
+          } @else {
+          <ion-card-title>{{'NAMES.' + pokemon.name | translate}}</ion-card-title>
+          }
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img [alt]="pokemon.name" [src]="pokemon.img" id="img"></ion-img>
+          <ion-button (click)="setOpen(true, index)" color="light">
+            <ion-icon name="pencil-sharp"></ion-icon>
+          </ion-button>
+          <ion-button (click)="deletePokemon(index)" color="light">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    }
     </ion-row>
-  <ion-content>
-    <ion-modal [isOpen]="isModalOpen">
-      <ng-template>
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-button (click)="cancel()">{{'CANCEL' | translate}}</ion-button>
-            </ion-buttons>
-            <ion-buttons slot="end">
-              <ion-button (click)="confirm()" [strong]="true">{{'CONFIRM' | translate}}</ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
-          <ion-item>
-            <ion-label position="stacked">{{'NEW_POKEMON_NAME' | translate}} :</ion-label>
-            <ion-input [formControl]="pokemonName" type="text"></ion-input>
-          </ion-item>
-        </ion-content>
-      </ng-template>
-    </ion-modal>
-  </ion-content>
+    }
+    <ion-content>
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-button (click)="cancel()">{{'CANCEL' | translate}}</ion-button>
+              </ion-buttons>
+              <ion-buttons slot="end">
+                <ion-button (click)="confirm()" [strong]="true">{{'CONFIRM' | translate}}</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <ion-item>
+              <ion-label position="stacked">{{'NEW_POKEMON_NAME' | translate}} :</ion-label>
+              <ion-input [formControl]="pokemonName" type="text"></ion-input>
+            </ion-item>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </ion-content>
   </ion-grid>
 </ion-content>

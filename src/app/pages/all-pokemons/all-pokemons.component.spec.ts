@@ -2,12 +2,12 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {IonicModule} from '@ionic/angular';
 
 import {AllPokemonsComponent} from './all-pokemons.component';
-import {HttpClientTestingModule} from "@angular/common/http/testing";
-import {RouterTestingModule} from "@angular/router/testing";
+import {provideHttpClientTesting} from "@angular/common/http/testing";
 import {TranslateService} from "@ngx-translate/core";
 import {I18nModule} from "../../shared/modules/i18n.module";
 import {TypeNamePipe} from "../../pipes/type-name.pipe";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 
 describe('AllPokemonsComponent', () => {
   let component: AllPokemonsComponent;
@@ -15,10 +15,12 @@ describe('AllPokemonsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AllPokemonsComponent, TypeNamePipe],
-      imports: [IonicModule.forRoot(), HttpClientTestingModule, RouterTestingModule, I18nModule, FormsModule, ReactiveFormsModule],
+      imports: [IonicModule.forRoot(), I18nModule, FormsModule, ReactiveFormsModule, AllPokemonsComponent, TypeNamePipe],
       providers: [
-        TranslateService]
+        TranslateService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AllPokemonsComponent);

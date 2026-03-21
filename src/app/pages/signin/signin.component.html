@@ -5,8 +5,10 @@
         <ion-item>
           <ion-input [formControl]="loginCtrl" label="{{'USERNAME' | translate}}" labelPlacement="floating"
                      type="text"></ion-input>
-          <ion-text *ngIf="loginCtrl.dirty && loginCtrl.hasError('required')" color="danger">{{'USERNAME' | translate}}
-            {{'IS_REQUIRED' | translate}}</ion-text>
+          @if (loginCtrl.dirty && loginCtrl.hasError('required')) {
+          <ion-text color="danger">{{'USERNAME' | translate}}
+          {{'IS_REQUIRED' | translate}}</ion-text>
+          }
         </ion-item>
       </ion-col>
     </ion-row>
@@ -16,9 +18,11 @@
           <ion-item>
             <ion-input [formControl]="passwordCtrl" label="{{'PASSWORD' | translate}}" labelPlacement="floating"
                        type="password"></ion-input>
-            <ion-text *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')"
-                      color="danger">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}
+            @if (passwordCtrl.dirty && passwordCtrl.hasError('required')) {
+            <ion-text
+              color="danger">{{'PASSWORD' | translate}} {{'IS_REQUIRED' | translate}}
             </ion-text>
+            }
           </ion-item>
         </ion-col>
       </ion-row>
@@ -33,9 +37,11 @@
     </form>
     <ion-row class="ion-justify-content-center">
       <ion-col sizeLg="3">
-        <ion-text *ngIf="passwordForm.dirty && passwordForm.hasError('matchingError')" color="danger">
-          {{'PASSWORD_NOT_MATCHING' | translate}}
+        @if (passwordForm.dirty && passwordForm.hasError('matchingError')) {
+        <ion-text color="danger">
+        {{'PASSWORD_NOT_MATCHING' | translate}}
         </ion-text>
+        }
       </ion-col>
     </ion-row>
     <ion-row class="ion-justify-content-center">
